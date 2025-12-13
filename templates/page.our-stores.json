@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TtqrjW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dra8Pb": {
+          "type": "heading",
+          "settings": {
+            "heading": "OURR SERVICES",
+            "heading_size": "h1"
+          }
+        },
+        "text_rmNm4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dra8Pb",
+        "text_rmNm4H"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_UYRQzU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fzQjaR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/services2.jpg",
+            "title": "CLEANING SERVICE",
+            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines. Please contact the store for detailed information.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YaDLBg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Services.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fzQjaR",
+        "column_YaDLBg"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_hByyKw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mr3xKN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/services2.jpg",
+            "title": "CLEANING SERVICE",
+            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines. Please contact the store for detailed information.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hgEheN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Services.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mr3xKN",
+        "column_hgEheN"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Bh37UM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WCzNHR": {
+          "type": "heading",
+          "settings": {
+            "heading": "OURR SERVICES",
+            "heading_size": "h1"
+          }
+        },
+        "text_zAzDqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WCzNHR",
+        "text_zAzDqQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_TtqrjW",
+    "multicolumn_UYRQzU",
+    "rich_text_Bh37UM",
+    "multicolumn_hByyKw"
+  ]
+}
