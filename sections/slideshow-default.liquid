@@ -120,8 +120,8 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.mobile_image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.settings.image or block.settings.mobile_image -%}
+        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+          {%- if block.settings.image -%}
             {%- liquid
               assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
               if section.settings.image_behavior == 'ambient'
@@ -136,43 +136,18 @@
                 assign fetch_priority = 'high'
               endif
             -%}
-            {%- comment -%} Prefer a separate mobile image when provided: build a mobile srcset and wrap the desktop image in a <picture> element {%- endcomment -%}
-            {%- if block.settings.mobile_image -%}
-              {%- capture mobile_srcset -%}
-                {%- assign mws = '375,550,750,1100,1500' | split: ',' -%}
-                {%- for w in mws -%}
-                  {{ block.settings.mobile_image | image_url: width: w | append: ' ' | append: w | append: 'w' }}{%- if forloop.last == false %}, {% endif %}
-                {%- endfor -%}
-              {%- endcapture -%}
-            {%- endif -%}
-
-            {%- assign main_img = block.settings.image -%}
-            {%- if main_img == blank and block.settings.mobile_image != blank -%}
-              {%- assign main_img = block.settings.mobile_image -%}
-            {%- endif -%}
-
             {%- if forloop.first %}
-              <picture>
-                {%- if block.settings.mobile_image -%}
-                  <source media="(max-width: 749px)" srcset="{{ mobile_srcset }}" sizes="100vw">
-                {%- endif -%}
-                {{
-                  main_img
-                  | image_url: width: 3840
-                  | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-                }}
-              </picture>
+              {{
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+              }}
             {%- else -%}
-              <picture>
-                {%- if block.settings.mobile_image -%}
-                  <source media="(max-width: 749px)" srcset="{{ mobile_srcset }}" sizes="100vw">
-                {%- endif -%}
-                {{
-                  main_img
-                  | image_url: width: 3840
-                  | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                }}
-              </picture>
+              {{
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+              }}
             {%- endif -%}
           {%- else -%}
             {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
@@ -183,7 +158,7 @@
             {%- endif -%}
           {%- endif -%}
         </div>
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
+        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
@@ -195,36 +170,20 @@
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
-            <div class="button-box">
-              {%- if block.settings.button_label != blank -%}
-                <div class="banner__buttons">
-                  <a
-                    {% if block.settings.link %}
-                      href="{{ block.settings.link }}"
-                    {% else %}
-                      role="link" aria-disabled="true"
-                    {% endif %}
-                    class="link underlined-link"
-                  >
-                    {{- block.settings.button_label | escape -}}
-                  </a>
-                </div>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <div class="banner__buttons">
-                  <a
-                    {% if block.settings.link_2 %}
-                      href="{{ block.settings.link_2 }}"
-                    {% else %}
-                      role="link" aria-disabled="true"
-                    {% endif %}
-                    class="link underlined-link"
-                  >
-                    {{- block.settings.button_label_2 | escape -}}
-                  </a>
-                </div>
-              {%- endif -%}
-            </div>
+            {%- if block.settings.button_label != blank -%}
+              <div class="banner__buttons">
+                <a
+                  {% if block.settings.link %}
+                    href="{{ block.settings.link }}"
+                  {% else %}
+                    role="link" aria-disabled="true"
+                  {% endif %}
+                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label | escape -}}
+                </a>
+              </div>
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -437,12 +396,6 @@
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
         {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Mobile image (displayed on small screens)",
-          "info": "Optional: provide a separate image for mobile viewports"
-        },
-        {
           "type": "range",
           "id": "image_overlay_opacity",
           "min": 0,
@@ -510,18 +463,6 @@
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "t:sections.slideshow.blocks.slide.settings.button_label.default",
-          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label", 
-          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
-        },
-        {
-          "type": "url",
-          "id": "link_2",
           "label": "t:sections.slideshow.blocks.slide.settings.link.label"
         },
         {

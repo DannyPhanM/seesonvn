@@ -239,12 +239,18 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .text-body {
-  font-size: 1.5rem;
+  font-size: 10px;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
+}
+
+@media(min-width: 750px) {
+  .text-body {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -284,48 +290,75 @@ h5,
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: 26px;
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .h0 {
+    font-size: 50px;
   }
 }
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  h1,
+  .h1 {
+    font-size: 40px;
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  h2,
+  .h2 {
+    font-size: 38px;
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  h3,
+  .h3 {
+    font-size: 36px;
   }
 }
 
@@ -333,18 +366,37 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: 12px;
+}
+@media only screen and (min-width: 750px) {
+  h4,
+  .h4 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 990px) {
+  h4,
+  .h4 {
+    font-size: 32px;
+  }
 }
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
     font-size: calc(var(--font-heading-scale) * 1.3rem);
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  h5,
+  .h5 {
+    font-size: 20px;
   }
 }
 
@@ -660,7 +712,7 @@ summary .icon-caret {
   right: 1.5rem;
   top: calc(50% - 0.2rem);
 }
-
+ 
 summary::-webkit-details-marker {
   display: none;
 }
@@ -2387,6 +2439,7 @@ input[type='checkbox'] {
     grid-template-areas: 'heading navigation icons';
     grid-template-columns: auto auto 1fr;
     column-gap: 2rem;
+    display: flex;
   }
 
   .header--middle-center:not(.drawer-menu) {
@@ -2784,6 +2837,8 @@ details[open] > .header__submenu {
 
   .header--middle-left .header__inline-menu {
     margin-left: 0;
+    text-align: right;
+    flex-grow: 2;
   }
 }
 
