@@ -9,9 +9,80 @@
  */
 {
   "sections": {
+    "slideshow_6w4AVd": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_bhKrjH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
+            "mobile_image": "shopify://shop_images/Carosel.png",
+            "image_overlay_opacity": 0,
+            "heading": "THE ATHLETES COLLECTION",
+            "heading_size": "h0",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "",
+            "button_label_2": "ABOUT COLLECTION",
+            "link_2": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        },
+        "slide_7U9kKw": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_label_2": "Button label",
+            "link_2": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_bhKrjH",
+        "slide_7U9kKw"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
+        "button_H3QDna": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -21,6 +92,7 @@
         }
       },
       "block_order": [
+        "button_H3QDna",
         "heading"
       ],
       "settings": {
@@ -76,8 +148,8 @@
         "columns_desktop": 4,
         "enable_desktop_slider": false,
         "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
+        "show_view_all": true,
+        "view_all_style": "link",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
@@ -125,6 +197,7 @@
     }
   },
   "order": [
+    "slideshow_6w4AVd",
     "rich_text",
     "collage-0",
     "featured-collection",
