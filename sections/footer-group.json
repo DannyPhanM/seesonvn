@@ -13,6 +13,18 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_3Lwce3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_3Lwce3"
+      ],
       "settings": {
         "menu_custom": "footer-new",
         "color_scheme": "scheme-1",
