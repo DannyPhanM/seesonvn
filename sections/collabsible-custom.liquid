@@ -1,0 +1,214 @@
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .content-container--full-width {
+      padding-left: 50px;
+      padding-right: 50px;
+    } 
+  }
+{%- endstyle -%}
+
+<div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient">
+  <div class="collabsible-custom__wrapper section-{{ section.id }}-padding{% if section.settings.full_width %} content-container--full-width{% else %} page-width{% endif %}">
+    <details class="collabsible-custom__details" onclick="this.classList.toggle('is-open')"{% if section.settings.open_by_default %} open{% endif %}>
+      <summary class="collabsible-custom__summary" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+        <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+        <span class="collabsible-custom__icon" style="display: flex; align-items: center;">
+          <span class="icon-plus" style="display: flex;align-items: center;margin-left: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3H13V21H11V3Z" fill="#999999"/><path d="M21 11V13L3 13L3 11L21 11Z" fill="#999999"/></svg>
+          </span>
+          <span class="icon-minus" style="display: none;align-items: center;margin-left: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 13V11H12L3 11L3 13L12 13H21Z" fill="#999999"/></svg>
+          </span>
+        </span>
+      </summary>
+      <div class="collabsible-custom__blocks">
+        {%- for block in section.blocks -%}
+          <div class="collabsible-custom__block" {{ block.shopify_attributes }}>
+            <{{ block.settings.heading_tag }} class="collabsible-custom__block-title {{ block.settings.heading_tag }}" style="margin-bottom: 0;">
+            {{ block.settings.title }}
+            </{{ block.settings.heading_tag }}>
+            <div class="collabsible-custom__block-content rte">{{ block.settings.content }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </details>
+  </div>
+
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.collabsible-custom__details').forEach(function(details) {
+      function updateIcon() {
+        var plus = details.querySelector('.icon-plus');
+        var minus = details.querySelector('.icon-minus');
+        if (details.open) {
+          if (plus) plus.style.display = 'none';
+          if (minus) minus.style.display = 'flex';
+        } else {
+          if (plus) plus.style.display = 'flex';
+          if (minus) minus.style.display = 'none';
+        }
+      }
+      details.addEventListener('toggle', updateIcon);
+      updateIcon();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collabsible Custom",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "Open by default",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Collabsible Custom Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collabsible_block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Block Title",
+          "default": "Block Title"
+        },
+        {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Block Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collabsible Custom",
+      "blocks": [
+        { "type": "collabsible_block" },
+        { "type": "collabsible_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}
