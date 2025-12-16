@@ -118,7 +118,7 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class="multicolumn-card__info {% if block.settings.content_overlay %} content_overlay {{ block.settings.content_alignment }} {% endif %}">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
@@ -199,6 +199,7 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+   
     {
       "type": "inline_richtext",
       "id": "title",
@@ -404,6 +405,30 @@
       "type": "column",
       "name": "t:sections.multicolumn.blocks.column.name",
       "settings": [
+         {
+      "type":"checkbox",
+      "id":"content_overlay",
+      "label": "Enable content overlay",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content alignment",
+      "visible_if": "{{ block.settings.content_overlay == true }}",
+      "default": "center-center",
+      "options": [
+        { "value": "left-top", "label": "Left Top" },
+        { "value": "left-center", "label": "Left Middle" },
+        { "value": "left-bottom", "label": "Left Bottom" },
+        { "value": "center-top", "label": "Center Top" },
+        { "value": "center-center", "label": "Center Middle" },
+        { "value": "center-bottom", "label": "Center Bottom" },
+        { "value": "right-top", "label": "Right Top" },
+        { "value": "right-center", "label": "Right Middle" },
+        { "value": "right-bottom", "label": "Right Bottom" }
+      ]
+    },
         {
           "type": "image_picker",
           "id": "image",
