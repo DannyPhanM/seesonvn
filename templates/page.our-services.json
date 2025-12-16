@@ -58,6 +58,7 @@
             "content_alignment": "right-top",
             "image": "shopify://shop_images/services2.jpg",
             "title": "CLEANING SERVICE",
+            "heading_tag": "h5",
             "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines. Please contact the store for detailed information.</p>",
             "link_label": "",
             "link": ""
@@ -70,6 +71,7 @@
             "content_alignment": "center-center",
             "image": "shopify://shop_images/Services.jpg",
             "title": "Column",
+            "heading_tag": "h2",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
@@ -139,6 +141,7 @@
             "content_alignment": "center-center",
             "image": "shopify://shop_images/services2.jpg",
             "title": "CLEANING SERVICE",
+            "heading_tag": "h2",
             "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines. Please contact the store for detailed information.</p>",
             "link_label": "",
             "link": ""
@@ -151,6 +154,7 @@
             "content_alignment": "center-center",
             "image": "shopify://shop_images/Services.jpg",
             "title": "Column",
+            "heading_tag": "h2",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
