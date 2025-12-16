@@ -8,26 +8,26 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_TtqrjW": {
+    "rich_text_JPhcki": {
       "type": "rich-text",
       "blocks": {
-        "heading_dra8Pb": {
+        "heading_htWAaR": {
           "type": "heading",
           "settings": {
-            "heading": "OURR SERVICES",
+            "heading": "HANOI IRL FLAGSHIP",
             "heading_size": "h1"
           }
         },
-        "text_rmNm4H": {
+        "text_c7g4b9": {
           "type": "text",
           "settings": {
-            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.<br/></p>"
+            "text": "<p>Tucked near Hanoi’s Hang Day Stadium, our flagship store unfolds inside a 1970s townhouse—quietly renovated to capture the city’s everyday rhythm. Natural light, handcrafted furniture, and raw textures echo the calm beauty of traditional Hanoi homes. It’s not just a space to browse, but a place to slow down, breathe in the scent of wood and tea, and feel the warmth of local life.</p>"
           }
         }
       },
       "block_order": [
-        "heading_dra8Pb",
-        "text_rmNm4H"
+        "heading_htWAaR",
+        "text_c7g4b9"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -39,33 +39,26 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_UYRQzU": {
+    "multicolumn_GGVYAc": {
       "type": "multicolumn",
       "blocks": {
-        "column_fzQjaR": {
+        "column_kJzwGR": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/services2.jpg",
-            "title": "CLEANING SERVICE",
-            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines.Please contact the store for detailed information.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_YaDLBg": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Services.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14.png",
+            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "title": "",
+            "heading_tag": "h2",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_fzQjaR",
-        "column_YaDLBg"
+        "column_kJzwGR"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -75,82 +68,99 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 2,
+        "columns_desktop": 1,
         "column_alignment": "left",
-        "background_style": "none",
+        "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     },
-    "multicolumn_hByyKw": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_mr3xKN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/services2.jpg",
-            "title": "CLEANING SERVICE",
-            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines.Please contact the store for detailed information.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hgEheN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Services.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_mr3xKN",
-        "column_hgEheN"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_Bh37UM": {
+    "rich_text_Tijt7A": {
       "type": "rich-text",
       "blocks": {
-        "heading_WCzNHR": {
+        "heading_WVaRKy": {
           "type": "heading",
           "settings": {
-            "heading": "OURR SERVICES",
+            "heading": "SAIGON IRL FLAGSHIP",
             "heading_size": "h1"
           }
         },
-        "text_zAzDqQ": {
+        "text_iC8r3R": {
           "type": "text",
           "settings": {
-            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.<br/></p>"
+            "text": "<p>Following the “solitude” of the Hanoi Flagship, the Saigon Flagship centers around the concept of “silence.” The design blends block tiles, works by Katja Lang, and poems by Wilhelm Müller, evoking the calm of winter. The space offers a “pause” in the city, where visitors can enjoy tea and experience quiet moments with SEESON, featuring a product display area, SEESON Clinic, and a tea space.</p>"
           }
         }
       },
       "block_order": [
-        "heading_WCzNHR",
-        "text_zAzDqQ"
+        "heading_WVaRKy",
+        "text_iC8r3R"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_bBBT8t": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_htbt8D": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
+            "image_mobile": "shopify://shop_images/image_14_2efa7b35-46eb-4f4d-9f8e-408b83e2cc48.png",
+            "title": "",
+            "heading_tag": "h2",
+            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_htbt8D"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_ah3XAQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9AHqAx": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR DISTRIBUTORS",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9AHqAx"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -159,15 +169,178 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
+      }
+    },
+    "collabsible_custom_FHwd3m": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_BfDW4C": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_tGkKAC": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_PnVXFH": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_txPQK3": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_BfDW4C",
+        "collabsible_block_tGkKAC",
+        "collabsible_block_PnVXFH",
+        "collabsible_block_txPQK3"
+      ],
+      "name": "Collabsible Custom",
+      "settings": {
+        "open_by_default": true,
+        "title": "In Ha Noi CITY",
+        "heading_tag": "h5",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collabsible_custom_VqTkHc": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_BicjdP": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_AVNnDq": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_CJEi86": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_8Mkyz7": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_BicjdP",
+        "collabsible_block_AVNnDq",
+        "collabsible_block_CJEi86",
+        "collabsible_block_8Mkyz7"
+      ],
+      "name": "Collabsible Custom",
+      "settings": {
+        "open_by_default": false,
+        "title": "In Ha Noi CITY",
+        "heading_tag": "h5",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collabsible_custom_iMw3rX": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_zkeXWW": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_d4MAx9": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_fdgRzf": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        },
+        "collabsible_block_PB4RaG": {
+          "type": "collabsible_block",
+          "settings": {
+            "title": "Rue Miche L'Édition",
+            "heading_tag": "h6",
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_zkeXWW",
+        "collabsible_block_d4MAx9",
+        "collabsible_block_fdgRzf",
+        "collabsible_block_PB4RaG"
+      ],
+      "name": "Collabsible Custom",
+      "settings": {
+        "open_by_default": false,
+        "title": "In Ha Noi CITY",
+        "heading_tag": "h5",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "rich_text_TtqrjW",
-    "multicolumn_UYRQzU",
-    "rich_text_Bh37UM",
-    "multicolumn_hByyKw"
+    "rich_text_JPhcki",
+    "multicolumn_GGVYAc",
+    "rich_text_Tijt7A",
+    "multicolumn_bBBT8t",
+    "rich_text_ah3XAQ",
+    "collabsible_custom_FHwd3m",
+    "collabsible_custom_VqTkHc",
+    "collabsible_custom_iMw3rX"
   ]
 }
