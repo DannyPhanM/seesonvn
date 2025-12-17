@@ -17,6 +17,22 @@
       padding-right: 50px;
     } 
   }
+  .collabsible-custom__details .collabsible-custom__blocks {
+    display: flex;
+    gap: 18px;
+}
+.collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__blocks {
+    width: calc(50% - 9px);
+}
+@media (min-width: 990px) {
+    .collabsible-custom__details .collabsible-custom__blocks {
+        gap: 32px;
+    }
+    .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__blocks {
+        width: calc(50% - 16px);
+    }
+}
+
 {%- endstyle -%}
 
 <div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient">
