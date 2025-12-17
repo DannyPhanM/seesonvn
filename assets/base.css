@@ -346,7 +346,7 @@ h3,
 .h3 {
   font-size: 14px;
   line-height: 17px;
-  font-weight:600;
+  font-weight: 700;
   letter-spacing: 0.7px;
 }
 
@@ -354,7 +354,7 @@ h3,
   h3,
   .h3 {
     font-size: 20px;
-    font-weight:600;
+    font-weight:700;
     line-height: 24px;
     letter-spacing: 1px;
   }
@@ -3661,4 +3661,21 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
+}
+
+.multicolumn .multicolumn-list {
+    gap: 18px;
+}
+.multicolumn .multicolumn-list.grid--2-col-desktop .grid__item {
+    width: calc(50% - 9px);
+}
+@media (min-width: 990px) {
+    .multicolumn .multicolumn-list.grid--2-col-desktop .grid__item {
+        width: calc(50% - 16px);
+    }
+}
+@media (min-width: 990px) {
+    .multicolumn .multicolumn-list {
+        gap: 32px;
+    }
 }
