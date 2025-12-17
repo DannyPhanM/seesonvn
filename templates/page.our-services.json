@@ -55,7 +55,7 @@
           "type": "column",
           "settings": {
             "content_overlay": true,
-            "content_alignment": "right-top",
+            "content_alignment": "left-top",
             "image": "shopify://shop_images/services2.jpg",
             "title": "CLEANING SERVICE",
             "heading_tag": "h3",
