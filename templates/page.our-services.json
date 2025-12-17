@@ -107,14 +107,14 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "OURR SERVICES",
+            "heading": "A LIFETIME OF PERFECT FIT",
             "heading_size": "h1"
           }
         },
         "text_zAzDqQ": {
           "type": "text",
           "settings": {
-            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.<br/></p>"
+            "text": "<p>Bring your SEESON eyewear to our stores and let us help keep them in perfect condition. From polishing and lens cleaning to lifetime frame adjustments, our expert team ensures your glasses look and feel as good as new — because every detail matters.</p>"
           }
         }
       },
@@ -138,25 +138,25 @@
         "column_mr3xKN": {
           "type": "column",
           "settings": {
-            "content_overlay": false,
-            "content_alignment": "center-center",
+            "content_overlay": true,
+            "content_alignment": "left-top",
             "image": "shopify://shop_images/services2.jpg",
-            "title": "CLEANING SERVICE",
-            "heading_tag": "h2",
-            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p>Note: The refreshing service is only available for certain product lines. Please contact the store for detailed information.</p>",
+            "title": "HANOI IRL FLAGSHIP",
+            "heading_tag": "h3",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_hgEheN": {
+        "column_Jipgk8": {
           "type": "column",
           "settings": {
-            "content_overlay": false,
-            "content_alignment": "center-center",
-            "image": "shopify://shop_images/Services.jpg",
-            "title": "Column",
-            "heading_tag": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/services2.jpg",
+            "title": "SAIGON IRL FLAGSHIP",
+            "heading_tag": "h3",
+            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -164,7 +164,7 @@
       },
       "block_order": [
         "column_mr3xKN",
-        "column_hgEheN"
+        "column_Jipgk8"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -190,7 +190,7 @@
         "text_QpdQwQ": {
           "type": "text",
           "settings": {
-            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><h4><br/><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></h4>"
+            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
           }
         }
       },
