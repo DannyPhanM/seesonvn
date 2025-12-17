@@ -24,7 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "OUR SERVICES",
-            "heading_size": "h1"
+            "heading_tag": "h3"
           }
         },
         "text_rmNm4H": {
@@ -108,7 +108,7 @@
           "type": "heading",
           "settings": {
             "heading": "A LIFETIME OF PERFECT FIT",
-            "heading_size": "h1"
+            "heading_tag": "h2"
           }
         },
         "text_zAzDqQ": {
