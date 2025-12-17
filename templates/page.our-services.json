@@ -180,8 +180,31 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_rTBygV": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QpdQwQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><h4><br/><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></h4>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QpdQwQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
       }
     }
   },
@@ -190,6 +213,7 @@
     "rich_text_TtqrjW",
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
-    "multicolumn_hByyKw"
+    "multicolumn_hByyKw",
+    "rich_text_rTBygV"
   ]
 }
