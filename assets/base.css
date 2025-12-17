@@ -1366,6 +1366,20 @@ button.shopify-payment-button__button--unbranded {
   padding: 1.2rem 2.6rem;
 }
 
+.button, .button * {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+@media(min-width: 750px) {
+  .button, .button * {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
 /* Shopify Accelerated Checkout */
 
 shopify-accelerated-checkout {
