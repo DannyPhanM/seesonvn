@@ -310,7 +310,7 @@ h1,
 .h1 {
   font-size: 18px;
   line-height: 26px;
-  letter-spacing: 0.9px;
+  letter-spacing: -0.9px;
 }
 
 @media only screen and (min-width: 750px) {
