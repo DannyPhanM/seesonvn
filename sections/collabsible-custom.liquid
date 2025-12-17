@@ -36,9 +36,9 @@
       <div class="collabsible-custom__blocks">
         {%- for block in section.blocks -%}
           <div class="collabsible-custom__block" {{ block.shopify_attributes }}>
-            <{{ block.settings.heading_tag }} class="collabsible-custom__block-title {{ block.settings.heading_tag }}" style="margin-bottom: 0;">
+            {% comment %} <{{ block.settings.heading_tag }} class="collabsible-custom__block-title {{ block.settings.heading_tag }}" style="margin-bottom: 0;">
             {{ block.settings.title }}
-            </{{ block.settings.heading_tag }}>
+            </{{ block.settings.heading_tag }}> {% endcomment %}
             <div class="collabsible-custom__block-content rte">{{ block.settings.content }}</div>
           </div>
         {%- endfor -%}
@@ -155,44 +155,6 @@
       "type": "collabsible_block",
       "name": "Block",
       "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Block Title",
-          "default": "Block Title"
-        },
-        {
-      "type": "select",
-      "id": "heading_tag",
-      "label": "Heading tag",
-      "default": "h2",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ]
-    },
         {
           "type": "richtext",
           "id": "content",
