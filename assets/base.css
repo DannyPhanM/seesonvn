@@ -318,7 +318,7 @@ h1,
   .h1 {
     font-size: 40px;
     line-height: 48px;
-    letter-spacing: -3.2px;
+    letter-spacing: -2px;
   }
 }
 
@@ -3666,12 +3666,10 @@ details-disclosure > details {
 .multicolumn .multicolumn-list {
     gap: 18px;
 }
-.multicolumn .multicolumn-list.grid--2-col-tablet-down .grid__item {
+.multicolumn .multicolumn-list.grid--2-col-desktop .grid__item {
     width: calc(50% - 9px);
 }
-.multicolumn .multicolumn-list.grid--1-col-tablet-down .grid__item {
-  width: 100%;
-}
+
 @media (min-width: 990px) {
     .multicolumn .multicolumn-list.grid--2-col-desktop .grid__item {
         width: calc(50% - 16px);
