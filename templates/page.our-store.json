@@ -23,8 +23,7 @@
         "heading_htWAaR": {
           "type": "heading",
           "settings": {
-            "heading": "HANOI IRL FLAGSHIP",
-            "heading_size": "h1"
+            "heading": "HANOI IRL FLAGSHIP"
           }
         },
         "text_c7g4b9": {
@@ -45,7 +44,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 50
       }
     },
     "multicolumn_GGVYAc": {
@@ -84,7 +83,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 52
+        "padding_bottom": 50
       }
     },
     "rich_text_Tijt7A": {
@@ -93,8 +92,7 @@
         "heading_WVaRKy": {
           "type": "heading",
           "settings": {
-            "heading": "SAIGON IRL FLAGSHIP",
-            "heading_size": "h1"
+            "heading": "SAIGON IRL FLAGSHIP"
           }
         },
         "text_iC8r3R": {
@@ -115,7 +113,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 100,
-        "padding_bottom": 52
+        "padding_bottom": 50
       }
     },
     "multicolumn_bBBT8t": {
@@ -163,8 +161,7 @@
         "heading_9AHqAx": {
           "type": "heading",
           "settings": {
-            "heading": "OUR DISTRIBUTORS",
-            "heading_size": "h2"
+            "heading": "OUR DISTRIBUTORS"
           }
         }
       },
@@ -187,24 +184,18 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_U84YGj": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_nJBYWn": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         }
@@ -221,8 +212,8 @@
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "collabsible_custom_VqTkHc": {
@@ -231,32 +222,24 @@
         "collabsible_block_BicjdP": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_AVNnDq": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_CJEi86": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_8Mkyz7": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         }
@@ -274,8 +257,8 @@
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "collabsible_custom_iMw3rX": {
@@ -284,32 +267,24 @@
         "collabsible_block_zkeXWW": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_d4MAx9": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_fdgRzf": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
         "collabsible_block_PB4RaG": {
           "type": "collabsible_block",
           "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         }
@@ -327,8 +302,8 @@
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     }
   },
