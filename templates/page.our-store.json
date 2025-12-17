@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -179,40 +188,31 @@
           "type": "collabsible_block",
           "settings": {
             "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
+            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
-        "collabsible_block_tGkKAC": {
+        "collabsible_block_U84YGj": {
           "type": "collabsible_block",
           "settings": {
             "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
+            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         },
-        "collabsible_block_PnVXFH": {
+        "collabsible_block_nJBYWn": {
           "type": "collabsible_block",
           "settings": {
             "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
-          }
-        },
-        "collabsible_block_txPQK3": {
-          "type": "collabsible_block",
-          "settings": {
-            "title": "Rue Miche L'Édition",
-            "heading_tag": "h6",
+            "heading_tag": "h3",
             "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
           }
         }
       },
       "block_order": [
         "collabsible_block_BfDW4C",
-        "collabsible_block_tGkKAC",
-        "collabsible_block_PnVXFH",
-        "collabsible_block_txPQK3"
+        "collabsible_block_U84YGj",
+        "collabsible_block_nJBYWn"
       ],
       "name": "Collabsible Custom",
       "settings": {
