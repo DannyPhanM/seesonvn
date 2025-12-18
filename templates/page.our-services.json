@@ -45,7 +45,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 50,
-        "padding_bottom": 50
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "multicolumn_UYRQzU": {
@@ -60,7 +62,7 @@
             "image_mobile": "shopify://shop_images/services2.jpg",
             "title": "CLEANING SERVICE",
             "heading_tag": "h3",
-            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.</em></p><p><em>Please contact the store for detailed information.</em></p>",
+            "text": "<p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. </p><p>Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.</em></p><p><em>Please contact the store for detailed information.</em></p>",
             "link_label": "",
             "link": ""
           }
@@ -98,7 +100,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 50,
-        "padding_bottom": 50
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "rich_text_Bh37UM": {
@@ -129,7 +133,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 50
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "multicolumn_hByyKw": {
@@ -182,7 +188,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 60
+        "padding_top_mobile": 50,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 50
       }
     },
     "rich_text_rTBygV": {
@@ -205,7 +213,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_top_mobile": 50,
+        "padding_bottom": 100,
+        "padding_bottom_mobile": 50
       }
     }
   },
