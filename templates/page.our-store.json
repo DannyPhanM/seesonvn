@@ -17,16 +17,17 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_JPhcki": {
+    "rich_text_BXkFfc": {
       "type": "rich-text",
       "blocks": {
-        "heading_htWAaR": {
+        "heading_cpCWiE": {
           "type": "heading",
           "settings": {
-            "heading": "HANOI IRL FLAGSHIP"
+            "heading": "HANOI IRL FLAGSHIP",
+            "heading_tag": "h1"
           }
         },
-        "text_c7g4b9": {
+        "text_UNbYqd": {
           "type": "text",
           "settings": {
             "text": "<p>Tucked near Hanoi’s Hang Day Stadium, our flagship store unfolds inside a 1970s townhouse—quietly renovated to capture the city’s everyday rhythm. Natural light, handcrafted furniture, and raw textures echo the calm beauty of traditional Hanoi homes. It’s not just a space to browse, but a place to slow down, breathe in the scent of wood and tea, and feel the warmth of local life.</p>"
@@ -34,8 +35,8 @@
         }
       },
       "block_order": [
-        "heading_htWAaR",
-        "text_c7g4b9"
+        "heading_cpCWiE",
+        "text_UNbYqd"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -43,8 +44,10 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 50
+        "padding_top": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "multicolumn_GGVYAc": {
@@ -83,28 +86,31 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 50
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
-    "rich_text_Tijt7A": {
+    "rich_text_amaBJ9": {
       "type": "rich-text",
       "blocks": {
-        "heading_WVaRKy": {
+        "heading_iBBJ8P": {
           "type": "heading",
           "settings": {
-            "heading": "SAIGON IRL FLAGSHIP"
+            "heading": "OUR SERVICES",
+            "heading_tag": "h1"
           }
         },
-        "text_iC8r3R": {
+        "text_nYf6jD": {
           "type": "text",
           "settings": {
-            "text": "<p>Following the “solitude” of the Hanoi Flagship, the Saigon Flagship centers around the concept of “silence.” The design blends block tiles, works by Katja Lang, and poems by Wilhelm Müller, evoking the calm of winter. The space offers a “pause” in the city, where visitors can enjoy tea and experience quiet moments with SEESON, featuring a product display area, SEESON Clinic, and a tea space.</p>"
+            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.</p>"
           }
         }
       },
       "block_order": [
-        "heading_WVaRKy",
-        "text_iC8r3R"
+        "heading_iBBJ8P",
+        "text_nYf6jD"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -112,8 +118,10 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 50
+        "padding_top": 50,
+        "padding_top_mobile": 50,
+        "padding_bottom": 50,
+        "padding_bottom_mobile": 50
       }
     },
     "multicolumn_bBBT8t": {
@@ -152,7 +160,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top_mobile": 50,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 50
       }
     },
     "rich_text_ah3XAQ": {
@@ -161,7 +171,8 @@
         "heading_9AHqAx": {
           "type": "heading",
           "settings": {
-            "heading": "OUR DISTRIBUTORS"
+            "heading": "OUR DISTRIBUTORS",
+            "heading_tag": "h2"
           }
         }
       },
@@ -175,7 +186,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_top_mobile": 50,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 50
       }
     },
     "collabsible_custom_FHwd3m": {
@@ -184,19 +197,25 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_U84YGj": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_nJBYWn": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         }
       },
@@ -213,7 +232,9 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_top_mobile": 50,
+        "padding_bottom": 30,
+        "padding_bottom_mobile": 50
       }
     },
     "collabsible_custom_VqTkHc": {
@@ -222,25 +243,33 @@
         "collabsible_block_BicjdP": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_AVNnDq": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_CJEi86": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_8Mkyz7": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         }
       },
@@ -258,7 +287,9 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_top_mobile": 50,
+        "padding_bottom": 30,
+        "padding_bottom_mobile": 50
       }
     },
     "collabsible_custom_iMw3rX": {
@@ -267,25 +298,33 @@
         "collabsible_block_zkeXWW": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_d4MAx9": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_fdgRzf": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         },
         "collabsible_block_PB4RaG": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>"
+            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "padding_top": 50,
+            "padding_bottom": 50
           }
         }
       },
@@ -303,15 +342,17 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_bottom": 30
+        "padding_top_mobile": 50,
+        "padding_bottom": 30,
+        "padding_bottom_mobile": 50
       }
     }
   },
   "order": [
     "main",
-    "rich_text_JPhcki",
+    "rich_text_BXkFfc",
     "multicolumn_GGVYAc",
-    "rich_text_Tijt7A",
+    "rich_text_amaBJ9",
     "multicolumn_bBBT8t",
     "rich_text_ah3XAQ",
     "collabsible_custom_FHwd3m",
