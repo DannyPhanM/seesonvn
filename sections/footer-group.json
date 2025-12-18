@@ -14,7 +14,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu_custom": "footer-new",
+        "menu_custom": "lsci-team",
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
