@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LCwFbF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rp9Jm9": {
+          "type": "heading",
+          "settings": {
+            "heading": "product warranty",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cpRbWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEESON provides warranty care for all eligible products. We handle each case with precision and attention, ensuring your item is restored to our quality standards or replaced when necessary.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rp9Jm9",
+        "text_cpRbWY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collapsible_content_LwEYV4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XXEnxn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping policy",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_dDEBmt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "warranty policy",
+            "icon": "none",
+            "row_content": "<ul><li>SEESON provides a 1-year warranty for products with manufacturer defects, based on the customer information provided. Please note the following specific cases:</li><li>Frame front warranty: 6-month warranty for breakage due to manufacturer defects.</li><li>Metal coating warranty: 6-month warranty for coating on metal components. Peeling caused by direct contact with surfaces such as tables or chairs is not covered.</li><li>Normal wear and tear—including faded prints, scratches, stretching, etc.—is not covered under warranty.</li><li>If a defective frame that qualifies for warranty is out of stock, SEESON will support the customer with an exchange for another frame of equal value (no refunds for price differences if the new frame is of lower value).</li><li>Note: Lens components are not covered under the frame warranty.</li><li>Warranty does not apply to damage resulting from customer use.</li><li>SEESON offers lifetime product care, including adjustments, tightening screws, cleaning, and other basic maintenance.</li><li>For damage caused during use or cases beyond the warranty period, SEESON will evaluate repair options individually. Any repair time and additional service fees will be communicated in advance.</li><li>Prescription lenses are covered for 30 days for prescription accuracy. The updated prescription must be verified by SEESON’s technicians before warranty processing. Warranty does not apply to lenses cut based on customer requests, old prescriptions, or prescriptions provided by third parties.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PRnaRQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Customer Service Locations",
+            "icon": "none",
+            "row_content": "<ul><li>HANOI IRL FLAGSHIP <br/>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li><li>SAIGON IRL FLAGSHIP<br/>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</li><li>For warranty cases sent and returned via shipping services, all shipping fees are covered by the customer.</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XXEnxn",
+        "collapsible_row_dDEBmt",
+        "collapsible_row_PRnaRQ"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LCwFbF",
+    "collapsible_content_LwEYV4"
+  ]
+}
