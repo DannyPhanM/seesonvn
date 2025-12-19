@@ -221,22 +221,14 @@
     "rich_text_6ar4X7": {
       "type": "rich-text",
       "blocks": {
-        "heading_tEC9W3": {
-          "type": "heading",
-          "settings": {
-            "heading": "A LIFETIME OF PERFECT FIT",
-            "heading_tag": "h1"
-          }
-        },
         "text_6PAnfK": {
           "type": "text",
           "settings": {
-            "text": "<p>Bring your SEESON eyewear to our stores and let us help keep them in perfect condition. From polishing and lens cleaning to lifetime frame adjustments, our expert team ensures your glasses look and feel as good as new — because every detail matters.</p>"
+            "text": ""
           }
         }
       },
       "block_order": [
-        "heading_tEC9W3",
         "text_6PAnfK"
       ],
       "name": "t:sections.rich-text.presets.name",
