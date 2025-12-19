@@ -47,7 +47,7 @@
         "padding_top": 50,
         "padding_top_mobile": 30,
         "padding_bottom": 50,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     },
     "multicolumn_GGVYAc": {
@@ -86,9 +86,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 50,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 60
       }
     },
     "rich_text_amaBJ9": {
@@ -119,9 +119,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 50,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 50,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     },
     "multicolumn_bBBT8t": {
@@ -160,9 +160,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 120,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 60
       }
     },
     "rich_text_ah3XAQ": {
@@ -186,9 +186,9 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 30,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     },
     "collabsible_custom_FHwd3m": {
@@ -197,17 +197,17 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong><br/>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
-            "padding_top": 50,
-            "padding_bottom": 50
+            "content": "<p><strong>Rue Miche L'Édition<br/></strong>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong><br/>Mắt kính Việt Phát<br/></strong>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "padding_top": 20,
+            "padding_bottom": 20
           }
         },
         "collabsible_block_U84YGj": {
           "type": "collabsible_block",
           "settings": {
             "content": "<p><strong>Mắt kính Tâm Đức</strong></p><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
-            "padding_top": 50,
-            "padding_bottom": 50
+            "padding_top": 20,
+            "padding_bottom": 20
           }
         }
       },
@@ -223,9 +223,9 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 30,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     },
     "collabsible_custom_VqTkHc": {
@@ -278,9 +278,9 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 30,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     },
     "collabsible_custom_iMw3rX": {
@@ -333,9 +333,9 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 30,
-        "padding_top_mobile": 50,
+        "padding_top_mobile": 0,
         "padding_bottom": 30,
-        "padding_bottom_mobile": 50
+        "padding_bottom_mobile": 20
       }
     }
   },
