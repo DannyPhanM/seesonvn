@@ -23,14 +23,14 @@
         "heading_rp9Jm9": {
           "type": "heading",
           "settings": {
-            "heading": "product warranty",
+            "heading": "USER GUIDE",
             "heading_tag": "h1"
           }
         },
         "text_cpRbWY": {
           "type": "text",
           "settings": {
-            "text": "<p>SEESON provides warranty care for all eligible products. We handle each case with precision and attention, ensuring your item is restored to our quality standards or replaced when necessary.</p>"
+            "text": "<p>This guide helps you care for your SEESON frames and lenses with ease. Proper use and maintenance ensure durability, comfort, and the best visual experience.</p>"
           }
         }
       },
@@ -56,35 +56,25 @@
         "collapsible_row_XXEnxn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Shipping policy",
+            "heading": "Caring for Your Frames",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p><strong>Recommendations</strong></p><ul><li>Put on, remove, and open/close your glasses using both hands.</li><li>Use lens-cleaning solution and a microfiber cloth to clean your glasses.</li><li>Store your glasses in a case or leather pouch when not in use.</li><li>Avoid dropping or applying strong impact to the product—especially on structural areas such as the bridge and hinges. When cleaning, hold each lens gently and avoid twisting the bridge.</li><li>For products with metal details: Metal is sensitive to sweat, chemicals, and prolonged exposure to water. Wipe the metal parts dry with a microfiber cloth after each use.</li><li>Avoid collisions that may cause the coating to peel. Always store your glasses in the case when not in use.</li><li>Stop using the product if you experience irritation in areas where the metal touches your skin, and contact SEESON for support.</li></ul><p><strong>Advoidances</strong></p><ul><li>Putting on or removing glasses with one hand, or wearing them on top of your head (this may stretch the frame).</li><li>Using detergents or any chemical solutions (alcohol, hand sanitizer, soap) to clean the glasses.</li><li>Leaving glasses in high temperatures or under direct sunlight.</li><li>Storing glasses together with other items—especially sharp objects—without a case.</li><li>Applying force or strong impact that may deform the glasses.</li><li>Wearing ill-fitting glasses (too loose, too tight, or uneven), or adjusting them yourself.</li><li>If your glasses become loose, stretched, or misaligned, please bring them to the SEESON IRL FLAGSHIP stores for professional adjustment and support.</li></ul>",
             "page": ""
           }
         },
         "collapsible_row_dDEBmt": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "warranty policy",
+            "heading": "Lenses maintenance",
             "icon": "none",
-            "row_content": "<ul><li>SEESON provides a 1-year warranty for products with manufacturer defects, based on the customer information provided. Please note the following specific cases:</li><li>Frame front warranty: 6-month warranty for breakage due to manufacturer defects.</li><li>Metal coating warranty: 6-month warranty for coating on metal components. Peeling caused by direct contact with surfaces such as tables or chairs is not covered.</li><li>Normal wear and tear—including faded prints, scratches, stretching, etc.—is not covered under warranty.</li><li>If a defective frame that qualifies for warranty is out of stock, SEESON will support the customer with an exchange for another frame of equal value (no refunds for price differences if the new frame is of lower value).</li><li>Note: Lens components are not covered under the frame warranty.</li><li>Warranty does not apply to damage resulting from customer use.</li><li>SEESON offers lifetime product care, including adjustments, tightening screws, cleaning, and other basic maintenance.</li><li>For damage caused during use or cases beyond the warranty period, SEESON will evaluate repair options individually. Any repair time and additional service fees will be communicated in advance.</li><li>Prescription lenses are covered for 30 days for prescription accuracy. The updated prescription must be verified by SEESON’s technicians before warranty processing. Warranty does not apply to lenses cut based on customer requests, old prescriptions, or prescriptions provided by third parties.</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_PRnaRQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Customer Service Locations",
-            "icon": "none",
-            "row_content": "<ul><li>HANOI IRL FLAGSHIP <br/>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li><li>SAIGON IRL FLAGSHIP<br/>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</li><li>For warranty cases sent and returned via shipping services, all shipping fees are covered by the customer.</li></ul>",
+            "row_content": "",
             "page": ""
           }
         }
       },
       "block_order": [
         "collapsible_row_XXEnxn",
-        "collapsible_row_dDEBmt",
-        "collapsible_row_PRnaRQ"
+        "collapsible_row_dDEBmt"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
