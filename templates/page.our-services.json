@@ -101,7 +101,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 50,
-        "padding_bottom": 50,
+        "padding_bottom": 120,
         "padding_bottom_mobile": 50
       }
     },
@@ -132,7 +132,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 0,
         "padding_top_mobile": 50,
         "padding_bottom": 50,
         "padding_bottom_mobile": 50
