@@ -197,7 +197,7 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><br/><strong>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong><br/>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
             "padding_top": 50,
             "padding_bottom": 50
           }
