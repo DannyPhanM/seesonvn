@@ -187,7 +187,7 @@
         "full_width": true,
         "padding_top": 0,
         "padding_top_mobile": 50,
-        "padding_bottom": 0,
+        "padding_bottom": 30,
         "padding_bottom_mobile": 50
       }
     },
@@ -218,7 +218,7 @@
       "name": "Collabsible Custom",
       "settings": {
         "open_by_default": true,
-        "title": "In Ho Chi Minh CITY",
+        "title": "Ho Chi Minh CITY",
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
@@ -273,7 +273,7 @@
       "name": "Collabsible Custom",
       "settings": {
         "open_by_default": false,
-        "title": "In Ha Noi CITY",
+        "title": "HO CHI MINH CITY",
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
@@ -328,7 +328,7 @@
       "name": "Collabsible Custom",
       "settings": {
         "open_by_default": false,
-        "title": "In Ha Noi CITY",
+        "title": "CAN THO CITY",
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "",
