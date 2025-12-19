@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LCwFbF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rp9Jm9": {
+          "type": "heading",
+          "settings": {
+            "heading": "WORK WITH US",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cpRbWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, we believe good work comes from good people. Join a team that values kindness, curiosity, and craft. Together, we create meaningful experiences for everyone who steps into our stores.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rp9Jm9",
+        "text_cpRbWY"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collapsible_content_LwEYV4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XXEnxn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sales (HO CHI MINH CITY)",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_dDEBmt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "QUality control (HANOI CITY)",
+            "icon": "none",
+            "row_content": "<h4>Job Descriptions</h4><ul><li>Inspect finished products to ensure they meet quality standards and have no defects.</li><li>Sort products into “qualified” and “non-qualified” categories.</li><li>Identify and handle defects that arise during inspection.</li><li>Clean and package products after completing the quality control process.</li></ul><h4>Job Requirements</h4><ul><li>Currently studying at a university or college in Hanoi.</li><li>Honest and responsible.</li><li>Careful, detail-oriented, and observant.</li></ul><h4>Salary</h4><ul><li>To be negotiated</li></ul><h4>Working Hours</h4><ul><li>Minimum 4 hours per shift, 6 shifts per week.</li><li>Flexible weekly shift registration.</li></ul><h4>Work Location</h4><ul><li>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li></ul><h4>How to Apply</h4><ul><li>Interested candidates, please send your CV to: retail.hr@seeson.vn </li><li>Only shortlisted applicants will be contacted for an interview.</li></ul><h4>Notes</h4><ul><li>Email subject line: [QUALITY CONTROL] – Full Name</li><li>CV must include a portrait photo taken within the last 6 months.</li><li>Clearly indicate whether you are applying for Full-time or Part-time.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PRnaRQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Online customer service (HANOI City)",
+            "icon": "none",
+            "row_content": "<h4>Job Descriptions</h4><ul><li>Inspect finished products to ensure they meet quality standards and have no defects.</li><li>Sort products into “qualified” and “non-qualified” categories.</li><li>Identify and handle defects that arise during inspection.</li><li>Clean and package products after completing the quality control process.</li></ul><h4>Job Requirements</h4><ul><li>Currently studying at a university or college in Hanoi.</li><li>Honest and responsible.</li><li>Careful, detail-oriented, and observant.</li></ul><h4>Salary</h4><ul><li>To be negotiated</li></ul><h4>Working Hours</h4><ul><li>Minimum 4 hours per shift, 6 shifts per week.</li><li>Flexible weekly shift registration.</li></ul><h4>Work Location</h4><ul><li>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li></ul><h4>How to Apply</h4><ul><li>Interested candidates, please send your CV to: retail.hr@seeson.vn </li><li>Only shortlisted applicants will be contacted for an interview.</li></ul><h4>Notes</h4><ul><li>Email subject line: [QUALITY CONTROL] – Full Name</li><li>CV must include a portrait photo taken within the last 6 months.</li><li>Clearly indicate whether you are applying for Full-time or Part-time.</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XXEnxn",
+        "collapsible_row_dDEBmt",
+        "collapsible_row_PRnaRQ"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LCwFbF",
+    "collapsible_content_LwEYV4"
+  ]
+}
