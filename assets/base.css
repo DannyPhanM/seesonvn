@@ -3740,10 +3740,20 @@ details-disclosure > details {
   }
 }
 
-.rte ul + ol {
-    margin-left: 30px;
-    list-style: circle;
+.rte ul,
+.rte ol {
+    list-style: none !important;
+    padding-left: 0;
 }
-.rte ul + ol li {
-    padding-left: 10px;
+.rte ul li,
+.rte ol li {
+    position: relative;
+    padding-left: 20px !important;
+}
+.rte ul li:before,
+.rte ol li:before {
+    content: '-';
+    position: absolute;
+    top: -1px;
+    left: 0;
 }
