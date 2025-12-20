@@ -3735,6 +3735,10 @@ details-disclosure > details {
     left: 0;
 }
 
+.collabsible-custom__summary .collabsible-custom__icon {
+  margin-left: auto;
+}
+
 @media(max-width: 749px) {
   .collabsible-custom__icon svg {
       width: 14px;
