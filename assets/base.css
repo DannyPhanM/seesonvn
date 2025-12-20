@@ -3715,7 +3715,7 @@ details-disclosure > details {
         gap: 32px;
     }
     .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block {
-        width: calc(33.33% - 22px);
+        flex: 1;
     }
 }
 
