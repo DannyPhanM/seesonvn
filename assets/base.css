@@ -3778,6 +3778,6 @@ details-disclosure > details {
     display: block;
 }
 
-.accordion__content {
+.accordion .accordion__content {
     padding-top: 25px;
 }
