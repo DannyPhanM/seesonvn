@@ -3807,7 +3807,7 @@ details-disclosure > details {
 @media (min-width: 750px) {
     .accordion .accordion__content h4 {
         margin-bottom: 30px;
-        margin-top: 30px;
+        margin-top: 24px;
     }
 }
 .accordion .accordion__content h5 {
@@ -3825,15 +3825,14 @@ details-disclosure > details {
     letter-spacing: 1px;
 }
 .accordion .accordion__content h5:first-child {
-    margin-top: 0;
+
 }
 .accordion .accordion__content h5:last-child {
-    margin-bottom: 0;
+
 }
 @media (min-width: 750px) {
     .accordion .accordion__content h5 {
-        margin-bottom: 24px;
-        margin-top: 24px;
+ 
     }
 }
 .accordion .accordion__content p,
