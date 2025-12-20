@@ -3691,8 +3691,15 @@ details-disclosure > details {
 
   @media screen and (min-width: 990px) {
     .content-container--full-width {
-      padding-left: 80px;
+      padding-left: 50px;
       padding-right: 50px;
+    } 
+  }
+
+    @media screen and (min-width: 1440px) {
+    .content-container--full-width {
+      padding-left: 80px;
+      padding-right: 80px;
     } 
   }
   .collabsible-custom__details .collabsible-custom__blocks {
