@@ -3777,3 +3777,7 @@ details-disclosure > details {
 .accordion summary[aria-expanded="true"] svg + svg {
     display: block;
 }
+
+.accordion__content {
+    padding-top: 25px;
+}
