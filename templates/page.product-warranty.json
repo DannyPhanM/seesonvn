@@ -92,7 +92,7 @@
         "heading": "",
         "heading_size": "h1",
         "heading_alignment": "left",
-        "layout": "none",
+        "layout": "section",
         "container_color_scheme": "scheme-2",
         "color_scheme": "scheme-1",
         "open_first_collapsible_row": false,
