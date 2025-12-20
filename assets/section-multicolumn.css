@@ -121,6 +121,7 @@
   .multicolumn-list.remove-space-x:not(.slider) {
     padding-left: 0;
     padding-right: 0;
+    gap: 0;
   }
 }
 
