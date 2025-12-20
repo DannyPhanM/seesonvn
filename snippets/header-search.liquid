@@ -31,6 +31,19 @@
       aria-label="{{ 'general.search.search' | t }}"
     >
       <div class="modal-overlay"></div>
+      <div class="promo_collection">
+        <div class="content-box">
+          <div class="sub-title">
+            {{ section.settings.sub_title_collection_search }}
+          </div>
+          <div class="title">
+            {{ section.settings.title_collection_search }}
+          </div>
+          <a href="{{ section.settings.button_link_collection_search }}" class="btn btn--secondary">
+            {{ section.settings.button_text_collection_search }}
+          </a>
+        </div>
+      </div>
       <div
         class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
         tabindex="-1"
@@ -83,11 +96,36 @@
           {%- if settings.predictive_search_enabled -%}
             <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
               {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+                  <div class="predictive_search_open">
+                    <div class="main-box">
+                      <div class=""text-box></div>
+                      <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="display:none">
+                          <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                            Sản phẩm đã xem gần đây
+                          </h2>
+                          <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
+                            <!-- Recently viewed products will be rendered here by JS -->
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
             </div>
 
             <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
           {%- endif -%}
         </form>
+                <div class="predictive_search_open">
+          <div class="main-box">
+            <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="display:none">
+                <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                  Sản phẩm đã xem gần đây
+                </h2>
+                <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
+                  <!-- Recently viewed products will be rendered here by JS -->
+                </ul>
+            </div>
+          </div>
+        </div>
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- else -%}

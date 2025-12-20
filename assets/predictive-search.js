@@ -9,6 +9,86 @@ class PredictiveSearch extends SearchForm {
     this.searchTerm = '';
 
     this.setupEventListeners();
+
+    // Render recently viewed products on open
+    this.renderRecentlyViewedProducts();
+  }
+  renderRecentlyViewedProducts() {
+    if (!window.getRecentlyViewedProducts) return;
+    const ids = window.getRecentlyViewedProducts();
+    // Support multiple containers (header, modal, etc.)
+    const groups = document.querySelectorAll('#predictive-search-recently-viewed-group');
+    const lists = document.querySelectorAll('#predictive-search-recently-viewed-list');
+    if (!groups.length || !lists.length) return;
+    if (!ids.length) {
+      groups.forEach(group => group.style.display = 'none');
+      lists.forEach(list => list.innerHTML = '');
+      return;
+    }
+    groups.forEach(group => group.style.display = 'none');
+    lists.forEach(list => list.innerHTML = '');
+
+    Promise.all(ids.map(handle => fetch(`/products/${handle}.js`).then(r => r.json()).catch(() => null)))
+      .then(products => {
+        products = products.filter(Boolean);
+        if (!products || !products.length) {
+          groups.forEach(group => group.style.display = 'none');
+          lists.forEach(list => list.innerHTML = '');
+          return;
+        }
+        groups.forEach(group => group.style.display = '');
+        // Settings: get from window or data-attributes if needed
+        const showVendor = window.themeSettings?.predictive_search_show_vendor;
+        // Always show price for recently viewed products (to match main product layout)
+        const showPrice = true;
+        // Map by handle for fast lookup
+        const productMap = {};
+        products.forEach(p => { productMap[p.handle] = p; });
+        // Render only unique, in order of handles in cookie
+        lists.forEach(list => {
+          list.innerHTML = '';
+          ids.forEach((handle, idx) => {
+            const product = productMap[handle];
+            if (!product) return;
+            const li = document.createElement('li');
+            li.className = 'predictive-search__list-item';
+            li.setAttribute('role', 'option');
+            li.setAttribute('aria-selected', 'false');
+            li.id = `predictive-search-option-recently-${idx+1}`;
+            // Featured image logic
+            let imgHtml = '';
+            if (product.featured_media && product.featured_media.preview_image) {
+              const aspect = product.featured_media.preview_image.aspect_ratio || 1;
+              imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=150" alt="${product.featured_media.alt || product.title}" width="50" height="${50 / aspect}">`;
+            } else if (product.featured_image) {
+              imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120" height="120">`;
+            }
+            // Vendor
+            let vendorHtml = '';
+            if (showVendor && product.vendor) {
+              vendorHtml = `<span class="visually-hidden">Vendor</span><div class="predictive-search__item-vendor caption-with-letter-spacing">${product.vendor}</div>`;
+            }
+            // Price (use min price)
+            let priceHtml = '';
+            if (showPrice && product.price) {
+              priceHtml = `<div class="predictive-search__item-price">${(product.price/100).toLocaleString('vi-VN', {style:'currency',currency:'VND'})}</div>`;
+            }
+            // Centered class logic
+            let centered = (!showVendor && !showPrice) ? ' predictive-search__item-content--centered' : '';
+            li.innerHTML = `
+              <a href="${product.url || '/products/' + product.handle}" class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text" tabindex="-1">
+                ${imgHtml}
+                <div class="predictive-search__item-content${centered}">
+                  ${vendorHtml}
+                  <p class="predictive-search__item-heading h5">${product.title}</p>
+                  ${priceHtml}
+                </div>
+              </a>
+            `;
+            list.appendChild(li);
+          });
+        });
+      });
   }
 
   setupEventListeners() {
@@ -231,6 +311,9 @@ class PredictiveSearch extends SearchForm {
 
     this.setLiveRegionResults();
     this.open();
+
+    // Re-render recently viewed products after search results update
+    this.renderRecentlyViewedProducts();
   }
 
   setLiveRegionResults() {
