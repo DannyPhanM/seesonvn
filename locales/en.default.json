@@ -113,6 +113,11 @@
     "product_title": "Example product title",
     "collection_title": "Your collection's name"
   },
+    "predictive_search": {
+    "recently_viewed": {
+      "title": "We’ll help you find the right look, just start typing."
+    }
+  },
   "products": {
     "product": {
       "add_to_cart": "Add to cart",

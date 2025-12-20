@@ -114,18 +114,21 @@
             <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
           {%- endif -%}
         </form>
-                <div class="predictive_search_open">
+        {%- unless settings.predictive_search_enabled -%}
+        <div class="predictive_search_open">
           <div class="main-box">
-            <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="display:none">
+            <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="">
                 <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
                   Sản phẩm đã xem gần đây
                 </h2>
+                <p id="predictive-search-recently-viewed-empty" style="display: flex;justify-content: center;align-items: center;min-height: 150px;">{{ 'predictive_search.recently_viewed.title' | t }}</p>
                 <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
-                  <!-- Recently viewed products will be rendered here by JS -->
+                  
                 </ul>
             </div>
           </div>
         </div>
+        {%- endunless -%}
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- else -%}

@@ -113,6 +113,11 @@
     "product_title": "Tiêu đề sản phẩm mẫu",
     "collection_title": "Tên bộ sưu tập của bạn"
   },
+      "predictive_search": {
+    "recently_viewed": {
+      "title": "Chúng tôi sẽ giúp bạn tìm phong cách phù hợp, hãy bắt đầu tìm kiếm."
+    }
+  },
   "products": {
     "product": {
       "add_to_cart": "Thêm vào giỏ hàng",
