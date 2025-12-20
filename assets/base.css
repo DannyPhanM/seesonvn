@@ -3733,3 +3733,9 @@ details-disclosure > details {
       height: 14px;
   }
 }
+
+@media(max-width: 749px) {
+  .socia_footer {
+    display: flex !important;
+  }
+}

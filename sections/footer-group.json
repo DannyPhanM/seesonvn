@@ -13,6 +13,17 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_custom_VrMB44": {
+          "type": "link_list_custom",
+          "settings": {
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_custom_VrMB44"
+      ],
       "settings": {
         "menu_custom": "lsci-team",
         "color_scheme": "scheme-1",
