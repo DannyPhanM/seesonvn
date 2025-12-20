@@ -3739,3 +3739,11 @@ details-disclosure > details {
     display: flex !important;
   }
 }
+
+.rte ul + ol {
+    margin-left: 30px;
+    list-style: circle;
+}
+.rte ul + ol li {
+    padding-left: 10px;
+}
