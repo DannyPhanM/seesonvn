@@ -3855,3 +3855,8 @@ details-disclosure > details {
 .accordion:last-child {
     border-bottom: none;
 }
+
+.page-width-custom {
+  max-width: 542px;
+  box-sizing: content-box;
+}
