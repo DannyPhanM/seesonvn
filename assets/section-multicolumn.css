@@ -114,8 +114,13 @@
   }
 
   .multicolumn-list:not(.slider) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .multicolumn-list.remove-space-x:not(.slider) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
