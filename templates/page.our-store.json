@@ -244,7 +244,7 @@
         "collabsible_block_AVNnDq": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
+            "content": "<h4>Cửa hàng 1</h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><h4>Cửa hàng 1</h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p>",
             "padding_top": 50,
             "padding_bottom": 50
           }
