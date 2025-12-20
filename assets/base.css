@@ -3861,3 +3861,9 @@ details-disclosure > details {
   box-sizing: content-box;
       margin-left: 0;
 }
+
+@media(max-width: 749px) {
+  .accordion .accordion__content {
+    padding-top: 10px;
+  }
+}
