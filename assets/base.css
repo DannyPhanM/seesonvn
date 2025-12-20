@@ -3859,4 +3859,5 @@ details-disclosure > details {
 .page-width-custom {
   max-width: 542px;
   box-sizing: content-box;
+      margin-left: 0;
 }
