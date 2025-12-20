@@ -584,6 +584,7 @@ footer * {
   .footer__content-bottom-wrapper .footer__copyright .content-right {
       width: 100%;
       align-items: flex-start;
+      flex-wrap: wrap;
   }
   .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom {
       flex-grow: 2;
