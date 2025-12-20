@@ -3864,6 +3864,6 @@ details-disclosure > details {
 
 @media(max-width: 749px) {
   .accordion .accordion__content {
-    padding-top: 10px;
+    padding-top: 5px;
   }
 }
