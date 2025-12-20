@@ -3780,6 +3780,8 @@ details-disclosure > details {
 
 .accordion .accordion__content {
     padding-top: 25px;
+    padding-bottom: 40px;
+    overflow-y: visible;
 }
 
 .accordion .accordion__content h4 {
