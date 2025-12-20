@@ -3849,3 +3849,9 @@ details-disclosure > details {
     line-height: 120%;
 }
 
+.accordion:first-child {
+    border-top: none;
+}
+.accordion:last-child {
+    border-bottom: none;
+}
