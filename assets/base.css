@@ -3722,6 +3722,7 @@ details-disclosure > details {
 .collabsible-custom__summary {
     position: relative;
     width: max-content;
+    min-width: 300px;
 }
 .collabsible-custom__summary:after {
     content: '';
