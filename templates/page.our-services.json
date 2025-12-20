@@ -87,6 +87,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
+        "remove_space_x": true,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -175,6 +176,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
+        "remove_space_x": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
