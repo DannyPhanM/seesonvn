@@ -23,14 +23,14 @@
         "heading_dra8Pb": {
           "type": "heading",
           "settings": {
-            "heading": "OUR SERVICES",
+            "heading": "Our journey begins",
             "heading_tag": "h1"
           }
         },
         "text_rmNm4H": {
           "type": "text",
           "settings": {
-            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.</p>"
+            "text": "<p>SEESON began in 2018 with a simple idea — to create eyewear that sees beyond fashion. Rooted in Vietnam, our studio explores the meeting point between structure, form, and emotion. We see each frame as a designed object, not just an accessory — where minimalism meets the quiet rhythm of Vietnamese sensibility.</p>"
           }
         }
       },
@@ -53,36 +53,22 @@
     "multicolumn_UYRQzU": {
       "type": "multicolumn",
       "blocks": {
-        "column_fzQjaR": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/services2.jpg",
-            "image_mobile": "shopify://shop_images/services2.jpg",
-            "title": "",
-            "heading_tag": "h3",
-            "text": "<p><strong>CLEANING SERVICE</strong></p><p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.<br/>Please contact the store for detailed information.</em></p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_YaDLBg": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Services.jpg",
+            "image": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
+            "image_mobile": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
             "title": "",
             "heading_tag": "h3",
-            "text": "<p><strong>FRAME ADJUSTMENT SERVICE</strong></p><p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_fzQjaR",
         "column_YaDLBg"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -94,7 +80,7 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 2,
+        "columns_desktop": 1,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "",
@@ -112,14 +98,14 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "A LIFETIME OF PERFECT FIT",
+            "heading": "our Design philosophy",
             "heading_tag": "h1"
           }
         },
         "text_zAzDqQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Bring your SEESON eyewear to our stores and let us help keep them in perfect condition. From polishing and lens cleaning to lifetime frame adjustments, our expert team ensures your glasses look and feel as good as new — because every detail matters.</p>"
+            "text": "<p>Each frame is developed with a clear structure and meticulous craftsmanship, balancing aesthetics and functionality. We combine modern technology with refined artisanal skills to create high-quality products — using carefully selected materials and attentive service to ensure the design accompanies you over time.</p>"
           }
         }
       },
