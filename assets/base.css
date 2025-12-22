@@ -142,6 +142,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 @media(min-width: 1440px) {
+    .header:not(.drawer-menu).page-width {
+   padding: 0 8rem;
+  }
   .page-width {
     padding: 0 8rem;
   }
