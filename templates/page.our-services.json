@@ -216,23 +216,12 @@
         "full_width": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 100,
-        "padding_bottom_mobile": 50
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_6ar4X7": {
       "type": "rich-text",
-      "blocks": {
-        "text_6PAnfK": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_6PAnfK"
-      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "left",
@@ -241,8 +230,8 @@
         "full_width": true,
         "padding_top": 40,
         "padding_top_mobile": 50,
-        "padding_bottom": 50,
-        "padding_bottom_mobile": 50
+        "padding_bottom": 200,
+        "padding_bottom_mobile": 130
       }
     }
   },
