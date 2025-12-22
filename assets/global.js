@@ -1332,20 +1332,46 @@ class CartPerformance {
 }
 
 
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.collabsible-custom__details').forEach(function(details) {
-      function updateIcon() {
-        var plus = details.querySelector('.icon-plus');
-        var minus = details.querySelector('.icon-minus');
-        if (details.open) {
-          if (plus) plus.style.display = 'none';
-          if (minus) minus.style.display = 'flex';
-        } else {
-          if (plus) plus.style.display = 'flex';
-          if (minus) minus.style.display = 'none';
-        }
+document.addEventListener('DOMContentLoaded', function () {
+  const allDetails = document.querySelectorAll('.collabsible-custom__details');
+
+  // Không tồn tại thì thôi, giải tán
+  if (!allDetails || allDetails.length === 0) return;
+
+  function updateIcon(details) {
+    if (!details) return;
+
+    const plus = details.querySelector('.icon-plus');
+    const minus = details.querySelector('.icon-minus');
+
+    if (details.open) {
+      if (plus) plus.style.display = 'none';
+      if (minus) minus.style.display = 'flex';
+    } else {
+      if (plus) plus.style.display = 'flex';
+      if (minus) minus.style.display = 'none';
+    }
+  }
+
+  allDetails.forEach(function (details) {
+    // phòng trường hợp markup bị lệch
+    if (!details || typeof details.open === 'undefined') return;
+
+    details.addEventListener('toggle', function () {
+      if (details.open) {
+        // đóng các details khác
+        allDetails.forEach(function (other) {
+          if (other && other !== details && other.open) {
+            other.open = false;
+          }
+        });
       }
-      details.addEventListener('toggle', updateIcon);
-      updateIcon();
+
+      // sync icon toàn bộ
+      allDetails.forEach(updateIcon);
     });
+
+    // init lần đầu
+    updateIcon(details);
   });
+});
