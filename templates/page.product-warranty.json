@@ -43,7 +43,7 @@
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
-        "full_width": false,
+        "full_width": true,
         "padding_top": 50,
         "padding_top_mobile": 30,
         "padding_bottom": 60,
