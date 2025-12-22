@@ -3850,11 +3850,9 @@ details-disclosure > details {
 }
 .accordion .accordion__content p,
 .accordion .accordion__content span,
-.accordion .accordion__content li,
-.collabsible-custom__block-content p {
+.accordion .accordion__content li{
     color: var(--Primary-ss-grey, #999);
     leading-trim: both;
-    text-edge: cap;
     font-family: var(--font-body-family);
     font-size: var(--Essentials-Body-text, 16px);
     font-style: normal;
