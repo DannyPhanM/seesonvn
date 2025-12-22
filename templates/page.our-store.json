@@ -199,7 +199,7 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<h4><strong>Rue Miche L'Édition</strong></h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><h4><strong>Mắt kính Việt Phát</strong></h4><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
             "padding_top": 20,
             "padding_bottom": 0
           }
@@ -207,7 +207,7 @@
         "collabsible_block_rFY4mU": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<h4><strong>Mắt kính Tâm Đức</strong></h4><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
+            "content": "<p><strong>Mắt kính Tâm Đức</strong></p><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
             "padding_top": 0,
             "padding_bottom": 0
           }
@@ -230,32 +230,55 @@
         "padding_bottom_mobile": 10
       }
     },
-    "collabsible_custom_VqTkHc": {
+    "collabsible_custom_ntF3mT": {
       "type": "collabsible-custom",
       "blocks": {
-        "collabsible_block_BicjdP": {
+        "collabsible_block_fEGnpY": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<h4><strong>Rue Miche L'Édition</strong></h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><h4><strong>Mắt kính Việt Phát</strong></h4><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
-            "padding_top": 20,
+            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "collabsible_block_arqnAj": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<p><strong>Mắt kính Tâm Đức</strong></p><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
+            "padding_top": 0,
             "padding_bottom": 0
           }
         }
       },
       "block_order": [
-        "collabsible_block_BicjdP"
+        "collabsible_block_fEGnpY",
+        "collabsible_block_arqnAj"
       ],
       "name": "Collabsible Custom",
       "settings": {
-        "open_by_default": false,
-        "title": "HO CHI MINH CITY",
+        "open_by_default": true,
+        "title": "HO CH MINH CITY",
         "heading_tag": "h5",
         "full_width": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "padding_top": 10,
         "padding_top_mobile": 10,
-        "padding_bottom": 10,
-        "padding_bottom_mobile": 10
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_zbAic8": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 200,
+        "padding_bottom_mobile": 130
       }
     }
   },
@@ -267,6 +290,7 @@
     "multicolumn_bBBT8t",
     "rich_text_ah3XAQ",
     "collabsible_custom_FHwd3m",
-    "collabsible_custom_VqTkHc"
+    "collabsible_custom_ntF3mT",
+    "rich_text_zbAic8"
   ]
 }
