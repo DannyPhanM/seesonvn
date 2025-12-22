@@ -3860,6 +3860,10 @@ details-disclosure > details {
     line-height: 120%;
 }
 
+.collabsible-custom__block-content p  {
+  color: #999999;
+}
+
 .accordion:first-child {
     border-top: none;
 }
