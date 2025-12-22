@@ -3878,7 +3878,8 @@ details-disclosure > details {
 .page-width-custom {
   max-width: 542px;
   box-sizing: content-box;
-      margin-left: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 @media(max-width: 749px) {
