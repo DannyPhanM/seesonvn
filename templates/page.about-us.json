@@ -1,0 +1,247 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TtqrjW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dra8Pb": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR SERVICES",
+            "heading_tag": "h1"
+          }
+        },
+        "text_rmNm4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, we design eyewear with the same care and precision found in traditional craftsmanship. From concept to final frame, every piece is shaped through thoughtful design, material sensitivity, and a respect for human touch. Our studio offers personalized fittings, custom frame adjustments, and design consultations—ensuring each pair not only fits your face, but your rhythm of life.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dra8Pb",
+        "text_rmNm4H"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 50,
+        "padding_top_mobile": 30,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_UYRQzU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fzQjaR": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/services2.jpg",
+            "image_mobile": "shopify://shop_images/services2.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>CLEANING SERVICE</strong></p><p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.<br/>Please contact the store for detailed information.</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YaDLBg": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Services.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>FRAME ADJUSTMENT SERVICE</strong></p><p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fzQjaR",
+        "column_YaDLBg"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "remove_space_x": true,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "rich_text_Bh37UM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WCzNHR": {
+          "type": "heading",
+          "settings": {
+            "heading": "A LIFETIME OF PERFECT FIT",
+            "heading_tag": "h1"
+          }
+        },
+        "text_zAzDqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bring your SEESON eyewear to our stores and let us help keep them in perfect condition. From polishing and lens cleaning to lifetime frame adjustments, our expert team ensures your glasses look and feel as good as new — because every detail matters.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WCzNHR",
+        "text_zAzDqQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_hByyKw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mr3xKN": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Rectangle_106.png",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Jipgk8": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Rectangle_107.png",
+            "image_mobile": "shopify://shop_images/Rectangle_107.png",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mr3xKN",
+        "column_Jipgk8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "remove_space_x": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_rTBygV": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QpdQwQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QpdQwQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_6ar4X7": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_top_mobile": 50,
+        "padding_bottom": 200,
+        "padding_bottom_mobile": 130
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_TtqrjW",
+    "multicolumn_UYRQzU",
+    "rich_text_Bh37UM",
+    "multicolumn_hByyKw",
+    "rich_text_rTBygV",
+    "rich_text_6ar4X7"
+  ]
+}
