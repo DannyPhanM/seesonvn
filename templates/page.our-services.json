@@ -73,9 +73,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Services.jpg",
-            "title": "FRAME ADJUSTMENT SERVICE",
+            "title": "",
             "heading_tag": "h3",
-            "text": "<p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
+            "text": "<p><strong>FRAME ADJUSTMENT SERVICE</strong></p><p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
             "link_label": "",
             "link": ""
           }
