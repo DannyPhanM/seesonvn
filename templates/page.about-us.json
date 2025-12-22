@@ -59,7 +59,6 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
-            "image_mobile": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -134,7 +133,6 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
-            "image_mobile": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -167,6 +165,39 @@
         "padding_bottom_mobile": 60
       }
     },
+    "rich_text_YKfw9t": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LQRJmP": {
+          "type": "heading",
+          "settings": {
+            "heading": "From Product to Construct",
+            "heading_tag": "h1"
+          }
+        },
+        "text_RhkKdx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our stores are a natural extension of our design philosophy. Each space is carefully crafted to capture the essence of SEESON — where traditional Vietnamese spirit meets fresh contemporary aesthetics. More than a place to shop, the store becomes an immersive experience, allowing visitors to step into our world and feel the thought, craft, and creativity behind every design.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LQRJmP",
+        "text_RhkKdx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
     "multicolumn_hByyKw": {
       "type": "multicolumn",
       "blocks": {
@@ -189,7 +220,6 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_107.png",
-            "image_mobile": "shopify://shop_images/Rectangle_107.png",
             "title": "",
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
@@ -269,6 +299,7 @@
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
     "multicolumn_xYj9HA",
+    "rich_text_YKfw9t",
     "multicolumn_hByyKw",
     "rich_text_rTBygV",
     "rich_text_6ar4X7"
