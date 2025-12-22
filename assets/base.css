@@ -3886,6 +3886,9 @@ details-disclosure > details {
   .accordion .accordion__content {
     padding-top: 5px;
   }
+  .page-width-custom {
+    padding: 0 16px;
+  }
 }
 
 .rich-text__text {
