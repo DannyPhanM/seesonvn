@@ -3850,7 +3850,8 @@ details-disclosure > details {
 }
 .accordion .accordion__content p,
 .accordion .accordion__content span,
-.accordion .accordion__content li {
+.accordion .accordion__content li,
+.collabsible-custom__block-content p {
     color: var(--Primary-ss-grey, #999);
     leading-trim: both;
     text-edge: cap;
