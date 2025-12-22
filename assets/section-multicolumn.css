@@ -196,24 +196,6 @@
   .multicolumn.background-none .slider.slider--mobile {
     margin-bottom: 0rem;
   }
-
-  .collabsible-custom__details .collabsible-custom__blocks {
-    gap: 20px !important;
-  }
-
-  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block .collabsible-custom__block-content {
-      padding-bottom: 0;
-  }
-
-  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block + .collabsible-custom__block {
-      padding-top: 0 !important;
-  }
-  
-  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block + .collabsible-custom__block .collabsible-custom__block-content {
-      padding-bottom: 0;
-      padding-top: 0;
-  }
-
 }
   .background-none .multicolumn-list .multicolumn-card__info,
   .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {

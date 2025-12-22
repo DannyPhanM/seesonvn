@@ -237,7 +237,7 @@
           "type": "collabsible_block",
           "settings": {
             "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
-            "padding_top": 0,
+            "padding_top": 20,
             "padding_bottom": 0
           }
         },
@@ -245,7 +245,7 @@
           "type": "collabsible_block",
           "settings": {
             "content": "<p><strong>Mắt kính Tâm Đức</strong></p><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
-            "padding_top": 0,
+            "padding_top": 20,
             "padding_bottom": 0
           }
         }
@@ -256,15 +256,15 @@
       ],
       "name": "Collabsible Custom",
       "settings": {
-        "open_by_default": false,
+        "open_by_default": true,
         "title": "HO CHI MINH CITY",
         "heading_tag": "h5",
         "full_width": false,
         "color_scheme": "scheme-1",
         "padding_top": 10,
         "padding_top_mobile": 10,
-        "padding_bottom": 11,
-        "padding_bottom_mobile": 11
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_zbAic8": {
