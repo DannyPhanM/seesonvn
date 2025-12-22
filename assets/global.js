@@ -1331,11 +1331,9 @@ class CartPerformance {
   }
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const allDetails = document.querySelectorAll('.collabsible-custom__details');
 
-  // Không tồn tại thì thôi, giải tán
   if (!allDetails || allDetails.length === 0) return;
 
   function updateIcon(details) {
@@ -1354,24 +1352,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   allDetails.forEach(function (details) {
-    // phòng trường hợp markup bị lệch
     if (!details || typeof details.open === 'undefined') return;
 
     details.addEventListener('toggle', function () {
       if (details.open) {
-        // đóng các details khác
         allDetails.forEach(function (other) {
-          if (other && other !== details && other.open) {
+          if (other !== details && other.open) {
             other.open = false;
           }
         });
       }
-
-      // sync icon toàn bộ
       allDetails.forEach(updateIcon);
     });
-
-    // init lần đầu
     updateIcon(details);
   });
 });
