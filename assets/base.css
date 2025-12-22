@@ -3889,7 +3889,7 @@ details-disclosure > details {
   .page-width-custom {
     padding: 0 16px;
   }
-  .header {
+  .header-wrapper .header {
     padding: 0 16px;
   }
 }
