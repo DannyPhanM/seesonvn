@@ -3889,6 +3889,9 @@ details-disclosure > details {
   .page-width-custom {
     padding: 0 16px;
   }
+  .header {
+    padding: 0 16px;
+  }
 }
 
 .rich-text__text {
