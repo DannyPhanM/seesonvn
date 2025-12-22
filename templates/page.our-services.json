@@ -148,9 +148,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_106.png",
-            "title": "HANOI IRL FLAGSHIP",
+            "title": "",
             "heading_tag": "h3",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
@@ -162,9 +162,9 @@
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_107.png",
             "image_mobile": "shopify://shop_images/Rectangle_107.png",
-            "title": "SAIGON IRL FLAGSHIP",
+            "title": "",
             "heading_tag": "h3",
-            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
