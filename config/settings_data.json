@@ -151,8 +151,8 @@
           "text": "#000000",
           "button": "#999999",
           "button_label": "#ffffff",
-          "secondary_button_label": "#505655",
-          "shadow": "#252525"
+          "secondary_button_label": "#999999",
+          "shadow": "#999999"
         }
       },
       "scheme-2": {
