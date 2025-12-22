@@ -3892,3 +3892,7 @@ details-disclosure > details {
   color: #999;
   line-height: 120%;
 }
+
+.accordion__title.font-body {
+  font-family: var(--font-body-family);
+}
