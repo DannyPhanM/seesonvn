@@ -1330,3 +1330,22 @@ class CartPerformance {
     );
   }
 }
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.collabsible-custom__details').forEach(function(details) {
+      function updateIcon() {
+        var plus = details.querySelector('.icon-plus');
+        var minus = details.querySelector('.icon-minus');
+        if (details.open) {
+          if (plus) plus.style.display = 'none';
+          if (minus) minus.style.display = 'flex';
+        } else {
+          if (plus) plus.style.display = 'flex';
+          if (minus) minus.style.display = 'none';
+        }
+      }
+      details.addEventListener('toggle', updateIcon);
+      updateIcon();
+    });
+  });
