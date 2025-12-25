@@ -57,6 +57,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Caring for Your Frames",
+            "font_body": false,
             "icon": "none",
             "row_content": "<p><strong>Recommendations</strong></p><ul><li>Put on, remove, and open/close your glasses using both hands.</li><li>Use lens-cleaning solution and a microfiber cloth to clean your glasses.</li><li>Store your glasses in a case or leather pouch when not in use.</li><li>Avoid dropping or applying strong impact to the product—especially on structural areas such as the bridge and hinges. When cleaning, hold each lens gently and avoid twisting the bridge.</li><li>For products with metal details: Metal is sensitive to sweat, chemicals, and prolonged exposure to water. Wipe the metal parts dry with a microfiber cloth after each use.</li><li>Avoid collisions that may cause the coating to peel. Always store your glasses in the case when not in use.</li><li>Stop using the product if you experience irritation in areas where the metal touches your skin, and contact SEESON for support.</li></ul><p><strong>Advoidances</strong></p><ul><li>Putting on or removing glasses with one hand, or wearing them on top of your head (this may stretch the frame).</li><li>Using detergents or any chemical solutions (alcohol, hand sanitizer, soap) to clean the glasses.</li><li>Leaving glasses in high temperatures or under direct sunlight.</li><li>Storing glasses together with other items—especially sharp objects—without a case.</li><li>Applying force or strong impact that may deform the glasses.</li><li>Wearing ill-fitting glasses (too loose, too tight, or uneven), or adjusting them yourself.</li><li>If your glasses become loose, stretched, or misaligned, please bring them to the SEESON IRL FLAGSHIP stores for professional adjustment and support.</li></ul>",
             "page": ""
@@ -66,8 +67,9 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Lenses maintenance",
+            "font_body": false,
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>input data</p>",
             "page": ""
           }
         }
