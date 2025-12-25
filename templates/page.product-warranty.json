@@ -90,7 +90,7 @@
         "collapsible_row_PRnaRQ"
       ],
       "custom_css": [
-        "@media (max-width: 767px) {li {font-size: 16px; line-height: 1.6; padding: 6px 0 6px 20px; }}"
+        "@media (max-width: 767px) {li {font-size: 12px; line-height: 120%; padding: 6px 0 6px 20px; }}"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
