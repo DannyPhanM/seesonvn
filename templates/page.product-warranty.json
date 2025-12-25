@@ -90,7 +90,8 @@
         "collapsible_row_PRnaRQ"
       ],
       "custom_css": [
-        "@media (max-width: 767px) {li {font-size: 12px; } strong {font-size: 12px; }}"
+        "@media (max-width: 767px) {li {font-size: 12px; } strong {font-size: 12px; }}",
+        ".accordion__title.inline-richtext.h4 {letter-spacing: 0em; text-transform: uppercase; /* nếu đang dùng uppercase */}"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
