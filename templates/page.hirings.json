@@ -89,6 +89,9 @@
         "collapsible_row_dDEBmt",
         "collapsible_row_PRnaRQ"
       ],
+      "custom_css": [
+        "@media (max-width: 767px) {li {font-size: 12px; }}"
+      ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
