@@ -90,8 +90,8 @@
         "collapsible_row_PRnaRQ"
       ],
       "custom_css": [
-        "@media (max-width: 767px) {li {font-size: 12px; } strong {font-size: 12px; }}",
-        "h3 {letter-spacing: 0px; text-transform: uppercase; }"
+        "@media (max-width: 767px) {li {font-size: 12px; }.strong {font-size: 12px; }}",
+        "h3 {letter-spacing: -1px; text-transform: uppercase;}"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
