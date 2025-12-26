@@ -3892,6 +3892,11 @@ details-disclosure > details {
   .header-wrapper .header {
     padding: 0 16px;
   }
+  .accordion .accordion__content p,
+  .accordion .accordion__content span,
+  .accordion .accordion__content li{ 
+    font-size: 12px;
+  }
 }
 
 .rich-text__text {
