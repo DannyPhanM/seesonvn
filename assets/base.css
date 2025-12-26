@@ -3897,6 +3897,10 @@ details-disclosure > details {
   .accordion .accordion__content li{ 
     font-size: 12px;
   }
+  .collapsible-content__wrapper .page-width-custom{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .rich-text__text {
