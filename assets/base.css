@@ -3911,3 +3911,7 @@ details-disclosure > details {
 .accordion__title.font-body {
   font-family: var(--font-body-family);
 }
+
+.content-for-layout {
+  min-height: 70vh;
+}
