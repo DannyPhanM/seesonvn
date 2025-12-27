@@ -68,9 +68,128 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "athletes_slideshow_hEgzBA": {
+      "type": "athletes-slideshow",
+      "blocks": {
+        "athlete_qgtbQh": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_e4cNz9": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_pdQfkz": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_CgXKCJ": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_8EzWFj": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_p3y4BP": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_jHpfU4": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_Era8mT": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_hTw3GN": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_hT9JMU": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_CtBtin": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_TH4Kcw": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_aXQ9fX": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_6EzmW8": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_qU8FPV": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_HPNfC6": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_6Badnd": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_tPRgXt": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_y3RNwr": {
+          "type": "athlete",
+          "settings": {}
+        },
+        "athlete_cHr8Uj": {
+          "type": "athlete",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "athlete_qgtbQh",
+        "athlete_e4cNz9",
+        "athlete_pdQfkz",
+        "athlete_CgXKCJ",
+        "athlete_8EzWFj",
+        "athlete_p3y4BP",
+        "athlete_jHpfU4",
+        "athlete_Era8mT",
+        "athlete_hTw3GN",
+        "athlete_hT9JMU",
+        "athlete_CtBtin",
+        "athlete_TH4Kcw",
+        "athlete_aXQ9fX",
+        "athlete_6EzmW8",
+        "athlete_qU8FPV",
+        "athlete_HPNfC6",
+        "athlete_6Badnd",
+        "athlete_tPRgXt",
+        "athlete_y3RNwr",
+        "athlete_cHr8Uj"
+      ],
+      "disabled": true,
+      "name": "Athletes Slideshow",
+      "settings": {
+        "heading": "THE ATHLETES COLLECTION",
+        "description": "<p>The spirit of sports isn't just for professional athletes — it lives in every moment of effort.</p>",
+        "button_label": "DISCOVER THE STORY",
+        "button_link": "",
+        "background_color": "#f2f2f2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "slideshow_6w4AVd"
+    "slideshow_6w4AVd",
+    "athletes_slideshow_hEgzBA"
   ]
 }

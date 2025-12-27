@@ -93,6 +93,11 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
+          <div class="wish-list">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
+              <path d="M3.45 0C2.475 0 1.65 0.33 0.99 0.99C0.33 1.65 0 2.475 0 3.45V27L10.5 22.245L21 27V3.45C21 2.475 20.67 1.65 20.01 0.99C19.35 0.33 18.525 0 17.55 0L3.45 0ZM3 3H17.55C17.55 3 17.715 3.015 17.835 3.15C17.97 3.285 17.985 3.375 17.985 3.45V22.395L10.485 18.915L2.985 22.395V3H3Z" fill="black"/>
+            </svg>
+          </div>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
@@ -110,6 +115,12 @@
         >
           {{ 'products.product.sold_out' | t }}
         </button>
+
+        <div class="wish-list">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
+            <path d="M3.45 0C2.475 0 1.65 0.33 0.99 0.99C0.33 1.65 0 2.475 0 3.45V27L10.5 22.245L21 27V3.45C21 2.475 20.67 1.65 20.01 0.99C19.35 0.33 18.525 0 17.55 0L3.45 0ZM3 3H17.55C17.55 3 17.715 3.015 17.835 3.15C17.97 3.285 17.985 3.375 17.985 3.45V22.395L10.485 18.915L2.985 22.395V3H3Z" fill="black"/>
+          </svg>
+        </div>
       </div>
     </div>
   {%- endif -%}

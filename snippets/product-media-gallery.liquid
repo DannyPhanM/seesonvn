@@ -42,6 +42,54 @@
   endif
 -%}
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<style>
+  /* Ép Swiper Container */
+  .slider-mobile-gutter.swiper {
+    overflow: hidden !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    touch-action: pan-y; /* Cho phép cuộn trang theo chiều dọc nhưng vuốt ngang cho slider */
+  }
+  
+  /* Cấu trúc Swiper Wrapper */
+  .product__media-list.swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    scroll-snap-type: none !important;
+    column-gap: 0 !important;
+  }
+
+  /* Từng Slide */
+  .product__media-item.swiper-slide {
+    width: 100% !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    scroll-snap-align: none !important;
+  }
+
+  .product__media-item img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  /* Ẩn counter và button mặc định của Dawn nếu cần (Swiper sẽ tự lo hoặc dùng qua class) */
+  .slider-buttons {
+    z-index: 2;
+  }
+</style>
+
 <media-gallery
   id="MediaGallery-{{ section.id }}"
   role="region"
@@ -52,20 +100,20 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
+  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter swiper">
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
     <ul
       id="Slider-Gallery-{{ section.id }}"
-      class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
+      class="product__media-list swiper-wrapper list-unstyled"
       role="list"
     >
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
           id="Slide-{{ section.id }}-{{ featured_media.id }}"
-          class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="product__media-item swiper-slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}"
           data-media-id="{{ section.id }}-{{ featured_media.id }}"
         >
           {%- assign media_position = 1 -%}
@@ -97,7 +145,7 @@
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <li
             id="Slide-{{ section.id }}-{{ media.id }}"
-            class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == nil and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+            class="product__media-item swiper-slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == nil and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}"
             data-media-id="{{ section.id }}-{{ media.id }}"
           >
             {%- liquid
@@ -330,3 +378,57 @@
     </slider-component>
   {%- endif -%}
 </media-gallery>
+
+<script>
+  function initProductSwiper() {
+    const swiperContainer = document.querySelector('#GalleryViewer-{{ section.id }}');
+    if (!swiperContainer || swiperContainer.classList.contains('swiper-initialized')) return;
+
+    const mainSwiper = new Swiper(swiperContainer, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: false, // Tắt loop theo yêu cầu
+      grabCursor: true,
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      touchEventsTarget: 'container',
+      resistance: true,
+      resistanceRatio: 0,
+      navigation: {
+        nextEl: swiperContainer.querySelector('.slider-button--next'),
+        prevEl: swiperContainer.querySelector('.slider-button--prev'),
+      },
+      on: {
+        slideChange: function () {
+          const event = new CustomEvent('slideChanged', {
+            detail: {
+              currentElement: this.slides[this.activeIndex],
+              currentPage: this.activeIndex + 1
+            }
+          });
+          swiperContainer.dispatchEvent(event);
+        }
+      }
+    });
+
+    const mediaGallery = document.querySelector('media-gallery#MediaGallery-{{ section.id }}');
+    if (mediaGallery) {
+      customElements.whenDefined('media-gallery').then(() => {
+        const originalSetActiveMedia = mediaGallery.setActiveMedia.bind(mediaGallery);
+        mediaGallery.setActiveMedia = function(mediaId, prepend) {
+          originalSetActiveMedia(mediaId, prepend);
+          const targetSlide = this.querySelector(`[data-media-id="${mediaId}"]`);
+          if (targetSlide && mainSwiper) {
+            const index = Array.from(targetSlide.parentElement.children).indexOf(targetSlide);
+            if (index !== -1) mainSwiper.slideTo(index);
+          }
+        };
+      });
+    }
+  }
+
+  // Khởi tạo sau một khoảng thời gian ngắn để đảm bảo DOM đã render xong chiều rộng
+  setTimeout(initProductSwiper, 100);
+  document.addEventListener('shopify:section:load', () => setTimeout(initProductSwiper, 100));
+</script>

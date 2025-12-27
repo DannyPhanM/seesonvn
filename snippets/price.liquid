@@ -107,6 +107,11 @@
         <span class="price-item price-item--sale price-item--last">
           {{ money_price }}
         </span>
+        {%- if compare_at_price > price -%}
+          <span class="badge sale-percentage">
+            -{{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round }}%
+          </span>
+        {%- endif -%}
       </div>
       {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
         {% render 'unit-price', price: product.selected_or_first_available_variant.unit_price, measurement: product.selected_or_first_available_variant.unit_price_measurement %}
@@ -114,7 +119,7 @@
     </div>
     {%- if show_badges -%}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
+        -{{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round }}%
       </span>
 
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
