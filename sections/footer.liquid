@@ -25,6 +25,11 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  @media(max-width: 749px) {
+    .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom {
+      gap: {{ section.settings.column_gap_mobile }}px;
+    }
+  }
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -475,6 +480,16 @@
     }
   ],
   "settings": [
+    {
+      "type": "range",
+      "id": "column_gap_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Column gap mobile",
+      "default": 20
+    },
     {
       "type": "link_list",
       "id": "menu_custom",

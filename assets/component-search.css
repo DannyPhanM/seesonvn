@@ -119,6 +119,8 @@ input::-webkit-search-decoration {
     font-weight: 400;
     line-height: 120%;
     letter-spacing: -2.5px;
+    margin-bottom: 46px;
+    margin-top: 30px;
 }
 .search-modal.modal__content .promo_collection a {
     color: #999;
@@ -178,6 +180,10 @@ input::-webkit-search-decoration {
     padding: 0;
     text-decoration: none ;
 }
+.search-modal.modal__content .search-modal__content .predictive-search__results-list li a img {
+  display: block;
+  margin: 0 auto;
+}
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li .predictive-search__item-heading {
     overflow: hidden;
     display: -webkit-box;
@@ -195,6 +201,7 @@ input::-webkit-search-decoration {
     letter-spacing: 0.24px;
     text-transform: capitalize;
     text-decoration: none !important;
+    font-family: var(--font-body-family);
 }
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li .predictive-search__item-price {
     display: none;
@@ -234,7 +241,7 @@ input::-webkit-search-decoration {
   .search-modal.modal__content {
     height: 100dvh;
     flex-wrap: wrap;
-    gap: 60px !important;
+    gap: 0px !important;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -251,12 +258,23 @@ input::-webkit-search-decoration {
   }
   .search-modal.modal__content .search-modal__content .predictive-search__results-list {
       overflow-x: auto;
+      padding-bottom: 20px;
   }
   .search-modal.modal__content .search-modal__content {
       height: auto;
       width: 100%;
       padding: 0;
   }
+
+  .search-modal.modal__content .search-modal__content .predictive_search_open h2,
+  .search-modal.modal__content .search-modal__content .search__input,
+  .search-modal.modal__content .search-modal__content .search__input::placeholder,
+  .search-modal.modal__content .search-modal__content .field__label {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  
 
   .search-modal.modal__content .promo_collection a {
     color: #999;
@@ -311,16 +329,12 @@ input::-webkit-search-decoration {
     }
 }
 
-@media(max-width: 750px) {
-  .page-width-custom,
-  .header-wrapper .header {
-      padding-top: 18px;
-      padding-bottom: 18px;
-      background: #eee;
+@media(max-width: 989px) {
+  .section-header.menu-open .header-wrapper .header,
+    body.open-search .section-header .header-wrapper .header {
+    background: #eee;
   }
-  .header__heading-logo-wrapper {
-      width: 90px;
-  }
+
   .menu-drawer {
       background: #EEE;
   }

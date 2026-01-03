@@ -24,6 +24,7 @@
 
   .template--index .shopify-section-group-header-group {
     height: 0;
+    z-index: 9999999;
   }
   .template--index .shopify-section-group-header-group .header-wrapper {
       background: transparent;
@@ -48,8 +49,14 @@
     }
   }
 
-  
-
+  .header__heading-logo-wrapper {
+      width: {{ section.settings.logo_size_desktop }}px;
+    }
+  @media(max-width: 989px) {
+    .header__heading-logo-wrapper {
+      width: {{ section.settings.logo_size }}px;
+    }
+  }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
@@ -550,6 +557,12 @@
       "info": "t:sections.header.settings.logo_help.content"
     },
     {
+      "type": "number",
+      "id": "logo_size_desktop",
+      "default": 160,
+      "label": "Logo size on desktop"
+    },
+    {
       "type": "select",
       "id": "mobile_logo_position",
       "options": [
@@ -564,6 +577,12 @@
       ],
       "default": "center",
       "label": "t:sections.header.settings.mobile_logo_position.label"
+    },
+    {
+      "type": "number",
+      "id": "logo_size",
+      "default": 90,
+      "label": "Logo size on mobile"
     },
     {
       "type": "link_list",

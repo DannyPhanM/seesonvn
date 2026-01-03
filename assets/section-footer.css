@@ -42,7 +42,7 @@
 
 .footer__content-bottom {
   border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 16px;
+  
 }
 
 .footer__content-bottom:only-child {
@@ -589,7 +589,7 @@ footer * {
   .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom {
       flex-grow: 2;
       display: flex;
-      gap: 20px;
+      
   }
   .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom .footer-block__details-content {
       flex-direction: column;
