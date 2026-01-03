@@ -104,10 +104,126 @@
         "padding_top": 36,
         "padding_bottom": 68
       }
+    },
+    "rich_text_Ap8tpF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mJdU4n": {
+          "type": "heading",
+          "settings": {
+            "heading": "ESSENTIAL spaces",
+            "heading_tag": "h1"
+          }
+        },
+        "text_9GprWX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Visit our store to discover the craftsmanship behind every frame. From the subtle weight of acetate to the balance of titanium, each detail is meant to be felt. See the full collection in person and experience eyewear the way it was meant to be tactile, personal, and precise.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mJdU4n",
+        "text_9GprWX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_DtdLjG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gJnUrC": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Rectangle_106.png",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Pp7ady": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Rectangle_107.png",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_gJnUrC",
+        "column_Pp7ady"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "remove_space_x": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_BqQawY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_hUdhDm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_hUdhDm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 50
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "rich_text_Ap8tpF",
+    "multicolumn_DtdLjG",
+    "rich_text_BqQawY"
   ]
 }
