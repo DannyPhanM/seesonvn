@@ -11,125 +11,77 @@
   "sections": {
     "main-collection-banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
     },
+    "slideshow_y6xnXG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_GBBXDE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
+            "mobile_image": "shopify://shop_images/Carosel.png",
+            "image_overlay_opacity": 0,
+            "heading": "{{ collection.title }}",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GBBXDE"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "main-collection-product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 24,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
-        "image_ratio": "portrait",
+        "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "padding_top": 20,
-        "padding_bottom": 68
-      }
-    },
-    "rich_text_HxQAXU": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_VzTcim": {
-          "type": "heading",
-          "settings": {
-            "heading": "ESSENTIAL spaces",
-            "heading_tag": "h1"
-          }
-        },
-        "text_H3mx44": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Visit our store to discover the craftsmanship behind every frame. From the subtle weight of acetate to the balance of titanium, each detail is meant to be felt. See the full collection in person and experience eyewear the way it was meant to be tactile, personal, and precise.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_VzTcim",
-        "text_H3mx44"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 60,
-        "padding_bottom_mobile": 20
-      }
-    },
-    "multicolumn_GFNqgx": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_dQVqBU": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_106.png",
-            "title": "",
-            "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ejtV4T": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_107.png",
-            "title": "",
-            "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_dQVqBU",
-        "column_ejtV4T"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "remove_space_x": false,
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 120,
-        "padding_bottom_mobile": 50
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "main-collection-banner",
-    "main-collection-product-grid",
-    "rich_text_HxQAXU",
-    "multicolumn_GFNqgx"
+    "slideshow_y6xnXG",
+    "main-collection-product-grid"
   ]
 }
