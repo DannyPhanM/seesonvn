@@ -92,7 +92,7 @@
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
-        "products_to_show": 4,
+        "products_to_show": 8,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
@@ -101,8 +101,33 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 68
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_BqQawY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_hUdhDm": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://www.seeson.vn/collections/all\" title=\"https://www.seeson.vn/collections/all\">BACK TO SHOP</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_hUdhDm"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 50
       }
     },
     "rich_text_Ap8tpF": {
@@ -193,10 +218,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "rich_text_BqQawY": {
+    "rich_text_MGN6ne": {
       "type": "rich-text",
       "blocks": {
-        "text_hUdhDm": {
+        "text_DqQyTC": {
           "type": "text",
           "settings": {
             "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
@@ -204,7 +229,7 @@
         }
       },
       "block_order": [
-        "text_hUdhDm"
+        "text_DqQyTC"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -222,8 +247,9 @@
   "order": [
     "main",
     "related-products",
+    "rich_text_BqQawY",
     "rich_text_Ap8tpF",
     "multicolumn_DtdLjG",
-    "rich_text_BqQawY"
+    "rich_text_MGN6ne"
   ]
 }
