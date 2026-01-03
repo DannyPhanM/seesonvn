@@ -30,6 +30,12 @@
       background: transparent;
   }
 
+  {% if section.settings.collection_transparent %}
+    .template--collection .shopify-section-group-header-group .header-wrapper {
+        background: transparent;
+    }
+  {% endif %}
+
   @media(min-width: 750px) {
     .template--index .shopify-section-group-header-group .header-wrapper .header__icon {
       color: #fff;
@@ -531,6 +537,12 @@
   "class": "section-header",
   "max_blocks": 3,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "collection_transparent",
+      "label": "Enable Collection Transparent",
+      "default": false
+    },
     {
       "type": "select",
       "id": "logo_position",

@@ -24,8 +24,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile}}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile}}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -183,7 +183,52 @@
             </ul>
 
             {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
+              {% if section.settings.pagination_type == 'load_more' %}
+                {% if paginate.next %}
+                  <div class="load-more-container center">
+                    <a href="{{ paginate.next.url }}" class="button load-more-button" id="load-more-button">
+                      {{ 'sections.collection_template.load_more' | t | default: 'Load More' }}
+                    </a>
+                  </div>
+                  <script>
+                    document.getElementById('load-more-button')?.addEventListener('click', function(e) {
+                      e.preventDefault();
+                      const button = this;
+                      const originalText = button.textContent;
+                      button.textContent = 'Loading...';
+                      button.classList.add('loading');
+                      
+                      fetch(button.href)
+                        .then(response => response.text())
+                        .then(html => {
+                          const parser = new DOMParser();
+                          const doc = parser.parseFromString(html, 'text/html');
+                          const newProducts = doc.getElementById('product-grid').innerHTML;
+                          document.getElementById('product-grid').insertAdjacentHTML('beforeend', newProducts);
+                          
+                          const nextButton = doc.getElementById('load-more-button');
+                          if (nextButton) {
+                            button.href = nextButton.href;
+                            button.textContent = originalText;
+                            button.classList.remove('loading');
+                          } else {
+                            button.parentElement.remove();
+                          }
+                          
+                          // Re-render quickly if necessary (e.g. for lazy load or animations)
+                           window.dispatchEvent(new CustomEvent('scroll'));
+                        })
+                        .catch(err => {
+                          console.error(err);
+                          button.textContent = originalText;
+                          button.classList.remove('loading');
+                        });
+                    });
+                  </script>
+                {% endif %}
+              {% else %}
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              {% endif %}
             {%- endif -%}
           </div>
         {%- endif -%}
@@ -208,6 +253,22 @@
       "step": 4,
       "default": 16,
       "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "select",
+      "id": "pagination_type",
+      "label": "Pagination style",
+      "default": "paged",
+      "options": [
+        {
+          "value": "paged",
+          "label": "Numbered"
+        },
+        {
+          "value": "load_more",
+          "label": "Load more"
+        }
+      ]
     },
     {
       "type": "range",
@@ -389,7 +450,7 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
@@ -399,7 +460,31 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "padding mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",

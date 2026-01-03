@@ -97,3 +97,17 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.load-more-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.load-more-button {
+  min-width: 20rem;
+}
+
+.load-more-button.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

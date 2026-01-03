@@ -347,7 +347,8 @@
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>",
+      "load_more": "Load More"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
