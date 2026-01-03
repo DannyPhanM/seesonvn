@@ -175,7 +175,6 @@
         "athlete_y3RNwr",
         "athlete_cHr8Uj"
       ],
-      "disabled": true,
       "name": "Athletes Slideshow",
       "settings": {
         "heading": "THE ATHLETES COLLECTION",
@@ -187,17 +186,71 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection_6Q8xjz": {
+      "type": "featured-collection",
+      "name": "ESSENTIAL STYLES",
+      "settings": {
+        "collection": "the-assembled-sunglasses",
+        "products_to_show": 8,
+        "title": "ESSENTIAL STYLES",
+        "heading_size": "h1",
+        "description": "<p>From essential shapes to statement pieces, these are the frames chosen by those who value design and distinction. Thoughtfully made to complement every face, every moment, and every style.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    },
     "rich_text_i7AqVh": {
       "type": "rich-text",
       "blocks": {
-        "heading_bKtdhr": {
+        "text_PWQdMz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every frame is crafted with balance, comfort, and timeless design.  Find the one that fits your world.<br/><br/><a href=\"https://www.seeson.vn/collections/all\" title=\"https://www.seeson.vn/collections/all\">SHOP ALL DESIGN</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_PWQdMz"
+      ],
+      "name": "Featured Collection Button",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "rich_text_xj9AQe": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cDzbMc": {
           "type": "heading",
           "settings": {
             "heading": "ESSENTIAL spaces",
             "heading_tag": "h1"
           }
         },
-        "text_PWQdMz": {
+        "text_mMRXhW": {
           "type": "text",
           "settings": {
             "text": "<p>Visit our store to discover the craftsmanship behind every frame. From the subtle weight of acetate to the balance of titanium, each detail is meant to be felt. See the full collection in person and experience eyewear the way it was meant to be tactile, personal, and precise.</p>"
@@ -205,8 +258,8 @@
         }
       },
       "block_order": [
-        "heading_bKtdhr",
-        "text_PWQdMz"
+        "heading_cDzbMc",
+        "text_mMRXhW"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -279,7 +332,9 @@
   "order": [
     "slideshow_6w4AVd",
     "athletes_slideshow_hEgzBA",
+    "featured_collection_6Q8xjz",
     "rich_text_i7AqVh",
+    "rich_text_xj9AQe",
     "multicolumn_q4jJiQ"
   ]
 }
