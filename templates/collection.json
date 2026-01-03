@@ -62,6 +62,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 24,
+        "pagination_type": "load_more",
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
@@ -75,7 +76,9 @@
         "filter_type": "drawer",
         "enable_sorting": true,
         "padding_top": 20,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     }
   },
