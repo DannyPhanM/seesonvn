@@ -4171,8 +4171,8 @@ details-disclosure>details {
       height: 18px;
   }
   .header__icon .svg-wrapper svg {
-      width: 13px;
-      height: 13px;
+      width: 15px;
+      height: 15px;
   }
   .cart-count-bubble {
       left: 13px;
@@ -4250,4 +4250,8 @@ details-disclosure>details {
     .header__icons {
         gap: 16px;
     }
+}
+.header__icon.header__icon--account .svg-wrapper svg {
+    width: 14px;
+    height: 14px;
 }
