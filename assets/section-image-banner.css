@@ -527,7 +527,7 @@
 }
 @media (max-width: 749px) {
   .slideshow__text.banner__box.flex-column .banner__heading {
-    color: var(--Primary-ss-black, #000);
+    color: #fff;
     leading-trim: both;
     text-edge: cap;
     font-family: Seesans;
@@ -541,7 +541,7 @@
     margin-top: 20px;
   }
   .slideshow__text.banner__box.flex-column .banner__text * {
-    color: var(--Primary-ss-grey, #999);
+    color: #fff;
     leading-trim: both;
     text-edge: cap;
     font-family: Afacad;
