@@ -105,9 +105,17 @@
 
 .load-more-button {
   min-width: 20rem;
+  color: #999;
+  font-size: 20px;
 }
 
 .load-more-button.loading {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media(max-width: 749px) {
+  .load-more-button {
+    font-size: 10px;
+  }
 }

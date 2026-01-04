@@ -186,7 +186,7 @@
               {% if section.settings.pagination_type == 'load_more' %}
                 {% if paginate.next %}
                   <div class="load-more-container center">
-                    <a href="{{ paginate.next.url }}" class="button load-more-button" id="load-more-button">
+                    <a href="{{ paginate.next.url }}" class="load-more-button" id="load-more-button">
                       {{ 'sections.collection_template.load_more' | t | default: 'Load More' }}
                     </a>
                   </div>
