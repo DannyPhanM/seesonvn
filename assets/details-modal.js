@@ -29,8 +29,10 @@ class DetailsModal extends HTMLElement {
     event.target.closest('details').setAttribute('open', true);
     document.body.addEventListener('click', this.onBodyClickEvent);
     document.body.classList.add('overflow-hidden');
+    document.documentElement.classList.add('overflow-hidden');
     if (this.classList.contains('header__search')) {
       document.body.classList.add('open-search');
+      document.documentElement.classList.add('open-search');
     }
 
     trapFocus(
@@ -44,7 +46,9 @@ class DetailsModal extends HTMLElement {
     this.detailsContainer.removeAttribute('open');
     document.body.removeEventListener('click', this.onBodyClickEvent);
     document.body.classList.remove('overflow-hidden');
+    document.documentElement.classList.remove('overflow-hidden');
     document.body.classList.remove('open-search');
+    document.documentElement.classList.remove('open-search');
 
     const predictiveSearch = this.querySelector('predictive-search');
     if (predictiveSearch && predictiveSearch.close) {

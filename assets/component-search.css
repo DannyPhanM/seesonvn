@@ -389,6 +389,7 @@ input::-webkit-search-decoration {
   letter-spacing: 0.24px;
 }
 
+html.open-search,
 body.open-search {
   height: 100dvh;
   overflow: hidden;
