@@ -25,6 +25,7 @@
         "link_list_custom_DrQKeE"
       ],
       "settings": {
+        "column_gap_mobile": 60,
         "menu_custom": "footer-new",
         "color_scheme": "scheme-1",
         "newsletter_enable": false,
