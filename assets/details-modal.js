@@ -45,6 +45,11 @@ class DetailsModal extends HTMLElement {
     document.body.removeEventListener('click', this.onBodyClickEvent);
     document.body.classList.remove('overflow-hidden');
     document.body.classList.remove('open-search');
+
+    const predictiveSearch = this.querySelector('predictive-search');
+    if (predictiveSearch && predictiveSearch.close) {
+      predictiveSearch.close();
+    }
   }
 }
 
