@@ -374,7 +374,7 @@ input::-webkit-search-decoration {
 }
 .predictive-search__clear-button {
   position: absolute;
-  top: 3px;
+  top: 0;
   right: 0;
   padding: 0;
   color: var(--Primary-ss-grey, #999);
