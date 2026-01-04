@@ -341,7 +341,7 @@
       "title": "Bộ sưu tập",
       "empty": "Không tìm thấy sản phẩm",
       "use_fewer_filters_html": "Sử dụng ít bộ lọc hơn hoặc <a class=\"{{ class }}\" href=\"{{ link }}\">xóa tất cả</a>",
-      "load_more": "Xem thêm"
+      "load_more": "Khám phá thêm sản phẩm"
     },
     "video": {
       "load_video": "Tải video: {{ description }}"
