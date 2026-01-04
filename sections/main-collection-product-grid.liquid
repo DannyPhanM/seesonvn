@@ -186,17 +186,23 @@
               {% if section.settings.pagination_type == 'load_more' %}
                 {% if paginate.next %}
                   <div class="load-more-container center">
+                    {%- assign current_shown = paginate.current_offset | plus: collection.products.size -%}
                     <a href="{{ paginate.next.url }}" class="load-more-button" id="load-more-button">
                       {{ 'sections.collection_template.load_more' | t | default: 'Load More' }}
+                      <span class="load-more-count">({{ current_shown }}/{{ collection.products_count }})</span>
                     </a>
                   </div>
                   <script>
                     document.getElementById('load-more-button')?.addEventListener('click', function(e) {
                       e.preventDefault();
                       const button = this;
-                      const originalText = button.textContent;
-                      button.textContent = 'Loading...';
+                      const countSpan = button.querySelector('.load-more-count');
+                      const originalCountText = countSpan ? countSpan.textContent : '';
+                      const originalButtonText = button.childNodes[0].textContent.trim();
+                      
                       button.classList.add('loading');
+                      const loadingText = 'Loading...';
+                      button.childNodes[0].textContent = loadingText + ' ';
                       
                       fetch(button.href)
                         .then(response => response.text())
@@ -209,8 +215,8 @@
                           const nextButton = doc.getElementById('load-more-button');
                           if (nextButton) {
                             button.href = nextButton.href;
-                            button.textContent = originalText;
                             button.classList.remove('loading');
+                            button.innerHTML = nextButton.innerHTML;
                           } else {
                             button.parentElement.remove();
                           }
@@ -220,8 +226,8 @@
                         })
                         .catch(err => {
                           console.error(err);
-                          button.textContent = originalText;
                           button.classList.remove('loading');
+                          button.childNodes[0].textContent = originalButtonText + ' ';
                         });
                     });
                   </script>
