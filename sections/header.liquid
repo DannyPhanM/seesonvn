@@ -31,8 +31,26 @@
   }
 
   {% if section.settings.collection_transparent %}
+      .template--collection  .shopify-section-group-header-group {
+    height: 0;
+    z-index: 9999999;
+  }
     .template--collection .shopify-section-group-header-group .header-wrapper {
         background: transparent;
+    }
+
+       .template--collection .shopify-section-group-header-group .header__heading-logo-wrapper .hidden {
+        display: block !important;
+    }
+    .template--collection .shopify-section-group-header-group .header__heading-logo-wrapper .hidden img {
+        display: block !important;
+    }
+         .template--collection .shopify-section-group-header-group .header-wrapper .header__icon {
+      color: #fff;
+    }
+     .template--collection .shopify-section-group-header-group .header__inline-menu .list-menu--inline > li > .header__menu-item:not(.gradient),
+     .template--collection .shopify-section-group-header-group .header__inline-menu .list-menu--inline > li  summary.header__menu-item{
+      color: #fff;
     }
   {% endif %}
 
