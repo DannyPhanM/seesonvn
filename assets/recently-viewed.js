@@ -25,9 +25,23 @@ function addRecentlyViewedProduct(productHandle) {
   setRecentlyViewedProducts(handles);
 }
 
+function clearRecentlyViewedProducts() {
+  document.cookie = `${RECENTLY_VIEWED_KEY}=; path=/; max-age=0`;
+  const lists = document.querySelectorAll('#predictive-search-recently-viewed-list');
+  
+  if (lists.length) {
+    lists.forEach(list => list.innerHTML = '');
+  }
+  
+  if (window.updateRecentlyViewedEmptyText) {
+    window.updateRecentlyViewedEmptyText();
+  }
+}
+
 // Usage: Call addRecentlyViewedProduct(productHandle) on product page view
 window.addRecentlyViewedProduct = addRecentlyViewedProduct;
 window.getRecentlyViewedProducts = getRecentlyViewedProducts;
+window.clearRecentlyViewedProducts = clearRecentlyViewedProducts;
 
 // Debug: Log recently viewed product handles on every page load
 
@@ -38,11 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var emptyText = document.getElementById('predictive-search-recently-viewed-empty');
   var list = document.getElementById('predictive-search-recently-viewed-list');
   function updateRecentlyViewedEmptyText() {
-    if (!emptyText || !list) return;
-    if (list.children.length === 0) {
-      emptyText.style.display = 'flex';
-    } else {
-      emptyText.style.display = 'none';
+    if (!list) return;
+    const hasItems = list.children.length > 0;
+    if (emptyText) {
+      emptyText.style.display = hasItems ? 'none' : 'flex';
+    }
+    const clearButtons = document.querySelectorAll('.predictive-search__clear-button');
+    clearButtons.forEach(btn => {
+      btn.style.display = hasItems ? 'inline-block' : 'none';
+    });
+
+    // Hide group if no items and it's inside predictive-search
+    const group = list.closest('#predictive-search-recently-viewed-group');
+    if (group && !hasItems && document.querySelector('predictive-search')) {
+      group.style.display = 'none';
     }
   }
   window.updateRecentlyViewedEmptyText = updateRecentlyViewedEmptyText;

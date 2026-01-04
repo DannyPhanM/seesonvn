@@ -115,6 +115,7 @@
   },
     "predictive_search": {
     "recently_viewed": {
+      "header": "Recently viewed products",
       "title": "We’ll help you find the right look, just start typing."
     }
   },

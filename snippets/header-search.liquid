@@ -100,9 +100,13 @@
                     <div class="main-box">
                       <div class=""text-box></div>
                       <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="display:none">
-                          <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
-                            Sản phẩm đã xem gần đây
-                          </h2>
+                          <div class="predictive-search__heading-wrapper">
+                            <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                              {{ 'predictive_search.recently_viewed.header' | t }}
+                            </h2>
+                            <button class="predictive-search__clear-button link link--text" type="button" onclick="clearRecentlyViewedProducts()">{{ 'products.facets.clear' | t }}</button>
+                          </div>
+                          
                           <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
                             <!-- Recently viewed products will be rendered here by JS -->
                           </ul>
@@ -118,9 +122,12 @@
         <div class="predictive_search_open">
           <div class="main-box">
             <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="">
-                <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
-                  Sản phẩm đã xem gần đây
-                </h2>
+                <div class="predictive-search__heading-wrapper">
+                  <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                    {{ 'predictive_search.recently_viewed.header' | t }}
+                  </h2>
+                  <button class="predictive-search__clear-button link link--text" type="button" onclick="clearRecentlyViewedProducts()">{{ 'products.facets.clear' | t }}</button>
+                </div>
                 <p id="predictive-search-recently-viewed-empty" style="display: flex;justify-content: center;align-items: center;min-height: 150px;">{{ 'predictive_search.recently_viewed.title' | t }}</p>
                 <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
                   
