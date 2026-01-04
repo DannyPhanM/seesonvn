@@ -2570,7 +2570,7 @@ input[type='checkbox'] {
 
   .header--middle-left .header__heading-link,
   .header--top-left .header__heading-link {
-    margin-left: -0.75rem;
+    /* margin-left: -0.75rem; */
   }
 
   .header__heading,
