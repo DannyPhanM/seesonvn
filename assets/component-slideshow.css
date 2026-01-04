@@ -204,6 +204,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .slideshow__text.banner__box {
     padding: 0;
