@@ -1683,6 +1683,7 @@ a.product__text {
   width: calc(100% - 35px);
   padding-left: 5px;
   padding-right: 5px;
+  background-color: #000;
 }
 
 .template--product .product__info-wrapper .product-form__buttons .product-form__submit span {

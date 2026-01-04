@@ -290,7 +290,7 @@
       }
     },
     "cart": {
-      "title": "Giỏ hàng của bạn",
+      "title": "Giỏ hàng",
       "caption": "Các mặt hàng trong giỏ hàng",
       "remove_title": "Xóa {{ title }}",
       "note": "Hướng dẫn đặc biệt của đơn hàng",

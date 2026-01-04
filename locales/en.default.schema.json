@@ -331,6 +331,9 @@
           },
           "notification": {
             "label": "Popup notification"
+          },
+          "drawer_notification": {
+            "label": "Drawer & Notification"
           }
         },
         "show_vendor": {

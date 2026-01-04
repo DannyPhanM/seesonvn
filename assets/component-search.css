@@ -236,7 +236,9 @@ input::-webkit-search-decoration {
     position: absolute;
     right: 60px;
 }
-
+.search-modal.modal__content .promo_collection .sub-title p {
+  margin-top: 0;
+}
 @media(max-width: 749px) {
   .search-modal.modal__content {
     height: 100dvh;
@@ -245,6 +247,9 @@ input::-webkit-search-decoration {
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+  }
+  .search-modal.modal__content .promo_collection .sub-title {
+    font-size: 12px;
   }
   .search-modal.modal__content .promo_collection {
       width: 100%;
@@ -274,8 +279,6 @@ input::-webkit-search-decoration {
     line-height: 15px;
   }
 
-  
-
   .search-modal.modal__content .promo_collection a {
     color: #999;
     leading-trim: both;
@@ -293,6 +296,10 @@ input::-webkit-search-decoration {
   }
 
   .search-modal.modal__content .promo_collection .title h2 {
+    margin: 0;
+  }
+
+  .search-modal.modal__content .promo_collection .title h2 {
     leading-trim: both;
     text-edge: cap;
     font-size: 18px;
@@ -305,14 +312,14 @@ input::-webkit-search-decoration {
 }
 
 .search-modal.modal__content .search-modal__content .search-modal__close-button {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     top: 10px;
     right: 0;
 }
 .search-modal.modal__content .search-modal__content .search-modal__close-button svg {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 @media (min-width: 750px) {
     .search-modal.modal__content .search-modal__content .predictive-search__results-list {
@@ -333,6 +340,11 @@ input::-webkit-search-decoration {
   .section-header.menu-open .header-wrapper .header,
     body.open-search .section-header .header-wrapper .header {
     background: #eee;
+  }
+
+  .header__icon--search svg {
+    width: 18px !important;
+    height: 18px !important;
   }
 
   .menu-drawer {

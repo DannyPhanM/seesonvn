@@ -8,7 +8,9 @@ if (!customElements.get('product-form')) {
         this.form = this.querySelector('form');
         this.variantIdInput.disabled = false;
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+        // For drawer_notification type, prioritize notification for add-to-cart feedback
         this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        this.cartDrawer = document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
         this.submitButtonText = this.submitButton.querySelector('span');
 
@@ -32,13 +34,21 @@ if (!customElements.get('product-form')) {
         delete config.headers['Content-Type'];
 
         const formData = new FormData(this.form);
-        if (this.cart) {
+        if (this.cart || this.cartDrawer) {
+          const sections = [];
+          if (this.cart) sections.push(...this.cart.getSectionsToRender());
+          if (this.cartDrawer) sections.push(...this.cartDrawer.getSectionsToRender());
+
+          const uniqueSections = sections.filter((obj, index, self) =>
+            index === self.findIndex((t) => t.id === obj.id)
+          );
+
           formData.append(
             'sections',
-            this.cart.getSectionsToRender().map((section) => section.id)
+            uniqueSections.map((section) => section.id)
           );
           formData.append('sections_url', window.location.pathname);
-          this.cart.setActiveElement(document.activeElement);
+          this.cart ? this.cart.setActiveElement(document.activeElement) : this.cartDrawer.setActiveElement(document.activeElement);
         }
         config.body = formData;
 
@@ -83,7 +93,8 @@ if (!customElements.get('product-form')) {
                 () => {
                   setTimeout(() => {
                     CartPerformance.measure("add:paint-updated-sections", () => {
-                      this.cart.renderContents(response);
+                      if (this.cart) this.cart.renderContents(response);
+                      if (this.cartDrawer && this.cart !== this.cartDrawer) this.cartDrawer.renderContents(response);
                     });
                   });
                 },
@@ -92,7 +103,8 @@ if (!customElements.get('product-form')) {
               quickAddModal.hide(true);
             } else {
               CartPerformance.measure("add:paint-updated-sections", () => {
-                this.cart.renderContents(response);
+                if (this.cart) this.cart.renderContents(response);
+                if (this.cartDrawer && this.cart !== this.cartDrawer) this.cartDrawer.renderContents(response);
               });
             }
           })
@@ -102,6 +114,7 @@ if (!customElements.get('product-form')) {
           .finally(() => {
             this.submitButton.classList.remove('loading');
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
+            if (this.cartDrawer && this.cartDrawer.classList.contains('is-empty')) this.cartDrawer.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
 
