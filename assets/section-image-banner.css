@@ -505,7 +505,6 @@
   color: var(--Primary-ss-grey-E, #EEE);
   leading-trim: both;
   text-edge: cap;
-  font-family: Seesans;
   font-size: var(--Essentials-Heading-text, 40px);
   font-style: normal;
   font-weight: 400;
@@ -519,7 +518,6 @@
   color: var(--Primary-ss-grey-E, #EEE);
   leading-trim: both;
   text-edge: cap;
-  font-family: Afacad;
   font-size: var(--Essentials-Body-text, 16px);
   font-style: normal;
   font-weight: 400;
@@ -533,7 +531,6 @@
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Seesans;
     font-size: var(--Essentials-Heading-text, 18px);
     font-style: normal;
     font-weight: 400;
@@ -547,7 +544,6 @@
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: Afacad;
     font-size: var(--Essentials-Body-text, 10px);
     font-style: normal;
     font-weight: 400;
