@@ -213,6 +213,10 @@ input::-webkit-search-decoration {
     border-bottom: 1px solid #C7C7C7;
     border-radius: 0;
     padding-right: 30px;
+    padding-left: 0;
+}
+.search-modal.modal__content .search-modal__content .search__input:focus ~ .field__label {
+  left: 0;
 }
 .search-modal.modal__content .search-modal__content .search__input::placeholder {
     color: #C7C7C7 !important;
