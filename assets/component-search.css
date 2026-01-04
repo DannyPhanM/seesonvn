@@ -374,7 +374,7 @@ input::-webkit-search-decoration {
 }
 .predictive-search__clear-button {
   position: absolute;
-  top: 0;
+  top: 3px;
   right: 0;
   padding: 0;
   color: var(--Primary-ss-grey, #999);
@@ -387,4 +387,9 @@ input::-webkit-search-decoration {
   line-height: 120%;
   /* 14.4px */
   letter-spacing: 0.24px;
+}
+
+body.open-search {
+  height: 100dvh;
+  overflow: hidden;
 }
