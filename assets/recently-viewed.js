@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const aspect = product.featured_media.preview_image.aspect_ratio || 1;
             imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=150" alt="${product.featured_media.alt || product.title}" width="50" height="${50 / aspect}">`;
           } else if (product.featured_image) {
-            imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120" height="120">`;
+            imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120" height="auto">`;
           }
           let priceHtml = '';
           if (product.price) {
