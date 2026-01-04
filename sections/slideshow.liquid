@@ -194,6 +194,13 @@
               <div class="banner__text rte">
                 <p>{{ block.settings.subheading }}</p>
               </div>
+              
+            {%- endif -%}
+                        {%- if block.settings.subheading_custom != blank -%}
+              <div class="banner__text rte">
+                <p>{{ block.settings.subheading_custom }}</p>
+              </div>
+              
             {%- endif -%}
             <div class="button-box">
               {%- if block.settings.button_label != blank -%}
@@ -495,6 +502,12 @@
           "id": "subheading",
           "default": "t:sections.slideshow.blocks.slide.settings.subheading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subheading_custom",
+          "default": "t:sections.slideshow.blocks.slide.settings.subheading.default",
+          "label": "Subheding Custom (for collection)"
         },
         {
           "type": "header",
