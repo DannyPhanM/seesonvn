@@ -13,8 +13,8 @@
       "type": "main-collection-banner",
       "disabled": true,
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_description": false,
+        "show_collection_image": false,
         "color_scheme": "scheme-1"
       }
     },
@@ -48,12 +48,12 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "small",
+        "slide_height": "medium",
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
