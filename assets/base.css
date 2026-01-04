@@ -4196,7 +4196,7 @@ details-disclosure>details {
       margin-bottom: 0;
   }
   .js .menu-drawer__menu li:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
   }
   .menu-drawer__navigation {
       padding-top: 40px;
