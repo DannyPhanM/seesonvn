@@ -219,6 +219,7 @@ input::-webkit-search-decoration {
 }
 .search-modal.modal__content .search-modal__content .field__label {
     color: #C7C7C7;
+    left: 0;
 }
 .search-modal.modal__content .search-modal__content .search__button.field__button {
     display: none;
