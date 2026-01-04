@@ -2726,7 +2726,7 @@ menu-drawer+.header__search {
 details[open]>.search-modal {
   opacity: 1;
   animation: animateMenuOpen var(--duration-default) ease;
-  top: 80px;
+  top: 65px;
 }
 
 details[open] .modal-overlay {
