@@ -312,6 +312,7 @@ input::-webkit-search-decoration {
     font-weight: 400;
     line-height: 120%; /* 21.6px */
     letter-spacing: -0.9px;
+    width: 60%;
   }
 
 }
@@ -389,7 +390,6 @@ input::-webkit-search-decoration {
   letter-spacing: 0.24px;
 }
 
-html.open-search,
 body.open-search {
   height: 100dvh;
   overflow: hidden;
