@@ -525,6 +525,9 @@
   font-weight: 400;
   line-height: 120%;
 }
+.slideshow__text.banner__box.flex-column .banner__text p {
+  margin: 0;
+}
 @media (max-width: 749px) {
   .slideshow__text.banner__box.flex-column .banner__heading {
     color: #fff;
