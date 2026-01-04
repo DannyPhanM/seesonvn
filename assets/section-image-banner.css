@@ -491,14 +491,11 @@
   }
 }
 
-.slideshow__text.banner__box {
-  &.flex-column {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-    .banner__text {
-      max-width: 50%;
-    }
-  }  
+.slideshow__text.banner__box.flex-column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.slideshow__text.banner__box.flex-column .banner__text {
+  max-width: 50%;
 }
