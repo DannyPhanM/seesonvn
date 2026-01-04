@@ -25,6 +25,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
+            "mobile_image": "shopify://shop_images/Carosel.png",
             "image_overlay_opacity": 0,
             "heading": "{{ collection.title }}",
             "heading_size": "h2",
@@ -48,7 +49,7 @@
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "small",
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
