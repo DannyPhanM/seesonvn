@@ -4143,6 +4143,9 @@ details-disclosure>details {
     .menu-drawer .list-menu__item:hover {
         color: #000 !important;
     } 
+    .search-modal.modal__content .search-modal__content .predictive_search_open {
+      margin-top: 40px;
+    }
 }
 
 .card-wrapper .card__information .card__heading {
