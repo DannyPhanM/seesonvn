@@ -30,6 +30,7 @@
             "heading": "{{ collection.title }}",
             "heading_size": "h2",
             "subheading": "",
+            "subheading_custom": "{{ collection.description }}",
             "button_label": "",
             "link": "",
             "button_label_2": "",
