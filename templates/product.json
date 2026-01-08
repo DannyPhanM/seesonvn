@@ -22,7 +22,6 @@
         },
         "title": {
           "type": "title",
-          "disabled": true,
           "settings": {}
         },
         "variant_picker": {
