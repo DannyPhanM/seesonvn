@@ -34,32 +34,10 @@
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-4"
           }
-        },
-        "slide_7U9kKw": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "enable_column": false,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "subheading_custom": "<p>Tell your brand's story through images</p>",
-            "button_label": "Button label",
-            "link": "",
-            "button_label_2": "Button label",
-            "link_2": "",
-            "button_style_secondary": false,
-            "show_text_box": true,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
-          }
         }
       },
       "block_order": [
-        "slide_bhKrjH",
-        "slide_7U9kKw"
+        "slide_bhKrjH"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
