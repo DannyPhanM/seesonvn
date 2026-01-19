@@ -15,7 +15,110 @@
   .drawer {
     visibility: hidden;
   }
+
+  .drawer__header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin: 0 3rem;
+  }
+
+  .drawer__tabs {
+    display: flex;
+    gap: 2rem;
+    flex-grow: 1;
+  }
+
+  .drawer__tab {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: rgba(var(--color-foreground), 0.5);
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  cart-drawer[active-tab="cart"] .drawer__tab[data-tab="cart"],
+  cart-drawer[active-tab="wishlist"] .drawer__tab[data-tab="wishlist"],
+  cart-drawer:not([active-tab]) .drawer__tab[data-tab="cart"] {
+    color: rgb(var(--color-foreground));
+  }
+
+
+  .drawer__tab-count {
+    font-size: 1.2rem;
+    vertical-align: super;
+    margin-left: 0.2rem;
+  }
+
+  cart-drawer:not([active-tab="wishlist"]) .drawer__wishlist-content {
+    display: none !important;
+  }
+
+  cart-drawer[active-tab="wishlist"] .drawer__cart-content {
+    display: none !important;
+  }
+  
+  cart-drawer[active-tab="wishlist"] #CartDrawer-Overlay {
+    display: block;
+  }
+
+  /* Force header to show when empty to allow tab switching */
+  cart-drawer.is-empty .drawer__header {
+    display: flex !important;
+  }
+
+  cart-drawer.is-empty .drawer__inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0 32px !important;
+  }
+
+  @media(min-width: 990px) {
+    cart-drawer.is-empty .drawer__inner {
+      padding-right: 80px !important;
+    }
+  }
+
+  cart-drawer.is-empty .drawer__cart-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  cart-drawer.is-empty .drawer__inner-empty {
+    padding: 0 !important;
+  }
 </style>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const drawer = document.querySelector('cart-drawer');
+    if (!drawer) return;
+
+    // Default to cart tab if not set
+    if (!drawer.hasAttribute('active-tab')) {
+      drawer.setAttribute('active-tab', 'cart');
+    }
+    
+    drawer.addEventListener('click', (event) => {
+      const tab = event.target.closest('.drawer__tab');
+      if (!tab) return;
+      
+      const target = tab.dataset.tab;
+      drawer.setAttribute('active-tab', target);
+    });
+  });
+</script>
+
+
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
@@ -27,42 +130,19 @@
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
     >
-      {%- if cart == empty -%}
-        <div class="drawer__inner-empty">
-          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
-            <div class="cart-drawer__empty-content">
-              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-              <button
-                class="drawer__close"
-                type="button"
-                onclick="this.closest('cart-drawer').close()"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                <span class="svg-wrapper">
-                  {{- 'icon-close.svg' | inline_asset_content -}}
-                </span>
-              </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
-              </a>
 
-              {%- if shop.customer_accounts_enabled and customer == null -%}
-                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                <p class="cart__login-paragraph">
-                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                </p>
-              {%- endif -%}
-            </div>
-          </div>
-          {%- if settings.cart_drawer_collection != blank -%}
-            <div class="cart-drawer__collection">
-              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }} <span class="drawer__heading-count">({{ cart.item_count }})</span></h2>
+        <div class="drawer__tabs">
+          <button class="drawer__tab" data-tab="cart" type="button">
+            {{ 'sections.cart.title' | t }}
+            <span class="drawer__tab-count">({{ cart.item_count }})</span>
+          </button>
+
+          <button class="drawer__tab" data-tab="wishlist" type="button">
+            {{ 'general.wishlist.title' | t | default: 'Wishlist' }}
+            <span class="drawer__tab-count wishlist-count-js">(0)</span>
+          </button>
+        </div>
         <button
           class="drawer__close"
           type="button"
@@ -74,6 +154,44 @@
           </span>
         </button>
       </div>
+
+      <div class="drawer__cart-content">
+        {%- if cart == empty -%}
+          <div class="drawer__inner-empty">
+            <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+              <div class="cart-drawer__empty-content">
+                <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+                <button
+                  class="drawer__close"
+                  type="button"
+                  onclick="this.closest('cart-drawer').close()"
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  <span class="svg-wrapper">
+                    {{- 'icon-close.svg' | inline_asset_content -}}
+                  </span>
+                </button>
+                <a href="{{ routes.all_products_collection_url }}" class="button">
+                  {{ 'general.continue_shopping' | t }}
+                </a>
+  
+                {%- if shop.customer_accounts_enabled and customer == null -%}
+                  <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
+                  <p class="cart__login-paragraph">
+                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                  </p>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- if settings.cart_drawer_collection != blank -%}
+              <div class="cart-drawer__collection">
+                {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"
@@ -590,5 +708,20 @@
         </div>
       </div>
     </div>
+      
+      <div class="drawer__wishlist-content">
+        <div class="drawer__contents">
+          <div id="st_share_page" class="st-page st-page--share"> 
+        </div>
+          {%- for block in section.blocks -%}
+            {%- if block.type == '@app' -%}
+              {% render block %}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+    </div>
   </div>
+  
 </cart-drawer>
