@@ -1683,11 +1683,12 @@ a.product__text {
 }
 
 .template--product .product__info-wrapper .product-form__buttons .product-form__submit {
-  width: calc(100% - 35px);
+  width: calc(100% - 36px);
   padding-left: 5px;
   padding-right: 5px;
   background-color: #000;
   min-height: 36px;
+  margin-top: 10px;
 }
 
 .template--product .product__info-wrapper .product-form__buttons .product-form__submit span {

@@ -1,0 +1,15 @@
+.template--index slideshow-component {
+  position: relative;
+}
+.template--index slideshow-component .slideshow__controls {
+  position: absolute;
+  bottom: 27px;
+  width: 100%;
+  z-index: 1;
+}
+.template--index slideshow-component .slider-button {
+  display: none;
+}
+.template--index slideshow-component .slider-counter__link span {
+  background: #fff !important;
+}

@@ -1,0 +1,434 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .feature-collection-slider .relative {
+    position: relative;
+  }
+
+  .feat-coll-slider {
+    background-color: {{ section.settings.background_color }};
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .feat-coll-header {
+
+  }
+  
+  .feat-coll-header h2 {
+    color: #000;
+    font-family: Seesans;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -2.4px;
+  }
+
+  .feat-coll-header .description {
+    color: #999;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .feat-coll-header .underlined-link {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  /* Floating Info Card - Left Half */
+  .feat-coll-info-card-fixed {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 706px;
+    max-width: 50%;
+    z-index: 100;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+  }
+  
+  .feat-coll-info-card-fixed.is-changing {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .feat-coll-info-card-fixed h3 {
+    color: #999;
+    margin: 0 0 14px;
+    font-family: Seesans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+  }
+
+  .feat-coll-info-card-fixed .product-title-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    flex-direction: column;
+  }
+
+  .feat-coll-info-card-fixed .price {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .feat-coll-info-card-fixed .product-img-wrap {
+    width: 100%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feat-coll-info-card-fixed .product-img-wrap img {
+    max-width: 100%;
+    max-height: 80px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .feat-coll-info-card-fixed .bookmark-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  /* Swiper Styles */
+  .feat-coll-slider .swiper {
+    width: 100%;
+    height: 100vh;
+    overflow: visible !important;
+    /* Shift the swiper so its 'center' (50%) is at the '75%' mark of the screen */
+    left: 25vw;
+    position: relative;
+  }
+
+  .feat-coll-slider .swiper-wrapper {
+    align-items: flex-end;
+  }
+
+  .feat-coll-slider .swiper-slide {
+    width: 160px !important;
+    height: 160px !important;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.3;
+    filter: grayscale(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    will-change: transform, width, height, opacity;
+  }
+
+  /* The Active Slide: Center point of the right 50% section */
+  .feat-coll-slider .swiper-slide-active {
+    width: 28vw !important;
+    height: 85% !important;
+    opacity: 1;
+    filter: grayscale(0);
+    margin-right: 60px;
+  }
+
+  .feat-coll-slider .athlete-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feat-coll-slider .athlete-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease;
+  }
+
+  /* Thumbnails in non-active slides */
+  .feat-coll-slider .swiper-slide:not(.swiper-slide-active) .athlete-card img {
+    height: 160px !important;
+    width: 160px !important;
+    object-fit: cover;
+  }
+
+  .feat-coll-slider .swiper-slide-active .athlete-card img {
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  @media screen and (max-width: 989px) {
+    .feat-coll-info-card-fixed {
+      width: 300px;
+      padding: 1.5rem;
+    }
+    .feat-coll-header {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .feat-coll-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 3rem 2rem;
+    }
+    .feat-coll-info-card-fixed {
+      position: relative;
+      bottom: 0;
+      left: 2rem;
+      width: calc(100% - 4rem);
+      box-shadow: none;
+      padding: 2rem 0;
+      background: transparent;
+      transform: none !important;
+    }
+    .feat-coll-slider .swiper {
+      height: 60vh;
+      min-height: 400px;
+      left: 0;
+    }
+    .feat-coll-slider .swiper-slide-active {
+      width: 90vw !important;
+      height: 100% !important;
+    }
+  }
+{%- endstyle -%}
+
+<div class="feat-coll-slider section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="feat-coll-header">
+      <h2 class="h1">{{ section.settings.heading }}</h2>
+      <div class="description rte">{{ section.settings.description }}</div>
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link }}" class="link underlined-link">
+          {{ section.settings.button_label }}
+        </a>
+      {%- endif -%}
+    </div>
+    <div class="relative">
+      <!-- Absolute Sync Card -->
+      <div class="feat-coll-info-card-fixed" id="FeatCollInfo-{{ section.id | replace: '-', '_' }}">
+        <div class="card-body">
+          <a href="#" class="product-title-link full-unstyled-link"><h3></h3></a>
+          <p class="price"></p>
+          <div class="product-img-wrap">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="400" height="225" alt="Product" />
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper" id="FeatCollSwiper-{{ section.id | replace: '-', '_' }}">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            {%- assign product = block.settings.product -%}
+            {%- assign large_display_img = product.media[0] -%}
+            {%- comment -%} Priority: metafield > media[1] (second image) {%- endcomment -%}
+            {%- assign info_card_img = product.metafields.custom.info_card_image | default: product.media[1] -%}
+            
+            <div class="swiper-slide" 
+                {{ block.shopify_attributes }}
+                data-title="{{ product.title | escape }}"
+                data-price="{{ product.price | money | escape }}"
+                data-url="{{ product.url }}"
+                data-product-img="{% if product != blank %}{{ info_card_img | image_url: width: 600 }}{% endif %}"
+            >
+              <div class="athlete-card">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+                {%- elsif large_display_img != blank -%}
+                  {{ large_display_img | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+                {%- elsif product != blank -%}
+                  {{ product.featured_image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Swiper JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiperId = '{{ section.id | replace: "-", "_" }}';
+    const infoCard = document.getElementById('FeatCollInfo-' + swiperId);
+    const swiperSelector = '#FeatCollSwiper-' + swiperId;
+
+    function updateCard(slide) {
+      if (!slide || !infoCard) return;
+
+      const title = slide.getAttribute('data-title');
+      const price = slide.getAttribute('data-price');
+      const url = slide.getAttribute('data-url');
+      const pImg = slide.getAttribute('data-product-img');
+
+      infoCard.classList.add('is-changing');
+
+      setTimeout(() => {
+        infoCard.querySelector('h3').textContent = title || '';
+        infoCard.querySelector('.price').innerHTML = price || '';
+        infoCard.querySelectorAll('a').forEach(a => a.href = url || '#');
+        
+        const pImgTag = infoCard.querySelector('.product-img-wrap img');
+        if (pImg) pImgTag.src = pImg;
+
+        infoCard.classList.remove('is-changing');
+      }, 300);
+    }
+
+    const swiper = new Swiper(swiperSelector, {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: 15,
+      slideToClickedSlide: true,
+      speed: 800,
+      watchSlidesProgress: true,
+      grabCursor: true,
+      on: {
+        init: function() {
+          updateCard(this.slides[this.activeIndex]);
+        },
+        slideChange: function() {
+          updateCard(this.slides[this.activeIndex]);
+        }
+      }
+    });
+
+    // Handle clicks that might happen before initialization completes
+    window.addEventListener('load', () => {
+        if(swiper.initialized) updateCard(swiper.slides[swiper.activeIndex]);
+    });
+
+    // Recalculate on resize
+    window.addEventListener('resize', () => swiper.update());
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Feature Coll Slider",
+  "tag": "section",
+  "class": "section feature-collection-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "SEESON LATEST ARRIVALS"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Take your time exploring our carefully curated collection, where you'll find an array of spectacles and sunglasses...</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "DISCOVER MORE"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_slide",
+      "name": "Product Slide",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Lifestyle Image (Large View)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Coll Slider",
+      "blocks": [
+        { "type": "product_slide" },
+        { "type": "product_slide" },
+        { "type": "product_slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,475 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .feat-coll-list-slider {
+    background-color: {{ section.settings.background_color }};
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  /* Info Card - Top Left (replaces header) */
+
+  .feat-coll-list-info-card {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    width: 400px;
+    background: #fff;
+    padding: 2rem;
+    z-index: 100;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    pointer-events: auto;
+  }
+
+  .feat-coll-list-info-card.is-changing {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .feat-coll-list-info-card h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    color: #000;
+    font-family: var(--font-heading-family);
+    line-height: 1.1;
+    letter-spacing: 0.1rem;
+  }
+
+  .feat-coll-list-info-card h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    color: #000;
+    font-family: var(--font-body-family);
+    line-height: 1.2;
+  }
+
+  .feat-coll-list-info-card .collection-title-link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #000;
+  }
+
+  .feat-coll-list-info-card .description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 1.5rem;
+  }
+
+  .feat-coll-list-info-card .cta-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.08rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #000;
+  }
+
+  .feat-coll-list-info-card .image-toggle-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Toggle button on slides */
+  .feat-coll-list-slider .swiper-slide .image-toggle-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .feat-coll-list-slider .swiper-slide-active .image-toggle-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .feat-coll-list-slider .swiper-slide .image-toggle-btn:hover {
+    background: rgba(255,255,255,1);
+    transform: scale(1.05);
+  }
+
+  .feat-coll-list-slider .swiper-slide .image-toggle-btn svg {
+    width: 22px;
+    height: auto;
+  }
+
+  /* Swiper Styles */
+  .feat-coll-list-slider .swiper {
+    width: 100%;
+    height: 100vh;
+    overflow: visible !important;
+    left: 25vw;
+    position: relative;
+  }
+
+  .feat-coll-list-slider .swiper-wrapper {
+    align-items: flex-end;
+  }
+
+  .feat-coll-list-slider .swiper-slide {
+    width: 160px !important;
+    height: 160px !important;
+    margin-right: 30px;
+    cursor: pointer;
+    /* transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); */
+    opacity: 0.3;
+    filter: grayscale(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    will-change: transform, width, height, opacity;
+  }
+
+  .feat-coll-list-slider .swiper-slide-active {
+    width: 28vw !important;
+    height: 85% !important;
+    opacity: 1;
+    filter: grayscale(0);
+    margin-right: 60px;
+  }
+
+  .feat-coll-list-slider .collection-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+
+  .feat-coll-list-slider .collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transition: transform 0.6s ease, all 0.8s ease; */
+    backface-visibility: hidden;
+  }
+
+  .feat-coll-list-slider .collection-card img.flipping {
+    /* animation: backflip 0.6s ease-in-out; */
+  }
+
+  @keyframes backflip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(90deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .feat-coll-list-slider .swiper-slide:not(.swiper-slide-active) .collection-card img {
+    height: 160px !important;
+    width: 160px !important;
+    object-fit: cover;
+  }
+
+  .feat-coll-list-slider .swiper-slide-active .collection-card img {
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  @media screen and (max-width: 989px) {
+    .feat-coll-list-info-card {
+      width: 320px;
+      padding: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .feat-coll-list-info-card {
+      position: relative;
+      bottom: 0;
+      left: 2rem;
+      width: calc(100% - 4rem);
+      box-shadow: none;
+      padding: 2rem 0;
+      background: transparent;
+      transform: none !important;
+    }
+    .feat-coll-list-slider .swiper {
+      height: 60vh;
+      min-height: 400px;
+      left: 0;
+    }
+    .feat-coll-list-slider .swiper-slide-active {
+      width: 90vw !important;
+      height: 100% !important;
+    }
+  }
+{%- endstyle -%}
+
+<div class="feat-coll-list-slider section-{{ section.id }}-padding">
+  <!-- Info Card with Title -->
+  <div class="feat-coll-list-info-card" id="FeatCollListInfo-{{ section.id | replace: '-', '_' }}">
+    <div class="card-body">
+      <h1>{{ section.settings.title }}</h1>
+      <a href="#" class="collection-title-link"><h2></h2></a>
+      <div class="description rte"></div>
+      <a href="#" class="cta-link">DISCOVER THE STORY</a>
+    </div>
+  </div>
+
+  <div class="swiper" id="FeatCollListSwiper-{{ section.id | replace: '-', '_' }}">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {%- assign collection = block.settings.collection -%}
+        {%- assign primary_image = block.settings.image | default: collection.featured_image | default: collection.products.first.featured_image -%}
+        {%- assign secondary_image = block.settings.image_second | default: collection.metafields.custom.collection_banner_second -%}
+        
+        <div class="swiper-slide" 
+             {{ block.shopify_attributes }}
+             data-title="{{ collection.title | escape }}"
+             data-description="{{ collection.description | strip_html | truncate: 200 | escape }}"
+             data-url="{{ collection.url }}"
+             data-primary-img="{% if primary_image != blank %}{{ primary_image | image_url: width: 2000 }}{% endif %}"
+             data-secondary-img="{% if secondary_image != blank %}{{ secondary_image | image_url: width: 2000 }}{% endif %}"
+        >
+          <button class="image-toggle-btn" aria-label="Toggle image view">
+            <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 -6.1196e-07L14.4 1.34615L12.65 3.07692C14.7833 3.34936 16.5417 3.91026 17.925 4.75962C19.3083 5.60897 20 6.58654 20 7.69231C20 9.02244 19.0375 10.1562 17.1125 11.0937C15.1875 12.0312 12.8167 12.5 10 12.5C7.18333 12.5 4.8125 12.0312 2.8875 11.0937C0.962496 10.1562 -1.60333e-06 9.02243 -1.48705e-06 7.69231C-1.40018e-06 6.69872 0.554165 5.80929 1.6625 5.02404C2.77083 4.23878 4.21667 3.65384 6 3.26923L6 5.24038C4.71667 5.5609 3.72917 5.95753 3.0375 6.43029C2.34583 6.90304 2 7.32372 2 7.69231C2 8.20513 2.7125 8.8141 4.1375 9.51923C5.5625 10.2244 7.51667 10.5769 10 10.5769C12.4833 10.5769 14.4375 10.2244 15.8625 9.51923C17.2875 8.8141 18 8.20513 18 7.69231C18 7.30769 17.575 6.84696 16.725 6.3101C15.875 5.77324 14.6667 5.36859 13.1 5.09615L14.4 6.34615L13 7.69231L9 3.84615L13 -6.1196e-07Z" fill="black"/>
+            </svg>
+          </button>
+          <div class="collection-card">
+            {%- if primary_image != blank -%}
+              <img src="{{ primary_image | image_url: width: 2000 }}" loading="lazy" alt="{{ collection.title }}" class="collection-img">
+            {%- else -%}
+              {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<!-- Swiper JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiperId = '{{ section.id | replace: "-", "_" }}';
+    const infoCard = document.getElementById('FeatCollListInfo-' + swiperId);
+    const swiperSelector = '#FeatCollListSwiper-' + swiperId;
+    let isSecondaryView = false;
+
+    function updateCard(slide) {
+      if (!slide || !infoCard) return;
+
+      const title = slide.getAttribute('data-title');
+      const description = slide.getAttribute('data-description');
+      const url = slide.getAttribute('data-url');
+
+      infoCard.classList.add('is-changing');
+
+      setTimeout(() => {
+        infoCard.querySelector('h2').textContent = title || '';
+        infoCard.querySelector('.description').textContent = description || '';
+        infoCard.querySelectorAll('a').forEach(a => a.href = url || '#');
+
+        infoCard.classList.remove('is-changing');
+      }, 300);
+    }
+
+    function toggleImages() {
+      isSecondaryView = !isSecondaryView;
+      
+      const allSlides = document.querySelectorAll(swiperSelector + ' .swiper-slide');
+      
+      allSlides.forEach(slide => {
+        const img = slide.querySelector('.collection-img');
+        if (!img) return;
+        
+        const primaryImg = slide.getAttribute('data-primary-img');
+        const secondaryImg = slide.getAttribute('data-secondary-img');
+        
+        // Add flipping animation
+        img.classList.add('flipping');
+        
+        // Change image at the midpoint of the flip (when rotated 90deg)
+        setTimeout(() => {
+          if (isSecondaryView && secondaryImg) {
+            img.src = secondaryImg;
+          } else if (primaryImg) {
+            img.src = primaryImg;
+          }
+        }, 300); // Half of the 600ms animation
+        
+        // Remove animation class after completion
+        setTimeout(() => {
+          img.classList.remove('flipping');
+        }, 600);
+      });
+    }
+
+    // Attach click handlers to all toggle buttons
+    const toggleButtons = document.querySelectorAll(swiperSelector + ' .image-toggle-btn');
+    toggleButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent slide click
+        toggleImages();
+      });
+    });
+
+    const swiper = new Swiper(swiperSelector, {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      speed: 600,
+      threshold: 0, // Immediate response, no dead zone
+      watchSlidesProgress: true,
+      grabCursor: true,
+      slidesOffsetAfter: -95, // Show 1.5 items after active slide
+      on: {
+        init: function() {
+          updateCard(this.slides[this.activeIndex]);
+        },
+        slideChange: function() {
+          updateCard(this.slides[this.activeIndex]);
+        }
+      }
+    });
+
+    window.addEventListener('load', () => {
+        if(swiper.initialized) updateCard(swiper.slides[swiper.activeIndex]);
+    });
+
+    window.addEventListener('resize', () => swiper.update());
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Heading",
+      "default": "Collections"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_slide",
+      "name": "Collection Slide",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Primary Image (Optional)",
+          "info": "Override collection featured image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_second",
+          "label": "Secondary Image (Optional)",
+          "info": "Image shown when toggle button is clicked. Falls back to metafield if not set."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider",
+      "blocks": [
+        { "type": "collection_slide" },
+        { "type": "collection_slide" },
+        { "type": "collection_slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

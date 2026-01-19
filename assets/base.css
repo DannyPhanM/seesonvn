@@ -4084,13 +4084,13 @@ details-disclosure>details {
 }
 
 .card-wrapper .card__information .price__container .price__sale .price-item--regular .money {
-  font-size: 8px;
+  /* font-size: 8px; */
   text-decoration: line-through;
 }
 
 @media (min-width: 750px) {
   .card-wrapper .card__information .price__container .price__sale .price-item--regular .money {
-    font-size: 4px;
+    font-size: 10px;
   }
 }
 
@@ -4110,14 +4110,19 @@ details-disclosure>details {
   letter-spacing: 0.5px;
   line-height: 12px;
 }
-
+.xb-wishlist-header-auto-container {
+  width: 16px;
+}
 @media (min-width: 750px) {
 
   .card-wrapper .card__information .money,
   .card-wrapper .card__information .price-item,
   .card-wrapper .card__information span {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
   }
   .card-wrapper .card__information .price {
     margin-top: 14px !important;
