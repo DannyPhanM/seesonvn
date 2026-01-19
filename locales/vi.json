@@ -50,7 +50,7 @@
     },
     "cart": {
       "view": "Xem giỏ hàng ({{ count }})",
-      "item_added": "Mặt hàng đã thêm vào giỏ hàng",
+      "item_added": "Đã thêm vào giỏ",
       "view_empty_cart": "Xem giỏ hàng"
     },
     "share": {
@@ -113,7 +113,7 @@
     "product_title": "Tiêu đề sản phẩm mẫu",
     "collection_title": "Tên bộ sưu tập của bạn"
   },
-    "predictive_search": {
+  "predictive_search": {
     "recently_viewed": {
       "header": "Sản phẩm đã xem gần đây",
       "title": "Chúng tôi sẽ giúp bạn tìm phong cách phù hợp, hãy bắt đầu tìm kiếm."
