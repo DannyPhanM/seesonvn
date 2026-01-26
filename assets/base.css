@@ -2170,7 +2170,11 @@ input[type='checkbox'] {
   font-size: 0.9rem;
   bottom: 0.8rem;
   left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
+  line-height: calc(1 + .1 / var(--font-body-scale));
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
 }
 
 /* utility-bar */
@@ -2887,6 +2891,7 @@ details[open]>.header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  font-family: var(--font-heading-family);
 }
 
 .header__menu-item:hover {
@@ -2916,7 +2921,6 @@ details[open]>.header__menu-item .icon-caret {
 
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }

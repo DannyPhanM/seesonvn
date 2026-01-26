@@ -59,40 +59,9 @@
     display: none !important;
   }
 
-  cart-drawer[active-tab="wishlist"] .drawer__cart-content {
+  cart-drawer[active-tab="wishlist"] .drawer__cart-content,
+  cart-drawer[active-tab="wishlist"] .drawer__footer {
     display: none !important;
-  }
-  
-  cart-drawer[active-tab="wishlist"] #CartDrawer-Overlay {
-    display: block;
-  }
-
-  /* Force header to show when empty to allow tab switching */
-  cart-drawer.is-empty .drawer__header {
-    display: flex !important;
-  }
-
-  cart-drawer.is-empty .drawer__inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 0 32px !important;
-  }
-
-  @media(min-width: 990px) {
-    cart-drawer.is-empty .drawer__inner {
-      padding-right: 80px !important;
-    }
-  }
-
-  cart-drawer.is-empty .drawer__cart-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  cart-drawer.is-empty .drawer__inner-empty {
-    padding: 0 !important;
   }
 </style>
 
@@ -114,7 +83,46 @@
       
       const target = tab.dataset.tab;
       drawer.setAttribute('active-tab', target);
+      
+      if (target === 'wishlist') {
+        fetchWishlist();
+      }
     });
+
+    async function fetchWishlist() {
+      const container = document.querySelector('#WishlistDrawerContent');
+      if (!container || container.dataset.loaded === 'true') return;
+      
+      container.innerHTML = '<div class="loading-spinner">Loading...</div>'; // Better UI later
+      
+      try {
+        const response = await fetch('/apps/wishlist');
+        if (!response.ok) throw new Error('Failed to fetch wishlist');
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Swishlist typically uses certain IDs or classes. 
+        // We'll try to find common ones or take the main content.
+        const content = doc.querySelector('#st-wishlist-page') || doc.querySelector('.st-wishlist-container') || doc.querySelector('main') || doc.body;
+        
+        if (content) {
+          container.innerHTML = content.innerHTML;
+          container.dataset.loaded = 'true';
+          
+          // Re-trigger any Swishlist initialization if necessary
+          // Swishlist might need a custom event or just to wait for its scripts
+          if (window.st_wishlist) {
+            // st_wishlist.init(); // Example if they have an init method
+          }
+        } else {
+          container.innerHTML = 'Wishlist content not found.';
+        }
+      } catch (error) {
+        console.error('Error fetching wishlist:', error);
+        container.innerHTML = 'Could not load wishlist. Please try again.';
+      }
+    }
   });
 </script>
 
@@ -708,11 +716,15 @@
         </div>
       </div>
     </div>
-      
-      <div class="drawer__wishlist-content">
+
+    <div class="drawer__wishlist-content">
         <div class="drawer__contents">
-          <div id="st_share_page" class="st-page st-page--share"> 
-        </div>
+          <div id="WishlistDrawerContent">
+            {% comment %} Wishlist content will be fetched and injected here via JS {% endcomment %}
+            <div class="loading-overlay" style="padding: 2rem; text-align: center;">
+              {% render 'loading-spinner' %}
+            </div>
+          </div>
           {%- for block in section.blocks -%}
             {%- if block.type == '@app' -%}
               {% render block %}
@@ -720,7 +732,6 @@
           {%- endfor -%}
         </div>
       </div>
-
     </div>
   </div>
   

@@ -13,7 +13,14 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>{{ localization.language.iso_code | upcase }}</span>
+    <span>
+      {% if localization.language.iso_code == 'vi' %}
+        VIE
+      {% else %}
+        {{ localization.language.iso_code | upcase }}
+      {% endif %}
+
+    </span>
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>

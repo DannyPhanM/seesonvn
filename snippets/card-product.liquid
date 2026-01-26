@@ -160,9 +160,7 @@
               {{ card_product.title | escape }}
             </a>
             <div class="wish-list">
-              <button title="Add to wishlist" aria-label="Add to wishlist" class="st-wishlist-button" type="button" data-type="product-card" data-handle="{{card_product.handle}}" aria-label="Add product to wishlist">
-                
-              </button>
+<div class="wishlist-engine" data-product_id="{{  card_product.id }}" data-variant_id="{{ card_product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
             </div>
           </h3>
           <div class="card-information">
