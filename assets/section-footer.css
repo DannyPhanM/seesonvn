@@ -579,6 +579,10 @@ footer * {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
+    padding-left: 0;
+    color: #999;
+    min-width: 0;
+    padding-right: 20px;
 }
 .footer__content-bottom-wrapper .footer__localization .disclosure__button:after,
 .footer__content-bottom-wrapper .localization-form .disclosure__button:after,
@@ -586,7 +590,13 @@ footer * {
 .footer__content-bottom-wrapper .localization-form .disclosure__button:before {
     content: none;
 }
-
+@media(min-width: 750px) {
+  .footer__content-bottom-wrapper .menu-list-custom .footer-block__details-content {
+    max-width: 542px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
 @media (max-width: 749px) {
   .footer__content-bottom-wrapper .footer__copyright {
       flex-wrap: wrap;
