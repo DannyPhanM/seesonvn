@@ -2649,7 +2649,7 @@ input[type='checkbox'] {
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
+  /* margin-right: -1.2rem; */
 }
 
 .header__icon--menu[aria-expanded='true']::before {
@@ -4275,8 +4275,10 @@ details-disclosure>details {
     .header-wrapper .list-menu {
         list-style: none;
         display: flex;
-        justify-content: flex-end;
-        gap: 41px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 462px;
+        margin-left: auto;
     }
     .header-wrapper .list-menu .header__menu-item {
         padding: 0;
