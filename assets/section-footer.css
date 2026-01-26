@@ -346,6 +346,7 @@
 
 .copyright__content * {
   font-family: var(--font-heading-family);
+  font-weight: 400;
 }
 
 .footer-block__details-content .list-menu__item--active {
