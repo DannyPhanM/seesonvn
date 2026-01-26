@@ -4209,7 +4209,6 @@ details-disclosure>details {
       height: 15px;
   }
   .cart-count-bubble {
-      left: 13px;
       width: 10px;
       height: 10px;
   }
@@ -4286,7 +4285,6 @@ details-disclosure>details {
         font-size: 12px;
     }
     .cart-count-bubble {
-        left: 13px;
     }
     .header__icons {
         gap: 16px;
