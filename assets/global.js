@@ -505,7 +505,7 @@ class MenuDrawer extends HTMLElement {
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
 
-    if (event instanceof KeyboardEvent) elementToFocus?.setAttribute('aria-expanded', false);
+    if (elementToFocus) elementToFocus.setAttribute('aria-expanded', false);
   }
 
   onFocusOut() {
@@ -598,6 +598,29 @@ class HeaderDrawer extends MenuDrawer {
 }
 
 customElements.define('header-drawer', HeaderDrawer);
+
+// Close menu drawer when search icon is clicked
+document.addEventListener('DOMContentLoaded', () => {
+  const searchIcon = document.querySelector('.header__search summary');
+  
+  if (searchIcon) {
+    searchIcon.addEventListener('click', () => {
+      // Get elements dynamically to ensure we check current state
+      const menuDrawerContainer = document.getElementById('Details-menu-drawer-container');
+      
+      if (menuDrawerContainer && menuDrawerContainer.hasAttribute('open')) {
+        const headerDrawer = document.querySelector('header-drawer');
+        const summaryElement = menuDrawerContainer.querySelector('summary');
+        
+        if (headerDrawer && summaryElement) {
+          // Create a fake event object to pass to closeMenuDrawer
+          const fakeEvent = new Event('click');
+          headerDrawer.closeMenuDrawer(fakeEvent, summaryElement);
+        }
+      }
+    }, true); // Use capture phase to run before other handlers
+  }
+});
 
 class ModalDialog extends HTMLElement {
   constructor() {

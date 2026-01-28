@@ -1887,6 +1887,10 @@ a.product__text {
 }
 .template--product .product__info-wrapper .product-form__buttons .product-form__submit {
   min-height: 18px;
+  margin-top: 0;
+}
+.predictive-search__clear-button {
+  top: -3px;
 }
 .template--product .buy-buttons-box {
   padding: 9px 14px;

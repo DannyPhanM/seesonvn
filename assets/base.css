@@ -2176,7 +2176,11 @@ input[type='checkbox'] {
   left: 50%;
   transform: translate(-50%, -35%);
 }
-
+@media(max-width: 749px) {
+  .cart-count-bubble {
+    transform: translate(-50%, -25%);
+  }
+}
 /* utility-bar */
 .utility-bar {
   height: 100%;
@@ -2622,6 +2626,16 @@ input[type='checkbox'] {
 
 .header__icon span {
   height: 100%;
+}
+
+.cart-count-bubble {
+  color: rgb(var(--color-foreground));
+}
+
+@media(min-width:750px) {
+  .template--index .shopify-section-group-header-group .header-wrapper .header__icon .cart-count-bubble {
+    color: #fff;
+  }
 }
 
 .header__icon .svg-wrapper {
@@ -4143,6 +4157,7 @@ details-disclosure>details {
         top: 54px;
         max-height: calc(100vh - 54px);
         overflow: auto;
+        padding-top: 17px !important;
     }
     details[open] > .search-modal .modal-overlay {
         display: none !important;
@@ -4161,7 +4176,7 @@ details-disclosure>details {
         display: none;
     }
     .header-wrapper .header .header__icons header-drawer {
-        margin: 0 0 0 10px;
+        margin: 0 0 0 0;
     }
     .header-wrapper .header #menu-drawer {
         background: #eee !important;
@@ -4169,9 +4184,6 @@ details-disclosure>details {
     .menu-drawer .list-menu__item:hover {
         color: #000 !important;
     } 
-    .search-modal.modal__content .search-modal__content .predictive_search_open {
-      margin-top: 40px;
-    }
 }
 
 .card-wrapper .card__information .card__heading {
@@ -4193,12 +4205,14 @@ details-disclosure>details {
 
 @media(max-width: 989px) {
   .header__icons {
-    gap: 8px;
+    gap: 0;
+    width: 70px;
+    justify-content: space-between;
   }
   .header__icon {
-      width: 18px;
-      height: 18px;
-      gap: 8px;
+    width: 18px;
+    height: 18px;
+    gap: 8px;
   }
   .header__icon .svg-wrapper {
       width: 18px;
@@ -4229,7 +4243,7 @@ details-disclosure>details {
       margin-bottom: 0;
   }
   .js .menu-drawer__menu li:not(:last-child) {
-      margin-bottom: 24px;
+      margin-bottom: 14px;
   }
   .menu-drawer__navigation {
       padding-top: 40px;
@@ -4268,7 +4282,7 @@ details-disclosure>details {
 }
 }
 
-@media (min-width: 989px) {
+@media (min-width: 990px) {
     .header-wrapper header-drawer {
         display: none;
     }
