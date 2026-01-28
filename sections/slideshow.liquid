@@ -121,7 +121,33 @@
         tabindex="-1"
       >
         <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.mobile_image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-          {%- if block.settings.image or block.settings.mobile_image -%}
+          {%- if block.settings.video != blank -%}
+            {%- comment -%} Shopify Hosted Video {%- endcomment -%}
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              class="slideshow__video"
+            >
+              {%- for source in block.settings.video.sources -%}
+                <source src="{{ source.url }}" type="{{ source.mime_type }}">
+              {%- endfor -%}
+              Your browser does not support the video tag.
+            </video>
+          {%- elsif block.settings.video_url != blank -%}
+            {%- comment -%} External Video URL (YouTube/Vimeo) {%- endcomment -%}
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              class="slideshow__video"
+              src="{{ block.settings.video_url }}"
+            >
+              Your browser does not support the video tag.
+            </video>
+          {%- elsif block.settings.image or block.settings.mobile_image -%}
             {%- liquid
               assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
               if section.settings.image_behavior == 'ambient'
@@ -444,6 +470,27 @@
       "name": "t:sections.slideshow.blocks.slide.name",
       "limit": 5,
       "settings": [
+        {
+          "type": "header",
+          "content": "Media Settings"
+        },
+        {
+          "type": "paragraph",
+          "content": "Choose image or video. Priority: Shopify Video > External Video URL > Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Shopify Video",
+          "info": "Upload video directly to Shopify. Recommended for best performance."
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "label": "External Video URL",
+          "info": "Use YouTube or Vimeo URL if no Shopify video is uploaded."
+        },
         {
           "type": "image_picker",
           "id": "image",

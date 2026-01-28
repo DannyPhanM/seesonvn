@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 1000;
   left: 0;
-  top: 65px;
+  top: 80px;
   width: 100vw;
   height: calc(100% - 65px);
   display: flex;
@@ -10,7 +10,11 @@
   background-color: rgba(var(--color-foreground), 0.5);
   transition: visibility var(--duration-default) ease;
 }
-
+@media(max-width: 990px) {
+  .drawer {
+    top: 53px;
+  }
+}
 .drawer.active {
   visibility: visible;
 }
