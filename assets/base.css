@@ -3845,9 +3845,16 @@ details-disclosure>details {
 
 .accordion .accordion__content,
 .collabsible-custom__block-content {
-  padding-top: 25px;
+  padding-top: 10px;
   padding-bottom: 40px;
   overflow-y: visible;
+}
+
+@media (min-width: 750px) {
+  .accordion .accordion__content,
+  .collabsible-custom__block-content {
+    padding-top: 6px;
+  }
 }
 
 .accordion .accordion__content h4,
@@ -4329,4 +4336,19 @@ body.open-drawer .header-wrapper .header__heading-logo-wrapper img {
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: none !important;
+}
+
+.accordion .accordion__content ul li {
+  padding-left: 14px !important;
+}
+.accordion .accordion__content ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.accordion .accordion__content ul li:before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #999;
+  top: 8px;
+  border-radius: 50%;
 }

@@ -183,6 +183,8 @@ input::-webkit-search-decoration {
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li a img {
   display: block;
   margin: 0 auto;
+  object-fit: contain;
+  aspect-ratio: 1;
 }
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li .predictive-search__item-heading {
     overflow: hidden;
@@ -214,6 +216,15 @@ input::-webkit-search-decoration {
     border-radius: 0;
     padding-right: 30px;
     padding-left: 0;
+    padding: 15px 30px 15px 0;
+}
+.search-modal.modal__content .search-modal__content .search__input::placeholder {
+  opacity: 1 !important; 
+  color: #999 !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.24px !important;
 }
 .search-modal.modal__content .search-modal__content .search__input:focus ~ .field__label {
   left: 0;

@@ -13,6 +13,9 @@
 }
 .template--index slideshow-component .slider-counter__link span {
   background: #fff !important;
+  width: 6px;
+  height: 6px;
+  border-radius: 0;
 }
 /* Slideshow video full height */
 .slideshow__video {

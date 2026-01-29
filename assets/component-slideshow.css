@@ -260,24 +260,33 @@ slideshow-component:not(.page-width) .slider-buttons {
 @media (max-width: 749px) {
     .template--index .banner--mobile-bottom .slideshow__text-wrapper {
         position: absolute;
-        bottom: 0;
-        width: calc(100% - 20px);
-        padding: 20px;
-    }
-    .template--index .banner--mobile-bottom .slideshow__text.banner__box {
-        background: transparent;
-    }
-}
-
-@media (max-width: 749px) {
-    .template--index .banner--mobile-bottom .slideshow__text-wrapper {
-        position: absolute;
         bottom: 40px;
-        width: calc(100% - 20px);
-        padding: 20px;
+        width: 100%;
+        padding: 16px;
     }
     .template--index .banner--mobile-bottom .slideshow__text.banner__box {
         background: transparent;
+        align-items: flex-end;
+    }
+    .slideshow__text.banner__box .banner__heading {
+      max-width: 220px;
+      text-align: left;
+      line-height: 26px;
+    }
+    .slideshow__text.banner__box .button-box {
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .template--index .slideshow__text.banner__box .button-box .banner__buttons {
+      padding: 2px;
+    }
+    .template--index slideshow-component .slideshow__controls {
+      bottom: 13px;
+    }
+
+    .template--index slideshow-component .slider-counter__link span {
+      width: 4px;
+      height: 4px;
     }
     .template--index .slideshow__controls {
         position: absolute !important;
