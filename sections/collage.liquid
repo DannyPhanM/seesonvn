@@ -42,7 +42,7 @@
               <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
                 <div
                   class="media media--transparent ratio"
-                  {% if block.settings.image != blank %}
+                  {%- if block.settings.image != blank -%}
                     style="--ratio-percent: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%"
                   {% else %}
                     style="--ratio-percent: 100%"

@@ -66,7 +66,7 @@
       "name": "Thanh trượt"
     },
     "wishlist": {
-      "title": "Danh sách yêu thích"
+      "title": "Wishlist"
     }
   },
   "newsletter": {
@@ -225,7 +225,8 @@
       },
       "reset": "Đặt lại",
       "sort_button": "Sắp xếp",
-      "sort_by_label": "Sắp xếp theo:",
+      "sort_by_label": "Sắp xếp theo",
+      "sort_by_newest": "Mới nhất",
       "to": "Đến",
       "clear_filter": "Xóa bộ lọc",
       "filter_selected_accessibility": "{{ type }} (Đã chọn {{ count }} bộ lọc)",

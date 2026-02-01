@@ -36,6 +36,39 @@
   }
 {%- endstyle -%}
 
+{%-  if collection.metafields.custom.collection_linked_right.value != blank or collection.metafields.custom.collection_linked_left.value != blank -%}
+  <div class="collection-linked page-width">
+    <div class="collection-linked__left">
+      {%- if collection.metafields.custom.collection_linked_left.value != blank -%}
+        {% for item in  collection.metafields.custom.collection_linked_left.value %}
+          <a href="{{ item.url }}" class="{%- if item.url == collection.url -%}active{%- endif -%}">{{ item.title }}</a>
+        {% endfor %}
+      {%- endif -%}
+    </div>
+    <div class="collection-linked__right">
+      {%- if collection.metafields.custom.collection_linked_right.value != blank -%}
+        {% for item in  collection.metafields.custom.collection_linked_right.value %}
+          <a href="{{ item.url }}" class="{%- if item.url == collection.url -%}active{%- endif -%}">{{ item.title }}</a>
+        {% endfor %}
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+<div class="slideshow__text banner__box mobile
+            content-container content-container--full-width-mobile 
+            flex-column 
+            ">
+  <h2 class="banner__heading inline-richtext h2">
+    {{ collection.title }}
+  </h2>
+  {%- if collection.description != blank -%}
+    <div class="banner__text rte">
+      {{ collection.description }}
+    </div>
+  {%- endif -%}
+</div>
+
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -327,6 +360,10 @@
         {
           "value": "square",
           "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "custom",
+          "label": "Custom "
         }
       ],
       "default": "adapt",
