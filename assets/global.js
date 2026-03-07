@@ -1390,3 +1390,126 @@ document.addEventListener('DOMContentLoaded', function () {
     updateIcon(details);
   });
 });
+
+class ProductCardCarousel extends HTMLElement {
+  constructor() {
+    super();
+    this.list = this.querySelector('.card__media-list');
+    this.items = Array.from(this.querySelectorAll('.card__media-item'));
+    this.dotsContainer = this.querySelector('.card__media-dots');
+    this.currentIndex = 0;
+    this.controls = this.querySelector('.card__media-nav');
+    
+    this.prevBtn = this.querySelector('.prev');
+    this.nextBtn = this.querySelector('.next');
+    
+    if (this.prevBtn) this.prevBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); this.slide('prev'); });
+    if (this.nextBtn) this.nextBtn.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); this.slide('next'); });
+
+    // Handle touch/swipe
+    this.startX = 0;
+    this.list.addEventListener('touchstart', (e) => { this.startX = e.touches[0].clientX; }, {passive: true});
+    this.list.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (this.startX - endX > 50) this.slide('next');
+        if (endX - this.startX > 50) this.slide('prev');
+    }, {passive: true});
+    
+    this.init();
+  }
+
+  connectedCallback() {
+    const cardWrapper = this.closest('.product-card-wrapper');
+    if (cardWrapper) {
+      const swatches = cardWrapper.querySelectorAll('.card__color-swatch-btn');
+      swatches.forEach(swatch => {
+        swatch.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const value = swatch.dataset.value;
+          this.filter(value);
+          swatches.forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+        });
+      });
+    }
+  }
+
+  init() {
+    const cardWrapper = this.closest('.product-card-wrapper');
+    const activeSwatch = cardWrapper ? cardWrapper.querySelector('.card__color-swatch-btn.active') : null;
+    if (activeSwatch) {
+      this.filter(activeSwatch.dataset.value);
+    } else {
+      this.updateDots();
+    }
+  }
+
+  filter(colorHandle) {
+    this.items.forEach(item => {
+      const variants = item.dataset.variants.split(' ');
+      if (colorHandle === 'all' || variants.includes('general') || variants.includes(colorHandle)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    this.currentIndex = 0;
+    this.updatePosition();
+    this.updateDots();
+    
+    const visibleItems = this.getVisibleItems();
+    if (this.controls) {
+      this.controls.style.display = visibleItems.length > 1 ? 'flex' : 'none';
+    }
+  }
+
+  getVisibleItems() {
+    return this.items.filter(item => !item.classList.contains('hidden'));
+  }
+
+  slide(direction) {
+    const visibleItems = this.getVisibleItems();
+    if (visibleItems.length <= 1) return;
+
+    if (direction === 'next') {
+      this.currentIndex = (this.currentIndex + 1) % visibleItems.length;
+    } else {
+      this.currentIndex = (this.currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    }
+
+    this.updatePosition();
+    this.updateDots();
+  }
+
+  updatePosition() {
+    const visibleItems = this.getVisibleItems();
+    if (visibleItems.length === 0) return;
+    
+    this.list.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+  }
+
+  updateDots() {
+    if (!this.dotsContainer) return;
+    this.dotsContainer.innerHTML = '';
+    const visibleItems = this.getVisibleItems();
+    if (visibleItems.length <= 1) return;
+
+    visibleItems.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('card__media-dot');
+      if (index === this.currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.currentIndex = index;
+        this.updatePosition();
+        this.updateDots();
+      });
+      this.dotsContainer.appendChild(dot);
+    });
+  }
+}
+
+customElements.define('product-card-carousel', ProductCardCarousel);
