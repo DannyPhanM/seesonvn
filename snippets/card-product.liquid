@@ -246,7 +246,6 @@
                   endif
                 -%}
                 {%- if is_color -%}
-                  123
                     {%- for value in option.values -%}
                       {%- liquid
                         assign swatch_value = null
@@ -271,7 +270,6 @@
                         endif
                       -%}
                       {%- if swatch_value -%}
-                        456
                         <button class="card__color-swatch-btn{% if card_product.selected_or_first_available_variant.options contains value %} active{% endif %}" 
                                 type="button"
                                 data-value="{{ value | handleize }}"
