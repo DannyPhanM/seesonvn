@@ -304,6 +304,7 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: var(--font-card-title-family);
 }
 
 .card__heading:last-child {
