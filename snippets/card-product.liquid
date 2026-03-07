@@ -236,24 +236,20 @@
                     {%- for value in option.values -%}
                       {%- liquid
                         assign swatch_value = null
-                        if value.swatch.image
+                        assign value_handle = value | handle
+                        assign swatch_metaobject = shop.metaobjects['shopify--color-pattern'][value_handle]
+                        assign swatch_value = null
+ 
+                        if swatch_metaobject.image != blank
+                          assign image_url = swatch_metaobject.image | image_url: width: 50
+                          assign swatch_value = 'url(' | append: image_url | append: ')'
+                        elsif value.swatch.image
                           assign image_url = value.swatch.image | image_url: width: 50
                           assign swatch_value = 'url(' | append: image_url | append: ')'
+                        elsif swatch_metaobject.color != blank
+                          assign swatch_value = swatch_metaobject.color
                         elsif value.swatch.color
                           assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-                        endif
- 
-                        if settings.color_swatch_mapping != blank
-                          assign mappings = settings.color_swatch_mapping | newline_to_br | split: '<br />'
-                          for mapping in mappings
-                            assign parts = mapping | split: ':'
-                            assign mapping_name = parts[0] | strip | downcase
-                            assign current_value_downcase = value | downcase
-                            if mapping_name == current_value_downcase
-                              assign swatch_value = parts[1] | strip
-                              break
-                            endif
-                          endfor
                         endif
 
                         if swatch_value == null
