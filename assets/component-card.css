@@ -639,38 +639,28 @@
 .card__colors {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 10px;
   margin-top: 1rem;
   position: relative;
   z-index: 20;
+  align-items: center;
+}
+
+.card__colors-more {
+  font-size: 1.2rem;
+  color: rgba(var(--color-foreground), 0.5);
+  line-height: 1;
 }
 
 .card__color-swatch {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--color-foreground), 0.1);
   background: var(--swatch-background);
   background-size: cover;
   background-position: center;
   display: block;
   position: relative;
-}
-
-.card__color-swatch:after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  transition: border-color var(--duration-short) ease;
-}
-
-.card__color-swatch:hover:after {
-  border-color: rgba(var(--color-foreground), 0.5);
 }
 
 /* Card Carousel */
@@ -755,39 +745,37 @@
 
 .card__media-dots {
   position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0.8rem;
+  left: 0.8rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
   z-index: 20;
 }
 
 .card__media-dot {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  width: 5px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background 0.2s ease, width 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .card__media-dot.active {
   background: #000;
-  width: 1.2rem;
-  border-radius: 3px;
 }
 
 .card__color-swatch-btn {
   background: none;
   border: 1px solid transparent;
-  padding: 2px;
+  padding: 3px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: border-color 0.2s ease;
+  width: 18px;
+  height: 18px;
 }
 
 .card__color-swatch-btn.active {

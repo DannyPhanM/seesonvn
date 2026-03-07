@@ -234,34 +234,38 @@
                 -%}
                 {%- if is_color -%}
                     {%- for value in option.values -%}
-                      {%- liquid
-                        assign swatch_value = null
-                        assign value_handle = value | handle
-                        assign swatch_metaobject = shop.metaobjects['shopify--color-pattern'][value_handle]
-                        assign swatch_value = null
+                      {%- if forloop.index <= 6 -%}
+                        {%- liquid
+                          assign value_handle = value | handle
+                          assign swatch_metaobject = shop.metaobjects['shopify--color-pattern'][value_handle]
+                          assign swatch_value = null
  
-                        if swatch_metaobject.image != blank
-                          assign image_url = swatch_metaobject.image | image_url: width: 50
-                          assign swatch_value = 'url(' | append: image_url | append: ')'
-                        elsif value.swatch.image
-                          assign image_url = value.swatch.image | image_url: width: 50
-                          assign swatch_value = 'url(' | append: image_url | append: ')'
-                        elsif swatch_metaobject.color != blank
-                          assign swatch_value = swatch_metaobject.color
-                        elsif value.swatch.color
-                          assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-                        endif
+                          if swatch_metaobject.image != blank
+                            assign image_url = swatch_metaobject.image | image_url: width: 50
+                            assign swatch_value = 'url(' | append: image_url | append: ')'
+                          elsif value.swatch.image
+                            assign image_url = value.swatch.image | image_url: width: 50
+                            assign swatch_value = 'url(' | append: image_url | append: ')'
+                          elsif swatch_metaobject.color != blank
+                            assign swatch_value = swatch_metaobject.color
+                          elsif value.swatch.color
+                            assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                          endif
 
-                        if swatch_value == null
-                          assign swatch_value = value | handle
-                        endif
-                      -%}
-                      <button class="card__color-swatch-btn{% if card_product.selected_or_first_available_variant.options contains value %} active{% endif %}" 
-                              type="button"
-                              data-value="{{ value | handleize }}"
-                              title="{{ value }}">
-                        <span class="card__color-swatch" style="--swatch-background: {{ swatch_value }};"></span>
-                      </button>
+                          if swatch_value == null
+                            assign swatch_value = value | handle
+                          endif
+                        -%}
+                        <button class="card__color-swatch-btn{% if card_product.selected_or_first_available_variant.options contains value %} active{% endif %}" 
+                                type="button"
+                                data-value="{{ value | handleize }}"
+                                title="{{ value }}">
+                          <span class="card__color-swatch" style="--swatch-background: {{ swatch_value }};"></span>
+                        </button>
+                      {%- endif -%}
+                      {%- if forloop.last and option.values.size > 6 -%}
+                        <span class="card__colors-more">+</span>
+                      {%- endif -%}
                     {%- endfor -%}
                 {%- endif -%}
               {%- endfor -%}
