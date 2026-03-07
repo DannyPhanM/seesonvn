@@ -541,7 +541,7 @@ table:not([class]) th {
 a:empty,
 ul:empty,
 dl:empty,
-div:empty,
+div:not(.card__media-dot):empty,
 section:empty,
 article:empty,
 p:empty,
