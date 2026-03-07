@@ -632,6 +632,40 @@
   font-family: var(--font-body-family);
   letter-spacing: -0.711px;
   font-weight: 700;
-  line-height: 1.2;
   color: #000;
+}
+
+.card__colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.card__color-swatch {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  background: var(--swatch-background);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: relative;
+}
+
+.card__color-swatch:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: border-color var(--duration-short) ease;
+}
+
+.card__color-swatch:hover:after {
+  border-color: rgba(var(--color-foreground), 0.5);
 }

@@ -1460,5 +1460,16 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Product Customizations",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "color_swatch_mapping",
+        "label": "Color swatch mapping",
+        "info": "Enter one per line, e.g., 'gray:#eeeeee'. This will override or supplement Shopify's built-in swatches."
+      }
+    ]
   }
 ]

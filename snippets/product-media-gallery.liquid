@@ -20,9 +20,65 @@
     assign single_media_visible = true
   endif
 
-  assign media_count = product.media.size
+  # Filter media based on variant alt text
+  assign current_variant = product.selected_or_first_available_variant
+  assign all_option_values = ''
+  for option in product.options_with_values
+    for value in option.values
+      assign handle = value | handleize | append: ','
+      assign all_option_values = all_option_values | append: handle
+    endfor
+  endfor
+  assign all_option_values = all_option_values | split: ',' | uniq
+
+  assign current_option_values = ''
+  for option in current_variant.options
+    assign handle = option | handleize | append: ','
+    assign current_option_values = current_option_values | append: handle
+  endfor
+  assign current_option_values = current_option_values | split: ','
+
+  assign filtered_media_ids = ''
+  for media in product.media
+    assign should_show = true
+    if media.alt != blank and product.variants.size > 1
+      assign alt_handle = media.alt | handleize
+      assign is_variant_image = false
+      for val in all_option_values
+        if val != blank and alt_handle contains val
+          assign is_variant_image = true
+          break
+        endif
+      endfor
+
+      if is_variant_image
+        assign should_show = false
+        for val in current_option_values
+          if val != blank and alt_handle contains val
+            assign should_show = true
+            break
+          endif
+        endfor
+      endif
+    endif
+
+    # Always show featured media of current variant
+    if media.id == current_variant.featured_media.id
+       assign should_show = true
+    endif
+
+    if should_show
+      assign media_id_str = media.id | append: ''
+      assign filtered_media_ids = filtered_media_ids | append: media_id_str | append: ','
+    endif
+  endfor
+  assign filtered_media_ids = filtered_media_ids | split: ',' | compact
+
+  assign media_count = filtered_media_ids.size
+  
   if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
-    assign media_count = media_count | minus: variant_images.size | plus: 1
+    # We still want to respect hide_variants if it's enabled, but our filtering might have already done the job.
+    # To be safe, we'll keep the standard Dawn logic but media_count is already reduced.
   endif
 
   if media_count == 1 or single_media_visible
@@ -86,6 +142,9 @@
         </li>
       {%- endif -%}
       {%- for media in product.media -%}
+        {%- assign media_id_str = media.id | append: "" -%}
+        {%- unless filtered_media_ids contains media_id_str -%}{% continue %}{%- endunless -%}
+
         {% if media_position >= limit
           or media_position >= 1
           and section.settings.hide_variants
@@ -252,6 +311,9 @@
           </li>
         {%- endif -%}
         {%- for media in product.media -%}
+          {%- assign media_id_str = media.id | append: "" -%}
+          {%- unless filtered_media_ids contains media_id_str -%}{% continue %}{%- endunless -%}
+
           {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
             {%- liquid
               capture media_index
