@@ -22,29 +22,37 @@
 
   # Filter media based on variant alt text
   assign current_variant = product.selected_or_first_available_variant
-  assign all_option_values = ''
-  for option in product.options_with_values
-    for value in option.values
-      assign handle = value | handleize | append: ','
-      assign all_option_values = all_option_values | append: handle
+  
+  # 1. Build a comprehensive dictionary of all possible variant/option handles
+  assign all_variant_handles = ''
+  for variant in product.variants
+    assign v_title_h = variant.title | handleize | append: ','
+    assign all_variant_handles = all_variant_handles | append: v_title_h
+    for option_val in variant.options
+      assign o_val_h = option_val | handleize | append: ','
+      assign all_variant_handles = all_variant_handles | append: o_val_h
     endfor
   endfor
-  assign all_option_values = all_option_values | split: ',' | uniq
+  assign all_variant_handles = all_variant_handles | split: ',' | uniq | compact
 
-  assign current_option_values = ''
-  for option in current_variant.options
-    assign handle = option | handleize | append: ','
-    assign current_option_values = current_option_values | append: handle
+  # 2. Get current variant's handles
+  assign current_variant_handles = ''
+  assign cv_title_h = current_variant.title | handleize | append: ','
+  assign current_variant_handles = current_variant_handles | append: cv_title_h
+  for option_val in current_variant.options
+    assign o_val_h = option_val | handleize | append: ','
+    assign current_variant_handles = current_variant_handles | append: o_val_h
   endfor
-  assign current_option_values = current_option_values | split: ','
+  assign current_variant_handles = current_variant_handles | split: ',' | uniq | compact
 
   assign filtered_media_ids = ''
   for media in product.media
     assign should_show = true
+    
     if media.alt != blank and product.variants.size > 1
       assign alt_parts = media.alt | split: ','
       assign is_variant_image = false
-      assign matches_current_variant = false
+      assign matches_current = false
       
       for part in alt_parts
         assign part_handle = part | handleize
@@ -54,36 +62,35 @@
         
         assign part_handle_padded = '-' | append: part_handle | append: '-'
         
-        # Find the longest variant match in this part to avoid partial matches
-        # e.g., 'silver-black' should match 'silver-black' variant, not 'black' variant
-        assign longest_match = ''
-        for val in all_option_values
-          assign val_padded = '-' | append: val | append: '-'
-          if part_handle_padded contains val_padded
-            if val.size > longest_match.size
-              assign longest_match = val
+        # Determine which variant "owns" this alt part (the longest/most specific match)
+        assign best_match = ''
+        for handle in all_variant_handles
+          assign handle_padded = '-' | append: handle | append: '-'
+          if part_handle_padded contains handle_padded
+            if handle.size > best_match.size
+              assign best_match = handle
             endif
           endif
         endfor
         
-        if longest_match != ''
+        if best_match != ''
           assign is_variant_image = true
-          # Check if this best match belongs to the current variant
-          for curr_val in current_option_values
-            if curr_val == longest_match
-              assign matches_current_variant = true
+          # Check if this "owner" belongs to our current selection
+          for cv_handle in current_variant_handles
+            if cv_handle == best_match
+              assign matches_current = true
               break
             endif
           endfor
         endif
         
-        if matches_current_variant
+        if matches_current
           break
         endif
       endfor
-
+      
       if is_variant_image
-        assign should_show = matches_current_variant
+        assign should_show = matches_current
       endif
     endif
 
