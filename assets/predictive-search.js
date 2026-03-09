@@ -60,10 +60,9 @@ class PredictiveSearch extends SearchForm {
             
             let imgHtml = '';
             if (product.featured_media && product.featured_media.preview_image) {
-              const aspect = product.featured_media.preview_image.aspect_ratio || 1;
-              imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=150" alt="${product.featured_media.alt || product.title}" width="50" height="${50 / aspect}">`;
+              imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=300" alt="${product.featured_media.alt || product.title}" width="155" height="72">`;
             } else if (product.featured_image) {
-              imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120" height="auto">`;
+              imgHtml = `<img class="predictive-search__image" src="${product.featured_image}&width=300" alt="${product.title}" width="155" height="72">`;
             }
             
             let vendorHtml = '';

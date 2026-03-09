@@ -232,10 +232,21 @@ cart-drawer-items {
 
 .cart-drawer .cart-item__media {
   grid-row: 1 / 4;
+  width: 15.5rem;
+}
+
+.cart-drawer .cart-item__image-container {
+  display: inline-flex;
+  width: 15.5rem;
+  height: 7.2rem;
+  overflow: hidden;
 }
 
 .cart-drawer .cart-item__image {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
 }
 
 .cart-drawer .cart-item__nested-line .cart-item__image {
