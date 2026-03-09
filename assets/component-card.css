@@ -761,6 +761,16 @@
   transition: background 0.2s ease;
 }
 
+@media screen and (max-width: 749px) {
+  .card__media-dots {
+    gap: 4px;
+  }
+  .card__media-dot {
+    width: 2px;
+    height: 2px;
+  }
+}
+
 .card__media-dot.active {
   background: #000;
 }

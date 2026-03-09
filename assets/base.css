@@ -4416,6 +4416,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 .template--collection .slideshow__text.banner__box.mobile {
   display: block;
+  margin-top: 15px;
 }
 @media (min-width: 750px) {
   .template--collection .slideshow__text.banner__box {

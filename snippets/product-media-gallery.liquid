@@ -42,20 +42,37 @@
   for media in product.media
     assign should_show = true
     if media.alt != blank and product.variants.size > 1
-      assign alt_handle = media.alt | handleize
+      assign alt_parts = media.alt | split: ','
       assign is_variant_image = false
-      for val in all_option_values
-        if val != blank and alt_handle contains val
-          assign is_variant_image = true
+      
+      for part in alt_parts
+        assign part_handle = part | handleize
+        if part_handle == ''
+          continue
+        endif
+        
+        for val in all_option_values
+          if val == part_handle
+            assign is_variant_image = true
+            break
+          endif
+        endfor
+        if is_variant_image
           break
         endif
       endfor
 
       if is_variant_image
         assign should_show = false
-        for val in current_option_values
-          if val != blank and alt_handle contains val
-            assign should_show = true
+        for part in alt_parts
+          assign part_handle = part | handleize
+          for val in current_option_values
+            if val == part_handle
+              assign should_show = true
+              break
+            endif
+          endfor
+          if should_show
             break
           endif
         endfor
