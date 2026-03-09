@@ -44,6 +44,7 @@
     if media.alt != blank and product.variants.size > 1
       assign alt_parts = media.alt | split: ','
       assign is_variant_image = false
+      assign matches_current_variant = false
       
       for part in alt_parts
         assign part_handle = part | handleize
@@ -51,31 +52,38 @@
           continue
         endif
         
+        assign part_handle_padded = '-' | append: part_handle | append: '-'
+        
+        # Find the longest variant match in this part to avoid partial matches
+        # e.g., 'silver-black' should match 'silver-black' variant, not 'black' variant
+        assign longest_match = ''
         for val in all_option_values
-          if val == part_handle
-            assign is_variant_image = true
-            break
+          assign val_padded = '-' | append: val | append: '-'
+          if part_handle_padded contains val_padded
+            if val.size > longest_match.size
+              assign longest_match = val
+            endif
           endif
         endfor
-        if is_variant_image
+        
+        if longest_match != ''
+          assign is_variant_image = true
+          # Check if this best match belongs to the current variant
+          for curr_val in current_option_values
+            if curr_val == longest_match
+              assign matches_current_variant = true
+              break
+            endif
+          endfor
+        endif
+        
+        if matches_current_variant
           break
         endif
       endfor
 
       if is_variant_image
-        assign should_show = false
-        for part in alt_parts
-          assign part_handle = part | handleize
-          for val in current_option_values
-            if val == part_handle
-              assign should_show = true
-              break
-            endif
-          endfor
-          if should_show
-            break
-          endif
-        endfor
+        assign should_show = matches_current_variant
       endif
     endif
 
