@@ -16,15 +16,20 @@ class PredictiveSearch extends SearchForm {
   renderRecentlyViewedProducts() {
     if (!window.getRecentlyViewedProducts) return;
     const ids = window.getRecentlyViewedProducts();
-    // Support multiple containers (header, modal, etc.)
     const groups = document.querySelectorAll('#predictive-search-recently-viewed-group');
     const lists = document.querySelectorAll('#predictive-search-recently-viewed-list');
+    
     if (!groups.length || !lists.length) return;
+    
     if (!ids.length) {
       groups.forEach(group => group.style.display = 'none');
-      lists.forEach(list => list.innerHTML = '');
+      lists.forEach(list => {
+          list.innerHTML = '';
+          list.dataset.loaded = 'true';
+      });
       return;
     }
+
     groups.forEach(group => group.style.display = 'none');
     lists.forEach(list => list.innerHTML = '');
 
@@ -37,14 +42,11 @@ class PredictiveSearch extends SearchForm {
           return;
         }
         groups.forEach(group => group.style.display = '');
-        // Settings: get from window or data-attributes if needed
         const showVendor = window.themeSettings?.predictive_search_show_vendor;
-        // Always show price for recently viewed products (to match main product layout)
         const showPrice = true;
-        // Map by handle for fast lookup
         const productMap = {};
         products.forEach(p => { productMap[p.handle] = p; });
-        // Render only unique, in order of handles in cookie
+
         lists.forEach(list => {
           list.innerHTML = '';
           ids.forEach((handle, idx) => {
@@ -55,7 +57,7 @@ class PredictiveSearch extends SearchForm {
             li.setAttribute('role', 'option');
             li.setAttribute('aria-selected', 'false');
             li.id = `predictive-search-option-recently-${idx+1}`;
-            // Featured image logic
+            
             let imgHtml = '';
             if (product.featured_media && product.featured_media.preview_image) {
               const aspect = product.featured_media.preview_image.aspect_ratio || 1;
@@ -63,17 +65,17 @@ class PredictiveSearch extends SearchForm {
             } else if (product.featured_image) {
               imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120" height="auto">`;
             }
-            // Vendor
+            
             let vendorHtml = '';
             if (showVendor && product.vendor) {
               vendorHtml = `<span class="visually-hidden">Vendor</span><div class="predictive-search__item-vendor caption-with-letter-spacing">${product.vendor}</div>`;
             }
-            // Price (use min price)
+            
             let priceHtml = '';
             if (showPrice && product.price) {
               priceHtml = `<div class="predictive-search__item-price">${(product.price/100).toLocaleString('vi-VN', {style:'currency',currency:'VND'})}</div>`;
             }
-            // Centered class logic
+            
             let centered = (!showVendor && !showPrice) ? ' predictive-search__item-content--centered' : '';
             li.innerHTML = `
               <a href="${product.url || '/products/' + product.handle}" class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text" tabindex="-1">
@@ -87,10 +89,15 @@ class PredictiveSearch extends SearchForm {
             `;
             list.appendChild(li);
           });
+          list.dataset.loaded = 'true';
         });
+
         if (window.updateRecentlyViewedEmptyText) {
           window.updateRecentlyViewedEmptyText();
         }
+      })
+      .catch(err => {
+        console.error('[RecentlyViewed] Error fetching products:', err);
       });
   }
 

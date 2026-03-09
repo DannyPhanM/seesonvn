@@ -49,77 +49,83 @@ console.log('[RecentlyViewed] Product handles in cookie:', getRecentlyViewedProd
 
 // Hiển thị hoặc ẩn thông báo trống trong header search
 document.addEventListener('DOMContentLoaded', function() {
-  var emptyText = document.getElementById('predictive-search-recently-viewed-empty');
-  var list = document.getElementById('predictive-search-recently-viewed-list');
   function updateRecentlyViewedEmptyText() {
-    if (!list) return;
-    const hasItems = list.children.length > 0;
-    if (emptyText) {
-      emptyText.style.display = hasItems ? 'none' : 'flex';
-    }
-    const clearButtons = document.querySelectorAll('.predictive-search__clear-button');
-    clearButtons.forEach(btn => {
-      btn.style.display = hasItems ? 'inline-block' : 'none';
-    });
+    const lists = document.querySelectorAll('#predictive-search-recently-viewed-list');
+    lists.forEach(list => {
+      const hasItems = list.children.length > 0;
+      const container = list.closest('.predictive_search_open') || list.closest('.predictive-search') || list.closest('.search-modal__content');
+      if (!container) return;
 
-    // Hide group if no items and it's inside predictive-search
-    const group = list.closest('#predictive-search-recently-viewed-group');
-    if (group && !hasItems && document.querySelector('predictive-search')) {
-      group.style.display = 'none';
-    }
+      const emptyText = container.querySelector('#predictive-search-recently-viewed-empty');
+      if (emptyText) {
+        emptyText.style.display = hasItems ? 'none' : 'flex';
+      }
+
+      const group = container.querySelector('#predictive-search-recently-viewed-group');
+      if (group) {
+        if (hasItems) {
+            group.style.display = '';
+        }
+      }
+      
+      const clearButtons = container.querySelectorAll('.predictive-search__clear-button');
+      clearButtons.forEach(btn => {
+        btn.style.display = hasItems ? 'inline-block' : 'none';
+      });
+    });
   }
   window.updateRecentlyViewedEmptyText = updateRecentlyViewedEmptyText;
-  // Nếu predictive_search bị tắt (search-form), tự động render sản phẩm đã xem gần đây
-  var group = document.getElementById('predictive-search-recently-viewed-group');
-  if (group && list && !window.customElements.get('predictive-search')) {
+
+  // Initial call to hide/show empty text
+  updateRecentlyViewedEmptyText();
+
+  // If predictive_search is disabled, manually render recently viewed
+  if (!window.customElements.get('predictive-search')) {
+    const lists = document.querySelectorAll('#predictive-search-recently-viewed-list');
     const handles = window.getRecentlyViewedProducts ? window.getRecentlyViewedProducts() : [];
-    if (!handles.length) {
-      group.style.display = '';
-      list.innerHTML = '';
-      updateRecentlyViewedEmptyText();
-      return;
-    }
-    group.style.display = '';
-    list.innerHTML = '';
-    Promise.all(handles.map(handle => fetch(`/products/${handle}.js`).then(r => r.json()).catch(() => null)))
-      .then(products => {
-        products = products.filter(Boolean);
-        if (!products.length) {
+    
+    if (lists.length && handles.length) {
+      Promise.all(handles.map(handle => fetch(`/products/${handle}.js`).then(r => r.json()).catch(() => null)))
+        .then(products => {
+          products = products.filter(Boolean);
+          if (!products.length) return;
+
+          lists.forEach(list => {
+            list.innerHTML = '';
+            products.forEach((product, idx) => {
+              const li = document.createElement('li');
+              li.className = 'predictive-search__list-item';
+              li.setAttribute('role', 'option');
+              li.setAttribute('aria-selected', 'false');
+              li.id = `predictive-search-option-recently-${idx+1}`;
+              
+              let imgHtml = '';
+              if (product.featured_media && product.featured_media.preview_image) {
+                const aspect = product.featured_media.preview_image.aspect_ratio || 1;
+                imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=150" alt="${product.featured_media.alt || product.title}" width="50" height="${50 / aspect}">`;
+              } else if (product.featured_image) {
+                imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120">`;
+              }
+              
+              let priceHtml = '';
+              if (product.price) {
+                priceHtml = `<div class="predictive-search__item-price">${(product.price/100).toLocaleString('vi-VN', {style:'currency',currency:'VND'})}</div>`;
+              }
+              
+              li.innerHTML = `
+                <a href="${product.url || '/products/' + product.handle}" class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text" tabindex="-1">
+                  ${imgHtml}
+                  <div class="predictive-search__item-content">
+                    <p class="predictive-search__item-heading h5">${product.title}</p>
+                    ${priceHtml}
+                  </div>
+                </a>
+              `;
+              list.appendChild(li);
+            });
+          });
           updateRecentlyViewedEmptyText();
-          return;
-        }
-        products.forEach((product, idx) => {
-          const li = document.createElement('li');
-          li.className = 'predictive-search__list-item';
-          li.setAttribute('role', 'option');
-          li.setAttribute('aria-selected', 'false');
-          li.id = `predictive-search-option-recently-${idx+1}`;
-          let imgHtml = '';
-          if (product.featured_media && product.featured_media.preview_image) {
-            const aspect = product.featured_media.preview_image.aspect_ratio || 1;
-            imgHtml = `<img class="predictive-search__image" src="${product.featured_media.preview_image.src}&width=150" alt="${product.featured_media.alt || product.title}" width="50" height="${50 / aspect}">`;
-          } else if (product.featured_image) {
-            imgHtml = `<img class="predictive-search__image" src="${product.featured_image}" alt="${product.title}" width="120">`;
-          }
-          let priceHtml = '';
-          if (product.price) {
-            priceHtml = `<div class="predictive-search__item-price">${(product.price/100).toLocaleString('vi-VN', {style:'currency',currency:'VND'})}</div>`;
-          }
-          li.innerHTML = `
-            <a href="${product.url || '/products/' + product.handle}" class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text" tabindex="-1">
-              ${imgHtml}
-              <div class="predictive-search__item-content">
-                <p class="predictive-search__item-heading h5">${product.title}</p>
-                ${priceHtml}
-              </div>
-            </a>
-          `;
-          list.appendChild(li);
         });
-        updateRecentlyViewedEmptyText();
-      });
-  } else {
-    // Gọi khi trang load để ẩn/hiện text nếu predictive-search đã render
-    updateRecentlyViewedEmptyText();
+    }
   }
 });
