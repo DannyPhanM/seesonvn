@@ -88,6 +88,9 @@ class PredictiveSearch extends SearchForm {
             list.appendChild(li);
           });
         });
+        if (window.updateRecentlyViewedEmptyText) {
+          window.updateRecentlyViewedEmptyText();
+        }
       });
   }
 

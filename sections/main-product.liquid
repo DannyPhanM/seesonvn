@@ -11,9 +11,14 @@
 >
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      if (window.addRecentlyViewedProduct) {
-        window.addRecentlyViewedProduct({{ product.handle | json }});
-      }
+      const addProd = () => {
+        if (window.addRecentlyViewedProduct) {
+          window.addRecentlyViewedProduct({{ product.handle | json }});
+        } else {
+          setTimeout(addProd, 100);
+        }
+      };
+      addProd();
     });
   </script>
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
