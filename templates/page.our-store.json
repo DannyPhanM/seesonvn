@@ -66,10 +66,40 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_BmyXE3": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14.png",
+            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "title": "",
+            "heading_tag": "h2",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_frCEJJ": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14.png",
+            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "title": "",
+            "heading_tag": "h2",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_kJzwGR"
+        "column_kJzwGR",
+        "column_BmyXE3",
+        "column_frCEJJ"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -82,7 +112,9 @@
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
-        "background_style": "primary",
+        "enable_desktop_slider": true,
+        "show_dots": false,
+        "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -157,6 +189,8 @@
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": false,
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
