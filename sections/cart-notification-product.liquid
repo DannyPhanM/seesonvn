@@ -4,10 +4,10 @@
       {%- if item.image -%}
         <div class="cart-notification-product__image global-media-settings">
           <img
-            src="{{ item.image | image_url: width: 140 }}"
+            src="{{ item.image | image_url: width: 400 }}"
             alt="{{ item.image.alt | escape }}"
-            width="70"
-            height="{{ 70 | divided_by: item.image.aspect_ratio | ceil }}"
+            width="155"
+            height="72"
             loading="lazy"
           >
         </div>

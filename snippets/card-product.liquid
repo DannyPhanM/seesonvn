@@ -44,14 +44,26 @@
     endif
 
     # Filter media based on variant alt text
-    assign all_option_values = ''
-    for option in card_product.options_with_values
-      for value in option.values
-        assign handle = value | handleize | append: ','
-        assign all_option_values = all_option_values | append: handle
+    assign all_variant_handles = ''
+    for variant in card_product.variants
+      assign v_title_h = variant.title | handleize | append: ','
+      assign all_variant_handles = all_variant_handles | append: v_title_h
+      for option_val in variant.options
+        assign o_val_h = option_val | handleize | append: ','
+        assign all_variant_handles = all_variant_handles | append: o_val_h
       endfor
     endfor
-    assign all_option_values = all_option_values | split: ',' | uniq
+    assign all_variant_handles = all_variant_handles | split: ',' | uniq | compact
+
+    assign current_variant = card_product.selected_or_first_available_variant
+    assign current_variant_handles = ''
+    assign cv_title_h = current_variant.title | handleize | append: ','
+    assign current_variant_handles = current_variant_handles | append: cv_title_h
+    for option_val in current_variant.options
+      assign o_val_h = option_val | handleize | append: ','
+      assign current_variant_handles = current_variant_handles | append: o_val_h
+    endfor
+    assign current_variant_handles = current_variant_handles | split: ',' | uniq | compact
   -%}
   <div class="card-wrapper product-card-wrapper">
     <div
@@ -77,23 +89,47 @@
               <div class="card__media-list">
                 {%- for media in card_product.media -%}
                   {%- liquid
-                    assign media_variants = ''
+                    assign media_assigned_variants = ''
+                    assign matches_current = false
+                    
                     if media.alt != blank
-                      assign alt_handle = media.alt | handleize
-                      for val in all_option_values
-                        if val != blank and alt_handle contains val
-                          assign media_variants = media_variants | append: val | append: ' '
+                      assign alt_parts = media.alt | split: ','
+                      for part in alt_parts
+                        assign part_handle = part | handleize
+                        if part_handle == ''
+                          continue
+                        endif
+                        
+                        assign part_handle_padded = '-' | append: part_handle | append: '-'
+                        assign best_match = ''
+                        for handle in all_variant_handles
+                          assign handle_padded = '-' | append: handle | append: '-'
+                          if part_handle_padded contains handle_padded
+                            if handle.size > best_match.size
+                              assign best_match = handle
+                            endif
+                          endif
+                        endfor
+                        
+                        if best_match != ''
+                          assign media_assigned_variants = media_assigned_variants | append: best_match | append: ' '
+                          for cvh in current_variant_handles
+                            if cvh == best_match
+                              assign matches_current = true
+                            endif
+                          endfor
                         endif
                       endfor
                     endif
                     
-                    if media_variants == ''
-                      assign media_variants = 'general'
+                    if media_assigned_variants == ''
+                      assign media_assigned_variants = 'general'
+                      assign matches_current = true
                     endif
                   -%}
-                  <div class="card__media-item{% if media_variants != 'general' and card_product.selected_or_first_available_variant.featured_media.id != media.id %} hidden{% endif %}" 
-                       data-variants="{{ media_variants | strip }}"
-                       {% if media_variants != 'general' %}data-specific="true"{% endif %}>
+                  <div class="card__media-item{% unless matches_current %} hidden{% endunless %}" 
+                       data-variants="{{ media_assigned_variants | strip }}"
+                       {% if media_assigned_variants != 'general' %}data-specific="true"{% endif %}>
                     <a class="media_link" href="{{ card_product.url }}">
                       <img
                         srcset="

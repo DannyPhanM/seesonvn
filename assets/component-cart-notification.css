@@ -116,6 +116,16 @@
   display: inline-flex;
   margin-right: 2rem;
   margin-top: 0;
+  width: 15.5rem;
+  height: 7.2rem;
+  overflow: hidden;
+}
+
+.cart-notification-product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
 }
 
 .cart-notification-product__image:after {
