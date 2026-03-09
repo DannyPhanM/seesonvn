@@ -68,10 +68,68 @@
 .multicolumn-card__image-wrapper .has-image-mobile .multicolumn-card__image--mobile {
     display: none;
 }
+
+{%- liquid
+  assign desktop_ratio = section.settings.image_ratio
+  assign mobile_ratio = section.settings.image_ratio_mobile
+
+  case desktop_ratio
+    when '1/1'
+      assign desktop_padding = '100%'
+    when '2/3'
+      assign desktop_padding = '150%'
+    when '3/2'
+      assign desktop_padding = '66.66%'
+    when '4/5'
+      assign desktop_padding = '125%'
+    when '16/9'
+      assign desktop_padding = '56.25%'
+    when '9/16'
+      assign desktop_padding = '177.77%'
+    when 'square'
+      assign desktop_padding = '100%'
+    when 'portrait'
+      assign desktop_padding = '150%'
+    when 'circle'
+      assign desktop_padding = '100%'
+  endcase
+
+  case mobile_ratio
+    when '1/1'
+      assign mobile_padding = '100%'
+    when '2/3'
+      assign mobile_padding = '150%'
+    when '3/2'
+      assign mobile_padding = '66.66%'
+    when '4/5'
+      assign mobile_padding = '125%'
+    when '16/9'
+      assign mobile_padding = '56.25%'
+    when '9/16'
+      assign mobile_padding = '177.77%'
+    when 'square'
+      assign mobile_padding = '100%'
+    when 'portrait'
+      assign mobile_padding = '150%'
+    when 'circle'
+      assign mobile_padding = '100%'
+  endcase
+-%}
+
+@media screen and (min-width: 750px) {
+  {% if desktop_ratio != 'adapt' %}
+    .section-{{ section.id }}-padding .media {
+      padding-bottom: {{ desktop_padding }};
+    }
+  {% endif %}
+}
+
 @media only screen and (max-width: 749px) {
-  .multicolumn-card__image-wrapper .has-image-mobile {
-    padding-bottom: 150% !important;
-  }
+  {% if mobile_ratio != 'adapt' %}
+    .section-{{ section.id }}-padding .media {
+      padding-bottom: {{ mobile_padding }} !important;
+    }
+  {% endif %}
     .multicolumn-card__image-wrapper .has-image-mobile .multicolumn-card__image {
         display: none;
     }
@@ -79,7 +137,6 @@
         display: block;
     }
 }
-
 {%- endstyle -%}
 
 {%- liquid
@@ -156,8 +213,8 @@
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
                   <div
                     class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio_mobile == 'adapt' %}
+                      {% comment %} style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;" {% endcomment %}
                     {% endif %}
                   >
                     {%- liquid
@@ -430,20 +487,76 @@
           "label": "t:sections.multicolumn.settings.image_ratio.options__1.label"
         },
         {
-          "value": "portrait",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
+          "value": "1/1",
+          "label": "1/1"
         },
         {
-          "value": "square",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
+          "value": "2/3",
+          "label": "2/3"
+        },
+        {
+          "value": "3/2",
+          "label": "3/2"
+        },
+        {
+          "value": "4/5",
+          "label": "4/5"
+        },
+        {
+          "value": "16/9",
+          "label": "16/9"
+        },
+        {
+          "value": "9/16",
+          "label": "9/16"
         },
         {
           "value": "circle",
           "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
         }
       ],
-      "default": "adapt",
-      "label": "t:sections.multicolumn.settings.image_ratio.label"
+      "default": "4/5",
+      "label": "Desktop image ratio"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_mobile",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "1/1",
+          "label": "1/1"
+        },
+        {
+          "value": "2/3",
+          "label": "2/3"
+        },
+        {
+          "value": "3/2",
+          "label": "3/2"
+        },
+        {
+          "value": "4/5",
+          "label": "4/5"
+        },
+        {
+          "value": "16/9",
+          "label": "16/9"
+        },
+        {
+          "value": "9/16",
+          "label": "9/16"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        }
+      ],
+      "default": "4/5",
+      "label": "Mobile image ratio"
     },
     {
       "type": "header",
@@ -500,7 +613,7 @@
       "type": "checkbox",
       "id": "show_dots",
       "label": "Show dots",
-      "default": false
+      "default": true
     },
     {
       "type": "select",

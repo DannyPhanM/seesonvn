@@ -61,7 +61,7 @@
 }
 
 .multicolumn-list__item:only-child {
-  max-width: 72rem;
+  /* max-width: 72rem; */
 }
 
 .multicolumn-list__item--empty {
@@ -239,6 +239,30 @@
   position: relative;
 }
 
+/* Removed previous .slider-buttons definition as it is handled below */
+
+.slider-component-desktop .slider-button {
+  pointer-events: auto;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.slider-component-desktop .slider-button:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
 .slider-component-desktop .slider-buttons {
   position: absolute;
   top: 50%;
@@ -247,46 +271,46 @@
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 4rem;
+  padding: 0 2rem;
   pointer-events: none;
   z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.slider-component-desktop .slider-button {
-  pointer-events: auto;
-  background: rgba(255, 255, 255, 0.6);
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.slider-component-desktop:hover .slider-buttons {
+  opacity: 1;
+}
+
+@media screen and (max-width: 749px) {
+  .slider-buttons {
+    display: none !important;
+  }
 }
 
 .slider-dots {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
-  z-index: 2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .slider-dot {
-  width: 22px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.4);
+  width: 8px;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .slider-dot[aria-current="true"] {
-  background: #fff;
+  background: #000;
+  width: 24px;
+  border-radius: 4px;
 }
 
 @media screen and (min-width: 990px) {
