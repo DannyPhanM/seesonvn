@@ -13,6 +13,33 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .section-{{ section.id }}-padding slider-component {
+    --desktop-margin-left-first-item: 0rem;
+  }
+  .section-{{ section.id }}-padding .slider--desktop {
+    scroll-padding-left: 0rem;
+  }
+  .section-{{ section.id }}-padding .slider--desktop .slider__slide:first-child {
+    margin-left: 0rem;
+    scroll-margin-left: 0rem;
+  }
+  .section-{{ section.id }}-padding .slider--desktop:after {
+    padding-left: 0rem;
+  }
+  .section-{{ section.id }}-padding .slider--desktop.grid--1-col-desktop .grid__item {
+    width: 100%;
+    max-width: 100%;
+  }
+  .section-{{ section.id }}-padding .slider--desktop.grid--2-col-desktop .grid__item {
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+  .section-{{ section.id }}-padding .slider--desktop.grid--3-col-desktop .grid__item {
+    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+  }
+  .section-{{ section.id }}-padding .slider--desktop.grid--4-col-desktop .grid__item {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  }
   .multicolumn-card__info.content_overlay {
     position: absolute !important;
     top: 0;

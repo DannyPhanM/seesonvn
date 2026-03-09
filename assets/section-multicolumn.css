@@ -289,28 +289,28 @@
 }
 
 .slider-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  z-index: 2;
 }
 
 .slider-dot {
-  width: 8px;
-  height: 8px;
-  background: #e8e8e8;
-  border-radius: 50%;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .slider-dot[aria-current="true"] {
-  background: #000;
-  width: 24px;
-  border-radius: 4px;
+  background: #fff;
 }
 
 @media screen and (min-width: 990px) {
