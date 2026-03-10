@@ -24,8 +24,9 @@
         "slide_GBBXDE": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
-            "mobile_image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
+            "video_url": "",
+            "image": "shopify://shop_images/banner-collection.png",
+            "mobile_image": "shopify://shop_images/banner-collection-mobile.png",
             "image_overlay_opacity": 0,
             "enable_column": true,
             "heading": "{{ collection.title }}",
