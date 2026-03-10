@@ -256,6 +256,7 @@
         "collection_slide_mfBRyT",
         "collection_slide_kJpwNU"
       ],
+      "disabled": true,
       "name": "Collection Slider",
       "settings": {
         "title": "Collections",
@@ -295,7 +296,7 @@
         "heading_cDzbMc": {
           "type": "heading",
           "settings": {
-            "heading": "ESSENTIAL spaces",
+            "heading": "ESSENTIAL SPACES",
             "heading_tag": "h1"
           }
         },
@@ -363,10 +364,13 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
+        "image_ratio_mobile": "4/5",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": true,
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
