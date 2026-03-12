@@ -185,6 +185,7 @@ input::-webkit-search-decoration {
   margin: 0 auto;
   object-fit: contain;
   aspect-ratio: 1;
+  object-position: left bottom;
 }
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li .predictive-search__item-heading {
     overflow: hidden;
@@ -254,6 +255,12 @@ input::-webkit-search-decoration {
 }
 .search-modal.modal__content .promo_collection .sub-title p {
   margin-top: 0;
+}
+@media(min-width: 750px) {
+  #predictive-search-recently-viewed-list li {
+    width: calc(25% - 11px);
+    overflow: hidden;
+  }
 }
 @media(max-width: 749px) {
   .search-modal.modal__content .search-modal__content .predictive_search_open {
