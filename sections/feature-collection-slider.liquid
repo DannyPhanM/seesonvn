@@ -6,7 +6,6 @@
     padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
   }
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -19,328 +18,267 @@
     position: relative;
     overflow: hidden;
     color: #000;
-    min-height: 80vh;
+  }
+
+  .feat-coll-flex {
+    display: flex;
+    align-items: stretch;
+  }
+
+  /* LEFT: 45% */
+  .feat-coll-left {
+    width: 45%;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
-    padding: 80px 0;
+    justify-content: flex-start;
+    gap: 30px;
+    box-sizing: border-box;
   }
 
-  .feat-coll-content-wrapper {
-    display: flex;
-    position: relative;
-    width: 100%;
-    gap: 40px;
-    align-items: stretch; /* Crucial for matching height */
-  }
-
-  /* Left Column: Info + Glasses + Thumbs */
-  .feat-coll-left-col {
-    width: 38%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 20;
-    min-height: 600px; /* Base height */
-  }
-
-  .feat-coll-info-card-stationary {
-    width: 100%;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .feat-coll-info-card-stationary.is-changing {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  .feat-coll-info-card-stationary h3 {
-    color: #000;
-    margin: 0 0 10px;
-    font-family: var(--font-card-title-family);
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: -1px;
+  .feat-coll-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px;
     text-transform: uppercase;
-  }
-
-  .feat-coll-info-card-stationary .price {
-    font-size: 24px;
-    font-weight: 400;
-    color: #666;
-    margin-bottom: 2rem;
     font-family: var(--font-heading-family);
   }
+  .feat-coll-info .price {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
 
-  .feat-coll-info-card-stationary .product-img-wrap {
-    flex: 1;
+  /* Preview Image (Left Middle) - 200x200 */
+  .feat-coll-preview {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #eee;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 20px 0;
+    overflow: hidden;
+    flex-shrink: 0;
   }
-
-  .feat-coll-info-card-stationary .product-img-wrap img {
-    max-width: 100%;
-    max-height: 400px;
+  .feat-coll-preview img {
+    max-width: 90%;
+    max-height: 90%;
     object-fit: contain;
     transition: opacity 0.4s ease;
   }
 
-  /* Right Column: Lifestyle Slider with Peek */
-  .feat-coll-right-col {
-    width: 62%;
-    position: relative;
-    overflow: hidden; /* Clip everything outside section width */
+  /* THUMB SLIDER (Master) */
+  .feat-coll-thumbs-wrap {
+    margin-top: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
   }
-
-  .lifestyle-swiper {
-    width: 100% !important;
-    height: 100% !important;
-    overflow: visible !important; /* Allow the PEER effect */
+  .thumb-master-swiper .swiper-slide {
+    height: 100px;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
   }
-
-  .lifestyle-swiper .swiper-slide {
-    height: 100%;
-    transition: opacity 0.5s ease;
-    opacity: 0.1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .lifestyle-swiper .swiper-slide-active {
-    opacity: 1;
-  }
-
-  .lifestyle-swiper img {
+  .thumb-master-swiper .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  /* Highlight based on our custom class */
+  .thumb-master-swiper .swiper-slide.show-item {
+    box-shadow: inset 0 0 0 3px #F2C94C;
+  }
 
-  /* Queue Thumbnails */
-  .thumb-queue-wrap {
+  /* RIGHT: 55% (Fixed High-Quality Image) */
+  .feat-coll-right {
+    width: 55%;
+    height: 600px;
+    background: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+  }
+  .master-lifestyle-img {
     width: 100%;
-    margin-top: auto;
-    padding: 20px 0;
-  }
-
-  .thumb-queue {
-    display: flex;
-    gap: 12px;
-    width: 100%;
-    flex-wrap: wrap; /* Fallback */
-    transition: all 0.4s ease;
-  }
-
-  .thumb-item {
-    width: 82px;
-    height: 110px;
-    flex-shrink: 0;
-    cursor: pointer;
-    filter: grayscale(100%);
-    opacity: 1;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* The Transfer Gap */
-  .thumb-item.is-active {
-    opacity: 0 !important;
-    pointer-events: none;
-    }
-    .lifestyle-swiper .swiper-slide {
-      height: 400px;
-      min-height: 400px;
-    }
-  }
-
-  @media screen and (max-width: 989px) {
-    .feat-coll-lifestyle-slider-wrap {
-      width: 70%;
-    }
-    .feat-coll-info-card-stationary {
-      width: 30%;
-    }
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.5s ease;
+    display: block;
   }
 
   @media screen and (max-width: 749px) {
-    .feat-coll-content-wrapper {
-      flex-direction: column;
-    }
-    .feat-coll-info-card-stationary,
-    .feat-coll-lifestyle-slider-wrap {
-      width: 100%;
-      padding-right: 0;
-    }
-    .lifestyle-swiper .swiper-slide {
-      height: 400px;
-      min-height: 400px;
-    }
+    .feat-coll-flex { flex-direction: column; }
+    .feat-coll-left, .feat-coll-right { width: 100%; padding: 0 15px; }
+    .feat-coll-right { height: 400px; order: 1; margin-bottom: 20px; }
+    .feat-coll-left { order: 2; gap: 20px; }
+    .feat-coll-preview { margin: 0 auto; }
+    .feat-coll-info { text-align: center; }
   }
 {%- endstyle -%}
 
+{%- assign product_list = section.settings.product_list -%}
+{%- assign total = product_list.count | default: 0 -%}
+
 <div class="feat-coll-slider section-{{ section.id }}-padding">
   <div class="page-width">
-    <!-- Header stays at the top -->
-    <div class="feat-coll-header">
-      <h2 class="h1">{{ section.settings.heading }}</h2>
-      <div class="description rte">{{ section.settings.description }}</div>
-      {%- if section.settings.button_label != blank -%}
-        <a href="{{ section.settings.button_link }}" class="link underlined-link">
-          {{ section.settings.button_label }}
-        </a>
-      {%- endif -%}
-    </div>
+    {%- if total > 0 -%}
+      <div class="feat-coll-flex">
+        <!-- LEFT Column -->
+        <div class="feat-coll-left">
+          <div class="feat-coll-info" id="FcInfo-{{ section.id | replace: '-', '_' }}">
+            <h3>&nbsp;</h3>
+            <p class="price">&nbsp;</p>
+          </div>
 
-    <!-- Middle: Stationary Content + Lifestyle Slider -->
-    <div class="feat-coll-content-wrapper">
-      <!-- Left Column: Info + Glasses + Thumbnails -->
-      <div class="feat-coll-left-col">
-        <div class="feat-coll-info-card-stationary" id="FeatCollInfo-{{ section.id | replace: '-', '_' }}">
-          <div class="product-info-row">
-            <div class="title-price-wrap">
-              <a href="#" class="product-title-link full-unstyled-link"><h3></h3></a>
-              <p class="price"></p>
+          <div class="feat-coll-preview" id="FcPreview-{{ section.id | replace: '-', '_' }}">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Glass Preview" />
+          </div>
+
+          <div class="feat-coll-thumbs-wrap">
+            <div class="swiper thumb-master-swiper" id="FcMaster-{{ section.id | replace: '-', '_' }}">
+              <div class="swiper-wrapper">
+                {%- for product in product_list -%}
+                  {%- assign glass_img = product.media[0] | default: product.featured_image -%}
+                  {%- assign life_img = product.media[1] | default: product.featured_image -%}
+                  {%- assign thumb_img = life_img -%}
+
+                  <div class="swiper-slide" 
+                    data-real-index="{{ forloop.index0 }}"
+                    data-title="{{ product.title | escape }}"
+                    data-price="{{ product.price | money }}"
+                    data-glass="{{ glass_img | image_url: width: 600 }}"
+                    data-lifestyle="{{ life_img | image_url: width: 1200 }}"
+                  >
+                    {{ thumb_img | image_url: width: 200 | image_tag: loading: 'lazy' }}
+                  </div>
+                {%- endfor -%}
+              </div>
             </div>
-            <button class="bookmark-btn" aria-label="Bookmark product">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="product-img-wrap">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" width="400" height="225" alt="Product" />
           </div>
         </div>
 
-        <!-- Thumbnail Queue (Part of Left Column) -->
-        <div class="thumb-queue-wrap">
-          <div class="thumb-queue" id="ThumbQueue-{{ section.id | replace: '-', '_' }}">
-            {%- for block in section.blocks -%}
-              {%- assign product = block.settings.product -%}
-              {%- if product == blank -%}{%- continue -%}{%- endif -%}
-              
-              {%- assign thumb_person_img = block.settings.image | default: product.media[1] | default: product.featured_image -%}
-
-              <div class="thumb-item" data-index="{{ forloop.index0 }}">
-                {%- if thumb_person_img != blank -%}
-                  {{ thumb_person_img | image_url: width: 200 | image_tag: loading: 'lazy' }}
-                {%- else -%}
-                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
+        <!-- RIGHT Column -->
+        <div class="feat-coll-right" id="FcRight-{{ section.id | replace: '-', '_' }}">
+          <img class="master-lifestyle-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Main View" width="1000" height="600" loading="lazy" />
         </div>
       </div>
-
-      <!-- Right Column: Lifestyle Slider -->
-      <div class="feat-coll-right-col">
-        <div class="lifestyle-swiper" id="LifestyleSwiper-{{ section.id | replace: '-', '_' }}">
-          <div class="swiper-wrapper">
-            {%- for block in section.blocks -%}
-              {%- assign product = block.settings.product -%}
-              {%- if product == blank -%}{%- continue -%}{%- endif -%}
-              
-              {%- assign person_img = block.settings.image | default: product.media[1] | default: product.featured_image -%}
-              {%- assign glasses_img = product.featured_image | default: product.media[0] -%}
-
-              <div class="swiper-slide" 
-                data-title="{{ product.title | escape }}"
-                data-price="{{ product.price | money | escape }}"
-                data-url="{{ product.url }}"
-                data-glasses-img="{{ glasses_img | image_url: width: 600 }}"
-              >
-                {%- if person_img != blank -%}
-                  {{ person_img | image_url: width: 1400 | image_tag: loading: 'lazy' }}
-                {%- else -%}
-                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                {%- endif -%}
-              </div>
-            {%- endfor -%}
-          </div>
-        </div>
-      </div>
-    </div>
+    {%- else -%}
+      <div class="center">Please select products in the section settings.</div>
+    {%- endif -%}
   </div>
 </div>
 
-<!-- Swiper JS CDN -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const swiperId = '{{ section.id | replace: "-", "_" }}';
-    const infoCard = document.getElementById('FeatCollInfo-' + swiperId);
-    const thumbQueue = document.getElementById('ThumbQueue-' + swiperId);
+(function(){
+  function init(){
+    const sid = '{{ section.id | replace: "-", "_" }}';
+    const mEl = document.getElementById('FcMaster-'+sid);
+    const iEl = document.getElementById('FcInfo-'+sid);
+    const pEl = document.getElementById('FcPreview-'+sid);
+    const rEl = document.getElementById('FcRight-'+sid);
     
-    function updateInfo(slide) {
-      if (!slide || !infoCard) return;
+    if(!mEl) return;
+
+    function selectProduct(ri) {
+      if (ri === undefined || ri === null) return;
+      
+      // 1. Manage Classes on all instances (inc clones)
+      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
+      mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]').forEach(sl => sl.classList.add('show-item'));
+
+      // 2. Extract Data from one of the active instances
+      const slide = mEl.querySelector('.swiper-slide[data-real-index="' + ri + '"]');
+      if (!slide) return;
+
       const title = slide.getAttribute('data-title');
       const price = slide.getAttribute('data-price');
-      const url = slide.getAttribute('data-url');
-      const glassesImg = slide.getAttribute('data-glasses-img');
+      const glass = slide.getAttribute('data-glass');
+      const life = slide.getAttribute('data-lifestyle');
 
-      infoCard.classList.add('is-changing');
-      setTimeout(() => {
-        infoCard.querySelector('h3').textContent = title || '';
-        infoCard.querySelector('.price').innerHTML = price || '';
-        infoCard.querySelectorAll('a').forEach(a => a.href = url || '#');
-        infoCard.querySelector('.product-img-wrap img').src = glassesImg || '';
-        infoCard.classList.remove('is-changing');
-      }, 300);
+      // Update Info
+      if(iEl) {
+        const h3 = iEl.querySelector('h3');
+        const p = iEl.querySelector('.price');
+        if(h3) h3.textContent = title || '';
+        if(p) p.innerHTML = price || '';
+      }
+
+      // Update Preview (Left)
+      const gImg = pEl.querySelector('img');
+      if(gImg && glass && gImg.src !== glass) {
+        gImg.style.opacity = '0';
+        setTimeout(() => { 
+          gImg.src = glass; 
+          gImg.onload = () => gImg.style.opacity = '1';
+        }, 150);
+      }
+
+      // Update Lifestyle (Right)
+      const lImg = rEl.querySelector('img');
+      if(lImg && life && lImg.src !== life) {
+        lImg.style.opacity = '0';
+        setTimeout(() => { 
+          lImg.src = life; 
+          lImg.onload = () => lImg.style.opacity = '1';
+        }, 200);
+      }
     }
 
-    const lifestyleSwiper = new Swiper('#LifestyleSwiper-' + swiperId, {
-      slidesPerView: 1.15,
-      centeredSlides: false,
-      spaceBetween: 25,
+    var swiper = new Swiper(mEl, {
+      slidesPerView: 5,
+      spaceBetween: 12,
       loop: false,
-      speed: 800,
       grabCursor: true,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        320: { slidesPerView: 3 },
+        750: { slidesPerView: 5 },
+        1200: { slidesPerView: 7 }
+      },
       on: {
         init: function() {
-          updateUI(0);
+          selectProduct(0);
+        },
+        click: function(s, e) {
+          const slide = e.target.closest('.swiper-slide');
+          if (slide) {
+            const idx = parseInt(slide.getAttribute('data-real-index'));
+            if (!isNaN(idx)) {
+              selectProduct(idx);
+            }
+          }
         },
         slideChange: function() {
-          updateUI(this.activeIndex);
+          // Sync UI when user swipes manually
+          if (this.activeIndex !== undefined) {
+             const currentSelected = mEl.querySelector('.swiper-slide.show-item');
+             const selIdx = currentSelected ? parseInt(currentSelected.getAttribute('data-real-index')) : -1;
+             
+             // If manual swipe moves the selected item out of view, follow the activeIndex
+             const spv = Math.floor(this.params.slidesPerView || 1);
+             if (selIdx < this.activeIndex || selIdx >= (this.activeIndex + spv)) {
+               selectProduct(this.activeIndex);
+             }
+          }
         }
       }
     });
 
-    function updateUI(activeIndex) {
-      console.log('UPDATING UI for Index:', activeIndex);
-      const slides = lifestyleSwiper.slides;
-      if (!slides[activeIndex]) return;
+    // Handle initial load
+    setTimeout(() => {
+      if (swiper) selectProduct(0);
+    }, 400);
+  }
 
-      updateInfo(slides[activeIndex]);
-
-      // Manage Thumbnail Queue
-      const items = thumbQueue.querySelectorAll('.thumb-item');
-      items.forEach(item => {
-        const itemIdx = parseInt(item.getAttribute('data-index'));
-        if (itemIdx === activeIndex) {
-          item.classList.add('is-active');
-          item.style.order = "99";
-          console.log('Pinned item', itemIdx);
-        } else {
-          item.classList.remove('is-active');
-          item.style.order = itemIdx.toString(); // Keep original order for others
-        }
-      });
-    }
-
-    // Handle Thumbnail Clicks
-    thumbQueue.addEventListener('click', function(e) {
-      const item = e.target.closest('.thumb-item');
-      if (item) {
-        const index = parseInt(item.getAttribute('data-index'));
-        lifestyleSwiper.slideTo(index);
-      }
-    });
-  });
+  document.addEventListener('DOMContentLoaded', init);
+  if(window.Shopify && Shopify.designMode) {
+    document.addEventListener('shopify:section:load', init);
+  }
+})();
 </script>
 
 {% schema %}
@@ -359,18 +297,13 @@
       "type": "richtext",
       "id": "description",
       "label": "Description",
-      "default": "<p>Take your time exploring our carefully curated collection, where you'll find an array of spectacles and sunglasses...</p>"
+      "default": "<p>Explore our carefully curated collection...</p>"
     },
     {
-      "type": "text",
-      "id": "button_label",
-      "label": "Button Label",
-      "default": "DISCOVER MORE"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 20
     },
     {
       "type": "color",
@@ -403,32 +336,9 @@
       "default": 60
     }
   ],
-  "blocks": [
-    {
-      "type": "product_slide",
-      "name": "Product Slide",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Lifestyle Image (Large View)"
-        }
-      ]
-    }
-  ],
   "presets": [
     {
-      "name": "Feature Coll Slider",
-      "blocks": [
-        { "type": "product_slide" },
-        { "type": "product_slide" },
-        { "type": "product_slide" }
-      ]
+      "name": "Feature Coll Slider"
     }
   ]
 }
