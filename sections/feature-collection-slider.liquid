@@ -276,7 +276,7 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script>
 (function(){
   function init(){
@@ -285,18 +285,21 @@
     const iEl = document.getElementById('FcInfo-'+sid);
     const pEl = document.getElementById('FcPreview-'+sid);
     const rEl = document.getElementById('FcRight-'+sid);
-    const fCard = document.getElementById('FcFlipCard-'+sid);
-    const fBtn = document.getElementById('FcFlipBtn-'+sid);
-    if(!mEl) return;
+    
+    if(!mEl || typeof Swiper === 'undefined') {
+      if (!mEl) return;
+      setTimeout(init, 100);
+      return;
+    }
  
     function selectProduct(ri) {
-      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
       const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+      if(slides.length === 0) return;
+
+      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
       slides.forEach(sl => sl.classList.add('show-item'));
       
       const slide = slides[0];
-      if(!slide) return;
-
       if(iEl) {
         iEl.querySelector('h3').textContent = slide.getAttribute('data-title');
         iEl.querySelector('.price').innerHTML = slide.getAttribute('data-price');
@@ -306,7 +309,7 @@
         const glass = slide.getAttribute('data-glass');
         if(gImg && glass) {
           gImg.style.opacity = '0';
-          setTimeout(() => { gImg.src = glass; gImg.onload = () => gImg.style.opacity = '1'; }, 150);
+          setTimeout(() => { gImg.src = glass; gImg.onload = () => gImg.style.opacity = '1'; }, 50);
         }
       }
       if(rEl) {
@@ -314,7 +317,7 @@
         const life = slide.getAttribute('data-lifestyle');
         if(lImg && life) {
           lImg.style.opacity = '0';
-          setTimeout(() => { lImg.src = life; lImg.onload = () => lImg.style.opacity = '1'; }, 200);
+          setTimeout(() => { lImg.src = life; lImg.onload = () => lImg.style.opacity = '1'; }, 100);
         }
       }
     }
@@ -334,8 +337,13 @@
       }
     });
   }
-  document.addEventListener('DOMContentLoaded', init);
-  document.addEventListener('shopify:section:load', init);
+
+  if (document.readyState === 'complete') {
+    init();
+  } else {
+    window.addEventListener('load', init);
+    document.addEventListener('shopify:section:load', init);
+  }
 })();
 </script>
 

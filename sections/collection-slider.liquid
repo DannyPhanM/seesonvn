@@ -337,7 +337,7 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script>
 (function(){
   function init(){
@@ -347,17 +347,21 @@
     const rEl = document.getElementById('ClRight-'+sid);
     const fCard = document.getElementById('FlipCard-'+sid);
     const fBtn = document.getElementById('FlipBtn-'+sid);
-    if(!mEl) return;
+    
+    if(!mEl || typeof Swiper === 'undefined') {
+      if (!mEl) return;
+      setTimeout(init, 100);
+      return;
+    }
 
     function selectCollection(ri) {
-      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
       const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+      if(slides.length === 0) return;
+      
+      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
       slides.forEach(sl => sl.classList.add('show-item'));
       
       const slide = slides[0];
-      if(!slide) return;
-
-      // Reset flip when switching collection
       if(fCard) fCard.classList.remove('is-flipped');
 
       if(iEl) {
@@ -378,18 +382,15 @@
         if(imgP && urlP) imgP.src = urlP;
         if(imgS && urlS) {
           imgS.src = urlS;
-          // Force button visibility if any slide has a secondary image, 
-          // but for this specific slide we check if it's the placeholder or real
           if(fBtn) fBtn.style.display = 'flex'; 
         }
       }
     }
 
     if(fBtn && fCard) {
-      fBtn.addEventListener('click', () => {
+      fBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         const isFlipped = fCard.classList.toggle('is-flipped');
-        
-        // Sync all thumbnail flips
         mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
           card.classList.toggle('is-flipped', isFlipped);
         });
@@ -411,8 +412,13 @@
       }
     });
   }
-  document.addEventListener('DOMContentLoaded', init);
-  document.addEventListener('shopify:section:load', init);
+
+  if (document.readyState === 'complete') {
+    init();
+  } else {
+    window.addEventListener('load', init);
+    document.addEventListener('shopify:section:load', init);
+  }
 })();
 </script>
 
