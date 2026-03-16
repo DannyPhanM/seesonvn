@@ -23,17 +23,17 @@
   .coll-list-flex {
     display: flex;
     align-items: stretch;
+    max-width: var(--page-width);
+    margin: 0 auto;
   }
 
-  /* LEFT: 45% */
+  /* DESKTOP LAYOUT (Default) */
   .coll-list-left {
-    width: 45%;
-    padding-right: 40px;
+    width: 60%;
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 30px;
-    box-sizing: border-box;
   }
 
   .coll-list-info h2 {
@@ -41,7 +41,6 @@
     font-weight: 700;
     margin: 0 0 10px;
     text-transform: uppercase;
-    font-family: var(--font-heading-family);
   }
   .coll-list-info .description {
     font-size: 16px;
@@ -59,52 +58,212 @@
     color: #000;
   }
 
-  /* THUMB SLIDER (Master) */
   .coll-list-thumbs-wrap {
     margin-top: auto;
+    padding-top: 50px;
     width: 100%;
     overflow: hidden;
-    padding: 10px 0;
-  }
-  .coll-thumb-swiper .swiper-slide {
-    height: 120px;
-    background: #fff;
-    cursor: pointer;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-  }
-  .coll-thumb-swiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  /* Highlight based on our custom class */
-  .coll-thumb-swiper .swiper-slide.show-item {
-    box-shadow: inset 0 0 0 3px #F2C94C;
   }
 
-  /* RIGHT: 55% */
-  .coll-list-right {
-    width: 55%;
-    height: 650px;
-    background: #f7f7f7;
+  .coll-thumb-swiper .swiper-slide {
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
     position: relative;
-    overflow: hidden;
   }
-  .coll-master-img {
-    width: 100%;
-    height: 100%;
+  .coll-thumb-swiper .swiper-slide.show-item { opacity: 1; }
+  .coll-thumb-swiper .swiper-slide img {
+    width: 100%; height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s ease;
+    aspect-ratio: 82 / 120;
     display: block;
   }
 
+  /* INDICATORS (Matches feature-collection-slider) */
+  .coll-list-thumbs-wrap .swiper-slide::after {
+    content: "";
+    position: absolute;
+    background: #000;
+    transition: transform 0.3s ease;
+  }
+  
+  .style-bottom.coll-thumb-swiper .swiper-slide.show-item::after { transform: scaleX(1); }
+
+  /* Thumbnail Flip Styles */
+  .coll-thumb-swiper .swiper-slide {
+    perspective: 500px;
+    padding: 0;
+  }
+  .coll-thumb-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    aspect-ratio: 82 / 120;
+  }
+  .coll-thumb-flip-card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .coll-thumb-front, .coll-thumb-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .coll-thumb-back {
+    transform: rotateY(180deg);
+  }
+  .coll-thumb-swiper .swiper-slide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .coll-list-right {
+    width: 40%;
+    height: 650px;
+    background: transparent;
+    perspective: 1000px; /* Required for 3D */
+    position: relative; /* Fixed: Required for absolute children like the flip button */
+  }
+  
+  .coll-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  
+  .coll-flip-card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .coll-flip-front, .coll-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+  }
+  
+  .coll-flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .coll-master-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Flip Icon Button */
+  .coll-flip-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    color: #000;
+  }
+  .coll-flip-btn:hover { background: #fff; transform: scale(1.1); }
+  .coll-flip-btn svg { width: 26px; height: 26px; transition: transform 0.6s ease; }
+  .coll-flip-card.is-flipped ~ .coll-flip-btn svg { transform: rotate(180deg); }
+
+  /* MOBILE LAYOUT (Design Match) */
   @media screen and (max-width: 749px) {
-    .coll-list-flex { flex-direction: column; }
-    .coll-list-left, .coll-list-right { width: 100%; padding: 0 15px; }
-    .coll-list-right { height: 400px; order: 1; margin-bottom: 20px; }
-    .coll-list-left { order: 2; gap: 20px; }
-    .coll-list-info { text-align: center; }
+    .coll-list-flex {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) 60px; /* Prevent overflow on small screens */
+      grid-template-areas: 
+        "info info"
+        "main thumbs";
+      gap: 15px;
+      padding: 0 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .coll-list-left {
+      display: contents;
+    }
+
+    .coll-list-right {
+      grid-area: main;
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 3 / 4;
+      background: transparent;
+    }
+
+    .coll-list-thumbs-wrap {
+      grid-area: thumbs;
+      width: 100% !important;
+      max-width: 60px;
+      height: auto !important;
+      align-self: end;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .coll-thumb-swiper {
+      width: 100% !important;
+      height: auto !important;
+      max-height: 400px;
+    }
+
+    .coll-thumb-swiper .swiper-slide {
+      padding: 0 !important;
+      margin-bottom: 10px;
+    }
+
+    .coll-list-info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 20px; /* Space below info */
+      width: 100%;
+      text-align: left !important;
+    }
+
+    .coll-list-info h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .coll-list-info .description {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* Mobile Active Item Style: Overlay border to ensure visibility */
+    .coll-thumb-swiper .swiper-slide::after {
+      display: none !important;
+    }
+    .coll-thumb-swiper .swiper-slide.show-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 1px solid #999;
+      z-index: 5;
+      pointer-events: none;
+    }
   }
 {%- endstyle -%}
 
@@ -112,10 +271,10 @@
 {%- assign total = collection_list.count | default: 0 -%}
 
 <div class="coll-list-slider section-{{ section.id }}-padding">
-  <div class="page-width">
+  <div class="">
     {%- if total > 0 -%}
       <div class="coll-list-flex">
-        <!-- LEFT Column -->
+        <!-- LEFT/CONTENT -->
         <div class="coll-list-left">
           <div class="coll-list-info" id="ClInfo-{{ section.id | replace: '-', '_' }}">
             <h2>&nbsp;</h2>
@@ -124,23 +283,30 @@
           </div>
 
           <div class="coll-list-thumbs-wrap">
-            <div class="swiper coll-thumb-swiper" id="ClMaster-{{ section.id | replace: '-', '_' }}">
+            <div class="swiper coll-thumb-swiper style-{{ section.settings.indicator_style }}" id="ClMaster-{{ section.id | replace: '-', '_' }}">
               <div class="swiper-wrapper">
                 {%- for collection in collection_list -%}
                   {%- assign main_img = collection.featured_image | default: collection.products.first.featured_image -%}
-
+                  {%- assign second_img = collection.metafields.custom.collection_banner_second | default: main_img -%}
+                  
                   <div class="swiper-slide" 
                     data-real-index="{{ forloop.index0 }}"
                     data-title="{{ collection.title | escape }}"
                     data-description="{{ collection.description | strip_html | truncate: 160 | escape }}"
                     data-url="{{ collection.url }}"
-                    data-img="{{ main_img | image_url: width: 1500 }}"
+                    data-img-primary="{{ main_img | image_url: width: 1200 }}"
+                    data-img-secondary="{{ second_img | image_url: width: 1200 }}"
+                    data-thumb-primary="{{ main_img | image_url: width: 300 }}"
+                    data-thumb-secondary="{{ second_img | image_url: width: 300 }}"
                   >
-                    {%- if main_img != blank -%}
-                      {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
-                    {%- else -%}
-                      {{ 'collection-1' | placeholder_svg_tag }}
-                    {%- endif -%}
+                    <div class="coll-thumb-flip-card">
+                      <div class="coll-thumb-front">
+                        {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
+                      </div>
+                      <div class="coll-thumb-back">
+                        <img src="{{ second_img | image_url: width: 300 }}" loading="lazy" alt="Back Thumb" />
+                      </div>
+                    </div>
                   </div>
                 {%- endfor -%}
               </div>
@@ -148,13 +314,25 @@
           </div>
         </div>
 
-        <!-- RIGHT Column -->
+        <!-- RIGHT/MASTER IMAGE -->
         <div class="coll-list-right" id="ClRight-{{ section.id | replace: '-', '_' }}">
-          <img class="coll-master-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Collection View" width="1200" height="800" loading="lazy" />
+          <div class="coll-flip-card" id="FlipCard-{{ section.id | replace: '-', '_' }}">
+             <div class="coll-flip-front">
+                <img class="coll-master-img primary" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Front master" loading="lazy" />
+             </div>
+             <div class="coll-flip-back">
+                <img class="coll-master-img secondary" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Back master" loading="lazy" />
+             </div>
+          </div>
+          <button class="coll-flip-btn" aria-label="Flip Image" id="FlipBtn-{{ section.id | replace: '-', '_' }}">
+             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8.75L19.4 10.0962L17.65 11.8269C19.7833 12.0994 21.5417 12.6603 22.925 13.5096C24.3083 14.359 25 15.3365 25 16.4423C25 17.7724 24.0375 18.9062 22.1125 19.8437C20.1875 20.7812 17.8167 21.25 15 21.25C12.1833 21.25 9.8125 20.7812 7.8875 19.8437C5.9625 18.9062 5 17.7724 5 16.4423C5 15.4487 5.55417 14.5593 6.6625 13.774C7.77083 12.9888 9.21667 12.4038 11 12.0192L11 13.9904C9.71667 14.3109 8.72917 14.7075 8.0375 15.1803C7.34583 15.653 7 16.0737 7 16.4423C7 16.9551 7.7125 17.5641 9.1375 18.2692C10.5625 18.9744 12.5167 19.3269 15 19.3269C17.4833 19.3269 19.4375 18.9744 20.8625 18.2692C22.2875 17.5641 23 16.9551 23 16.4423C23 16.0577 22.575 15.597 21.725 15.0601C20.875 14.5232 19.6667 14.1186 18.1 13.8462L19.4 15.0962L18 16.4423L14 12.5962L18 8.75Z" fill="black"/>
+             </svg>
+          </button>
         </div>
       </div>
     {%- else -%}
-      <div class="center">Please select collections in the section settings.</div>
+      <div class="center">Please select collections in the settings.</div>
     {%- endif -%}
   </div>
 </div>
@@ -167,93 +345,74 @@
     const mEl = document.getElementById('ClMaster-'+sid);
     const iEl = document.getElementById('ClInfo-'+sid);
     const rEl = document.getElementById('ClRight-'+sid);
-    
+    const fCard = document.getElementById('FlipCard-'+sid);
+    const fBtn = document.getElementById('FlipBtn-'+sid);
     if(!mEl) return;
 
     function selectCollection(ri) {
-      if (ri === undefined || ri === null) return;
-      
-      // 1. Manage Classes
       mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
-      const activeSlide = mEl.querySelector('.swiper-slide[data-real-index="' + ri + '"]');
-      if (activeSlide) activeSlide.classList.add('show-item');
+      const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+      slides.forEach(sl => sl.classList.add('show-item'));
+      
+      const slide = slides[0];
+      if(!slide) return;
 
-      if (!activeSlide) return;
+      // Reset flip when switching collection
+      if(fCard) fCard.classList.remove('is-flipped');
 
-      const title = activeSlide.getAttribute('data-title');
-      const desc = activeSlide.getAttribute('data-description');
-      const url = activeSlide.getAttribute('data-url');
-      const img = activeSlide.getAttribute('data-img');
-
-      // Update Info
       if(iEl) {
         const h2 = iEl.querySelector('h2');
-        const dDiv = iEl.querySelector('.description');
+        const desc = iEl.querySelector('.description');
         const cta = iEl.querySelector('.cta-link');
-        if(h2) h2.textContent = title || '';
-        if(dDiv) dDiv.textContent = desc || '';
-        if(cta) cta.href = url || '#';
+        if(h2) h2.textContent = slide.getAttribute('data-title');
+        if(desc) desc.textContent = slide.getAttribute('data-description');
+        if(cta) cta.href = slide.getAttribute('data-url');
       }
 
-      // Update Large Image (Right)
-      const rImg = rEl.querySelector('img');
-      if(rImg && img && rImg.src !== img) {
-        rImg.style.opacity = '0';
-        setTimeout(() => { 
-          rImg.src = img; 
-          rImg.onload = () => rImg.style.opacity = '1';
-        }, 150);
+      if(fCard) {
+        const imgP = fCard.querySelector('.coll-master-img.primary');
+        const imgS = fCard.querySelector('.coll-master-img.secondary');
+        const urlP = slide.getAttribute('data-img-primary');
+        const urlS = slide.getAttribute('data-img-secondary');
+        
+        if(imgP && urlP) imgP.src = urlP;
+        if(imgS && urlS) {
+          imgS.src = urlS;
+          // Force button visibility if any slide has a secondary image, 
+          // but for this specific slide we check if it's the placeholder or real
+          if(fBtn) fBtn.style.display = 'flex'; 
+        }
       }
     }
 
-    var swiper = new Swiper(mEl, {
-      slidesPerView: 4,
-      spaceBetween: 15,
-      loop: false,
-      grabCursor: true,
-      slideToClickedSlide: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        320: { slidesPerView: 2.5 },
-        750: { slidesPerView: 4 },
-        1200: { slidesPerView: 5 }
+    if(fBtn && fCard) {
+      fBtn.addEventListener('click', () => {
+        const isFlipped = fCard.classList.toggle('is-flipped');
+        
+        // Sync all thumbnail flips
+        mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
+          card.classList.toggle('is-flipped', isFlipped);
+        });
+      });
+    }
+
+    const swiper = new Swiper(mEl, {
+      slidesPerView: 4, spaceBetween: 15,
+      breakpoints: { 
+        320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
+        750: { direction: 'horizontal', slidesPerView: 5, spaceBetween: 20 } 
       },
       on: {
-        init: function() {
-          selectCollection(0);
-        },
+        init: function() { selectCollection(0); },
         click: function(s, e) {
-          const slide = e.target.closest('.swiper-slide');
-          if (slide) {
-            const idx = parseInt(slide.getAttribute('data-real-index'));
-            if (!isNaN(idx)) {
-              selectCollection(idx);
-            }
-          }
-        },
-        slideChange: function() {
-          if (this.activeIndex !== undefined) {
-             const currentSelected = mEl.querySelector('.swiper-slide.show-item');
-             const selIdx = currentSelected ? parseInt(currentSelected.getAttribute('data-real-index')) : -1;
-             
-             const spv = Math.floor(this.params.slidesPerView || 1);
-             if (selIdx < this.activeIndex || selIdx >= (this.activeIndex + spv)) {
-               selectCollection(this.activeIndex);
-             }
-          }
+          const sl = e.target.closest('.swiper-slide');
+          if(sl) selectCollection(parseInt(sl.getAttribute('data-real-index')));
         }
       }
     });
-
-    setTimeout(() => {
-      if (swiper) selectCollection(0);
-    }, 400);
   }
-
   document.addEventListener('DOMContentLoaded', init);
-  if(window.Shopify && Shopify.designMode) {
-    document.addEventListener('shopify:section:load', init);
-  }
+  document.addEventListener('shopify:section:load', init);
 })();
 </script>
 
@@ -263,47 +422,21 @@
   "tag": "section",
   "class": "section collection-slider-section",
   "settings": [
+    { "type": "collection_list", "id": "collection_list", "label": "Collections", "limit": 12 },
     {
-      "type": "collection_list",
-      "id": "collection_list",
-      "label": "Collections",
-      "limit": 12
+      "type": "select",
+      "id": "indicator_style",
+      "label": "Indicator Style",
+      "options": [
+        { "value": "top", "label": "Option 1: 25px Top" },
+        { "value": "bottom", "label": "Option 2: Full Bottom" }
+      ],
+      "default": "bottom"
     },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#F2F2F2"
-    },
-    {
-      "type": "header",
-      "content": "Padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Top",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Bottom",
-      "default": 60
-    }
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#F2F2F2" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top", "default": 60 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 60 }
   ],
-  "presets": [
-    {
-      "name": "Collection Slider"
-    }
-  ]
+  "presets": [{ "name": "Collection Slider" }]
 }
 {% endschema %}
