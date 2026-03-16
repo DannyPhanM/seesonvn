@@ -25,6 +25,25 @@
     align-items: stretch;
     max-width: var(--page-width);
     margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .feat-coll-header {
+    max-width: var(--page-width);
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+  .feat-coll-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+  .feat-coll-header .description {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.5;
   }
 
   /* DESKTOP LAYOUT (Default) */
@@ -144,12 +163,25 @@
   @media screen and (max-width: 749px) {
     .feat-coll-flex {
       display: grid !important;
-      grid-template-columns: 1fr 60px; /* Image | Thumbs */
+      grid-template-columns: minmax(0, 1fr) 60px; /* Image | Thumbs */
       grid-template-areas: 
         "main thumbs"
         "info info";
       gap: 15px;
       padding: 0 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .feat-coll-header {
+      padding: 0 15px;
+      margin-bottom: 25px;
+    }
+    .feat-coll-header h2 {
+      font-size: 22px;
+    }
+    .feat-coll-header .description {
+      font-size: 14px;
     }
     
     .feat-coll-left {
@@ -227,6 +259,17 @@
 
 <div class="feat-coll-slider section-{{ section.id }}-padding">
   <div class="">
+    {%- if section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="feat-coll-header">
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="description">{{ section.settings.description }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
     {%- if total > 0 -%}
       <div class="feat-coll-flex">
         <!-- LEFT/CONTENT -->
@@ -353,6 +396,8 @@
   "tag": "section",
   "class": "section feature-collection-slider",
   "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "SEESON LATEST ARRIVALS" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Explore our carefully curated collection of spectacles and sunglasses.</p>" },
     { "type": "product_list", "id": "product_list", "label": "Products" },
     {
       "type": "select",
