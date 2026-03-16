@@ -105,93 +105,43 @@
     },
     "feature_collection_slider_Trkr38": {
       "type": "feature-collection-slider",
-      "blocks": {
-        "product_slide_MfCQGf": {
-          "type": "product_slide",
-          "settings": {
-            "product": "aude-havana"
-          }
-        },
-        "product_slide_KXVnUL": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-assembled-10-sunglasses-black-mirror-iron"
-          }
-        },
-        "product_slide_AhhTxz": {
-          "type": "product_slide",
-          "settings": {
-            "product": "anthony-matte-gunmetal"
-          }
-        },
-        "product_slide_bFygkr": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-athletes-02-havana"
-          }
-        },
-        "product_slide_RGVHfA": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-athletes-03-sunglasses-silver-tinted-blue"
-          }
-        },
-        "product_slide_pXfdQh": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-ruler-02-sunglasses-silver-brown"
-          }
-        },
-        "product_slide_AcWQPm": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-layered-09-layered-grey"
-          }
-        },
-        "product_slide_PWe4t7": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-athletes-13-grey-rhino"
-          }
-        },
-        "product_slide_MajzgA": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-edge-01-purple"
-          }
-        },
-        "product_slide_jDA4WB": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-soap-12-black"
-          }
-        },
-        "product_slide_QGCVDX": {
-          "type": "product_slide",
-          "settings": {
-            "product": "the-assembled-10-sunglasses-light-grey-black"
-          }
-        }
-      },
-      "block_order": [
-        "product_slide_MfCQGf",
-        "product_slide_KXVnUL",
-        "product_slide_AhhTxz",
-        "product_slide_bFygkr",
-        "product_slide_RGVHfA",
-        "product_slide_pXfdQh",
-        "product_slide_AcWQPm",
-        "product_slide_PWe4t7",
-        "product_slide_MajzgA",
-        "product_slide_jDA4WB",
-        "product_slide_QGCVDX"
-      ],
       "name": "Feature Coll Slider",
       "settings": {
         "heading": "SEESON LATEST ARRIVALS",
         "description": "<p>Take your time exploring our carefully curated collection, where you'll find an array of spectacles and sunglasses...</p>",
-        "button_label": "DISCOVER MORE",
-        "button_link": "",
+        "product_list": [
+          "anthony-matte-gunmetal",
+          "aude-brown-havana",
+          "aude-havana",
+          "jean-francois-transparent-grey",
+          "maxence-moss-green",
+          "maxence-transparent-beige",
+          "the-assembled-02-transparent-beige",
+          "the-assembled-10-sunglasses-dark-grey-black",
+          "the-assembled-10-sunglasses-light-grey-black",
+          "the-assembled-10-sunglasses-light-grey-mirror-iron"
+        ],
+        "background_color": "#f2f2f2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "collection_slider_jC63Bt": {
+      "type": "collection-slider",
+      "name": "Collection Slider",
+      "settings": {
+        "collection_list": [
+          "best-seller-kinh-can",
+          "best-seller-kinh-ram",
+          "big-size",
+          "clearance-sale",
+          "medium-size",
+          "metal",
+          "new-collection",
+          "small-size",
+          "the-athletes",
+          "the-assembled-sunglasses"
+        ],
         "background_color": "#f2f2f2",
         "padding_top": 60,
         "padding_bottom": 60
@@ -223,45 +173,6 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 60
-      }
-    },
-    "collection_slider_jC63Bt": {
-      "type": "collection-slider",
-      "blocks": {
-        "collection_slide_fC7RHt": {
-          "type": "collection_slide",
-          "settings": {
-            "collection": "best-seller-kinh-can",
-            "image_second": "shopify://shop_images/Carosel.png"
-          }
-        },
-        "collection_slide_mfBRyT": {
-          "type": "collection_slide",
-          "settings": {
-            "collection": "clearance-sale",
-            "image_second": "shopify://shop_images/TheAthletes02_Red_Black_4.png"
-          }
-        },
-        "collection_slide_kJpwNU": {
-          "type": "collection_slide",
-          "settings": {
-            "collection": "new-collection",
-            "image_second": "shopify://shop_images/The_Athletes_13_a648bb6e-e120-4b49-9b66-0d384916160e.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "collection_slide_fC7RHt",
-        "collection_slide_mfBRyT",
-        "collection_slide_kJpwNU"
-      ],
-      "disabled": true,
-      "name": "Collection Slider",
-      "settings": {
-        "title": "Collections",
-        "background_color": "#f2f2f2",
-        "padding_top": 60,
         "padding_bottom": 60
       }
     },
@@ -385,8 +296,8 @@
   "order": [
     "slideshow_6w4AVd",
     "feature_collection_slider_Trkr38",
-    "featured_collection_6Q8xjz",
     "collection_slider_jC63Bt",
+    "featured_collection_6Q8xjz",
     "rich_text_i7AqVh",
     "rich_text_xj9AQe",
     "multicolumn_q4jJiQ"
