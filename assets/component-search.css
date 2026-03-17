@@ -186,6 +186,7 @@ input::-webkit-search-decoration {
   object-fit: contain;
   aspect-ratio: 1;
   object-position: left bottom;
+  width: 100%;
 }
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li .predictive-search__item-heading {
     overflow: hidden;
@@ -380,9 +381,6 @@ input::-webkit-search-decoration {
   }
   .menu-drawer .list-menu__item {
       color: #000;
-      leading-trim: both;
-      text-edge: cap;
-      font-family: Seesans;
       font-size: var(--Menu-text, 30px);
       font-style: normal;
       font-weight: 400;

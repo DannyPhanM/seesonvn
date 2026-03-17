@@ -56,16 +56,8 @@
   justify-content: center;
 }
 
-cart-drawer.is-empty .drawer__inner {
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
-  padding: 0;
-}
+/* Removed is-empty overrides to keep header visible and layout consistent */
 
-cart-drawer.is-empty .drawer__header {
-  display: none;
-}
 
 cart-drawer:not(.is-empty) .cart-drawer__warnings,
 cart-drawer:not(.is-empty) .cart-drawer__collection {
@@ -129,8 +121,19 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   flex-direction: column;
 }
 
+.drawer__cart-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .drawer__footer {
   padding: 1.5rem 0;
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(var(--color-background));
+  z-index: 10;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {
@@ -183,6 +186,39 @@ cart-drawer {
   flex-wrap: wrap;
 }
 
+.cart-drawer__warnings .cart-drawer__empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart__empty-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+  color: #999;
+  margin-bottom: 40px;
+}
+
+.continue-shopping-button {
+  min-width: 250px;
+  height: 44px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .cart-drawer__collection {
   margin: 0 2.5rem 1.5rem;
 }
@@ -224,6 +260,7 @@ cart-drawer-items {
   display: grid;
   grid-template: repeat(2, auto) / repeat(4, 1fr);
   gap: 1rem;
+  column-gap: 0;
   margin: 0;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -292,7 +329,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-item > td + td {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 .cart-drawer .cart-item__details {
@@ -479,6 +516,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .drawer__footer {
     padding-top: 14px;
     padding-bottom: 44px;
+    border-top: 1px solid #e8e8e8;
 }
 .cart-drawer__footer .totals,
 .totals__total {

@@ -33,8 +33,10 @@
     background: none;
     border: none;
     padding: 0;
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--font-body-family);
+    line-height: 1.2;
     text-transform: uppercase;
     cursor: pointer;
     color: rgba(var(--color-foreground), 0.5);
@@ -139,63 +141,41 @@
       tabindex="-1"
     >
 
-      <div class="drawer__header">
-        <div class="drawer__tabs">
-          <button class="drawer__tab" data-tab="cart" type="button">
-            {{ 'sections.cart.title' | t }}
-            <span class="drawer__tab-count">({{ cart.item_count }})</span>
-          </button>
+        <div class="drawer__header">
+          <div class="drawer__tabs">
+            <button class="drawer__tab" data-tab="cart" type="button">
+              {{ 'sections.cart.title' | t }}
+              <span class="drawer__tab-count">({{ cart.item_count }})</span>
+            </button>
 
-          <button class="drawer__tab" data-tab="wishlist" type="button">
-            {{ 'general.wishlist.title' | t | default: 'Wishlist' }}
-            <span class="drawer__tab-count wishlist-count-js">(0)</span>
+            <button class="drawer__tab" data-tab="wishlist" type="button">
+              {{ 'general.wishlist.title' | t | default: 'Wishlist' }}
+              <span class="drawer__tab-count wishlist-count-js">(0)</span>
+            </button>
+          </div>
+          <button
+            class="drawer__close"
+            type="button"
+            onclick="this.closest('cart-drawer').close()"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-close.svg' | inline_asset_content -}}
+            </span>
           </button>
         </div>
-        <button
-          class="drawer__close"
-          type="button"
-          onclick="this.closest('cart-drawer').close()"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
-          <span class="svg-wrapper">
-            {{- 'icon-close.svg' | inline_asset_content -}}
-          </span>
-        </button>
-      </div>
 
       <div class="drawer__cart-content">
         {%- if cart == empty -%}
           <div class="drawer__inner-empty">
             <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
               <div class="cart-drawer__empty-content">
-                <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-                <button
-                  class="drawer__close"
-                  type="button"
-                  onclick="this.closest('cart-drawer').close()"
-                  aria-label="{{ 'accessibility.close' | t }}"
-                >
-                  <span class="svg-wrapper">
-                    {{- 'icon-close.svg' | inline_asset_content -}}
-                  </span>
-                </button>
-                <a href="{{ routes.all_products_collection_url }}" class="button">
+                <p class="cart__empty-text">There’s nothing in your Shopping Bag, yet.</p>
+                <a href="{{ routes.all_products_collection_url }}" class="button button--primary continue-shopping-button">
                   {{ 'general.continue_shopping' | t }}
                 </a>
-  
-                {%- if shop.customer_accounts_enabled and customer == null -%}
-                  <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                  <p class="cart__login-paragraph">
-                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                  </p>
-                {%- endif -%}
               </div>
             </div>
-            {%- if settings.cart_drawer_collection != blank -%}
-              <div class="cart-drawer__collection">
-                {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
-              </div>
-            {%- endif -%}
           </div>
         {%- endif -%}
 
@@ -547,8 +527,8 @@
                                                 <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
                           <div class="icon-box">
                             <div class="wish-list">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="27" viewBox="0 0 21 27" fill="none">
-                                <path d="M3.45 0C2.475 0 1.65 0.33 0.99 0.99C0.33 1.65 0 2.475 0 3.45V27L10.5 22.245L21 27V3.45C21 2.475 20.67 1.65 20.01 0.99C19.35 0.33 18.525 0 17.55 0L3.45 0ZM3 3H17.55C17.55 3 17.715 3.015 17.835 3.15C17.97 3.285 17.985 3.375 17.985 3.45V22.395L10.485 18.915L2.985 22.395V3H3Z" fill="black"/>
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.86732 2C4.43398 2 4.06732 2.14667 3.77398 2.44C3.48065 2.73333 3.33398 3.1 3.33398 3.53333V14L8.00065 11.8867L12.6673 14V3.53333C12.6673 3.1 12.5207 2.73333 12.2273 2.44C11.934 2.14667 11.5673 2 11.134 2H4.86732ZM4.66732 3.33333H11.134C11.134 3.33333 11.2073 3.34 11.2607 3.4C11.3207 3.46 11.3273 3.5 11.3273 3.53333V11.9533L7.99398 10.4067L4.66065 11.9533V3.33333H4.66732Z" fill="black"/>
                               </svg>
                             </div>
                             <cart-remove-button
@@ -565,7 +545,9 @@
                                   {% endif %}
                                 >
                                   <span class="svg-wrapper">
-                                    {{- 'icon-remove.svg' | inline_asset_content -}}
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4.66602 14C4.29935 14 3.98546 13.8694 3.72435 13.6083C3.46324 13.3472 3.33268 13.0333 3.33268 12.6667V4H2.66602V2.66667H5.99935V2H9.99935V2.66667H13.3327V4H12.666V12.6667C12.666 13.0333 12.5355 13.3472 12.2743 13.6083C12.0132 13.8694 11.6993 14 11.3327 14H4.66602ZM11.3327 4H4.66602V12.6667H11.3327V4ZM5.99935 11.3333H7.33268V5.33333H5.99935V11.3333ZM8.66602 11.3333H9.99935V5.33333H8.66602V11.3333Z" fill="black"/>
+                                    </svg>
                                   </span>
                                 </button>
                               </cart-remove-button>
@@ -615,8 +597,14 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+      {%- if cart != empty -%}
+        <div class="custom-note">
+          <p>Don’t forget to save your code to use at checkout.</p>
+        </div>
+      {%- endif -%}
       <div class="drawer__footer">
-        {%- if settings.show_cart_note -%}
+        {%- if cart != empty -%}
+          {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
               <span class="summary__title">
@@ -702,20 +690,21 @@
 
         <!-- CTAs -->
 
-        <div class="cart__ctas" {{ block.shopify_attributes }}>
-          <button
-            type="submit"
-            id="CartDrawer-Checkout"
-            class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
-            {% if cart == empty %}
-              disabled
-            {% endif %}
-          >
-            {{ 'sections.cart.checkout' | t }}
-          </button>
-        </div>
+          <div class="cart__ctas" {{ block.shopify_attributes }}>
+            <button
+              type="submit"
+              id="CartDrawer-Checkout"
+              class="cart__checkout-button button"
+              name="checkout"
+              form="CartDrawer-Form"
+              {% if cart == empty %}
+                disabled
+              {% endif %}
+            >
+              {{ 'sections.cart.checkout' | t }}
+            </button>
+          </div>
+        {%- endif -%}
       </div>
     </div>
 

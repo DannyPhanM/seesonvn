@@ -119,6 +119,17 @@
       assign desktop_padding = '150%'
     when 'circle'
       assign desktop_padding = '100%'
+    when 'adapt'
+      assign highest_ratio = 0
+      for block in section.blocks
+        if block.settings.image.aspect_ratio > highest_ratio
+          assign highest_ratio = block.settings.image.aspect_ratio
+        endif
+      endfor
+      if highest_ratio == 0
+        assign highest_ratio = 1
+      endif
+      assign desktop_padding = 1 | divided_by: highest_ratio | times: 100 | append: '%'
   endcase
 
   case mobile_ratio
@@ -140,23 +151,31 @@
       assign mobile_padding = '150%'
     when 'circle'
       assign mobile_padding = '100%'
+    when 'adapt'
+      assign highest_ratio_mobile = 0
+      for block in section.blocks
+        assign image_mobile = block.settings.image_mobile | default: block.settings.image
+        if image_mobile.aspect_ratio > highest_ratio_mobile
+          assign highest_ratio_mobile = image_mobile.aspect_ratio
+        endif
+      endfor
+      if highest_ratio_mobile == 0
+        assign highest_ratio_mobile = 1
+      endif
+      assign mobile_padding = 1 | divided_by: highest_ratio_mobile | times: 100 | append: '%'
   endcase
 -%}
 
 @media screen and (min-width: 750px) {
-  {% if desktop_ratio != 'adapt' %}
-    .section-{{ section.id }}-padding .media {
-      padding-bottom: {{ desktop_padding }};
-    }
-  {% endif %}
+  .section-{{ section.id }}-padding .media {
+    padding-bottom: {{ desktop_padding }};
+  }
 }
 
 @media only screen and (max-width: 749px) {
-  {% if mobile_ratio != 'adapt' %}
-    .section-{{ section.id }}-padding .media {
-      padding-bottom: {{ mobile_padding }} !important;
-    }
-  {% endif %}
+  .section-{{ section.id }}-padding .media {
+    padding-bottom: {{ mobile_padding }} !important;
+  }
     .multicolumn-card__image-wrapper .has-image-mobile .multicolumn-card__image {
         display: none;
     }
@@ -204,14 +223,6 @@
         id="Slider-{{ section.id }}"
         role="list"
       >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
         {%- for block in section.blocks -%}
         {%- assign heading_tag = block.settings.heading_tag | default: 'h2' -%}
           {%- assign empty_column = '' -%}
@@ -240,9 +251,6 @@
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
                   <div
                     class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio_mobile == 'adapt' %}
-                      {% comment %} style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;" {% endcomment %}
-                    {% endif %}
                   >
                     {%- liquid
                       assign number_of_columns = section.settings.columns_desktop

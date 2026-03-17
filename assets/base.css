@@ -325,7 +325,8 @@ h1,
 .h1 {
   font-size: 18px;
   line-height: 26px;
-  letter-spacing: -0.9px;
+  letter-spacing: 0.09px;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 750px) {
@@ -334,7 +335,7 @@ h1,
   .h1 {
     font-size: 40px;
     line-height: 48px;
-    letter-spacing: -3.2px;
+    
   }
 }
 
@@ -342,6 +343,8 @@ h1,
 h2,
 .h2 {
   font-size: 16px;
+  letter-spacing: 0.09px;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 750px) {
@@ -2173,11 +2176,11 @@ input[type='checkbox'] {
   background: transparent;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
+  transform: translate(-50%, -32%);
 }
 @media(max-width: 749px) {
   .cart-count-bubble {
-    transform: translate(-50%, -25%);
+    transform: translate(-45%, -25%);
   }
 }
 /* utility-bar */
@@ -2914,6 +2917,7 @@ details[open]>.header__submenu {
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
+  font-weight: 600;
 }
 
 .header__menu-item:hover span {
