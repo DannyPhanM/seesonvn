@@ -59,6 +59,7 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_4.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -136,6 +137,7 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -143,12 +145,13 @@
             "link": ""
           }
         },
-        "column_mqGtKf": {
+        "column_zFVUAx": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -156,12 +159,13 @@
             "link": ""
           }
         },
-        "column_4TyW9e": {
+        "column_kRcT8p": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
             "title": "",
             "heading_tag": "h3",
             "text": "",
@@ -172,8 +176,8 @@
       },
       "block_order": [
         "column_yCHRaT",
-        "column_mqGtKf",
-        "column_4TyW9e"
+        "column_zFVUAx",
+        "column_kRcT8p"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -241,6 +245,7 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_106.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
@@ -254,6 +259,7 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_107.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
@@ -273,7 +279,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
