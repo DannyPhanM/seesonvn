@@ -23,7 +23,7 @@
         "heading_dra8Pb": {
           "type": "heading",
           "settings": {
-            "heading": "Our journey begins",
+            "heading": "OUR JOURNEY BEGINS",
             "heading_tag": "h1"
           }
         },
@@ -100,7 +100,7 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "our Design philosophy",
+            "heading": "OUR DESIGN PHILOSOPHY",
             "heading_tag": "h1"
           }
         },
@@ -142,10 +142,38 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_mqGtKf": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4TyW9e": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "title": "",
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_yCHRaT"
+        "column_yCHRaT",
+        "column_mqGtKf",
+        "column_4TyW9e"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -154,12 +182,12 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "show_dots": true,
         "background_style": "none",
         "color_scheme": "",
@@ -177,7 +205,7 @@
         "heading_LQRJmP": {
           "type": "heading",
           "settings": {
-            "heading": "From Product to Construct",
+            "heading": "FROM PRODUCT TO CONSTRUCT",
             "heading_tag": "h1"
           }
         },
