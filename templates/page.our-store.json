@@ -53,27 +53,13 @@
     "multicolumn_GGVYAc": {
       "type": "multicolumn",
       "blocks": {
-        "column_kJzwGR": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
-            "title": "",
-            "heading_tag": "h2",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_BmyXE3": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
             "heading_tag": "h2",
             "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
@@ -81,13 +67,27 @@
             "link": ""
           }
         },
-        "column_frCEJJ": {
+        "column_B49F6V": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
+            "title": "",
+            "heading_tag": "h2",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3p6zQV": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
             "heading_tag": "h2",
             "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
@@ -97,9 +97,9 @@
         }
       },
       "block_order": [
-        "column_kJzwGR",
         "column_BmyXE3",
-        "column_frCEJJ"
+        "column_B49F6V",
+        "column_3p6zQV"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
