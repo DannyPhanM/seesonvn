@@ -119,8 +119,10 @@
           "the-assembled-02-transparent-beige",
           "the-assembled-10-sunglasses-dark-grey-black",
           "the-assembled-10-sunglasses-light-grey-black",
-          "the-assembled-10-sunglasses-light-grey-mirror-iron"
+          "the-assembled-10-sunglasses-light-grey-mirror-iron",
+          "the-athletes-03-silver"
         ],
+        "indicator_style": "bottom",
         "background_color": "#f2f2f2",
         "padding_top": 60,
         "padding_bottom": 60
@@ -142,6 +144,7 @@
           "the-athletes",
           "the-assembled-sunglasses"
         ],
+        "indicator_style": "bottom",
         "background_color": "#f2f2f2",
         "padding_top": 60,
         "padding_bottom": 60
