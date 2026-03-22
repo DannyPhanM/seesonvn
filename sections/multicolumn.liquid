@@ -244,14 +244,17 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
-                  <div
-                    class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
-                  >
+              {%- liquid
+                assign spaced_image = false
+                if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle'
+                  assign spaced_image = true
+                endif
+              -%}
+              <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
+                <div
+                  class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
+                >
+                  {%- if block.settings.image != blank or block.settings.image_mobile != blank -%}
                     {%- liquid
                       assign number_of_columns = section.settings.columns_desktop
                       assign number_of_columns_mobile = section.settings.columns_mobile
@@ -272,14 +275,16 @@
                       (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
                       calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                     {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
+                    {%- if block.settings.image != blank -%}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                          sizes: sizes,
+                          class: 'multicolumn-card__image'
+                      }}
+                    {%- endif -%}
                     {% if block.settings.image_mobile %}
                       {{
                         block.settings.image_mobile
@@ -290,9 +295,11 @@
                           class: 'multicolumn-card__image--mobile'
                       }}
                     {% endif %}
-                  </div>
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {%- endif -%}
                 </div>
-              {%- endif -%}
+              </div>
               <div class="multicolumn-card__info {% if block.settings.content_overlay %} content_overlay {{ block.settings.content_alignment }} {% endif %}">
                 {%- if block.settings.title != blank -%}
                   <{{ heading_tag }} class="inline-richtext">{{ block.settings.title }}</{{ heading_tag }}>

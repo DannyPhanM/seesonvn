@@ -82,13 +82,18 @@
               disabled
             {% endif %}
           >
-            <span>
+            <span class="product-form__submit-text">
               {%- if product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+            </span>
+            <span class="product-form__submit-price">
+              {%- if product.selected_or_first_available_variant.available -%}
+                + {{ product.selected_or_first_available_variant.price | money }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
