@@ -4803,3 +4803,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 #swym-plugin {
   display: none !important;
 }
+
+.card-wrapper.product-card-wrapper > .swym-advanced-wishlist-collections-container {
+  display: none;
+}
