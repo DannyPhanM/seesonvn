@@ -246,7 +246,13 @@
       }
     },
     "swym_advanced_collections_wishlist_enabled": true,
-    "swym_header_icon_enabled": false
+    "swym_header_icon_enabled": false,
+    "swym_header_icon_show_count": true,
+    "swym_header_icon_custom_html": "",
+    "swym_header_icon_count_bubble_html": "",
+    "swym_header_icon_custom_css": "",
+    "swym_header_icon_selector_desktop": "",
+    "swym_header_icon_selector_mobile": ""
   },
   "presets": {
     "Craft": {
