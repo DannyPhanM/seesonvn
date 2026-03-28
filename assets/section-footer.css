@@ -345,7 +345,7 @@
 }
 
 .copyright__content * {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-card-title-family);
   font-weight: 400;
 }
 

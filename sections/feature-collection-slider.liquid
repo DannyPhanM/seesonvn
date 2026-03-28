@@ -1,5 +1,5 @@
 <!-- Link Swiper's CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -66,11 +66,12 @@
     text-transform: uppercase;
   }
   .feat-coll-info .price {
-    font-size: 18px;
-    color: #000;
+    font-size: 30px;
+    color: #999;
     font-weight: 600;
+    margin-top: 10px;
   }
-  
+
   .feat-coll-info {
     display: flex;
     justify-content: space-between;
@@ -129,10 +130,10 @@
   .feat-coll-thumbs-wrap .swiper-slide::after {
     content: "";
     position: absolute;
-    background: #000;
+    background: #999;
     transition: transform 0.3s ease;
   }
-  
+
   /* Style Top (25px) */
   .style-top.thumb-master-swiper .swiper-slide { padding-top: 15px; }
   .style-top.thumb-master-swiper .swiper-slide::after {
@@ -144,10 +145,10 @@
   /* Style Full Top (Was Bottom) */
   .style-bottom.thumb-master-swiper .swiper-slide { padding-top: 15px; }
   .style-bottom.thumb-master-swiper .swiper-slide::after {
-    top: 3px; left: 0; width: 100%; height: 2px;
-    transform: scaleX(0); transform-origin: left;
+    top: 3px; left: 50%; width: 55px; height: 2px;
+    transform: translateX(-50%) scaleX(0); transform-origin: left;
   }
-  .style-bottom.thumb-master-swiper .swiper-slide.show-item::after { transform: scaleX(1); }
+  .style-bottom.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
 
   .feat-coll-right {
     width: 42.343%;
@@ -160,6 +161,7 @@
     aspect-ratio: 542 / 710;
     display: block;
     transition: opacity 0.5s ease;
+    object-fit: contain;
   }
 
   /* MOBILE LAYOUT (Design Match) */
@@ -167,7 +169,7 @@
     .feat-coll-flex {
       display: grid !important;
       grid-template-columns: minmax(0, 1fr) 60px; /* Image | Thumbs */
-      grid-template-areas: 
+      grid-template-areas:
         "main thumbs"
         "info info";
       gap: 15px;
@@ -186,7 +188,7 @@
     .feat-coll-header .description {
       font-size: 14px;
     }
-    
+
     .feat-coll-left {
       display: contents; /* Allows children to be positions by grid */
     }
@@ -283,21 +285,36 @@
               <p class="price">&nbsp;</p>
             </div>
             <div class="feat-coll-info-actions">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon-bookmark"
+              >
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
             </div>
           </div>
 
           <div class="feat-coll-preview" id="FcPreview-{{ section.id | replace: '-', '_' }}">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Preview"/>
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Preview">
           </div>
 
           <div class="feat-coll-thumbs-wrap">
-            <div class="swiper thumb-master-swiper style-{{ section.settings.indicator_style }}" id="FcMaster-{{ section.id | replace: '-', '_' }}">
+            <div
+              class="swiper thumb-master-swiper style-{{ section.settings.indicator_style }}"
+              id="FcMaster-{{ section.id | replace: '-', '_' }}"
+            >
               <div class="swiper-wrapper">
                 {%- for product in product_list -%}
-                  <div class="swiper-slide" 
+                  <div
+                    class="swiper-slide"
                     data-real-index="{{ forloop.index0 }}"
                     data-title="{{ product.title | escape }}"
+                    data-available="{{ product.available }}"
                     data-price="{{ product.price | money }}"
                     data-glass="{{ product.media[0] | image_url: width: 600 }}"
                     data-lifestyle="{{ product.media[1] | image_url: width: 1200 }}"
@@ -312,7 +329,12 @@
 
         <!-- RIGHT/MAIN IMAGE -->
         <div class="feat-coll-right" id="FcRight-{{ section.id | replace: '-', '_' }}">
-          <img class="master-lifestyle-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Main View" loading="lazy" />
+          <img
+            class="master-lifestyle-img"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            alt="Main View"
+            loading="lazy"
+          >
         </div>
       </div>
     {%- else -%}
@@ -323,73 +345,74 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script>
-(function(){
-  function init(){
-    const sid = '{{ section.id | replace: "-", "_" }}';
-    const mEl = document.getElementById('FcMaster-'+sid);
-    const iEl = document.getElementById('FcInfo-'+sid);
-    const pEl = document.getElementById('FcPreview-'+sid);
-    const rEl = document.getElementById('FcRight-'+sid);
-    
-    if(!mEl || typeof Swiper === 'undefined') {
-      if (!mEl) return;
-      setTimeout(init, 100);
-      return;
+  (function(){
+    function init(){
+      const sid = '{{ section.id | replace: "-", "_" }}';
+      const mEl = document.getElementById('FcMaster-'+sid);
+      const iEl = document.getElementById('FcInfo-'+sid);
+      const pEl = document.getElementById('FcPreview-'+sid);
+      const rEl = document.getElementById('FcRight-'+sid);
+
+      if(!mEl || typeof Swiper === 'undefined') {
+        if (!mEl) return;
+        setTimeout(init, 100);
+        return;
+      }
+
+      function selectProduct(ri) {
+        const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+        if(slides.length === 0) return;
+
+        mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
+        slides.forEach(sl => sl.classList.add('show-item'));
+
+        const slide = slides[0];
+        if(iEl) {
+          iEl.querySelector('h3').textContent = slide.getAttribute('data-title');
+          const isAvailable = slide.getAttribute('data-available') === 'true';
+          iEl.querySelector('.price').innerHTML = isAvailable ? slide.getAttribute('data-price') : '{{ 'products.product.sold_out' | t | default: 'Out of stock' }}';
+        }
+        if(pEl) {
+          const gImg = pEl.querySelector('img');
+          const glass = slide.getAttribute('data-glass');
+          if(gImg && glass) {
+            gImg.style.opacity = '0';
+            setTimeout(() => { gImg.src = glass; gImg.onload = () => gImg.style.opacity = '1'; }, 50);
+          }
+        }
+        if(rEl) {
+          const lImg = rEl.querySelector('img');
+          const life = slide.getAttribute('data-lifestyle');
+          if(lImg && life) {
+            lImg.style.opacity = '0';
+            setTimeout(() => { lImg.src = life; lImg.onload = () => lImg.style.opacity = '1'; }, 100);
+          }
+        }
+      }
+
+      const swiper = new Swiper(mEl, {
+        slidesPerView: 4, spaceBetween: 15,
+        breakpoints: {
+          320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
+          750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
+        },
+        on: {
+          init: function() { selectProduct(0); },
+          click: function(s, e) {
+            const sl = e.target.closest('.swiper-slide');
+            if(sl) selectProduct(parseInt(sl.getAttribute('data-real-index')));
+          }
+        }
+      });
     }
- 
-    function selectProduct(ri) {
-      const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
-      if(slides.length === 0) return;
 
-      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
-      slides.forEach(sl => sl.classList.add('show-item'));
-      
-      const slide = slides[0];
-      if(iEl) {
-        iEl.querySelector('h3').textContent = slide.getAttribute('data-title');
-        iEl.querySelector('.price').innerHTML = slide.getAttribute('data-price');
-      }
-      if(pEl) {
-        const gImg = pEl.querySelector('img');
-        const glass = slide.getAttribute('data-glass');
-        if(gImg && glass) {
-          gImg.style.opacity = '0';
-          setTimeout(() => { gImg.src = glass; gImg.onload = () => gImg.style.opacity = '1'; }, 50);
-        }
-      }
-      if(rEl) {
-        const lImg = rEl.querySelector('img');
-        const life = slide.getAttribute('data-lifestyle');
-        if(lImg && life) {
-          lImg.style.opacity = '0';
-          setTimeout(() => { lImg.src = life; lImg.onload = () => lImg.style.opacity = '1'; }, 100);
-        }
-      }
+    if (document.readyState === 'complete') {
+      init();
+    } else {
+      window.addEventListener('load', init);
+      document.addEventListener('shopify:section:load', init);
     }
-
-    const swiper = new Swiper(mEl, {
-      slidesPerView: 4, spaceBetween: 15,
-      breakpoints: { 
-        320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
-        750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 } 
-      },
-      on: {
-        init: function() { selectProduct(0); },
-        click: function(s, e) {
-          const sl = e.target.closest('.swiper-slide');
-          if(sl) selectProduct(parseInt(sl.getAttribute('data-real-index')));
-        }
-      }
-    });
-  }
-
-  if (document.readyState === 'complete') {
-    init();
-  } else {
-    window.addEventListener('load', init);
-    document.addEventListener('shopify:section:load', init);
-  }
-})();
+  })();
 </script>
 
 {% schema %}
@@ -399,7 +422,12 @@
   "class": "section feature-collection-slider",
   "settings": [
     { "type": "text", "id": "heading", "label": "Heading", "default": "SEESON LATEST ARRIVALS" },
-    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>Explore our carefully curated collection of spectacles and sunglasses.</p>" },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Explore our carefully curated collection of spectacles and sunglasses.</p>"
+    },
     { "type": "product_list", "id": "product_list", "label": "Products" },
     {
       "type": "select",
@@ -412,8 +440,26 @@
       "default": "bottom"
     },
     { "type": "color", "id": "background_color", "label": "Background Color", "default": "#F2F2F2" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top", "default": 60 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 60 }
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
   ],
   "presets": [{ "name": "Feature Coll Slider" }]
 }

@@ -143,6 +143,30 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     max-width: var(--page-width);
     padding: 0 8rem;
   }
+
+  .template--product .page-width {
+    padding-left:  42px;
+    padding-right: 42px
+  }
+
+  .template--product .header:not(.drawer-menu).page-width {
+    padding-left:  42px;
+    padding-right: 42px
+  }
+
+  .template--product .search-modal.modal__content .page-width {
+    padding-right: 2px;
+    padding-left:  2px;
+  }
+
+  .template--product .search-modal.modal__content .page-width .search-modal__content {
+    padding-left: 2px;
+    padding-top: 20px;
+  }
+
+  .template--product .drawer__inner {
+    padding-right: 42px !important ;
+  }
 }
 
 @media(min-width: 1440px) {
@@ -153,6 +177,30 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
   .page-width {
     padding: 0 8rem;
+  }
+
+    .template--product .page-width {
+    padding-left:  80px;
+    padding-right: 80px
+  }
+
+  .template--product .header:not(.drawer-menu).page-width {
+    padding-left:  80px;
+    padding-right: 80px
+  }
+
+  .template--product .search-modal.modal__content .page-width {
+    padding-right: 0;
+    padding-left:  0;
+  }
+
+  .template--product .search-modal.modal__content .page-width .search-modal__content {
+    padding-left: 40px;
+    padding-top: 0px;
+  }
+
+  .template--product .drawer__inner {
+    padding-right: 78px !important ;
   }
 }
 
@@ -3928,13 +3976,12 @@ details-disclosure>details {
 .accordion .accordion__content p,
 .accordion .accordion__content span,
 .accordion .accordion__content li {
-  color: var(--Primary-ss-grey, #999);
-  leading-trim: both;
-  font-family: var(--font-body-family);
-  font-size: var(--Essentials-Body-text, 16px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
+text-align: justify;
+font-size: 11px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.2; /* 13.2px */
+letter-spacing: 0.55px;
 }
 
 .collabsible-custom__block-content p {
@@ -4803,7 +4850,6 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 #swym-plugin {
   display: none !important;
 }
-
-.card-wrapper.product-card-wrapper > .swym-advanced-wishlist-collections-container {
+.swym-advanced-wishlist-collections-container {
   display: none;
 }

@@ -25,12 +25,15 @@
     align-items: stretch;
     max-width: var(--page-width);
     margin: 0 auto;
+    padding: 0 80px;
   }
 
   /* DESKTOP LAYOUT (Default) */
   .coll-list-left {
-    width: 60%;
-    padding: 40px;
+    width: 57.657%;
+    padding: 32px;
+    padding-left: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -84,12 +87,14 @@
   .coll-list-thumbs-wrap .swiper-slide::after {
     content: "";
     position: absolute;
-    background: #000;
+    background: #999;
     transition: transform 0.3s ease;
   }
   
-  .style-bottom.coll-thumb-swiper .swiper-slide.show-item::after { transform: scaleX(1); }
-
+  .style-bottom.coll-thumb-swiper .swiper-slide.show-item::after {
+    top: 3px; left: 50%; width: 55px; height: 2px;
+    transform: translateX(-50%) scaleX(1);
+  }
   /* Thumbnail Flip Styles */
   .coll-thumb-swiper .swiper-slide {
     perspective: 500px;
