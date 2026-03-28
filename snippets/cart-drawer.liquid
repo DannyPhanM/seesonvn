@@ -78,6 +78,31 @@
     if (!drawer.hasAttribute('active-tab')) {
       drawer.setAttribute('active-tab', 'cart');
     }
+
+    function updateWishlistCount(swat) {
+      if (swat && swat.wishlist && typeof swat.wishlist.fetchUserLists === 'function') {
+        swat.wishlist.fetchUserLists(function(lists) {
+          const defaultList = lists.find(list => list.isDefault) || lists[0];
+          const count = defaultList ? defaultList.itemCount : 0;
+          const countElements = document.querySelectorAll('.wishlist-count-js');
+          countElements.forEach(el => {
+            el.textContent = `(${count})`;
+          });
+        }, function(error) {
+          console.error("Error fetching wishlist count:", error);
+        });
+      }
+    }
+
+    function refreshSwymWishlist(swatInstance) {
+      updateWishlistCount(swatInstance);
+      const wishlistContainerElement = document.querySelector("#swym-wishlist-render-container");
+      if (wishlistContainerElement) {
+        wishlistContainerElement.innerHTML = '';
+        const queryParams = swatInstance.utils.getEncodedAsObject(window.location.search);
+        swatInstance.ui.renderWishlistInContainer(wishlistContainerElement, queryParams);
+      }
+    }
     
     drawer.addEventListener('click', (event) => {
       const tab = event.target.closest('.drawer__tab');
@@ -85,49 +110,54 @@
       
       const target = tab.dataset.tab;
       drawer.setAttribute('active-tab', target);
-      
-      if (target === 'wishlist') {
-        fetchWishlist();
+
+      // Re-render Swym when switching to wishlist tab
+      if (target === 'wishlist' && window._swat) {
+        refreshSwymWishlist(window._swat);
       }
     });
 
-    async function fetchWishlist() {
-      const container = document.querySelector('#WishlistDrawerContent');
-      if (!container || container.dataset.loaded === 'true') return;
+
+
+    // Swym Wishlist Synchronization
+    window.SwymCallbacks = window.SwymCallbacks || [];
+    window.SwymCallbacks.push(function(swat) {
+      window._swat = swat;
+
+      // Initial update
+      refreshSwymWishlist(swat);
+
+      // Listen for changes
+      swat.evtLayer.addEventListener('sw:addedtowishlist', () => refreshSwymWishlist(swat));
+      swat.evtLayer.addEventListener('sw:removedfromwishlist', () => refreshSwymWishlist(swat));
       
-      container.innerHTML = '<div class="loading-spinner">Loading...</div>'; // Better UI later
-      
-      try {
-        const response = await fetch('/apps/wishlist');
-        if (!response.ok) throw new Error('Failed to fetch wishlist');
-        const html = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        
-        // Swishlist typically uses certain IDs or classes. 
-        // We'll try to find common ones or take the main content.
-        const content = doc.querySelector('#st-wishlist-page') || doc.querySelector('.st-wishlist-container') || doc.querySelector('main') || doc.body;
-        
-        if (content) {
-          container.innerHTML = content.innerHTML;
-          container.dataset.loaded = 'true';
-          
-          // Re-trigger any Swishlist initialization if necessary
-          // Swishlist might need a custom event or just to wait for its scripts
-          if (window.st_wishlist) {
-            // st_wishlist.init(); // Example if they have an init method
-          }
-        } else {
-          container.innerHTML = 'Wishlist content not found.';
-        }
-      } catch (error) {
-        console.error('Error fetching wishlist:', error);
-        container.innerHTML = 'Could not load wishlist. Please try again.';
+      // Listen for general shopper info refresh for multi-device sync
+      if (swat.JSEvents && swat.JSEvents.customerInfoRefreshed) {
+        swat.evtLayer.addEventListener(swat.JSEvents.customerInfoRefreshed, () => updateWishlistCount(swat));
       }
-    }
+    });
   });
 </script>
+<script class="swym-wishlist-header-counter-custom">
+function renderWishlistCounter(swat) {
+	var counter_elem = document.querySelectorAll(".swym-wishlist-header-counter"); /* Targets the span added in Step 1. */
+	if (counter_elem) {
+		for (var i = 0; i < counter_elem.length; i++) {
+			if (swat.renderWishlistCount) {
+				swat.renderWishlistCount(counter_elem[i], function(count, element) {
+					console.log("debug - renderWishlistCount", count, element); 
+				});
+			}
+		}
+	}
+}
 
+if (!window.SwymCallbacks) {
+	window.SwymCallbacks = [];
+}
+
+window.SwymCallbacks.push(renderWishlistCounter);
+</script>
 
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
@@ -151,6 +181,7 @@
             <button class="drawer__tab" data-tab="wishlist" type="button">
               {{ 'general.wishlist.title' | t | default: 'Wishlist' }}
               <span class="drawer__tab-count wishlist-count-js">(0)</span>
+              <span class="swym-wishlist-header-counter"></span>
             </button>
           </div>
           <button
@@ -711,10 +742,17 @@
     <div class="drawer__wishlist-content">
         <div class="drawer__contents">
           <div id="WishlistDrawerContent">
-            {% comment %} Wishlist content will be fetched and injected here via JS {% endcomment %}
-            <div class="loading-overlay" style="padding: 2rem; text-align: center;">
-              {% render 'loading-spinner' %}
-            </div>
+            <!-- Include html in the body -->
+            <div id="swym-wishlist-render-container"></div>
+            {% comment %}
+            <script type="text/javascript">
+              window.SwymCallbacks = window.SwymCallbacks || [];
+              window.SwymCallbacks.push(function(swat) {
+                var wishlistContainerElement = document.querySelector("#swym-wishlist-render-container");
+                var queryParams = swat.utils.getEncodedAsObject(window.location.search);// Contains queryParams["lid"];
+                swat.ui.renderWishlistInContainer(wishlistContainerElement, queryParams);});
+            </script>
+            {% endcomment %}
           </div>
           {%- for block in section.blocks -%}
             {%- if block.type == '@app' -%}

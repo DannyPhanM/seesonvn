@@ -85,13 +85,16 @@
         {% comment %} <a class="media_link" href="{{ card_product.url }}"></a> {% endcomment %}
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
-            <product-card-carousel class="card__media-wrapper" data-variant-id="{{ card_product.selected_or_first_available_variant.id }}">
+            <product-card-carousel
+              class="card__media-wrapper"
+              data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+            >
               <div class="card__media-list">
                 {%- for media in card_product.media -%}
                   {%- liquid
                     assign media_assigned_variants = ''
                     assign matches_current = false
-                    
+
                     if media.alt != blank
                       assign alt_parts = media.alt | split: ','
                       for part in alt_parts
@@ -99,7 +102,7 @@
                         if part_handle == ''
                           continue
                         endif
-                        
+
                         assign part_handle_padded = '-' | append: part_handle | append: '-'
                         assign best_match = ''
                         for handle in all_variant_handles
@@ -110,7 +113,7 @@
                             endif
                           endif
                         endfor
-                        
+
                         if best_match != ''
                           assign media_assigned_variants = media_assigned_variants | append: best_match | append: ' '
                           for cvh in current_variant_handles
@@ -121,15 +124,19 @@
                         endif
                       endfor
                     endif
-                    
+
                     if media_assigned_variants == ''
                       assign media_assigned_variants = 'general'
                       assign matches_current = true
                     endif
                   -%}
-                  <div class="card__media-item{% unless matches_current %} hidden{% endunless %}" 
-                       data-variants="{{ media_assigned_variants | strip }}"
-                       {% if media_assigned_variants != 'general' %}data-specific="true"{% endif %}>
+                  <div
+                    class="card__media-item{% unless matches_current %} hidden{% endunless %}"
+                    data-variants="{{ media_assigned_variants | strip }}"
+                    {% if media_assigned_variants != 'general' %}
+                      data-specific="true"
+                    {% endif %}
+                  >
                     <a class="media_link" href="{{ card_product.url }}">
                       <img
                         srcset="
@@ -172,7 +179,10 @@
           </div>
         {%- endif -%}
         <div class="card__content">
-          {%- if card_product.available == false or card_product.compare_at_price > card_product.price and card_product.available -%}
+          {%- if card_product.available == false
+            or card_product.compare_at_price > card_product.price
+            and card_product.available
+          -%}
             <div class="card__badge {{ settings.badge_position }}">
               {%- if card_product.available == false -%}
                 <span
@@ -186,7 +196,15 @@
                   id="Badge-{{ section_id }}-{{ card_product.id }}"
                   class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
                 >
-                  -{{ card_product.compare_at_price | minus: card_product.price | times: 100.0 | divided_by: card_product.compare_at_price | round }}%
+                  -
+                  {{-
+                    card_product.compare_at_price
+                    | minus: card_product.price
+                    | times: 100.0
+                    | divided_by: card_product.compare_at_price
+                    | round
+                  -}}
+                  %
                 </span>
               {%- endif -%}
             </div>
@@ -204,15 +222,51 @@
             <a
               href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
-              class="full-unstyled-link"
+              class="full-unstyled-link product-card__link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
               {{ card_product.title | escape }}
             </a>
-            <div class="wish-list">
-              <div class="wishlist-engine" data-product_id="{{  card_product.id }}" data-variant_id="{{ card_product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
-            </div>
+                      <button
+            type="button"
+            aria-label="Add to Wishlist"
+            class="swym-button swym-add-to-wishlist-view-product product_{{ card_product.id }} swym-bookmark"
+            data-with-epi="true"
+            data-swaction="addToWishlist"
+            data-product-id="{{ card_product.id }}"
+            data-variant-id="{{ card_product.selected_or_first_available_variant.id | default: card_product.variants[0].id }}"
+            data-product-url="{{ shop.url | append: card_product.url }}"
+          >
+            <svg
+              id="swym-atw-pdp-button-icon"
+              class="atw-button-icon"
+              width="19"
+              height="24"
+              viewBox="0 0 19 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" stroke="#000" stroke-width="1.75px" fill="none" stroke-linejoin="round"></path>
+            </svg>
+          </button>
           </h3>
+          {% comment %}
+            <button
+              type="button"
+              class="swym-advanced-wishlist-collections"
+              aria-label="{{ADD_TO_WISHLIST}}"
+              aria-pressed="false"
+              style="color:{{ICON_COLOR}}; transform:{{ICON_POSITION}};"
+            >
+              <div class="swym-advanced-wishlist-collections-social-count">
+                {{SOCIAL_COUNT}}
+              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" stroke="{{ICON_COLOR}}" stroke-width="{{ICON_WIDTH}}" fill="none" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          {% endcomment %}
+
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -265,44 +319,46 @@
                   assign is_color = false
                   assign option_name_downcase = option.name | downcase
                   if option_name_downcase contains 'color' or option_name_downcase contains 'màu' or option_name_downcase contains 'frame'
-                     assign is_color = true
+                    assign is_color = true
                   endif
                 -%}
                 {%- if is_color -%}
-                    {%- for value in option.values -%}
-                      {%- if forloop.index <= 6 -%}
-                        {%- liquid
-                          assign value_handle = value | handle
-                          assign swatch_metaobject = shop.metaobjects['shopify--color-pattern'][value_handle]
-                          assign swatch_value = null
- 
-                          if swatch_metaobject.image != blank
-                            assign image_url = swatch_metaobject.image | image_url: width: 50
-                            assign swatch_value = 'url(' | append: image_url | append: ')'
-                          elsif value.swatch.image
-                            assign image_url = value.swatch.image | image_url: width: 50
-                            assign swatch_value = 'url(' | append: image_url | append: ')'
-                          elsif swatch_metaobject.color != blank
-                            assign swatch_value = swatch_metaobject.color
-                          elsif value.swatch.color
-                            assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-                          endif
+                  {%- for value in option.values -%}
+                    {%- if forloop.index <= 6 -%}
+                      {%- liquid
+                        assign value_handle = value | handle
+                        assign swatch_metaobject = shop.metaobjects['shopify--color-pattern'][value_handle]
+                        assign swatch_value = null
 
-                          if swatch_value == null
-                            assign swatch_value = value | handle
-                          endif
-                        -%}
-                        <button class="card__color-swatch-btn{% if card_product.selected_or_first_available_variant.options contains value %} active{% endif %}" 
-                                type="button"
-                                data-value="{{ value | handleize }}"
-                                title="{{ value }}">
-                          <span class="card__color-swatch" style="--swatch-background: {{ swatch_value }};"></span>
-                        </button>
-                      {%- endif -%}
-                      {%- if forloop.last and option.values.size > 6 -%}
-                        <span class="card__colors-more">+</span>
-                      {%- endif -%}
-                    {%- endfor -%}
+                        if swatch_metaobject.image != blank
+                          assign image_url = swatch_metaobject.image | image_url: width: 50
+                          assign swatch_value = 'url(' | append: image_url | append: ')'
+                        elsif value.swatch.image
+                          assign image_url = value.swatch.image | image_url: width: 50
+                          assign swatch_value = 'url(' | append: image_url | append: ')'
+                        elsif swatch_metaobject.color != blank
+                          assign swatch_value = swatch_metaobject.color
+                        elsif value.swatch.color
+                          assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+                        endif
+
+                        if swatch_value == null
+                          assign swatch_value = value | handle
+                        endif
+                      -%}
+                      <button
+                        class="card__color-swatch-btn{% if card_product.selected_or_first_available_variant.options contains value %} active{% endif %}"
+                        type="button"
+                        data-value="{{ value | handleize }}"
+                        title="{{ value }}"
+                      >
+                        <span class="card__color-swatch" style="--swatch-background: {{ swatch_value }};"></span>
+                      </button>
+                    {%- endif -%}
+                    {%- if forloop.last and option.values.size > 6 -%}
+                      <span class="card__colors-more">+</span>
+                    {%- endif -%}
+                  {%- endfor -%}
                 {%- endif -%}
               {%- endfor -%}
             </div>

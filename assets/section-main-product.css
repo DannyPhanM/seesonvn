@@ -452,6 +452,27 @@ a.product__text {
 
 }
 
+
+.product__title-content .wishlist-button {
+  margin: 0 !important;
+  width: auto;
+  cursor: pointer;
+}
+.product__title-content .wishlist-button button {
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.product__title-content .wishlist-button button svg,
+.product__title-content .wishlist-button button path {
+  width: 32px;
+  height: 32px;
+}
+
 .product__description-title {
   font-weight: 600;
 }

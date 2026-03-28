@@ -139,11 +139,17 @@
                         - {{ product.selected_or_first_available_variant.title | escape }}
                       {%- endif -%}
                     </h1>
-                    <button class="wishlist-button" type="button" aria-label="Add to wishlist">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.5 3C14.1667 3 12 5.5 12 5.5C12 5.5 9.83333 3 6.5 3C3.5 3 1.5 5.5 1.5 8.5C1.5 13.5 12 21 12 21C12 21 22.5 13.5 22.5 8.5C22.5 5.5 20.5 3 17.5 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </button>
+                    <div id="swym-atw-button-container" class="wishlist-button swym-atw-button-container margin-top false default-position consent-given">
+                      <button id="swym-atw-pdp-button" type="button" aria-label="Add to wishlist" class="atw-button-add-color atw-button-add false">
+                        <svg id="swym-atw-pdp-button-icon" class="atw-button-icon" width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.06667 0C2.2 0 1.46667 0.293333 0.88 0.88C0.293333 1.46667 0 2.2 0 3.06667V24L9.33333 19.7733L18.6667 24V3.06667C18.6667 2.2 18.3733 1.46667 17.7867 0.88C17.2 0.293333 16.4667 0 15.6 0L3.06667 0ZM2.66667 2.66667H15.6C15.6 2.66667 15.7467 2.68 15.8533 2.8C15.9733 2.92 15.9867 3 15.9867 3.06667V19.9067L9.32 16.8133L2.65333 19.9067V2.66667H2.66667Z" fill="black"/>
+                        </svg>
+                        <span id="swym-atw-pdp-button-text" class="atw-button-text" aria-hidden="true"></span>
+                        <div id="swym-atw-animated-loader-wrapper" class="swym-atw-animated-loader-wrapper">
+                          <div id="swym-atw-animated-loader" class=""></div>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               {%- when 'price' -%}
