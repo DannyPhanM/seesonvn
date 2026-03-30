@@ -1513,3 +1513,12 @@ class ProductCardCarousel extends HTMLElement {
 }
 
 customElements.define('product-card-carousel', ProductCardCarousel);
+
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.drawer__close')) {
+    if (document.body.classList.contains('swym-modal-active')) {
+      document.body.classList.remove('swym-modal-active');
+    }
+  }
+});
+

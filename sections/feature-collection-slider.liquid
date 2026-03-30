@@ -310,6 +310,15 @@
             >
               <div class="swiper-wrapper">
                 {%- for product in product_list -%}
+                  {%- assign lifestyle_image = product.media[0] -%}
+                  {%- assign thumbnail_image = product.media[0] -%}
+                  {%- for media in product.media -%}
+                    {%- if media.alt contains '-4' -%}
+                      {%- assign lifestyle_image = media -%}
+                      {%- assign thumbnail_image = media -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
                   <div
                     class="swiper-slide"
                     data-real-index="{{ forloop.index0 }}"
@@ -317,9 +326,9 @@
                     data-available="{{ product.available }}"
                     data-price="{{ product.price | money }}"
                     data-glass="{{ product.media[0] | image_url: width: 600 }}"
-                    data-lifestyle="{{ product.media[1] | image_url: width: 1200 }}"
+                    data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
                   >
-                    {{ product.media[1] | image_url: width: 200 | image_tag: loading: 'lazy' }}
+                    {{ thumbnail_image | image_url: width: 200 | image_tag: loading: 'lazy' }}
                   </div>
                 {%- endfor -%}
               </div>

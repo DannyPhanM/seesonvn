@@ -81,7 +81,7 @@ class PredictiveSearch extends SearchForm {
                 ${imgHtml}
                 <div class="predictive-search__item-content${centered}">
                   ${vendorHtml}
-                  <p class="predictive-search__item-heading h5">${product.title}</p>
+                  <p class="predictive-search__item-heading h5" style="font-family: var(--font-card-title-family);">${product.title}</p>
                   ${priceHtml}
                 </div>
               </a>

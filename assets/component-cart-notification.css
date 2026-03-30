@@ -4,6 +4,10 @@
 
 .cart-notification-wrapper .cart-notification.active {
   display: block !important;
+  border-color: #999;
+  border-width: 1px;
+  box-shadow: none;
+  outline: none;
 }
 
 .cart-notification {
@@ -69,7 +73,7 @@
     bottom: 0;
     left: 0;
     width: 99999px;
-    background: #222;
+    background: #999;
     height: 1px;
   }
 
@@ -77,7 +81,7 @@
 
 @media screen and (min-width: 1440px) {
   .cart-notification-wrapper:is(.page-width) > .cart-notification {
-    right: 84px; 
+    right: 82px; 
   }
 }
 

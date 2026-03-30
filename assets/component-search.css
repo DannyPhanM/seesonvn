@@ -383,7 +383,7 @@ input::-webkit-search-decoration {
       color: #000;
       font-size: var(--Menu-text, 30px);
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 120%;
       letter-spacing: -1.5px;
   }

@@ -4414,7 +4414,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 
 .template--collection .page-width {
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 
 .media_link {

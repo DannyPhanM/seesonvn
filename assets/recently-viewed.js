@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="${product.url || '/products/' + product.handle}" class="predictive-search__item predictive-search__item--link-with-thumbnail link link--text" tabindex="-1">
                   ${imgHtml}
                   <div class="predictive-search__item-content">
-                    <p class="predictive-search__item-heading h5">${product.title}</p>
+                    <p class="predictive-search__item-heading h5" style="font-family: var(--font-card-title-family);">${product.title}</p>
                     ${priceHtml}
                   </div>
                 </a>
