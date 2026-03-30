@@ -45,7 +45,7 @@ window.clearRecentlyViewedProducts = clearRecentlyViewedProducts;
 
 // Debug: Log recently viewed product handles on every page load
 
-console.log('[RecentlyViewed] Product handles in cookie:', getRecentlyViewedProducts());
+// console.log('[RecentlyViewed] Product handles in cookie:', getRecentlyViewedProducts());
 
 // Hiển thị hoặc ẩn thông báo trống trong header search
 document.addEventListener('DOMContentLoaded', function() {

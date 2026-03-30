@@ -4853,3 +4853,15 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .swym-advanced-wishlist-collections-container {
   display: none;
 }
+
+.header__search .search-modal .page-width {
+  padding: 0;
+}
+
+@media(max-width: 749px) {
+  .card__information .card__heading .swym-button,
+  .card__information .card__heading .swym-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}

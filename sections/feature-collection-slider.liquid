@@ -59,11 +59,12 @@
 
   .feat-coll-info-text h3 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.09px;
     color: #999;
     margin: 0 0 8px;
     text-transform: uppercase;
+    font-family: var(--font-card-title-family);
   }
   .feat-coll-info .price {
     font-size: 30px;
@@ -172,12 +173,16 @@
       grid-template-areas:
         "main thumbs"
         "info info";
-      gap: 15px;
+      gap: 26px;
+      row-gap: 14px;
       padding: 0 15px;
       width: 100%;
       box-sizing: border-box;
     }
-
+.master-lifestyle-img {
+  aspect-ratio: 275 / 380;
+  object-fit: cover;
+}
     .feat-coll-header {
       padding: 0 15px;
       margin-bottom: 25px;
@@ -257,6 +262,43 @@
       pointer-events: none;
     }
   }
+  @media(max-width: 989px) {
+   .feat-coll-flex {
+    padding: 0 50px;
+    display: flex;
+  }
+  .feat-coll-header {
+    padding: 0 15px;
+  }
+
+  .feat-coll-header h2 {
+    font-size: 18px;
+  }
+.feat-coll-header .description {
+  font-size: 10px;
+}
+
+}
+
+@media(max-width: 749px) {
+  .feat-coll-header , .feat-coll-flex {
+    padding: 0 15px;
+  }
+
+  .thumb-master-swiper {
+    margin: 0;
+  }
+
+  .feat-coll-info {
+    padding-top: 0;
+    
+  }
+  .feat-coll-info-actions button, .feat-coll-info-actions svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+}
 {%- endstyle -%}
 
 {%- assign product_list = section.settings.product_list -%}
@@ -403,7 +445,8 @@
         slidesPerView: 4, spaceBetween: 15,
         breakpoints: {
           320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
-          750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
+          750: { direction: 'horizontal', slidesPerView: 4, spaceBetween: 15 },
+          990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
         },
         on: {
           init: function() { selectProduct(0); },
