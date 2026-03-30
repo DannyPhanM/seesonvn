@@ -4697,8 +4697,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 @media (min-width: 1440px) {
   .search-modal.modal__content .page-width {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 80px;
+    padding-right: 80px;
   }
   .search-modal.modal__content .page-width .search-modal__content {
     max-width: 595px;
