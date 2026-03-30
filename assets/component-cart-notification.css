@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 990px) {
   .cart-notification-wrapper:is(.page-width) > .cart-notification {
-    right: 84px;
+    right: 42px;
     border-top: none;
     border-right: none;
   }
@@ -73,6 +73,12 @@
     height: 1px;
   }
 
+}
+
+@media screen and (min-width: 1440px) {
+  .cart-notification-wrapper:is(.page-width) > .cart-notification {
+    right: 84px; 
+  }
 }
 
 .cart-notification.animate {
