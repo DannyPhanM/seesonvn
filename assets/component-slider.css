@@ -272,6 +272,10 @@ slider-component.slider-component-full-width {
   display: block;
 }
 
+.slider-counter__link--dots.slider-counter__link--active span {
+  border: 0.2px solid #999;
+}
+
 .slider-counter__link--active.slider-counter__link--dots .dot {
   background-color: rgb(var(--color-foreground));
 }
@@ -283,18 +287,12 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {
-  border-color: rgb(var(--color-foreground));
+  
 }
 
 .slider-counter__link--dots .dot,
 .slider-counter__link--numbers {
   transition: transform 0.2s ease-in-out;
-}
-
-.slider-counter__link--active.slider-counter__link--numbers,
-.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot,
-.slider-counter__link--numbers:hover {
-  transform: scale(1.1);
 }
 
 .slider-counter__link--numbers {

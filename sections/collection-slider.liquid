@@ -274,18 +274,25 @@
 
 {%- assign collection_list = section.settings.collection_list -%}
 {%- assign total = collection_list.count | default: 0 -%}
+{%- if total > 0 -%}
+  {%- assign first_collection = collection_list | first -%}
+  {%- assign first_main_img = first_collection.featured_image | default: first_collection.products.first.featured_image -%}
+  {%- assign first_second_img = first_collection.metafields.custom.collection_banner_second | default: first_main_img -%}
+{%- endif -%}
 
 <div class="coll-list-slider section-{{ section.id }}-padding">
+
   <div class="">
     {%- if total > 0 -%}
       <div class="coll-list-flex">
         <!-- LEFT/CONTENT -->
         <div class="coll-list-left">
           <div class="coll-list-info" id="ClInfo-{{ section.id | replace: '-', '_' }}">
-            <h2>&nbsp;</h2>
-            <div class="description">&nbsp;</div>
-            <a href="#" class="cta-link">DISCOVER THE STORY</a>
+            <h2>{{ first_collection.title | escape }}</h2>
+            <div class="description">{{ first_collection.description | strip_html | truncate: 160 | escape }}</div>
+            <a href="{{ first_collection.url }}" class="cta-link">DISCOVER THE STORY</a>
           </div>
+
 
           <div class="coll-list-thumbs-wrap">
             <div class="swiper coll-thumb-swiper style-{{ section.settings.indicator_style }}" id="ClMaster-{{ section.id | replace: '-', '_' }}">
@@ -309,8 +316,9 @@
                         {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
                       </div>
                       <div class="coll-thumb-back">
-                        <img src="{{ second_img | image_url: width: 300 }}" loading="lazy" alt="Back Thumb" />
+                        {{ second_img | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Back Thumb' }}
                       </div>
+
                     </div>
                   </div>
                 {%- endfor -%}
@@ -323,12 +331,14 @@
         <div class="coll-list-right" id="ClRight-{{ section.id | replace: '-', '_' }}">
           <div class="coll-flip-card" id="FlipCard-{{ section.id | replace: '-', '_' }}">
              <div class="coll-flip-front">
-                <img class="coll-master-img primary" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Front master" loading="lazy" />
+                {{ first_main_img | image_url: width: 1200 | image_tag: class: 'coll-master-img primary', alt: first_collection.title, loading: 'lazy' }}
              </div>
              <div class="coll-flip-back">
-                <img class="coll-master-img secondary" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Back master" loading="lazy" />
+                {{ first_second_img | image_url: width: 1200 | image_tag: class: 'coll-master-img secondary', alt: first_collection.title, loading: 'lazy' }}
              </div>
+
           </div>
+
           <button class="coll-flip-btn" aria-label="Flip Image" id="FlipBtn-{{ section.id | replace: '-', '_' }}">
              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 8.75L19.4 10.0962L17.65 11.8269C19.7833 12.0994 21.5417 12.6603 22.925 13.5096C24.3083 14.359 25 15.3365 25 16.4423C25 17.7724 24.0375 18.9062 22.1125 19.8437C20.1875 20.7812 17.8167 21.25 15 21.25C12.1833 21.25 9.8125 20.7812 7.8875 19.8437C5.9625 18.9062 5 17.7724 5 16.4423C5 15.4487 5.55417 14.5593 6.6625 13.774C7.77083 12.9888 9.21667 12.4038 11 12.0192L11 13.9904C9.71667 14.3109 8.72917 14.7075 8.0375 15.1803C7.34583 15.653 7 16.0737 7 16.4423C7 16.9551 7.7125 17.5641 9.1375 18.2692C10.5625 18.9744 12.5167 19.3269 15 19.3269C17.4833 19.3269 19.4375 18.9744 20.8625 18.2692C22.2875 17.5641 23 16.9551 23 16.4423C23 16.0577 22.575 15.597 21.725 15.0601C20.875 14.5232 19.6667 14.1186 18.1 13.8462L19.4 15.0962L18 16.4423L14 12.5962L18 8.75Z" fill="black"/>
@@ -343,21 +353,17 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
 <script>
 (function(){
   function init(){
-    const sid = '{{ section.id | replace: "-", "_" }}';
-    const mEl = document.getElementById('ClMaster-'+sid);
-    const iEl = document.getElementById('ClInfo-'+sid);
-    const rEl = document.getElementById('ClRight-'+sid);
-    const fCard = document.getElementById('FlipCard-'+sid);
-    const fBtn = document.getElementById('FlipBtn-'+sid);
+    const sectionId = '{{ section.id | replace: "-", "_" }}';
+    const mEl = document.getElementById('ClMaster-' + sectionId);
+    const iEl = document.getElementById('ClInfo-' + sectionId);
+    const fCard = document.getElementById('FlipCard-' + sectionId);
+    const fBtn = document.getElementById('FlipBtn-' + sectionId);
     
-    if(!mEl || typeof Swiper === 'undefined') {
-      if (!mEl) return;
-      setTimeout(init, 100);
-      return;
-    }
+    if(!mEl) return;
 
     function selectCollection(ri) {
       const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
@@ -402,14 +408,30 @@
       });
     }
 
-    const swiper = new Swiper(mEl, {
-      slidesPerView: 4, spaceBetween: 15,
+    if (typeof Swiper === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        script.onload = () => createSwiper(mEl, selectCollection);
+        document.head.appendChild(script);
+    } else {
+        createSwiper(mEl, selectCollection);
+    }
+  }
+
+  function createSwiper(mEl, selectCollection) {
+    new Swiper(mEl, {
+      slidesPerView: 4, 
+      spaceBetween: 15,
+      watchSlidesProgress: true,
       breakpoints: { 
         320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
         750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 } 
       },
       on: {
-        init: function() { selectCollection(0); },
+        init: function() { 
+            const slides = mEl.querySelectorAll('.swiper-slide');
+            if (slides.length > 0) slides[0].classList.add('show-item');
+        },
         click: function(s, e) {
           const sl = e.target.closest('.swiper-slide');
           if(sl) selectCollection(parseInt(sl.getAttribute('data-real-index')));
@@ -418,14 +440,13 @@
     });
   }
 
-  if (document.readyState === 'complete') {
-    init();
-  } else {
-    window.addEventListener('load', init);
+  document.addEventListener('DOMContentLoaded', init);
+  if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', init);
   }
 })();
 </script>
+
 
 {% schema %}
 {

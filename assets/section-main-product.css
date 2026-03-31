@@ -54,7 +54,7 @@ product-info {
 }
 
 @media screen and (min-width: 1024px) {
-    .product__column-sticky {
+  .product__column-sticky {
     display: block;
     position: sticky;
     top: 3rem;
@@ -63,29 +63,47 @@ product-info {
 
   .product.grid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 2rem;
+    /* Using the requested ratio: 300 : 624 : 300 */
+    grid-template-columns: 300fr 624fr 300fr;
+    justify-content: space-between;
+    gap: 3.5%; /* Fluid gap to distribute spacing */
     align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
   }
 
-  .product__left-info,
-  .product__media-wrapper,
-  .product__info-wrapper {
-    max-width: 100% !important;
+  /* Cap widths at the maximums requested, but allow them to shrink on smaller screens */
+  .product__left-info {
+    order: 1;
     width: 100% !important;
+    max-width: 300px !important;
   }
 
   .product__media-wrapper {
     order: 2;
-  }
-
-  .product__left-info {
-    order: 1;
+    width: 100% !important;
+    max-width: 624px !important;
   }
 
   .product__info-wrapper {
     order: 3;
+    width: 100% !important;
+    max-width: 300px !important;
     padding: 0 !important;
+  }
+  .template--product .product__info-wrapper .product-form__buttons .product-form__submit span, .template--product .product__info-wrapper .product-form__buttons .product-form__submit span {
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .template--product .product__info-wrapper .product-form__buttons .product-form__submit span, .template--product .product__info-wrapper .product-form__buttons .product-form__submit span {
+    font-size: 16px !important;
+  }
+  .product.grid {
+    grid-template-columns: 300px 624px 294px;
+    gap: 0;
   }
 }
 
@@ -113,6 +131,7 @@ product-info {
 
 .product__left-info .accordion:first-child {
   border-top: none;
+  margin-top: 0;
 }
 
 .product__left-info .accordion:last-child {
@@ -145,20 +164,26 @@ product-info {
   margin: 0;
 }
 
+@media(min-width: 1024px) {
+  .product__left-info.grid__item, .product__info-wrapper.grid__item {
+    margin-top: 373px;
+  }
+}
+
 .product__left-info summary .icon-plus {
-  display: block;
+  display: flex !important;
 }
 
 .product__left-info summary .icon-minus {
-  display: none;
+  display: none !important;
 }
 
 .product__left-info details[open] summary .icon-plus {
-  display: none;
+  display: none !important;
 }
 
 .product__left-info details[open] summary .icon-minus {
-  display: block;
+  display: flex !important;
 }
 
 .product__left-info summary .icon-plus,
@@ -177,6 +202,7 @@ product-info {
   margin: 0;
   text-transform: uppercase;
   font-size: 2.4rem;
+  letter-spacing: -1.3px;
 }
 
 .wishlist-button {
@@ -208,18 +234,22 @@ letter-spacing: 0.8px;
 }
 
 .product-form__input .form__label {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 2rem;
-  font-weight: 500;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
 .selected-value-right {
   font-weight: 400;
-  opacity: 0.6;
-  text-transform: none;
+  font-size: 12px;
+  opacity: 0.5;
+  text-transform: capitalize;
 }
 
 .wishlist-button svg {
@@ -329,7 +359,7 @@ letter-spacing: 0.8px;
 .product-form__input {
   flex: 0 0 100%;
   padding: 0;
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 30px 0;
   max-width: 44rem;
   min-width: fit-content;
   border: none;
@@ -409,7 +439,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 }
 
 .product__title > * {
@@ -493,15 +523,18 @@ a.product__text {
 
 @media(min-width: 1024px) {
   .product__info-container {
-    width: 296px;
+    width: 100%;
+    margin-top: 0 !important;
   }
 
-  .product__left-info {
-    width: 220px;
+  .product__media-list .product__media-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 
   .grid__item.product__media-wrapper {
-    padding :0;
+    padding: 0 !important;
   }
 }
 
@@ -1589,7 +1622,7 @@ a.product__text {
 
 .product-media-container.constrain-height.media-fit-contain {
   --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
-  width: min(var(--contained-width), 100%);
+  width: 100%;
 }
 
 .product-media-container .media {

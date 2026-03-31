@@ -488,6 +488,8 @@ class MenuDrawer extends HTMLElement {
     summaryElement.setAttribute('aria-expanded', true);
     trapFocus(this.mainDetailsToggle, summaryElement);
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
+    document.body.classList.add('overflow-hidden');
+    document.body.classList.add('open-drawer');
   }
 
   closeMenuDrawer(event, elementToFocus = false) {
@@ -502,6 +504,8 @@ class MenuDrawer extends HTMLElement {
       submenu.classList.remove('submenu-open');
     });
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
+    document.body.classList.remove('overflow-hidden');
+    document.body.classList.remove('open-drawer');
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
 

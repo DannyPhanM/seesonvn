@@ -22,6 +22,7 @@ if (!customElements.get('media-gallery')) {
       }
 
       onSlideChanged(event) {
+        if (!this.elements.thumbnails || !event.detail || !event.detail.currentElement) return;
         const thumbnail = this.elements.thumbnails.querySelector(
           `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
         );

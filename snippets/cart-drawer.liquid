@@ -82,6 +82,7 @@
     function updateWishlistCount(swat) {
       if (swat && swat.wishlist && typeof swat.wishlist.fetchUserLists === 'function') {
         swat.wishlist.fetchUserLists(function(lists) {
+          if (!Array.isArray(lists)) return;
           const defaultList = lists.find(list => list.isDefault) || lists[0];
           const count = defaultList ? defaultList.itemCount : 0;
           const countElements = document.querySelectorAll('.wishlist-count-js');
@@ -179,8 +180,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
 
             <button class="drawer__tab" data-tab="wishlist" type="button">
               {{ 'general.wishlist.title' | t | default: 'Wishlist' }}
-              <span class="drawer__tab-count wishlist-count-js">(0)</span>
-              <span class="swym-wishlist-header-counter"></span>
+              <span class="swym-wishlist-header-counter drawer__tab-count wishlist-count-js"></span>
             </button>
           </div>
           <button

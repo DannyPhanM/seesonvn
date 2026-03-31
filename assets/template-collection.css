@@ -70,7 +70,9 @@
 .collection__title.title-wrapper {
   margin-bottom: 2.5rem;
 }
-
+.collection__title.title-wrapper * {
+  max-width: 542px;
+}
 .collection__title .title:not(:only-child) {
   margin-bottom: 1rem;
 }
@@ -99,8 +101,19 @@
 }
 
 .load-more-container {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 14px;
+}
+
+@media(min-width: 990px) {
+  .load-more-container {
+    margin-top: 40px;
+  }
+}
+
+@media(min-width: 1280px) {
+  .load-more-container {
+    margin-top: 170px;
+  }
 }
 
 .load-more-button {

@@ -2,307 +2,349 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
-  }
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
     }
-  }
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
 
-  .feat-coll-slider {
-    background-color: {{ section.settings.background_color }};
-    position: relative;
-    overflow: hidden;
-    color: #000;
-  }
+    .feat-coll-slider {
+      background-color: {{ section.settings.background_color }};
+      position: relative;
+      overflow: hidden;
+      color: #000;
+    }
 
-  .feat-coll-flex {
-    display: flex;
-    align-items: stretch;
-    max-width: var(--page-width);
-    margin: 0 auto;
-    padding: 0 80px;
-  }
-
-  .feat-coll-header {
-    max-width: var(--page-width);
-    margin: 0 auto 40px;
-    padding: 0 80px;
-  }
-  .feat-coll-header h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0 0 10px;
-    text-transform: uppercase;
-  }
-  .feat-coll-header .description {
-    font-size: 16px;
-    color: #666;
-    max-width: 600px;
-    line-height: 1.5;
-  }
-
-  /* DESKTOP LAYOUT (Default) */
-  .feat-coll-left {
-    width: 57.657%;
-    padding: 32px;
-    padding-left: 0;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .feat-coll-info-text h3 {
-    font-size: 30px;
-    font-weight: 400;
-    letter-spacing: 0.09px;
-    color: #999;
-    margin: 0 0 8px;
-    text-transform: uppercase;
-    font-family: var(--font-card-title-family);
-  }
-  .feat-coll-info .price {
-    font-size: 30px;
-    color: #999;
-    font-weight: 600;
-    margin-top: 10px;
-  }
-
-  .feat-coll-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .feat-coll-info-actions {
-    display: flex;
-    gap: 15px;
-  }
-  .feat-coll-info-actions svg {
-    width: 38px !important;
-    height: 38px !important;
-    cursor: pointer;
-    stroke: #999;
-  }
-
-  .feat-coll-preview {
-    width: 250px;
-    height: 250px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .feat-coll-preview img {
-    max-width: 90%; max-height: 90%;
-    object-fit: contain;
-    transition: opacity 0.4s ease;
-  }
-
-  .feat-coll-thumbs-wrap {
-    margin-top: auto;
-    padding-top: 50px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .thumb-master-swiper .swiper-slide {
-    height: auto;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    opacity: 0.6;
-    position: relative;
-  }
-  .thumb-master-swiper .swiper-slide.show-item { opacity: 1; }
-  .thumb-master-swiper .swiper-slide img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    aspect-ratio: 82 / 120;
-    display: block;
-  }
-
-  /* INDICATORS */
-  .feat-coll-thumbs-wrap .swiper-slide::after {
-    content: "";
-    position: absolute;
-    background: #999;
-    transition: transform 0.3s ease;
-  }
-
-  /* Style Top (25px) */
-  .style-top.thumb-master-swiper .swiper-slide { padding-top: 15px; }
-  .style-top.thumb-master-swiper .swiper-slide::after {
-    top: 3px; left: 50%; width: 25px; height: 2px;
-    transform: translateX(-50%) scaleX(0);
-  }
-  .style-top.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
-
-  /* Style Full Top (Was Bottom) */
-  .style-bottom.thumb-master-swiper .swiper-slide { padding-top: 15px; }
-  .style-bottom.thumb-master-swiper .swiper-slide::after {
-    top: 3px; left: 50%; width: 55px; height: 2px;
-    transform: translateX(-50%) scaleX(0); transform-origin: left;
-  }
-  .style-bottom.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
-
-  .feat-coll-right {
-    width: 42.343%;
-    background: transparent;
-    position: relative;
-    overflow: hidden;
-  }
-  .master-lifestyle-img {
-    width: 100%; height: 100%;
-    aspect-ratio: 542 / 710;
-    display: block;
-    transition: opacity 0.5s ease;
-    object-fit: contain;
-  }
-
-  /* MOBILE LAYOUT (Design Match) */
-  @media screen and (max-width: 749px) {
     .feat-coll-flex {
-      display: grid !important;
-      grid-template-columns: minmax(0, 1fr) 60px; /* Image | Thumbs */
-      grid-template-areas:
-        "main thumbs"
-        "info info";
-      gap: 26px;
-      row-gap: 14px;
-      padding: 0 15px;
-      width: 100%;
-      box-sizing: border-box;
+      display: flex;
+      align-items: stretch;
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0 80px;
     }
-.master-lifestyle-img {
-  aspect-ratio: 275 / 380;
-  object-fit: cover;
-}
+
     .feat-coll-header {
-      padding: 0 15px;
-      margin-bottom: 25px;
+      max-width: var(--page-width);
+      margin: 0 auto 70px;
+      padding: 0 80px;
     }
     .feat-coll-header h2 {
-      font-size: 22px;
+      font-size: 40px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      text-transform: uppercase;
     }
     .feat-coll-header .description {
-      font-size: 14px;
+      font-size: 16px;
+      color: #666;
+      max-width: 600px;
+      line-height: 1.5;
+      margin-top: 20px;
     }
 
+    /* DESKTOP LAYOUT (Default) */
     .feat-coll-left {
-      display: contents; /* Allows children to be positions by grid */
-    }
-
-    .feat-coll-right {
-      grid-area: main;
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 3 / 4;
-      background: transparent;
-    }
-
-    .feat-coll-thumbs-wrap {
-      grid-area: thumbs;
-      width: 100% !important;
-      height: auto !important;
-      align-self: end; /* Push to bottom */
-      padding: 0;
-      margin: 0;
+      width: 57.657%;
+      padding: 60px;
+      padding-left: 0;
+      padding-bottom: 0;
       display: flex;
       flex-direction: column;
-    }
-
-    .thumb-master-swiper {
-      height: 100% !important;
-      max-height: 400px; /* Adjust as needed */
-    }
-
-    .thumb-master-swiper .swiper-slide {
-      padding: 0 !important;
-      margin-bottom: 10px;
-    }
-
-    .feat-coll-info {
-      grid-area: info;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 10px;
-      width: 100%;
+      gap: 30px;
     }
 
     .feat-coll-info-text h3 {
-      font-size: 16px;
-      margin-bottom: 3px;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 0.09px;
+      color: #999;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      font-family: var(--font-card-title-family);
+      letter-spacing: -1.3px;
+    }
+    .feat-coll-info .price {
+      font-size: 30px;
+      color: #999;
+      font-weight: 600;
+      margin-top: 10px;
     }
 
-    .feat-coll-info .price {
-      font-size: 14px;
+    .feat-coll-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
+
+    .feat-coll-info-actions button {
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none !important;
+      box-shadow: none !important;
+      min-width: unset !important;
+      line-height: normal !important;
+      appearance: none !important;
+      -webkit-appearance: none !important;
+    }
+    .feat-coll-info-actions svg {
+      width: 38px !important;
+      height: 38px !important;
+
+      fill: none;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .feat-coll-info-actions svg path {
+      stroke: #999;
+    }
+
+    .feat-coll-info-actions button.swym-added svg path {
+      fill: #000;
+      stroke: #000;
+    }
+
+    .feat-coll-info-actions .swym-added.swym-add-to-wishlist {
+      background: transparent !important;
+      opacity: 1;
+    }
+    /* Hide Swym default heart icon */
+    .feat-coll-info-actions .swym-button::after,
+    .feat-coll-info-actions .swym-button::before { display: none !important; }
+
 
     .feat-coll-preview {
-      display: none;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 1;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: 0;
+    }
+    .feat-coll-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s ease;
+      max-width: 574px;
     }
 
-    /* Mobile Active Item Style: Overlay border to ensure visibility */
-    .thumb-master-swiper .swiper-slide::after {
-      display: none !important;
+    .feat-coll-thumbs-wrap {
+      margin-top: auto;
+      padding-top: 50px;
+      width: 100%;
+      overflow: hidden;
     }
-    .thumb-master-swiper .swiper-slide.show-item::before {
+
+    .thumb-master-swiper .swiper-slide {
+      height: auto;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0.6;
+      position: relative;
+    }
+    .thumb-master-swiper .swiper-slide.show-item { opacity: 1; }
+    .thumb-master-swiper .swiper-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      aspect-ratio: 82 / 120;
+      display: block;
+    }
+
+    /* INDICATORS */
+    .feat-coll-thumbs-wrap .swiper-slide::after {
       content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      border: 1px solid #999;
-      z-index: 5;
-      pointer-events: none;
+      background: #999;
+      transition: transform 0.3s ease;
     }
-  }
-  @media(max-width: 989px) {
-   .feat-coll-flex {
-    padding: 0 50px;
-    display: flex;
-  }
-  .feat-coll-header {
-    padding: 0 15px;
+
+    /* Style Top (25px) */
+    .style-top.thumb-master-swiper .swiper-slide { padding-top: 15px; }
+    .style-top.thumb-master-swiper .swiper-slide::after {
+      top: 3px; left: 50%; width: 25px; height: 2px;
+      transform: translateX(-50%) scaleX(0);
+    }
+    .style-top.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
+
+    /* Style Full Top (Was Bottom) */
+    .style-bottom.thumb-master-swiper .swiper-slide { padding-top: 15px; }
+    .style-bottom.thumb-master-swiper .swiper-slide::after {
+      top: 3px; left: 50%; width: 55px; height: 2px;
+      transform: translateX(-50%) scaleX(0); transform-origin: left;
+    }
+    .style-bottom.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
+
+    .feat-coll-right {
+      width: 42.343%;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    .master-lifestyle-img {
+      width: 100%; height: 100%;
+      aspect-ratio: 542 / 710;
+      display: block;
+      transition: opacity 0.5s ease;
+      object-fit: contain;
+    }
+
+    .feat-coll-header .description p {
+      margin: 0;
+    }
+
+    /* MOBILE LAYOUT (Design Match) */
+    @media screen and (max-width: 749px) {
+      .feat-coll-flex {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 60px; /* Image | Thumbs */
+        grid-template-areas:
+          "main thumbs"
+          "info info";
+        gap: 26px;
+        row-gap: 14px;
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .master-lifestyle-img {
+        aspect-ratio: 275 / 380;
+        object-fit: cover;
+      }
+      .feat-coll-header {
+        padding: 0 15px;
+        margin-bottom: 25px;
+      }
+      .feat-coll-header h2 {
+        font-size: 22px;
+      }
+      .feat-coll-header .description {
+        font-size: 14px;
+      }
+
+      .feat-coll-left {
+        display: contents; /* Allows children to be positions by grid */
+      }
+
+      .feat-coll-right {
+        grid-area: main;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 3 / 4;
+        background: transparent;
+      }
+
+      .feat-coll-thumbs-wrap {
+        grid-area: thumbs;
+        width: 100% !important;
+        height: auto !important;
+        align-self: end; /* Push to bottom */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .thumb-master-swiper {
+        height: 100% !important;
+        max-height: 400px; /* Adjust as needed */
+      }
+
+      .thumb-master-swiper .swiper-slide {
+        padding: 0 !important;
+        margin-bottom: 10px;
+      }
+
+      .feat-coll-info {
+        grid-area: info;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        width: 100%;
+      }
+
+      .feat-coll-info-text h3 {
+        font-size: 16px;
+        margin-bottom: 3px;
+      }
+
+      .feat-coll-info .price {
+        font-size: 14px;
+      }
+
+      .feat-coll-preview {
+        display: none;
+      }
+
+      /* Mobile Active Item Style: Overlay border to ensure visibility */
+      .thumb-master-swiper .swiper-slide::after {
+        display: none !important;
+      }
+      .thumb-master-swiper .swiper-slide.show-item::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border: 1px solid #999;
+        z-index: 5;
+        pointer-events: none;
+      }
+    }
+    @media(max-width: 989px) {
+     .feat-coll-flex {
+      padding: 0 50px;
+      display: flex;
+    }
+    .feat-coll-header {
+      padding: 0 15px;
+    }
+
+    .feat-coll-header h2 {
+      font-size: 18px;
+    }
+  .feat-coll-header .description {
+    font-size: 10px;
   }
 
-  .feat-coll-header h2 {
-    font-size: 18px;
-  }
-.feat-coll-header .description {
-  font-size: 10px;
-}
-
-}
-
-@media(max-width: 749px) {
-  .feat-coll-header , .feat-coll-flex {
-    padding: 0 15px;
   }
 
-  .thumb-master-swiper {
-    margin: 0;
-  }
-
-  .feat-coll-info {
-    padding-top: 0;
-    
-  }
-  .feat-coll-info-actions button, .feat-coll-info-actions svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-
-}
+    @media(max-width: 749px) {
+      .feat-coll-header, .feat-coll-flex {
+        padding: 0 15px;
+      }
+      .feat-coll-info-actions button, .feat-coll-info-actions svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
 {%- endstyle -%}
 
 {%- assign product_list = section.settings.product_list -%}
 {%- assign total = product_list.count | default: 0 -%}
+{%- if total > 0 -%}
+  {%- assign first_product = product_list | first -%}
+  {%- assign first_lifestyle_image = first_product.media[0] -%}
+  {%- for media in first_product.media -%}
+    {%- if media.alt contains '-4' -%}
+      {%- assign first_lifestyle_image = media -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
 
 <div class="feat-coll-slider section-{{ section.id }}-padding">
   <div class="">
@@ -323,26 +365,46 @@
         <div class="feat-coll-left">
           <div class="feat-coll-info" id="FcInfo-{{ section.id | replace: '-', '_' }}">
             <div class="feat-coll-info-text">
-              <h3>&nbsp;</h3>
-              <p class="price">&nbsp;</p>
+              <h3>{{ first_product.title | escape }}</h3>
+              <p class="price">
+                {%- if first_product.available -%}
+                  {{ first_product.price | money }}
+                {%- else -%}
+                  {{ 'products.product.sold_out' | t | default: 'Out of stock' }}
+                {%- endif -%}
+              </p>
             </div>
+
             <div class="feat-coll-info-actions">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon-bookmark"
+              <button
+                type="button"
+                aria-label="Add to Wishlist"
+                class="swym-button swym-add-to-wishlist swym-add-to-wishlist-view-product swym-bookmark product_{{ first_product.id }}"
+                data-with-epi="true"
+                data-swaction="addToWishlist"
+                data-product-id="{{ first_product.id }}"
+                data-variant-id="{{ first_product.selected_or_first_available_variant.id | default: first_product.variants[0].id }}"
+                data-product-url="{{ shop.url | append: first_product.url }}"
+                id="FcWishlist-{{ section.id | replace: '-', '_' }}"
               >
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-              </svg>
+                <svg
+                  viewBox="0 0 19 24"
+                  fill="none"
+                  class="icon-bookmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" stroke="currentColor" stroke-width="1.75px" stroke-linejoin="round"></path>
+                </svg>
+              </button>
             </div>
           </div>
 
           <div class="feat-coll-preview" id="FcPreview-{{ section.id | replace: '-', '_' }}">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Preview">
+            {{
+              first_product.media[0]
+              | image_url: width: 1000
+              | image_tag: alt: first_product.title, widths: '400, 600, 800, 1000', sizes: '(min-width: 750px) 600px, 100vw'
+            }}
           </div>
 
           <div class="feat-coll-thumbs-wrap">
@@ -352,15 +414,17 @@
             >
               <div class="swiper-wrapper">
                 {%- for product in product_list -%}
-                  {%- assign lifestyle_image = product.media[0] -%}
-                  {%- assign thumbnail_image = product.media[0] -%}
-                  {%- for media in product.media -%}
-                    {%- if media.alt contains '-4' -%}
-                      {%- assign lifestyle_image = media -%}
-                      {%- assign thumbnail_image = media -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
+                  {%- liquid
+                    assign lifestyle_image = product.media[0]
+                    assign thumbnail_image = product.media[0]
+                    for media in product.media
+                      if media.alt contains '-4'
+                        assign lifestyle_image = media
+                        assign thumbnail_image = media
+                        break
+                      endif
+                    endfor
+                  -%}
                   <div
                     class="swiper-slide"
                     data-real-index="{{ forloop.index0 }}"
@@ -369,6 +433,9 @@
                     data-price="{{ product.price | money }}"
                     data-glass="{{ product.media[0] | image_url: width: 600 }}"
                     data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
+                    data-product-id="{{ product.id }}"
+                    data-variant-id="{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}"
+                    data-product-url="{{ shop.url | append: product.url }}"
                   >
                     {{ thumbnail_image | image_url: width: 200 | image_tag: loading: 'lazy' }}
                   </div>
@@ -380,12 +447,16 @@
 
         <!-- RIGHT/MAIN IMAGE -->
         <div class="feat-coll-right" id="FcRight-{{ section.id | replace: '-', '_' }}">
-          <img
-            class="master-lifestyle-img"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            alt="Main View"
-            loading="lazy"
-          >
+          {{
+            first_lifestyle_image
+            | image_url: width: 1200
+            | image_tag:
+              class: 'master-lifestyle-img',
+              alt: first_product.title,
+              loading: 'lazy',
+              widths: '600, 800, 1000, 1200',
+              sizes: '(min-width: 750px) 50vw, 100vw'
+          }}
         </div>
       </div>
     {%- else -%}
@@ -395,20 +466,17 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
 <script>
   (function(){
     function init(){
-      const sid = '{{ section.id | replace: "-", "_" }}';
-      const mEl = document.getElementById('FcMaster-'+sid);
-      const iEl = document.getElementById('FcInfo-'+sid);
-      const pEl = document.getElementById('FcPreview-'+sid);
-      const rEl = document.getElementById('FcRight-'+sid);
+      const sectionId = '{{ section.id | replace: "-", "_" }}';
+      const mEl = document.getElementById('FcMaster-' + sectionId);
+      const iEl = document.getElementById('FcInfo-' + sectionId);
+      const pEl = document.getElementById('FcPreview-' + sectionId);
+      const rEl = document.getElementById('FcRight-' + sectionId);
 
-      if(!mEl || typeof Swiper === 'undefined') {
-        if (!mEl) return;
-        setTimeout(init, 100);
-        return;
-      }
+      if(!mEl) return;
 
       function selectProduct(ri) {
         const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
@@ -418,17 +486,54 @@
         slides.forEach(sl => sl.classList.add('show-item'));
 
         const slide = slides[0];
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+
         if(iEl) {
           iEl.querySelector('h3').textContent = slide.getAttribute('data-title');
           const isAvailable = slide.getAttribute('data-available') === 'true';
           iEl.querySelector('.price').innerHTML = isAvailable ? slide.getAttribute('data-price') : '{{ 'products.product.sold_out' | t | default: 'Out of stock' }}';
         }
+
+        if(wBtn) {
+          const pid = slide.getAttribute('data-product-id');
+          const vid = slide.getAttribute('data-variant-id');
+          const purl = slide.getAttribute('data-product-url');
+          const oldPid = wBtn.getAttribute('data-product-id');
+          
+          wBtn.setAttribute('data-product-id', pid);
+          wBtn.setAttribute('data-variant-id', vid);
+          wBtn.setAttribute('data-product-url', purl);
+          
+          // Update Swym product class
+          wBtn.classList.remove('product_' + oldPid);
+          wBtn.classList.add('product_' + pid);
+
+          // Reset classes and refresh state
+          wBtn.classList.remove('swym-added');
+          
+          if (window._swat) {
+            // Check current wishlist status
+            window._swat.fetchWishlist(function(items) {
+              const isInWishlist = items.some(item => item.empi == pid || item.epi == vid);
+              if (isInWishlist) {
+                wBtn.classList.add('swym-added');
+              }
+              if (window._swat.initializeAllButtons) {
+                window._swat.initializeAllButtons();
+              }
+            });
+          }
+        }
+
         if(pEl) {
           const gImg = pEl.querySelector('img');
           const glass = slide.getAttribute('data-glass');
           if(gImg && glass) {
             gImg.style.opacity = '0';
-            setTimeout(() => { gImg.src = glass; gImg.onload = () => gImg.style.opacity = '1'; }, 50);
+            setTimeout(() => { 
+                gImg.src = glass; 
+                gImg.onload = () => gImg.style.opacity = '1'; 
+            }, 50);
           }
         }
         if(rEl) {
@@ -436,34 +541,92 @@
           const life = slide.getAttribute('data-lifestyle');
           if(lImg && life) {
             lImg.style.opacity = '0';
-            setTimeout(() => { lImg.src = life; lImg.onload = () => lImg.style.opacity = '1'; }, 100);
+            setTimeout(() => { 
+                lImg.src = life; 
+                lImg.onload = () => lImg.style.opacity = '1'; 
+            }, 50);
           }
         }
       }
 
-      const swiper = new Swiper(mEl, {
-        slidesPerView: 4, spaceBetween: 15,
-        breakpoints: {
-          320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
-          750: { direction: 'horizontal', slidesPerView: 4, spaceBetween: 15 },
-          990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
-        },
-        on: {
-          init: function() { selectProduct(0); },
-          click: function(s, e) {
-            const sl = e.target.closest('.swiper-slide');
-            if(sl) selectProduct(parseInt(sl.getAttribute('data-real-index')));
-          }
-        }
-      });
+      if (typeof Swiper === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        script.onload = () => createSwiper(mEl, selectProduct);
+        document.head.appendChild(script);
+      } else {
+        createSwiper(mEl, selectProduct);
+      }
     }
 
-    if (document.readyState === 'complete') {
-      init();
-    } else {
-      window.addEventListener('load', init);
+    function createSwiper(mEl, selectProduct) {
+        new Swiper(mEl, {
+            slidesPerView: 4, 
+            spaceBetween: 15,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
+                750: { direction: 'horizontal', slidesPerView: 4, spaceBetween: 15 },
+                990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
+            },
+            on: {
+                init: function() { 
+                    const slides = mEl.querySelectorAll('.swiper-slide');
+                    if (slides.length > 0) slides[0].classList.add('show-item');
+                },
+                click: function(s, e) {
+                    const sl = e.target.closest('.swiper-slide');
+                    if(sl) selectProduct(parseInt(sl.getAttribute('data-real-index')));
+                }
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+    if (Shopify.designMode) {
       document.addEventListener('shopify:section:load', init);
     }
+    // Global Swym Synchronization
+    window.SwymCallbacks = window.SwymCallbacks || [];
+    window.SwymCallbacks.push(function(swat) {
+      const sectionId = '{{ section.id | replace: "-", "_" }}';
+      swat.evtLayer.addEventListener('sw:removedfromwishlist', function(e) {
+        const deletedPid = e.detail.empi;
+        const deletedVid = e.detail.epi;
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+        const btnPid = wBtn ? wBtn.getAttribute('data-product-id') : null;
+        const btnVid = wBtn ? wBtn.getAttribute('data-variant-id') : null;
+        
+        if (wBtn && (btnPid == deletedPid || btnVid == deletedVid)) {
+          wBtn.classList.remove('swym-added');
+        }
+      });
+      
+      swat.evtLayer.addEventListener('sw:addedtowishlist', function(e) {
+        const addedPid = e.detail.empi;
+        const addedVid = e.detail.epi;
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+        const btnPid = wBtn ? wBtn.getAttribute('data-product-id') : null;
+        const btnVid = wBtn ? wBtn.getAttribute('data-variant-id') : null;
+
+        if (wBtn && (btnPid == addedPid || btnVid == addedVid)) {
+          wBtn.classList.add('swym-added');
+        }
+      });
+
+      // Check initial state for first slide
+      const activeSlide = document.querySelector(`#FcThumb-${sectionId} .swiper-slide-active`) || document.querySelector(`#FcThumb-${sectionId} .swiper-slide`);
+      if (activeSlide) {
+        const pid = activeSlide.getAttribute('data-product-id');
+        swat.fetchWishlist(function(items) {
+          const isInWishlist = items.some(item => item.empi == pid);
+          const wBtn = document.getElementById('FcWishlist-' + sectionId);
+          if (wBtn && isInWishlist) {
+            wBtn.classList.add('swym-added');
+          }
+        });
+      }
+    });
   })();
 </script>
 

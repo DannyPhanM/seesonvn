@@ -747,7 +747,7 @@ a.active-facets__button.focused .active-facets__button-inner {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 100000000;
   background-color: rgba(var(--color-foreground), 0.5);
   pointer-events: none;
 }
@@ -802,6 +802,7 @@ a.active-facets__button.focused .active-facets__button-inner {
   position: sticky;
   top: 0;
   z-index: 2;
+  align-items: center;
 }
 
 .mobile-facets__header-inner {
@@ -850,10 +851,11 @@ a.active-facets__button.focused .active-facets__button-inner {
 
 .mobile-facets__open-label {
   color: #000;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   margin-right: 6px;
 }
 
@@ -1022,6 +1024,8 @@ input.mobile-facets__checkbox {
   transition: background-color 0.2s ease;
   word-break: break-word;
   display: flex;
+  align-items: center;
+  color: #000;
 }
 
 .mobile-facets__label > svg {
@@ -1030,6 +1034,9 @@ input.mobile-facets__checkbox {
   z-index: 2;
   margin-right: 6px;
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  color: #000;
 }
 
 .mobile-facets__label .icon-checkmark {

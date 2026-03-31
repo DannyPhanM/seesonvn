@@ -51,7 +51,7 @@
 
   .cart-notification {
     border-width: 0 var(--popup-border-width) var(--popup-border-width);
-    max-width: 36.8rem;
+    max-width: 43.5rem;
     right: 2.2rem;
   }
 }
@@ -169,5 +169,5 @@
 .cart-notification-product__variant {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: rgba(var(--color-foreground), 0.7);
+  color: #000;
 }

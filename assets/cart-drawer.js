@@ -3,7 +3,11 @@ class CartDrawer extends HTMLElement {
     super();
 
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
+    this.addEventListener('click', (event) => {
+      if (event.target.id === 'CartDrawer-Overlay' || event.target === this) {
+        this.close();
+      }
+    });
     this.setHeaderCartIconAccessibility();
   }
 
@@ -85,7 +89,6 @@ class CartDrawer extends HTMLElement {
     });
 
     setTimeout(() => {
-      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       if (!document.querySelector('cart-notification')) this.open();
     });
   }

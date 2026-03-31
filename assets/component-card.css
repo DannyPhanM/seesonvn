@@ -605,7 +605,11 @@
     display: none;
 }
 .cart-notification .cart-notification__heading {
+    color: #000;
     font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.09px;
     text-transform: uppercase;
 }
 .cart-notification .cart-notification__heading svg {
@@ -622,9 +626,13 @@
     border-radius: 0;
 }
 .cart-notification .cart-notification-product__name {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: -2px;
+font-family: Seesans;
+font-size: 20px;
+font-weight: 400;
+line-height: 1.2;
+letter-spacing: -1.4px;
+text-transform: uppercase;
+font-family: var(--font-card-title-family);
 }
 
 .custom-note {
@@ -731,22 +739,19 @@
 }
 
 .card__media-btn {
-  background: rgba(255, 255, 255, 0.8);
   border: none;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   pointer-events: auto;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0;
+  background: transparent;
 }
 
 .card__media-btn svg {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 6px;
+  height: 2rem;
 }
 
 .card__media-btn.prev svg {
@@ -771,7 +776,6 @@
   height: 5px;
   background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
 @media screen and (max-width: 749px) {
