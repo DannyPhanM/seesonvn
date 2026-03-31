@@ -41,7 +41,7 @@
       "settings": {
         "collection_transparent": true,
         "logo_position": "middle-left",
-        "logo_size_desktop": 160,
+        "logo_size_desktop": 180,
         "mobile_logo_position": "left",
         "logo_size": 90,
         "menu": "lsci-team",
