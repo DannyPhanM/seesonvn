@@ -253,6 +253,10 @@
   color: #000;
 }
 
+.slider-component-desktop .slider-button.slider-button--prev svg {
+  transform: rotate(180deg);
+}
+
 .slider-component-desktop .slider-button svg {
   width: 16px;
   height: 54px;
