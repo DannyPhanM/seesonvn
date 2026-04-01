@@ -516,14 +516,14 @@
           // Reset classes and refresh state
           wBtn.classList.remove('swym-added');
           
-          if (window._swat) {
+          if (window._swat && typeof window._swat.fetchWishlist === 'function') {
             // Check current wishlist status
             window._swat.fetchWishlist(function(items) {
               const isInWishlist = items.some(item => item.empi == pid || item.epi == vid);
               if (isInWishlist) {
                 wBtn.classList.add('swym-added');
               }
-              if (window._swat.initializeAllButtons) {
+              if (typeof window._swat.initializeAllButtons === 'function') {
                 window._swat.initializeAllButtons();
               }
             });
@@ -536,8 +536,11 @@
           if(gImg && glass) {
             gImg.style.opacity = '0';
             setTimeout(() => { 
+                gImg.removeAttribute('srcset');
+                gImg.removeAttribute('sizes');
                 gImg.src = glass; 
                 gImg.onload = () => gImg.style.opacity = '1'; 
+                if (gImg.complete) gImg.style.opacity = '1';
             }, 50);
           }
         }
@@ -547,8 +550,11 @@
           if(lImg && life) {
             lImg.style.opacity = '0';
             setTimeout(() => { 
+                lImg.removeAttribute('srcset');
+                lImg.removeAttribute('sizes');
                 lImg.src = life; 
                 lImg.onload = () => lImg.style.opacity = '1'; 
+                if (lImg.complete) lImg.style.opacity = '1';
             }, 50);
           }
         }
@@ -579,9 +585,14 @@
                     const slides = mEl.querySelectorAll('.swiper-slide');
                     if (slides.length > 0) slides[0].classList.add('show-item');
                 },
-                click: function(s, e) {
-                    const sl = e.target.closest('.swiper-slide');
-                    if(sl) selectProduct(parseInt(sl.getAttribute('data-real-index')));
+                click: function(swiper, event) {
+                    const slide = event.target.closest('.swiper-slide');
+                    if (slide) {
+                        const realIndex = slide.getAttribute('data-real-index');
+                        if (realIndex !== null) {
+                            selectProduct(parseInt(realIndex));
+                        }
+                    }
                 }
             }
         });
@@ -620,8 +631,8 @@
       });
 
       // Check initial state for first slide
-      const activeSlide = document.querySelector(`#FcThumb-${sectionId} .swiper-slide-active`) || document.querySelector(`#FcThumb-${sectionId} .swiper-slide`);
-      if (activeSlide) {
+      const activeSlide = document.querySelector(`#FcMaster-${sectionId} .swiper-slide-active`) || document.querySelector(`#FcMaster-${sectionId} .swiper-slide`);
+      if (activeSlide && typeof swat.fetchWishlist === 'function') {
         const pid = activeSlide.getAttribute('data-product-id');
         swat.fetchWishlist(function(items) {
           const isInWishlist = items.some(item => item.empi == pid);
