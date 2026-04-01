@@ -514,14 +514,17 @@ a.product__text {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-  .product__left-info,
-  .product__info-wrapper {
-    position: sticky;
-    top: 30px;
-  }
+
 }
 
 @media(min-width: 1024px) {
+    .product__left-info,
+  .product__info-wrapper {
+ position: sticky;
+    bottom: 50px;
+    top: auto;
+    align-self: end; 
+  }
   .product__info-container {
     width: 100%;
     margin-top: 0 !important;
