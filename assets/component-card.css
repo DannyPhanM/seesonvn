@@ -755,11 +755,7 @@ font-family: var(--font-card-title-family);
 }
 
 .card__media-btn.prev svg {
-  transform: rotate(90deg);
-}
-
-.card__media-btn.next svg {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
 }
 
 .card__media-dots {

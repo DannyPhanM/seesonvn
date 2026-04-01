@@ -4732,7 +4732,6 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   }
   .search-modal.modal__content .page-width .search-modal__content {
     max-width: 595px;
-    margin-right: 10px;
   }
   .search-modal.modal__content .page-width .promo_collection .title h2 {
     font-size: 60px;
@@ -4886,6 +4885,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 
 .header__search .search-modal .page-width {
   padding: 0;
+  max-width: 1440px;
 }
 
 @media(max-width: 749px) {
