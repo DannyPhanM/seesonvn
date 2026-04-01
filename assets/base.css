@@ -4432,8 +4432,9 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   margin-bottom: 8px;
 }
 
-.template--collection .page-width {
-  /* max-width: 1440px; */
+.template--collection.open-facets {
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 .collapsible-content .accordion:last-child {
@@ -4534,11 +4535,12 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 
 .template--collection.open-facets .header-wrapper {
   z-index: 1;
+  pointer-events: none;
 }
 #FacetFiltersFormMobile {
   height: calc(100dvh - 165px);
   top: auto;
-  z-index: 10;
+  z-index: 9999999;
 }
 .mobile-facets .mobile-facets__inner {
   top: auto;
@@ -4552,11 +4554,26 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   padding: 20px 16px;
   border: none;
 }
+
 .mobile-facets .mobile-facets__main {
   padding-top: 30px;
 }
 .mobile-facets .mobile-facets__count {
   display: none;
+}
+
+@media(min-width: 768px) {
+  .mobile-facets .mobile-facets__header, 
+  .mobile-facets .mobile-facets__summary {
+    padding-left: 50px !important;
+  }
+}
+
+@media(min-width: 990px) {
+  .mobile-facets .mobile-facets__header, 
+  .mobile-facets .mobile-facets__summary {
+    padding-left: 80px !important;
+  }
 }
 .mobile-facets .mobile-facets__heading {
   text-align: left;
