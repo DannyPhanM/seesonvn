@@ -4377,7 +4377,7 @@ letter-spacing: 0.55px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 462px;
+        max-width: 460px;
         margin-left: auto;
     }
     .header-wrapper .list-menu .header__menu-item {
