@@ -4566,6 +4566,10 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   .mobile-facets .mobile-facets__header, 
   .mobile-facets .mobile-facets__summary {
     padding-left: 50px !important;
+    
+  }
+  .mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+    margin-left: 50px !important;
   }
 }
 
@@ -4573,6 +4577,11 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   .mobile-facets .mobile-facets__header, 
   .mobile-facets .mobile-facets__summary {
     padding-left: 80px !important;
+    padding-right: 32px !important;
+  }
+    .mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+    margin-left: 80px !important;
+    margin-right: 32px !important;
   }
 }
 .mobile-facets .mobile-facets__heading {
