@@ -2920,6 +2920,7 @@ details[open]>.header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+  letter-spacing: 120%; /*Uyen note */
 }
 
 .header--top-center .header__inline-menu,
@@ -2965,7 +2966,7 @@ details[open]>.header__submenu {
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .header__menu-item:hover span {
