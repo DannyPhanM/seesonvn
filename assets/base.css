@@ -3792,8 +3792,8 @@ details-disclosure>details {
 
 @media screen and (min-width: 990px) {
   .content-container--full-width {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 

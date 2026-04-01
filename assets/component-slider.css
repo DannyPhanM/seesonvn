@@ -255,6 +255,11 @@ slider-component.slider-component-full-width {
 
 .slider-counter__link {
   padding: 1rem;
+  opacity: 0.5;
+}
+
+.slider-counter__link.slider-counter__link--active {
+  opacity: 1;
 }
 
 @media screen and (max-width: 749px) {
