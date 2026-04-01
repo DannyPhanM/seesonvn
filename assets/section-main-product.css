@@ -1820,6 +1820,7 @@ a.product__text {
   line-height: 24px;
   letter-spacing: -1.2px;
   font-weight: 400;
+  font-family: var(--font-card-title-family);
 }
 
 .template--product .product__media-wrapper .product__column-sticky {
