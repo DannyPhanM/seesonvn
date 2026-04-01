@@ -2920,7 +2920,7 @@ details[open]>.header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
-  letter-spacing: 120%; /*Uyen note */
+  letter-spacing: 10%; /*Uyen note */
 }
 
 .header--top-center .header__inline-menu,
