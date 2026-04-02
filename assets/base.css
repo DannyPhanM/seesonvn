@@ -4460,7 +4460,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: flex;
   gap: 10px;
   padding-top: 23px;
-  padding-bottom: 34px;
+  padding-bottom: 40px;
   overflow-x: auto;
   justify-content: space-between;
 }
