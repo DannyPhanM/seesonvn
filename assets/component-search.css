@@ -150,11 +150,11 @@ input::-webkit-search-decoration {
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
-    letter-spacing:-5%;
+    letter-spacing:5%;
     border: none;
     margin: 0;
     margin-bottom: 30px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .search-modal.modal__content .search-modal__content .predictive-search__results-list {
     display: flex;

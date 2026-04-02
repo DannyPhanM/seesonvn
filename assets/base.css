@@ -4548,7 +4548,12 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
     margin-left: 50px !important;
   }
 }
-
+.mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+  margin-top: 16px !important;
+}
+.mobile-facets .mobile-facets__list .mobile-facets__item {
+  width: 45%;
+}
 @media(min-width: 990px) {
   .mobile-facets .mobile-facets__header, 
   .mobile-facets .mobile-facets__summary {
