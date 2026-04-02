@@ -348,8 +348,8 @@ input::-webkit-search-decoration {
     right: 0;
 }
 .search-modal.modal__content .search-modal__content .search-modal__close-button svg {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
 }
 @media (min-width: 750px) {
     .search-modal.modal__content .search-modal__content .predictive-search__results-list {
