@@ -4641,7 +4641,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   font-style: normal;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.8px;
+  letter-spacing: 0%;
   text-transform: uppercase;
 }
 .mobile-facets .mobile-facets__summary svg {
