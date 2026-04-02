@@ -32,7 +32,7 @@
             "heading": "EXPLORE {{ collection.title }}",
             "heading_size": "h2",
             "subheading": "",
-            "subheading_custom": "{{ collection.description }}<p>The spirit of sports isn’t just for professional athletes — it lives in every moment of effort, breakthrough, and pushing beyond your own limits. The Athletes collection was created to celebrate everyday movement. </p>",
+            "subheading_custom": "{{ collection.description }}",
             "button_label": "",
             "link": "",
             "button_label_2": "",
