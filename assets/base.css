@@ -4528,7 +4528,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .template--collection .slideshow__text.banner__box.mobile .banner__text p {
   text-align: left;
   color: #999;
-  text-align: justify;
+  text-align: left;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
