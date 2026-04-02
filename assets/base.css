@@ -1450,9 +1450,9 @@ button.shopify-payment-button__button--unbranded {
 
   .button,
   .button * {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
   }
 }
 
