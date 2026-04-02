@@ -4416,7 +4416,7 @@ body.open-search .header-wrapper .header{
 }
 body.open-drawer .header-wrapper *,
 body.open-search .header-wrapper * {
-  color: #222 !important;
+  color: #000 !important;
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper img,
 body.open-search .header-wrapper .header__heading-logo-wrapper img {
@@ -4468,8 +4468,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: none;
 }
 .collection-linked a {
-  text-align: justify;
-  font-style: normal;
+  text-align: left;
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
