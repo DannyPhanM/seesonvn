@@ -861,8 +861,8 @@ a.active-facets__button.focused .active-facets__button-inner {
 }
 
 .mobile-facets__open .svg-wrapper {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   color: #000;
 }
 
@@ -1263,4 +1263,8 @@ facet-remove.active-facets__button-wrapper {
 }
 facet-remove.active-facets__button-wrapper a {
   padding: 0;
+}
+
+.mobile-facets .mobile-facets__main details:not(:last-child) {
+  border-bottom: 1px solid #b2b2b2;
 }

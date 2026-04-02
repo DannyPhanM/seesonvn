@@ -4728,6 +4728,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   .search-modal.modal__content .page-width .promo_collection {
     max-width: 40%;
     width: 100%;
+    display: flex;
+    align-items: flex-end;
   }
   .search-modal.modal__content .page-width .search-modal__content {
     max-width: 595px;
@@ -4743,7 +4745,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   }
   .search-modal.modal__content .page-width .promo_collection .title h2 {
     font-size: 40px;
-    font-weight: 600px;
+    font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0.09px;
     text-transform: uppercase;
@@ -4928,4 +4930,16 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 
 .swym-ui-component .swym-wishlist-title-container {
   display: none !important;
+}
+
+.template--collection .slideshow__text.banner__box.flex-column {
+  max-width: 542px;
+}
+.template--collection .slideshow__text.banner__box.flex-column .banner__text {
+  max-width: 100%;
+}
+.template--collection .slideshow__text.banner__box.flex-column .banner__text * {
+  letter-spacing: 0 !important;
+  text-align: justify;
+  line-height: 1.2;
 }

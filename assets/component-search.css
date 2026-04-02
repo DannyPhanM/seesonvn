@@ -314,7 +314,7 @@ input::-webkit-search-decoration {
   .search-modal.modal__content .promo_collection .title h2 {
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2; /* 21.6px */
     letter-spacing: -0.9px;
     width: 60%;
