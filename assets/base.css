@@ -4769,7 +4769,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   }
   .search-modal.modal__content .page-width .promo_collection .title h2 {
     font-size: 40px;
-    font-weight: 600px !important;
+    font-weight: 600px;
     line-height: 120%;
     letter-spacing: 0.09px;
     text-transform: uppercase;
