@@ -1237,11 +1237,16 @@ summary::-webkit-details-marker {
 .media model-viewer {
   display: block;
   max-width: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.template--product .media>*:not(.zoom):not(.deferred-media__poster-button),
+.template--product .media model-viewer {
+  position: relative;
 }
 
 .media>img {
