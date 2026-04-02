@@ -4005,7 +4005,7 @@ details-disclosure>details {
 .accordion .accordion__content span,
 .accordion .accordion__content li {
 text-align: justify;
-font-size: 11px;
+font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 1.2; /* 13.2px */
