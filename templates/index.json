@@ -12,10 +12,9 @@
     "slideshow_6w4AVd": {
       "type": "slideshow",
       "blocks": {
-        "slide_bhKrjH": {
+        "slide_kjBj9L": {
           "type": "slide",
           "settings": {
-            "video": "shopify://files/videos/VIDEO FOR WEB.mp4",
             "video_url": "",
             "image": "shopify://shop_images/Backinstock_TheOffice_2626_extended_1.png",
             "mobile_image": "shopify://shop_images/Carosel.png",
@@ -37,7 +36,7 @@
             "color_scheme": "scheme-4"
           }
         },
-        "slide_kjBj9L": {
+        "slide_bL94pR": {
           "type": "slide",
           "settings": {
             "video_url": "",
@@ -87,8 +86,8 @@
         }
       },
       "block_order": [
-        "slide_bhKrjH",
         "slide_kjBj9L",
+        "slide_bL94pR",
         "slide_EkdaDe"
       ],
       "name": "t:sections.slideshow.presets.name",
