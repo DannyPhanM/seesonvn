@@ -26,6 +26,8 @@ variant-selects {
   margin-bottom: 18px;
   color: #000;
   text-transform: capitalize;
+  font-size: 16px;
+  letter-spacing: 0;
 }
 
 .product-form__input input[type='radio'] {
