@@ -4948,3 +4948,16 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   text-align: justify;
   line-height: 1.2;
 }
+
+.template-search__header .h2 {
+  text-transform: uppercase;
+}
+.template-search__search .search__input {
+  padding: 1.5rem !important;
+}
+.template-search__search .search__input::placeholder {
+  opacity: 1;
+}
+.template-search__search .field__label {
+  display: none;
+}
