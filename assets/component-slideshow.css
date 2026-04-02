@@ -103,6 +103,7 @@ slideshow-component .slideshow.banner {
 @media screen and (min-width: 990px) {
   .slideshow__text-wrapper.banner__content {
     padding: 8rem;
+    padding-bottom: 60px;
   }
 }
 
