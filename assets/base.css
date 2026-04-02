@@ -4468,7 +4468,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: none;
 }
 .collection-linked a {
-  text-align: left;
+  text-align: justify;
+  font-style: normal;
   font-weight: 400;
   line-height: 1.2;
   text-transform: uppercase;
