@@ -608,7 +608,7 @@
     color: #000;
     font-size: 16px;
     font-weight: 500;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.09px;
     text-transform: uppercase;
 }
@@ -629,7 +629,7 @@
 font-family: Seesans;
 font-size: 20px;
 font-weight: 400;
-line-height: 120%;
+line-height: 1.2;
 letter-spacing: -5%;
 text-transform: uppercase;
 font-family: var(--font-card-title-family);

@@ -237,7 +237,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 
 .template--index .slideshow__text.banner__box .button-box .banner__buttons a{
   font-size: 20px;
-  line-height: 120%;
+  line-height: 1.2;
   font-weight: 400;
 }
 

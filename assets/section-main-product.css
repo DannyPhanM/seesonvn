@@ -1955,12 +1955,6 @@ a.product__text {
   margin-bottom: 0;
 }
 
-@media (min-width: 750px) {
-  .template--product .product__info-wrapper .price-box {
-    /* margin-top: 220px; */
-  }
-}
-
 .template--product
   .product__info-wrapper
   .price-box
@@ -2308,17 +2302,8 @@ product-recommendations.related-products {
 }
 
 @media (min-width: 1024px) {
-  .grid__item.product__media-wrapper {
-    /* padding-left: 120px; */
-  }
   .template--product .product__media-wrapper .product__column-sticky {
     gap: 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .grid__item.product__media-wrapper {
-    /* padding-left: 212px; */
   }
 }
 

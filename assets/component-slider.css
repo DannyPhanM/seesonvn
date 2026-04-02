@@ -291,10 +291,6 @@ slider-component.slider-component-full-width {
   }
 }
 
-.slider-counter__link--dots:not(.slider-counter__link--active):hover .dot {
-  
-}
-
 .slider-counter__link--dots .dot,
 .slider-counter__link--numbers {
   transition: transform 0.2s ease-in-out;

@@ -313,9 +313,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 @media(min-width: 750px) {
   .text-body {
     font-size: 16px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0%;
     text-align: justify;
+  }
 }
 
 h1,
@@ -767,10 +768,6 @@ h3 .icon-arrow,
   height: 20px;
 }
 
-.svg-wrapper>svg {
-
-}
-
 /* base-details-summary */
 summary {
   cursor: pointer;
@@ -1177,10 +1174,6 @@ summary::-webkit-details-marker {
     min-width: 35%;
   }
 
-  .grid--peek.slider .grid__item:first-of-type {
-    
-  }
-
   /* Fix to show some space at the end of our sliders in all browsers */
   .grid--peek.slider:after {
     margin-left: calc(-1 * var(--grid-mobile-horizontal-spacing));
@@ -1452,7 +1445,7 @@ button.shopify-payment-button__button--unbranded {
   .button * {
     font-size: 16px;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 1.2;
     padding: 0 14px;
   }
 }
@@ -2627,12 +2620,6 @@ input[type='checkbox'] {
 }
 
 @media screen and (min-width: 990px) {
-
-  .header--middle-left .header__heading-link,
-  .header--top-left .header__heading-link {
-    /* margin-left: -0.75rem; */
-  }
-
   .header__heading,
   .header__heading-link {
     justify-self: start;
@@ -2704,15 +2691,6 @@ input[type='checkbox'] {
   transform: scale(1.07);
 }
 
-.header__icon .icon {
-
-}
-
-.header__icon,
-.header__icon--cart .icon {
-
-}
-
 .header__icon--cart {
   position: relative;
   /* margin-right: -1.2rem; */
@@ -2757,10 +2735,6 @@ menu-drawer+.header__search {
 
 .header--top-center.drawer-menu>.header__search {
   margin-left: 3.2rem;
-}
-
-.header--top-center header-drawer {
-  
 }
 
 .header:not(.header--has-menu) *>.header__search {
@@ -3910,7 +3884,7 @@ details-disclosure>details {
   color: #999;
   font-size: 16px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 1.2;
   list-style: none;
   position: relative;
   padding-left: 15px;
@@ -3943,13 +3917,11 @@ details-disclosure>details {
   margin-top: 20px;
   text-transform: initial !important;
   color: var(--Primary-ss-grey, #999);
-  leading-trim: both;
-  text-edge: cap;
   font-family: var(--font-body-family);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 1px;
 }
 
@@ -3977,13 +3949,11 @@ details-disclosure>details {
   margin-top: 20px;
   text-transform: initial !important;
   color: var(--Primary-ss-grey, #999);
-  leading-trim: both;
-  text-edge: cap;
   font-family: var(--font-body-family);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 1px;
 }
 
@@ -4009,7 +3979,7 @@ text-align: justify;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 120%
+line-height: 1.2;
 letter-spacing: 0.55px;
 }
 
@@ -4059,7 +4029,7 @@ letter-spacing: 0.55px;
 
 .rich-text__text {
   color: #999;
-  line-height: 120%;
+  line-height: 1.2;
 }
 
 .accordion__title.font-body {
@@ -4090,7 +4060,7 @@ letter-spacing: 0.55px;
   border-radius: 0;
   font-size: 10px;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 1.2;
 }
 .card__badge.sale .badge {
   padding: 8px;
@@ -4099,7 +4069,7 @@ letter-spacing: 0.55px;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 1.2;
 }
 .card__badge.sold-out .badge {
   border: none;
@@ -4163,7 +4133,7 @@ letter-spacing: 0.55px;
   .card-wrapper .card__information .card__heading a{
     font-size: 24px;
     letter-spacing: -5%;
-    line-height: 120%;
+    line-height: 1.2;
   }
 
   .card-wrapper .card__information .card__heading a:hover {
@@ -4394,8 +4364,6 @@ letter-spacing: 0.55px;
     }
     .header__menu-item span {
         font-size: 12px;
-    }
-    .cart-count-bubble {
     }
     .header__icons {
         gap: 16px;
@@ -4771,7 +4739,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   .search-modal.modal__content .page-width .promo_collection .title h2 {
     font-size: 40px;
     font-weight: 600px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.09px;
     text-transform: uppercase;
   }
