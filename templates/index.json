@@ -201,7 +201,7 @@
         "full_width": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 120,
+        "padding_bottom": 110,
         "padding_bottom_mobile": 60
       }
     },
@@ -212,7 +212,7 @@
           "type": "heading",
           "settings": {
             "heading": "ESSENTIAL SPACES",
-            "heading_tag": "h1"
+            "heading_tag": "h2"
           }
         },
         "text_mMRXhW": {
