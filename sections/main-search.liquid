@@ -115,6 +115,7 @@
                 type="reset"
                 class="reset__button field__button hidden{% if search.terms == blank %} hidden{% endif %}"
                 aria-label="{{ 'general.search.reset' | t }}"
+                style="display: none;"
               >
                 <span class="svg-wrapper">
                   {{- 'icon-reset.svg' | inline_asset_content -}}

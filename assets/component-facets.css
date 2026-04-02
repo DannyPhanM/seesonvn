@@ -866,6 +866,11 @@ a.active-facets__button.focused .active-facets__button-inner {
   color: #000;
 }
 
+.mobile-facets__open .svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
 .mobile-facets__open line,
 .mobile-facets__open circle {
   stroke: rgba(var(--color-link), var(--alpha-link));
@@ -1265,6 +1270,16 @@ facet-remove.active-facets__button-wrapper a {
   padding: 0;
 }
 
-.mobile-facets .mobile-facets__main details:not(:last-child) {
-  border-bottom: 1px solid #b2b2b2;
+.mobile-facets .mobile-facets__main details:not(:last-child) summary > div {
+  position: relative;
+}
+.mobile-facets .mobile-facets__main details:not(:last-child) summary > div:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  height: 1px;
+  width: 100%;
+  background: #aba3a3;
 }

@@ -96,7 +96,9 @@ product-info {
     font-size: 11px !important;
   }
 }
-
+.template--product .product__info-wrapper .product-form__buttons .product-form__submit span {
+  padding: 0 11px;
+}
 @media screen and (min-width: 1440px) {
   .template--product .product__info-wrapper .product-form__buttons .product-form__submit span, .template--product .product__info-wrapper .product-form__buttons .product-form__submit span {
     font-size: 16px !important;
