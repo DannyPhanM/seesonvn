@@ -74,7 +74,7 @@
   max-width: 542px;
 }
 .collection__title .title:not(:only-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
 }
 
 @media screen and (min-width: 990px) {
