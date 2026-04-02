@@ -607,8 +607,8 @@
 .cart-notification .cart-notification__heading {
     color: #000;
     font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 500;
+    line-height: 120%;
     letter-spacing: 0.09px;
     text-transform: uppercase;
 }
