@@ -633,6 +633,7 @@ line-height: 1.2;
 letter-spacing: -5%;
 text-transform: uppercase;
 font-family: var(--font-card-title-family);
+margin-bottom: 16px;
 }
 
 .custom-note {
