@@ -3909,7 +3909,7 @@ details-disclosure>details {
   color: #999;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 120%;
   list-style: none;
   position: relative;
   padding-left: 15px;
