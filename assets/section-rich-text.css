@@ -60,6 +60,12 @@
   .rich-text__blocks > * + * {
     margin-top: 2.4rem;
   }
+
+  .template--index .rich-text__blocks>*+* {
+    margin-top: 12px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
 }
 
 .rich-text__blocks > * + a {

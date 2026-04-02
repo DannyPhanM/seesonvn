@@ -65,6 +65,7 @@
 
 .collection__description > * {
   margin: 0;
+  text-align: justify;
 }
 
 .collection__title.title-wrapper {

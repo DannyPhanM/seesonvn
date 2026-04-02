@@ -267,7 +267,7 @@ cart-drawer-items {
 .cart-drawer .cart-item__image-container {
   display: inline-flex;
   width: 15.5rem;
-  height: 7.2rem;
+  height: 9rem;
   overflow: hidden;
 }
 
