@@ -89,7 +89,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "YOU MAY ALSO LIKE",
         "heading_size": "h2",
         "products_to_show": 8,
         "columns_desktop": 4,
@@ -170,6 +170,7 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
+            "image": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
@@ -182,6 +183,7 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
+            "image": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
@@ -200,8 +202,8 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio": "1/1",
+        "image_ratio_mobile": "1/1",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
