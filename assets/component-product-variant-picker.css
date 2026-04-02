@@ -25,7 +25,7 @@ variant-selects {
 :is(.product-form__input--pill, .product-form__input--swatch) .form__label {
   margin-bottom: 18px;
   color: #000;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .product-form__input input[type='radio'] {
