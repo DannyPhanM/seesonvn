@@ -4475,7 +4475,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  letter-spacing: 1.2px; 
+  letter-spacing: 0%; 
   font-weight: 400px; 
   font-size: 20px; 
   color:#999
