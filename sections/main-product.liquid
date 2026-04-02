@@ -159,7 +159,7 @@
                     <h1>
                       {{ product.title | escape }}
                       {%- if product.selected_or_first_available_variant.title != 'Default Title' -%}
-                        - {{ product.selected_or_first_available_variant.title | escape }}
+                        {% comment %} - {{ product.selected_or_first_available_variant.title | escape }} {% endcomment %}
                       {%- endif -%}
                     </h1>
                     <div
