@@ -1820,7 +1820,7 @@ a.product__text {
 
 .template--product .product.product--medium .product__title h1 {
   font-size: 24px;
-  line-height: 120%;
+  line-height: 100%;
   letter-spacing: -5%;
   font-weight: 400;
   font-family: var(--font-card-title-family);
