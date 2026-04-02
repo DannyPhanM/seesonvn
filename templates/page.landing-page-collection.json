@@ -22,16 +22,14 @@
       "name": "Collection Slider",
       "settings": {
         "collection_list": [
-          "best-seller-kinh-can",
-          "best-seller-kinh-ram",
-          "big-size",
-          "clearance-sale",
-          "medium-size",
-          "metal",
-          "new-collection",
-          "small-size",
+          "all-designs",
           "the-athletes",
-          "the-assembled-sunglasses"
+          "the-assembled-24",
+          "the-assembled-collection",
+          "the-athletes-sunglasses",
+          "the-edge",
+          "the-snorkel-23",
+          "the-soap-optical"
         ],
         "indicator_style": "bottom",
         "background_color": "#eeeeee",
