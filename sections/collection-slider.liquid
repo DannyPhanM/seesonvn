@@ -128,6 +128,7 @@
 
   .coll-list-right {
     width: 42.37%;
+    height: auto;
     background: transparent;
     perspective: 1000px; /* Required for 3D */
     position: relative; /* Fixed: Required for absolute children like the flip button */
@@ -136,7 +137,6 @@
   .coll-flip-card {
     position: relative;
     width: 100%;
-    height: 100%;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
   }
@@ -145,22 +145,27 @@
     transform: rotateY(180deg);
   }
   
-  .coll-flip-front, .coll-flip-back {
+  .coll-flip-front {
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .coll-flip-back {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     overflow: hidden;
-  }
-  
-  .coll-flip-back {
     transform: rotateY(180deg);
   }
 
   .coll-master-img {
-    width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%; height: auto;
     display: block;
   }
 
