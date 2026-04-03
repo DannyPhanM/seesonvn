@@ -131,6 +131,7 @@
     },
     "collection_slider_jC63Bt": {
       "type": "collection-slider",
+      "disabled": true,
       "name": "Collection Slider",
       "settings": {
         "collection_list": [
