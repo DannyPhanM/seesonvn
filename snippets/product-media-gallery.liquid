@@ -60,18 +60,27 @@
           continue
         endif
         
-        assign part_handle_padded = '-' | append: part_handle | append: '-'
-        
-        # Determine which variant "owns" this alt part (the longest/most specific match)
+        # 1. Try Exact Match first (Highest priority)
         assign best_match = ''
         for handle in all_variant_handles
-          assign handle_padded = '-' | append: handle | append: '-'
-          if part_handle_padded contains handle_padded
-            if handle.size > best_match.size
-              assign best_match = handle
-            endif
+          if part_handle == handle
+            assign best_match = handle
+            break
           endif
         endfor
+        
+        # 2. If no exact match, try partial match (longest string wins)
+        if best_match == ''
+          assign part_handle_padded = '-' | append: part_handle | append: '-'
+          for handle in all_variant_handles
+            assign handle_padded = '-' | append: handle | append: '-'
+            if part_handle_padded contains handle_padded
+              if handle.size > best_match.size
+                assign best_match = handle
+              endif
+            endif
+          endfor
+        endif
         
         if best_match != ''
           assign is_variant_image = true
