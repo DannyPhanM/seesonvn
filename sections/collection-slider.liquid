@@ -389,9 +389,15 @@
         const urlP = slide.getAttribute('data-img-primary');
         const urlS = slide.getAttribute('data-img-secondary');
         
-        if(imgP && urlP) imgP.src = urlP;
+        if(imgP && urlP) {
+          imgP.src = urlP;
+          imgP.srcset = urlP; // Clear/Update srcset to ensure the new image shows
+          if(imgP.dataset.src) imgP.dataset.src = urlP; // For lazyload libraries
+        }
         if(imgS && urlS) {
           imgS.src = urlS;
+          imgS.srcset = urlS; // Clear/Update srcset
+          if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
           if(fBtn) fBtn.style.display = 'flex'; 
         }
       }
