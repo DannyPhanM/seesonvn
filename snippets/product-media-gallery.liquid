@@ -60,33 +60,35 @@
           continue
         endif
         
-        # 1. Try Exact Match first (Highest priority)
-        assign best_match = ''
+        assign current_best_match = ''
+        assign current_best_match_size = 0
+        
         for handle in all_variant_handles
+          assign h_size = handle | size
+          
+          # Check exact match
           if part_handle == handle
-            assign best_match = handle
+            assign current_best_match = handle
+            assign current_best_match_size = h_size
             break
+          endif
+          
+          # Check partial match with strict boundaries
+          assign part_handle_padded = '-' | append: part_handle | append: '-'
+          assign handle_padded = '-' | append: handle | append: '-'
+          
+          if part_handle_padded contains handle_padded
+            if h_size > current_best_match_size
+              assign current_best_match = handle
+              assign current_best_match_size = h_size
+            endif
           endif
         endfor
         
-        # 2. If no exact match, try partial match (longest string wins)
-        if best_match == ''
-          assign part_handle_padded = '-' | append: part_handle | append: '-'
-          for handle in all_variant_handles
-            assign handle_padded = '-' | append: handle | append: '-'
-            if part_handle_padded contains handle_padded
-              if handle.size > best_match.size
-                assign best_match = handle
-              endif
-            endif
-          endfor
-        endif
-        
-        if best_match != ''
+        if current_best_match != ''
           assign is_variant_image = true
-          # Check if this "owner" belongs to our current selection
           for cv_handle in current_variant_handles
-            if cv_handle == best_match
+            if cv_handle == current_best_match
               assign matches_current = true
               break
             endif
