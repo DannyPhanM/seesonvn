@@ -4981,3 +4981,15 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .product-form__submit-price span {
   padding-right: 0 !important;
 }
+
+.active-facets__button .svg-wrapper {
+  padding: 0;
+  min-width: 12px;
+}
+
+.active-facets__button .svg-wrapper svg {
+  width: 12px;
+    height: 12px;
+    min-width: 12px;
+    padding: 0;
+}
