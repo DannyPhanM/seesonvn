@@ -427,7 +427,7 @@
             id="FcPreview-{{ section.id | replace: '-', '_' }}"
           >
             {{
-              first_product.media[0]
+              first_product.media[1]
               | image_url: width: 1000
               | image_tag: alt: first_product.title, widths: '400, 600, 800, 1000', sizes: '(min-width: 750px) 600px, 100vw'
             }}
@@ -457,7 +457,7 @@
                     data-title="{{ product.title | escape }}"
                     data-available="{{ product.available }}"
                     data-price="{{ product.price | money }}"
-                    data-glass="{{ product.media[0] | image_url: width: 600 }}"
+                    data-glass="{{ product.media[1] | image_url: width: 600 }}"
                     data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
                     data-product-id="{{ product.id }}"
                     data-variant-id="{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}"
