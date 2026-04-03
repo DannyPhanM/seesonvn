@@ -60,35 +60,44 @@
           continue
         endif
         
-        assign current_best_match = ''
-        assign current_best_match_size = 0
+        # Segment-based matching: split handle by '-' and try from longest to shortest
+        # e.g. 'silver-black-3' tries: 'silver-black-3', 'silver-black', 'silver'
+        assign segments = part_handle | split: '-'
+        assign seg_count = segments | size
+        assign found_match = ''
         
-        for handle in all_variant_handles
-          assign h_size = handle | size
-          
-          # Check exact match
-          if part_handle == handle
-            assign current_best_match = handle
-            assign current_best_match_size = h_size
-            break
-          endif
-          
-          # Check partial match with strict boundaries
-          assign part_handle_padded = '-' | append: part_handle | append: '-'
-          assign handle_padded = '-' | append: handle | append: '-'
-          
-          if part_handle_padded contains handle_padded
-            if h_size > current_best_match_size
-              assign current_best_match = handle
-              assign current_best_match_size = h_size
+        for i in (1..seg_count)
+          # Build candidate from first N segments (N = seg_count - i + 1, going from full to shortest)
+          assign take_count = seg_count | minus: i | plus: 1
+          assign candidate = ''
+          assign seg_index = 0
+          for seg in segments
+            if seg_index < take_count
+              if seg_index > 0
+                assign candidate = candidate | append: '-'
+              endif
+              assign candidate = candidate | append: seg
             endif
+            assign seg_index = seg_index | plus: 1
+          endfor
+          
+          # Check if this candidate matches any variant handle exactly
+          for handle in all_variant_handles
+            if candidate == handle
+              assign found_match = handle
+              break
+            endif
+          endfor
+          
+          if found_match != ''
+            break
           endif
         endfor
         
-        if current_best_match != ''
+        if found_match != ''
           assign is_variant_image = true
           for cv_handle in current_variant_handles
-            if cv_handle == current_best_match
+            if cv_handle == found_match
               assign matches_current = true
               break
             endif
