@@ -4809,10 +4809,13 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-item {
   display: grid;
-  grid-template-columns: 155px 80px 1fr;
+  grid-template-columns: 175px 20px 20px 1fr;
   grid-template-rows: auto auto;
-  grid-template-areas: "img title title" "img button price";
-  gap: 6px 12px;
+  grid-template-areas:
+        "img title title title"
+        "img variant variant variant"
+        "img remove button price";
+  gap: 6px 3px;
   padding: 0;
   align-items: center;
   position: relative;
@@ -4823,7 +4826,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-image-wrapper {
   grid-area: img;
-  width: 155px;
+  width: 175px;
+  padding-right: 20px
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-is-button {
   grid-area: title;
@@ -4842,6 +4846,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   font-weight: 400;
   color: #000;
   white-space: normal;
+  font-family: var(--font-card-title-family);
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-price {
   grid-area: price;
@@ -4871,11 +4876,12 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: flex;
   gap: 5px;
   font-weight: 400;
+  font-size: 0;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-add-to-cart-btn:before {
   content: '';
   display: block;
-  background: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.86732 2C4.43398 2 4.06732 2.14667 3.77398 2.44C3.48065 2.73333 3.33398 3.1 3.33398 3.53333V14L8.00065 11.8867L12.6673 14V3.53333C12.6673 3.1 12.5207 2.73333 12.2273 2.44C11.934 2.14667 11.5673 2 11.134 2H4.86732ZM4.66732 3.33333H11.134C11.134 3.33333 11.2073 3.34 11.2607 3.4C11.3207 3.46 11.3273 3.5 11.3273 3.53333V11.9533L7.99398 10.4067L4.66065 11.9533V3.33333H4.66732Z" fill="black"/></svg>');
+  background: url('data:image/svg+xml,<svg width="16" height="14" viewBox="0 0 16 18" fill="none" class="icon icon-cart" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.1667 4.21672H14.6667C14.8257 4.20532 14.9854 4.22666 15.1358 4.27938C15.2863 4.3321 15.4243 4.41506 15.5415 4.52321C15.6586 4.63137 15.7523 4.76245 15.8169 4.90824C15.8814 5.05403 15.9154 5.21146 15.9167 5.37089V16.2875C15.9181 16.6206 15.7873 16.9407 15.5529 17.1774C15.3185 17.4141 14.9998 17.5482 14.6667 17.55H1.33333C1.00021 17.5482 0.681468 17.4141 0.447094 17.1774C0.212721 16.9407 0.0818841 16.6206 0.0833248 16.2875V5.37089C0.0846253 5.21146 0.118588 5.05403 0.183117 4.90824C0.247646 4.76245 0.341377 4.63137 0.458513 4.52321C0.575649 4.41506 0.713705 4.3321 0.864168 4.27938C1.01463 4.22666 1.1743 4.20532 1.33333 4.21672H3.83333C4.14749 2.27505 6.03708 0.412598 7.99999 0.412598C9.96291 0.412598 11.8525 2.27505 12.1667 4.21672ZM10.9167 4.21672C10.6042 2.97505 9.25541 1.67501 7.99999 1.67501C6.74458 1.67501 5.39583 2.97505 5.08333 4.21672H10.9167ZM1.33333 16.2875H14.6667V5.46672H1.33333V16.2875Z" fill="currentColor"></path></svg>');
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
@@ -4890,12 +4896,48 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   text-decoration: line-through;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-delete-btn {
-  position: absolute;
-  top: 6px;
-  right: 6px;
+  grid-area: remove;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  padding: 0;
+  background: transparent !important;
+  color: #000;
+  align-self: end;
 }
-
+#swym-wishlist-render-container .swym-wishlist-grid .swym-delete-btn:before {
+  content: '';
+  display: block;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.66602 14C4.29935 14 3.98546 13.8694 3.72435 13.6083C3.46324 13.3472 3.33268 13.0333 3.33268 12.6667V4H2.66602V2.66667H5.99935V2H9.99935V2.66667H13.3327V4H12.666V12.6667C12.666 13.0333 12.5355 13.3472 12.2743 13.6083C12.0132 13.8694 11.6993 14 11.3327 14H4.66602ZM11.3327 4H4.66602V12.6667H11.3327V4ZM5.99935 11.3333H7.33268V5.33333H5.99935V11.3333ZM8.66602 11.3333H9.99935V5.33333H8.66602V11.3333Z" fill="black"/></svg>');
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-delete-btn {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 16px;
+  height: 16px;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-delete-btn::before {
+    content: '';
+  display: block;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.66602 14C4.29935 14 3.98546 13.8694 3.72435 13.6083C3.46324 13.3472 3.33268 13.0333 3.33268 12.6667V4H2.66602V2.66667H5.99935V2H9.99935V2.66667H13.3327V4H12.666V12.6667C12.666 13.0333 12.5355 13.3472 12.2743 13.6083C12.0132 13.8694 11.6993 14 11.3327 14H4.66602ZM11.3327 4H4.66602V12.6667H11.3327V4ZM5.99935 11.3333H7.33268V5.33333H5.99935V11.3333ZM8.66602 11.3333H9.99935V5.33333H8.66602V11.3333Z" fill="black"></path></svg>');
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-delete-btn .swym-icon {
+  display: none;;
+}
 #swym-plugin {
+  
   display: none !important;
 }
 .swym-advanced-wishlist-collections-container {
@@ -4992,4 +5034,22 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
     height: 12px;
     min-width: 12px;
     padding: 0;
+}
+
+#swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-image-wrapper {
+  display: inline-flex;
+  width: 15.5rem;
+  height: 9rem;
+  overflow: hidden;
+  margin-right: 20px;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-variant-title {
+  grid-area: variant;
+  color: #999 !important;
 }
