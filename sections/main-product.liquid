@@ -90,6 +90,25 @@
       {%- assign collapsible_tabs = section.blocks | where: 'type', 'collapsible_tab' -%}
       <div class="product__left-info grid__item">
         {%- for block in collapsible_tabs -%}
+          {%- liquid
+            if block.settings.enable_sizing_data
+              assign _sc = product.metafields.custom.size_chart.value
+              if _sc != blank
+                assign _has_sizing = false
+                if _sc.lens_width_a != blank or _sc.lens_height_b != blank or _sc.bridge_width_c != blank or _sc.total_frame_width_d != blank or _sc.temple_length_e != blank
+                  assign _has_sizing = true
+                endif
+              else
+                assign _has_sizing = false
+                if product.metafields.custom.lens_width_a != blank or product.metafields.custom.lens_width != blank or product.metafields.custom.lens_height_b != blank or product.metafields.custom.lens_height != blank or product.metafields.custom.bridge_width_c != blank or product.metafields.custom.bridge_width != blank or product.metafields.custom.total_frame_width_d != blank or product.metafields.custom.frame_width != blank or product.metafields.custom.temple_length_e != blank or product.metafields.custom.temple_length != blank
+                  assign _has_sizing = true
+                endif
+              endif
+              unless _has_sizing
+                continue
+              endunless
+            endif
+          -%}
           <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
             <details
               id="Details-{{ block.id }}-{{ section.id }}"
