@@ -33,22 +33,24 @@
         },
         "collapsible_tab_9M6Lid": {
           "type": "collapsible_tab",
-          "enable_sizing_data": false,
           "settings": {
+            "enable_sizing_data": false,
             "heading": "Details",
             "icon": "none",
             "content": "{{ product.description }}",
-            "page": ""
+            "page": "",
+            "sizing_description": "<p>To determine the right frame size, measure the total width of your current glasses. A suitable frame size should be within ±4mm of the width of your current pair.</p>"
           }
         },
         "collapsible_tab_4rJxwr": {
           "type": "collapsible_tab",
-          "enable_sizing_data": true,
           "settings": {
+            "enable_sizing_data": true,
             "heading": "Sizings",
             "icon": "none",
             "content": "{{ product.description }}",
-            "page": ""
+            "page": "",
+            "sizing_description": "<p>To determine the right frame size, measure the total width of your current glasses. A suitable frame size should be within ±4mm of the width of your current pair.</p>"
           }
         },
         "price": {
