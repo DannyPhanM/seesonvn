@@ -2375,6 +2375,7 @@ product-recommendations.related-products {
   .template--product .product.product--medium .product__left-info {
     order: 3;
     width: 100%;
+    margin-top: 20px
   }
   .template--product .product.product--medium .thumbnail-slider {
     display: block !important;
@@ -2389,4 +2390,110 @@ product-recommendations.related-products {
   .product-media-container.constrain-height .media {
     padding-top: 150%;
   }
+}
+
+/* Product Sizing Tab Styles */
+.product-sizing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-sizing__top-highlight {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 1rem;
+  color: var(--Primary-ss-black, #000);
+  font-family: Afacad;
+  font-size: var(--Description-Description-body, 11px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.55px;
+  margin-bottom: 20px;
+}
+
+.product-sizing__diagram {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.sizing-diagram-image {
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  aspect-ratio: 296.00/148.24;
+  object-fit: contain;
+}
+
+.product-sizing__summary-brief {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.product-sizing__table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.product-sizing__table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.product-sizing__table-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-sizing__table-col * {
+  color: var(--Primary-ss-black, #000);
+  font-size: var(--Description-Description-body, 11px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.55px;
+}
+
+.sizing-label {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.sizing-value {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.product-sizing__description.rte {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #000;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+.product-sizing__description.rte p {
+  margin: 0;
+}
+
+.sizing-square-icon {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 4px;
 }

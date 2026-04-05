@@ -33,6 +33,7 @@
         },
         "collapsible_tab_9M6Lid": {
           "type": "collapsible_tab",
+          "enable_sizing_data": false,
           "settings": {
             "heading": "Details",
             "icon": "none",
@@ -42,6 +43,7 @@
         },
         "collapsible_tab_4rJxwr": {
           "type": "collapsible_tab",
+          "enable_sizing_data": true,
           "settings": {
             "heading": "Sizings",
             "icon": "none",

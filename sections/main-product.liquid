@@ -111,8 +111,12 @@
                 </span>
               </summary>
               <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                {{ block.settings.content }}
-                {{ block.settings.page.content }}
+                {%- if block.settings.enable_sizing_data -%}
+                   {%- render 'product-sizing', product: product, description: block.settings.sizing_description -%}
+                {%- else -%}
+                   {{ block.settings.content }}
+                   {{ block.settings.page.content }}
+                {%- endif -%}
               </div>
             </details>
           </div>
@@ -1077,6 +1081,12 @@
       "name": "t:sections.main-product.blocks.collapsible_tab.name",
       "settings": [
         {
+          "type": "checkbox",
+          "id": "enable_sizing_data", 
+          "label": "Enable sizing data",
+          "default": false
+        },
+        {
           "type": "text",
           "id": "heading",
           "default": "t:sections.main-product.blocks.collapsible_tab.settings.heading.default",
@@ -1275,6 +1285,12 @@
           "type": "page",
           "id": "page",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+        },
+        {
+          "type": "richtext",
+          "id": "sizing_description",
+          "label": "Sizing description",
+          "default": "<p>To determine the right frame size, measure the total width of your current glasses. A suitable frame size should be within ±4mm of the width of your current pair.</p>"
         }
       ]
     },

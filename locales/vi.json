@@ -197,7 +197,14 @@
       },
       "taxes_included": "Đã bao gồm thuế.",
       "duties_included": "Đã bao gồm thuế nhập khẩu.",
-      "duties_and_taxes_included": "Đã bao gồm thuế và thuế nhập khẩu."
+      "duties_and_taxes_included": "Đã bao gồm thuế và thuế nhập khẩu.",
+      "sizing": {
+        "lens_width": "Chiều rộng tròng (A):",
+        "bridge_width": "Chiều rộng cầu (C):",
+        "lens_height": "Chiều cao tròng (B):",
+        "frame_width": "Tổng chiều rộng gọng (D):",
+        "temple_length": "Chiều dài càng kính (E):"
+      }
     },
     "modal": {
       "label": "Thư viện phương tiện"

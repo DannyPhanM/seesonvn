@@ -197,7 +197,14 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "sizing": {
+        "lens_width": "Lens width (A):",
+        "bridge_width": "Bridge width (C):",
+        "lens_height": "Lens height (B):",
+        "frame_width": "Total frame width (D):",
+        "temple_length": "Temple length (E):"
+      }
     },
     "modal": {
       "label": "Media gallery"

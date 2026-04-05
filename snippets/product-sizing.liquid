@@ -1,0 +1,102 @@
+{%- comment -%}
+  Renders product sizing information
+  Usage:
+  {% render 'product-sizing', product: product, description: block.settings.sizing_description %}
+{%- endcomment -%}
+
+<div class="product-sizing">
+  {%- liquid
+    assign size_chart = product.metafields.custom.size_chart.value
+    
+    if size_chart != blank
+      assign lens_width = size_chart.lens_width_a.value | default: size_chart.lens_width_a
+      assign lens_height = size_chart.lens_height_b.value | default: size_chart.lens_height_b
+      assign bridge_width = size_chart.bridge_width_c.value | default: size_chart.bridge_width_c
+      assign frame_width = size_chart.total_frame_width_d.value | default: size_chart.total_frame_width_d
+      assign temple_length = size_chart.temple_length_e.value | default: size_chart.temple_length_e
+      
+      assign shape_mo = product.metafields.custom.eyewear_frame_style_shape.value
+      assign frame_image = shape_mo.image.value | default: shape_mo.image | default: size_chart.image.value | default: size_chart.image
+      
+      assign sizing_description = size_chart.description.value | default: size_chart.description
+    else
+      # Fallback to product metafields if metaobject is not used
+      assign lens_width = product.metafields.custom.lens_width_a.value | default: product.metafields.custom.lens_width_a | default: product.metafields.custom.lens_width.value
+      assign lens_height = product.metafields.custom.lens_height_b.value | default: product.metafields.custom.lens_height_b | default: product.metafields.custom.lens_height.value
+      assign bridge_width = product.metafields.custom.bridge_width_c.value | default: product.metafields.custom.bridge_width_c | default: product.metafields.custom.bridge_width.value
+      assign frame_width = product.metafields.custom.total_frame_width_d.value | default: product.metafields.custom.total_frame_width_d | default: product.metafields.custom.frame_width.value
+      assign temple_length = product.metafields.custom.temple_length_e.value | default: product.metafields.custom.temple_length_e | default: product.metafields.custom.temple_length.value
+      
+      assign shape_mo = product.metafields.custom.eyewear_frame_style_shape.value
+      assign frame_image = shape_mo.image.value | default: shape_mo.image | default: product.metafields.custom.eyewear_frame_style_shape_image.value
+      
+      assign sizing_description = description | default: product.metafields.custom.description.value
+    endif
+  -%}
+
+  {%- if lens_width != blank or bridge_width != blank or temple_length != blank -%}
+    <div class="product-sizing__top-highlight">
+      <span class="sizing-value">
+        {{ lens_width }}
+        <span class="sizing-square-icon">{% render 'icon-square-small' %}</span>
+        {{ bridge_width }}
+        -
+        {{ temple_length }}
+      </span>
+    </div>
+  {%- endif -%}
+
+  {%- if frame_image != blank -%}
+    <div class="product-sizing__diagram">
+      {{ frame_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'sizing-diagram-image' }}
+    </div>
+  {%- endif -%} 
+
+  <div class="product-sizing__details-box">
+    <div class="product-sizing__table">
+      <div class="product-sizing__table-row">
+        <div class="product-sizing__table-col" style="justify-content: flex-start; gap: 3px;">
+          <span class="label-a">A</span>
+          <span class="sizing-square-icon">{% render 'icon-square-small' %}</span>
+          <span class="label-c">C</span>
+          <span class="separator">-</span>
+          <span class="label-e">E</span>
+        </div>
+        <div class="product-sizing__table-col">
+          <span class="sizing-label">{{ 'products.product.sizing.lens_width' | t }}</span>
+          <span class="sizing-value">{{ lens_width | default: '—' }} mm</span>
+        </div>
+      </div>
+      <div class="product-sizing__table-row">
+        <div class="product-sizing__table-col">
+          <span class="sizing-label">{{ 'products.product.sizing.bridge_width' | t }}</span>
+          <span class="sizing-value">{{ bridge_width | default: '—' }} mm</span>
+        </div>
+        <div class="product-sizing__table-col">
+          <span class="sizing-label">{{ 'products.product.sizing.lens_height' | t }}</span>
+          <span class="sizing-value">{{ lens_height | default: '—' }} mm</span>
+        </div>
+      </div>
+      <div class="product-sizing__table-row">
+        <div class="product-sizing__table-col">
+          <span class="sizing-label">{{ 'products.product.sizing.frame_width' | t }}</span>
+          <span class="sizing-value">{{ frame_width | default: '—' }} mm</span>
+        </div>
+        <div class="product-sizing__table-col">
+          <span class="sizing-label">{{ 'products.product.sizing.temple_length' | t }}</span>
+          <span class="sizing-value">{{- temple_length | default: '—' -}} mm</span>
+        </div>
+      </div>
+    </div>
+
+    {%- if size_chart.description != blank -%}
+      <div class="product-sizing__description rte">
+        {{- size_chart.description | metafield_tag -}}
+      </div>
+    {%- elsif description != blank -%}
+      <div class="product-sizing__description rte">
+        {{- description -}}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
