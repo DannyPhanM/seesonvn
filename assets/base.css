@@ -5053,3 +5053,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   grid-area: variant;
   color: #999 !important;
 }
+
+.template--product .badge.price__badge-sold-out {
+  display: none;
+}
