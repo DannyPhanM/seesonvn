@@ -81,7 +81,7 @@
   content: '';
   height: 0.6rem;
   right: 0;
-  top: 40%;
+  top: 34%;
 }
 
 .localization-selector.link {
@@ -446,4 +446,8 @@
 
 .language-selector .disclosure__list {
   min-width: auto;
+}
+
+.footer__content-bottom-wrapper .copyright__content a:hover {
+  text-decoration: none;
 }

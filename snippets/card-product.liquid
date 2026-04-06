@@ -183,7 +183,7 @@
             or card_product.compare_at_price > card_product.price
             and card_product.available
           -%}
-            <div class="card__badge {{ settings.badge_position }}">
+            <div class="card__badge {{ settings.badge_position }} {% if card_product.compare_at_price > card_product.price %} sale {% endif %}">
               {%- if card_product.available == false -%}
                 <span
                   id="Badge-{{ section_id }}-{{ card_product.id }}"

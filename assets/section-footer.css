@@ -342,11 +342,13 @@
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
   color: rgba(var(--color-foreground), 0.75);
+  letter-spacing: -0.6px;
 }
 
 .copyright__content * {
   font-family: var(--font-card-title-family);
   font-weight: 400;
+  letter-spacing: -0.6px;
 }
 
 .footer-block__details-content .list-menu__item--active {
@@ -596,6 +598,12 @@ footer * {
     max-width: 542px;
     margin-left: auto;
     margin-right: 0;
+  }
+}
+
+@media(min-width:990px) {
+  .footer__content-bottom-wrapper .menu-list-custom .footer-block__details-content {
+    width: 462px;
   }
 }
 @media (max-width: 749px) {

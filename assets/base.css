@@ -2683,17 +2683,12 @@ input[type='checkbox'] {
 }
 
 .header__icon .svg-wrapper {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .header__icon::after {
   content: none;
-}
-
-.header__icon:hover .icon,
-.modal__close-button:hover .icon {
-  transform: scale(1.07);
 }
 
 .header__icon--cart {
@@ -2953,7 +2948,7 @@ details[open]>.header__submenu {
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .header__menu-item:hover span {
@@ -4075,6 +4070,7 @@ letter-spacing: 0.55px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
+  background: transparent;
 }
 .card__badge.sold-out .badge {
   border: none;
@@ -4391,6 +4387,8 @@ body.open-search .header-wrapper .header{
 body.open-drawer .header-wrapper *,
 body.open-search .header-wrapper * {
   color: #000 !important;
+  fill: #222;
+  
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper img,
 body.open-search .header-wrapper .header__heading-logo-wrapper img {
@@ -5056,4 +5054,43 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 
 .template--product .badge.price__badge-sold-out {
   display: none;
+}
+
+.scrolled-past-header .header-wrapper {
+  background: #EEE !important;
+}
+.scrolled-past-header .header-wrapper .header__menu-item,
+.scrolled-past-header .header-wrapper .header__icon svg,
+.scrolled-past-header .header-wrapper .header__icon .cart-count-bubble {
+  color: #222 !important;
+  fill: #222 !important;
+}
+.scrolled-past-header .header-wrapper .header__menu-item path,
+.scrolled-past-header .header-wrapper .header__icon svg path,
+.scrolled-past-header .header-wrapper .header__icon .cart-count-bubble path {
+  fill: #222;
+}
+.scrolled-past-header .header__heading-logo-wrapper img {
+  display: block !important;
+}
+.scrolled-past-header.shopify-section-group-header-group .header__heading-logo-wrapper div.hidden {
+  display: none !important;
+}
+
+@media(min-width: 1072px) {
+.search-modal.modal__content .page-width .promo_collection .content-box, .search-modal.modal__content .search-modal__content .predictive_search_open {
+  min-height: 219px;
+}
+.search-modal.modal__content .page-width .promo_collection .title h2 {
+  font-size: 50px;
+  max-width: 80%;
+  margin-bottom: 25px !important;
+}
+.search-modal.modal__content .promo_collection .title {
+  margin-bottom: 25px !important;
+}
+}
+
+body:not(.template---index) .header__icon .svg-wrapper svg path{
+  fill: #222 !important;
 }

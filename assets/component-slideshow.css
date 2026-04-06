@@ -223,6 +223,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 .slideshow__text.banner__box .banner__heading {
     max-width: 450px;
+    color: #fff;
 }
 .slideshow__text.banner__box .button-box {
     margin-top: 0;
@@ -239,6 +240,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
+  color: #fff;
 }
 
 .slideshow__text.banner__box .button-box {
