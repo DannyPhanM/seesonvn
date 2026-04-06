@@ -16,6 +16,8 @@
     <span>
       {% if localization.language.iso_code == 'vi' %}
         VIE
+      {% elsif localization.language.iso_code == 'en' %}
+        ENG
       {% else %}
         {{ localization.language.iso_code | upcase }}
       {% endif %}
@@ -45,7 +47,13 @@
               {{- 'icon-checkmark.svg' | inline_asset_content -}}
             </span>
             <span>
-              {{ language.endonym_name | capitalize }}
+              {% if language.iso_code == 'vi' %}
+                VIE
+              {% elsif language.iso_code == 'en' %}
+                ENG
+              {% else %}
+                {{ language.iso_code | upcase }}
+              {% endif %}
             </span>
           </a>
         </li>

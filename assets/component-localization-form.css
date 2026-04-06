@@ -322,6 +322,7 @@
 .disclosure__link .icon-checkmark {
   width: 1rem;
   margin-right: 0.2rem;
+  color: rgb(242, 11, 11);
 }
 
 .disclosure__link:hover .localization-form__currency,
