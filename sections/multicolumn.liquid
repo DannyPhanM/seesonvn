@@ -52,6 +52,17 @@
 .multicolumn-card__info.content_overlay * {
     color: #fff !important;
 }
+.multicolumn-card__info.content_overlay {
+    pointer-events: none;
+    z-index: 12;
+}
+.multicolumn-card__info.content_overlay > * {
+    pointer-events: auto;
+}
+.multicolumn-card__info .link {
+  z-index: 12;
+  position: relative;
+}
 .multicolumn-card__info.content_overlay.left-top {
     justify-content: flex-start;
     text-align: flex-start;
@@ -243,17 +254,20 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
-              {%- liquid
-                assign spaced_image = false
-                if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle'
-                  assign spaced_image = true
-                endif
-              -%}
-              <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
-                <div
-                  class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
-                >
+              <div class="multicolumn-card content-container">
+                {%- liquid
+                  assign spaced_image = false
+                  if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle'
+                    assign spaced_image = true
+                  endif
+                -%}
+                {%- if block.settings.link != blank and block.settings.image_link -%}
+                  <a href="{{ block.settings.link }}" class="media_link"></a>
+                {%- endif -%}
+                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} {% unless block.settings.content_overlay %}multicolumn-card-spacing{%endunless%}{% endif %}">
+                  <div
+                    class="{% if block.settings.image_mobile  %} has-image-mobile {% endif %} media media--transparent media--{{ section.settings.image_ratio }}"
+                  >
                   {%- if block.settings.image != blank or block.settings.image_mobile != blank -%}
                     {%- liquid
                       assign number_of_columns = section.settings.columns_desktop
@@ -282,7 +296,8 @@
                         | image_tag:
                           widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                           sizes: sizes,
-                          class: 'multicolumn-card__image'
+                          class: 'multicolumn-card__image',
+                          draggable: false
                       }}
                     {%- endif -%}
                     {% if block.settings.image_mobile %}
@@ -292,7 +307,8 @@
                         | image_tag:
                           widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                           sizes: sizes,
-                          class: 'multicolumn-card__image--mobile'
+                          class: 'multicolumn-card__image--mobile',
+                          draggable: false
                       }}
                     {% endif %}
                   {%- else -%}
@@ -795,6 +811,12 @@
           "id": "title",
           "default": "t:sections.multicolumn.blocks.column.settings.title.default",
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "image_link",
+          "label": "Link image",
+          "default": false
         },
          {
       "type": "select",
