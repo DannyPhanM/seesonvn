@@ -240,10 +240,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_hByyKw": {
+    "multicolumn_XzAw6C": {
       "type": "multicolumn",
       "blocks": {
-        "column_mr3xKN": {
+        "column_te9UKE": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -251,14 +251,14 @@
             "image": "shopify://shop_images/Rectangle_106.png",
             "image_mobile": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
-            "image_link": false,
+            "image_link": true,
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         },
-        "column_Jipgk8": {
+        "column_3rLbLM": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -266,17 +266,17 @@
             "image": "shopify://shop_images/Rectangle_107.png",
             "image_mobile": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
-            "image_link": false,
+            "image_link": true,
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_mr3xKN",
-        "column_Jipgk8"
+        "column_te9UKE",
+        "column_3rLbLM"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -349,7 +349,7 @@
     "rich_text_Bh37UM",
     "multicolumn_xYj9HA",
     "rich_text_YKfw9t",
-    "multicolumn_hByyKw",
+    "multicolumn_XzAw6C",
     "rich_text_rTBygV",
     "rich_text_6ar4X7"
   ]
