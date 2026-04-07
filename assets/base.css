@@ -4540,11 +4540,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   z-index: 1;
   pointer-events: none;
 }
-#FacetFiltersFormMobile {
-  height: calc(100dvh - 165px);
-  top: auto;
-  z-index: 9999999;
-}
+
 .mobile-facets .mobile-facets__inner {
   top: auto;
   bottom: 0;
@@ -4554,12 +4550,13 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   width: 100%;
 }
 .mobile-facets .mobile-facets__header {
-  padding: 20px 16px;
+  padding: 40px 32px 20px 0;
   border: none;
 }
 
 .mobile-facets .mobile-facets__main {
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 .mobile-facets .mobile-facets__count {
   display: none;
@@ -4638,7 +4635,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   width: 14px;
 }
 .mobile-facets .mobile-facets__summary {
-  padding: 20px 16px 14px;
+  padding: 20px 32px 14px 0;
 }
 .mobile-facets .mobile-facets__summary span {
   color: #000;
@@ -4695,7 +4692,39 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   display: none;
 }
 
-.product-grid-container .product-grid{
+#FacetFiltersFormMobile {
+  position: absolute;
+  overflow: visible;
+  width: 410px;
+  height: max-content;
+  top: -22px;
+  left: -1px;
+  border-left: 0;
+  z-index: 9;
+}
+#FacetFiltersFormMobile .mobile-facets__inner {
+  border-right: 1px solid var(--Primary-ss-grey, #999);
+  border-bottom: 1px solid var(--Primary-ss-grey, #999);
+  background: #eee;
+  border-left: none;
+}
+/* Overlay for capturing clicks outside the filter */
+.open-facets-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8; /* Just below #FacetFiltersFormMobile which is 9 */
+  background: transparent;
+  display: none;
+}
+
+details[open] > .open-facets-overlay {
+  display: block;
+}
+
+.product-grid-container .product-grid {
   margin-top: 30px;
   row-gap: 10px;
 }
@@ -4713,9 +4742,6 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 
 @media (min-width: 750px) {
-  #FacetFiltersFormMobile {
-    height: 100%;
-  }
   #FacetFiltersFormMobile .mobile-facets__inner {
     max-width: 490px;
   }

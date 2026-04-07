@@ -468,6 +468,7 @@
           </span>
         </span>
       </summary>
+      <div class="open-facets-overlay"></div>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
           <div class="mobile-facets__inner gradient">
@@ -975,9 +976,6 @@
       mutations.forEach((mutation) => {
         if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
           if (detailsElement.hasAttribute('open')) {
-            document.body.classList.add('open-facets');
-          } else {
-            document.body.classList.remove('open-facets');
             document.body.classList.remove('overflow-hidden-mobile');
             document.body.classList.remove('overflow-hidden-tablet');
             document.body.classList.remove('overflow-hidden-desktop');
@@ -990,6 +988,35 @@
     if (detailsElement) {
       observer.observe(detailsElement, { attributes: true });
     }
+
+    // Close on click outside or scroll
+    const menuDrawer = detailsElement.closest('menu-drawer');
+    const summaryElement = detailsElement.querySelector('summary');
+
+    window.addEventListener('scroll', () => {
+      if (detailsElement.hasAttribute('open')) {
+        detailsElement.removeAttribute('open');
+        if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
+          menuDrawer.closeMenuDrawer(new Event('scroll'), summaryElement);
+        }
+      }
+    }, { passive: true });
+
+    document.addEventListener('click', (event) => {
+      if (detailsElement.hasAttribute('open')) {
+        const form = detailsElement.querySelector('form');
+        const isClickInsideForm = form && form.contains(event.target);
+        const summary = detailsElement.querySelector('summary');
+        const isSummaryClick = summary && summary.contains(event.target);
+
+        if (!isClickInsideForm && !isSummaryClick) {
+          detailsElement.removeAttribute('open');
+          if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
+            menuDrawer.closeMenuDrawer(event, summaryElement);
+          }
+        }
+      }
+    });
 
     const clearAllButton = document.querySelector('.mobile-facets__clear-all');
     const mobileForm = document.getElementById('FacetFiltersFormMobile');
@@ -1028,8 +1055,10 @@
     document.addEventListener('click', (event) => {
       const closeButton = event.target.closest('.mobile-facets__close');
       if (closeButton && detailsElement) {
-        console.log('closeButton', closeButton);
         detailsElement.removeAttribute('open');
+        if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
+          menuDrawer.closeMenuDrawer(event, summaryElement);
+        }
       }
 
       const clickedClearAll = event.target.closest('.mobile-facets__clear-all');
