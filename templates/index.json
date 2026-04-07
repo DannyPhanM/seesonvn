@@ -239,41 +239,43 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_q4jJiQ": {
+    "multicolumn_6hVQMN": {
       "type": "multicolumn",
       "blocks": {
-        "column_RbMyY7": {
+        "column_xtmjHX": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/Rectangle_106.png",
             "image_mobile": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         },
-        "column_mcHykr": {
+        "column_PLGFtf": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/banner_mobile_3.png",
+            "image": "shopify://shop_images/Rectangle_107.png",
             "image_mobile": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_RbMyY7",
-        "column_mcHykr"
+        "column_xtmjHX",
+        "column_PLGFtf"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -295,8 +297,8 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 120,
-        "padding_bottom_mobile": 50
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
       }
     }
   },
@@ -307,6 +309,6 @@
     "featured_collection_6Q8xjz",
     "rich_text_i7AqVh",
     "rich_text_xj9AQe",
-    "multicolumn_q4jJiQ"
+    "multicolumn_6hVQMN"
   ]
 }
