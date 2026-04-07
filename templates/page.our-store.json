@@ -53,42 +53,45 @@
     "multicolumn_GGVYAc": {
       "type": "multicolumn",
       "blocks": {
-        "column_kJzwGR": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
-            "title": "",
-            "heading_tag": "h2",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_BmyXE3": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h2",
             "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_frCEJJ": {
+        "column_wmHzw9": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/image_14_53ad5317-59dc-4364-aae7-2f82b87f8d12.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
             "title": "",
+            "image_link": false,
+            "heading_tag": "h2",
+            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ABK7de": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
+            "title": "",
+            "image_link": false,
             "heading_tag": "h2",
             "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
@@ -97,9 +100,9 @@
         }
       },
       "block_order": [
-        "column_kJzwGR",
         "column_BmyXE3",
-        "column_frCEJJ"
+        "column_wmHzw9",
+        "column_ABK7de"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -107,7 +110,7 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "16/9",
+        "image_ratio": "adapt",
         "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
@@ -118,7 +121,7 @@
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 50,
@@ -167,8 +170,39 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
-            "image_mobile": "shopify://shop_images/image_14_2efa7b35-46eb-4f4d-9f8e-408b83e2cc48.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
+            "image_link": false,
+            "heading_tag": "h2",
+            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jd8VNi": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h2",
+            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MKiX78": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
+            "title": "",
+            "image_link": false,
             "heading_tag": "h2",
             "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
@@ -177,7 +211,9 @@
         }
       },
       "block_order": [
-        "column_htbt8D"
+        "column_htbt8D",
+        "column_jd8VNi",
+        "column_MKiX78"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -191,12 +227,12 @@
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "show_dots": false,
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
@@ -235,15 +271,15 @@
         "collabsible_block_BfDW4C": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p><strong>Rue Miche L'Édition</strong></p><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><p><strong>Mắt kính Việt Phát</strong></p><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
-            "padding_top": 20,
+            "content": "<h4><strong>Rue Miche L'Édition</strong></h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><h4></h4><h4><strong>Mắt kính Việt Phát</strong></h4><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận<br/>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "padding_top": 30,
             "padding_bottom": 0
           }
         },
         "collabsible_block_rFY4mU": {
           "type": "collabsible_block",
           "settings": {
-            "content": "<p><strong>Mắt kính Tâm Đức</strong></p><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
+            "content": "<h3><strong>Mắt kính Tâm Đức</strong></h3><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM<br/>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM<br/>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM<br/>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM<br/>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM<br/>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
             "padding_top": 20,
             "padding_bottom": 0
           }
@@ -257,7 +293,7 @@
       "settings": {
         "open_by_default": true,
         "title": "HA NOI CITY",
-        "heading_tag": "h5",
+        "heading_tag": "h3",
         "full_width": false,
         "color_scheme": "scheme-1",
         "padding_top": 10,
