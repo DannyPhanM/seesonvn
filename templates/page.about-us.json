@@ -23,7 +23,7 @@
         "heading_dra8Pb": {
           "type": "heading",
           "settings": {
-            "heading": "Our journey begins",
+            "heading": "OUR JOURNEY BEGINS",
             "heading_tag": "h1"
           }
         },
@@ -59,7 +59,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_0bbfacc9-bfd1-4bad-9f8e-d8589f010aac.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_4.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "",
             "link_label": "",
@@ -100,7 +102,7 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "our Design philosophy",
+            "heading": "OUR DESIGN PHILOSOPHY",
             "heading_tag": "h1"
           }
         },
@@ -135,8 +137,40 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/516920c4ab33a94cb138ec616145c72d8fd96d33.jpg",
+            "image": "shopify://shop_images/banner_desktop.png",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
             "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EFNMAp": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/banner_desktop.png",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CnJrUT": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/banner_desktop.png",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
+            "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "",
             "link_label": "",
@@ -145,7 +179,9 @@
         }
       },
       "block_order": [
-        "column_yCHRaT"
+        "column_yCHRaT",
+        "column_EFNMAp",
+        "column_CnJrUT"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -154,17 +190,17 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "show_dots": true,
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
@@ -177,7 +213,7 @@
         "heading_LQRJmP": {
           "type": "heading",
           "settings": {
-            "heading": "From Product to Construct",
+            "heading": "FROM PRODUCT TO CONSTRUCT",
             "heading_tag": "h1"
           }
         },
@@ -213,7 +249,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_106.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
@@ -226,7 +264,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_107.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
@@ -245,7 +285,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
