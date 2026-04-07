@@ -67,12 +67,27 @@
     overflow: hidden;
   }
 
+  .coll-thumb-swiper {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .coll-thumb-swiper.swiper-initialized {
+    opacity: 1;
+  }
+
+  .coll-thumb-swiper .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
   .coll-thumb-swiper .swiper-slide {
     height: auto;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0.6;
     position: relative;
+    flex-shrink: 0;
   }
   .coll-thumb-swiper .swiper-slide.show-item { opacity: 1; }
   .coll-thumb-swiper .swiper-slide img {
@@ -187,7 +202,7 @@
     border: none;
     color: #000;
   }
-  .coll-flip-btn:hover { background: #fff; transform: scale(1.1); }
+  
   .coll-flip-btn svg { width: 26px; height: 26px; transition: transform 0.6s ease; }
   .coll-flip-card.is-flipped ~ .coll-flip-btn svg { transform: rotate(180deg); }
 
@@ -234,6 +249,10 @@
       width: 100% !important;
       height: auto !important;
       max-height: 400px;
+    }
+
+    .coll-thumb-swiper .swiper-wrapper {
+      flex-direction: column;
     }
 
     .coll-thumb-swiper .swiper-slide {
