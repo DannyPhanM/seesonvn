@@ -69,7 +69,7 @@ input::-webkit-search-decoration {
 }
 
 .search-modal.modal__content {
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 60px;
   height: max-content;
   align-items: flex-end;
