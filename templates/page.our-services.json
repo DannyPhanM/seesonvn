@@ -59,8 +59,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/services2.jpg",
-            "image_mobile": "shopify://shop_images/services2.jpg",
+            "image_mobile": "shopify://shop_images/banner_mobile_7.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>CLEANING SERVICE</strong></p><p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.<br/>Please contact the store for detailed information.</em></p>",
             "link_label": "",
@@ -73,7 +74,9 @@
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Services.jpg",
+            "image_mobile": "shopify://shop_images/banner_mobile_1.png",
             "title": "",
+            "image_link": false,
             "heading_tag": "h3",
             "text": "<p><strong>FRAME ADJUSTMENT SERVICE</strong></p><p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
             "link_label": "",
@@ -91,8 +94,8 @@
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
-        "image_ratio": "4/5",
-        "image_ratio_mobile": "4/5",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
@@ -142,40 +145,43 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_hByyKw": {
+    "multicolumn_N8yxjX": {
       "type": "multicolumn",
       "blocks": {
-        "column_mr3xKN": {
+        "column_hrjhHR": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_106.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_2.png",
             "title": "",
+            "image_link": true,
             "heading_tag": "h3",
             "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         },
-        "column_Jipgk8": {
+        "column_98Faij": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Rectangle_107.png",
-            "image_mobile": "shopify://shop_images/Rectangle_107.png",
+            "image_mobile": "shopify://shop_images/banner_mobile_3.png",
             "title": "",
+            "image_link": true,
             "heading_tag": "h3",
             "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
             "link_label": "",
-            "link": ""
+            "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_mr3xKN",
-        "column_Jipgk8"
+        "column_hrjhHR",
+        "column_98Faij"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -184,13 +190,13 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
+        "image_ratio_mobile": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 2,
         "column_alignment": "left",
         "enable_desktop_slider": false,
-        "show_dots": false,
+        "show_dots": true,
         "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
@@ -246,7 +252,7 @@
     "rich_text_TtqrjW",
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
-    "multicolumn_hByyKw",
+    "multicolumn_N8yxjX",
     "rich_text_rTBygV",
     "rich_text_6ar4X7"
   ]
