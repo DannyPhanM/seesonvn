@@ -132,42 +132,42 @@
     "multicolumn_xYj9HA": {
       "type": "multicolumn",
       "blocks": {
-        "column_yCHRaT": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/banner_desktop.png",
-            "image_mobile": "shopify://shop_images/banner_mobile.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h3",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_EFNMAp": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/banner_desktop.png",
-            "image_mobile": "shopify://shop_images/banner_mobile.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h3",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_CnJrUT": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/banner_desktop.png",
+            "image": "shopify://shop_images/image_15.png",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xNhrqN": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_15.png",
+            "image_mobile": "shopify://shop_images/banner_mobile.png",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_44fFJt": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/image_15.png",
             "image_mobile": "shopify://shop_images/banner_mobile.png",
             "title": "",
             "image_link": false,
@@ -179,9 +179,9 @@
         }
       },
       "block_order": [
-        "column_yCHRaT",
-        "column_EFNMAp",
-        "column_CnJrUT"
+        "column_CnJrUT",
+        "column_xNhrqN",
+        "column_44fFJt"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
