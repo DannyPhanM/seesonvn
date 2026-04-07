@@ -138,6 +138,7 @@ input::-webkit-search-decoration {
   justify-content: flex-end;
   align-items: flex-start;
   padding-right: 0;
+  padding-left: 53px;
 }
 
 .search-modal.modal__content .search-modal__content .predictive_search_open {
