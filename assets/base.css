@@ -2774,7 +2774,8 @@ menu-drawer+.header__search {
 details[open]>.search-modal {
   opacity: 1;
   animation: animateMenuOpen var(--duration-default) ease;
-  top: 81px;
+  top: 80px;
+  border-top: 1px solid #999;
 }
 
 @media(min-width: 990px) {
@@ -3892,12 +3893,19 @@ details-disclosure>details {
   list-style: none;
   position: relative;
   padding-left: 15px;
+  text-align: left;
+  letter-spacing: 0;
 }
 
 .template--page .accordion .accordion__content li::before {
-  content: "-";
+  content: "";
   position: absolute;
-  left: 0;
+  left: 3px;
+  top: 9px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #999;
 }
 
 .accordion .accordion__content,
@@ -3911,7 +3919,7 @@ details-disclosure>details {
 @media (min-width: 750px) {
   .accordion .accordion__content,
   .collabsible-custom__block-content {
-    padding-top: 6px;
+    padding-top: 9px;
   }
 }
 
@@ -3979,7 +3987,6 @@ details-disclosure>details {
 .accordion .accordion__content p,
 .accordion .accordion__content span,
 .accordion .accordion__content li {
-text-align: justify;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -4387,7 +4394,6 @@ letter-spacing: 0.55px;
 body.open-drawer .header-wrapper,
 body.open-search .header-wrapper .header{
   background: #eeeeee !important;
-  border-bottom: 1px solid #999;
 }
 body.open-drawer .header-wrapper *,
 body.open-search .header-wrapper *,
@@ -4406,10 +4412,27 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 
 .accordion .accordion__content ul li {
-  padding-left: 14px !important;
+  padding-left: 17px !important;
 }
 .accordion .accordion__content ul li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+}
+.template--page .accordion .accordion__content ul {
+  margin-bottom: 3px;
+}
+.template--page .accordion .accordion__content ul ~ ul {
+  margin-top: 5px;
+}
+.rte ul + ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 25px;
+}
+.rte ul + ol li {
+  padding-left: 15px !important;
+}
+.rte ul + ol li:not(:last-child) {
+  margin-bottom: 4px;
 }
 
 .template--collection.open-facets {
