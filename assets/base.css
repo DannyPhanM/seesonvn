@@ -2668,6 +2668,10 @@ input[type='checkbox'] {
   color: rgb(var(--color-foreground));
 }
 
+.header__icon .svg-wrapper svg path {
+  fill: #222;
+}
+
 .header__icon span {
   height: 100%;
 }
@@ -4056,21 +4060,22 @@ letter-spacing: 0.55px;
 }
 
 .card__badge.sale .badge {
-  border: 1.4px solid red;
+  border: 1px solid red;
   border-radius: 0;
   font-size: 10px;
   font-weight: 700;
   line-height: 1.2;
 }
 .card__badge.sale .badge {
-  padding: 8px;
+  padding: 6px;
   color: #E90303;
   text-align: center;
-  font-size: 16px;
+  line-height: 1.2;
+  background: transparent;
+  font-size: 10px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
-  background: transparent;
 }
 .card__badge.sold-out .badge {
   border: none;
@@ -4385,9 +4390,10 @@ body.open-search .header-wrapper .header{
   border-bottom: 1px solid #999;
 }
 body.open-drawer .header-wrapper *,
-body.open-search .header-wrapper * {
+body.open-search .header-wrapper *,
+body.open-drawer .header-wrapper .header__icon svg path, body.open-search .header-wrapper .header__icon svg path {
   color: #000 !important;
-  fill: #222;
+  fill: #222 !important;
   
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper img,
@@ -4747,10 +4753,9 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
     max-width: 595px;
   }
   .search-modal.modal__content .page-width .promo_collection .title h2 {
-    font-size: 40px;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.09px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
   }
 }
@@ -5061,6 +5066,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 .scrolled-past-header .header-wrapper .header__menu-item,
 .scrolled-past-header .header-wrapper .header__icon svg,
+.scrolled-past-header .header-wrapper .header__icon svg path,
 .scrolled-past-header .header-wrapper .header__icon .cart-count-bubble {
   color: #222 !important;
   fill: #222 !important;
@@ -5084,13 +5090,14 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .search-modal.modal__content .page-width .promo_collection .title h2 {
   font-size: 50px;
   max-width: 80%;
-  margin-bottom: 25px !important;
-}
-.search-modal.modal__content .promo_collection .title {
-  margin-bottom: 25px !important;
-}
 }
 
-body:not(.template---index) .header__icon .svg-wrapper svg path{
-  fill: #222 !important;
+}
+
+.search-modal.modal__content .page-width .promo_collection .title h2 {
+  margin: 0;
+}
+
+.swym-button.swym-add-to-wishlist-view-product.swym-added {
+  opacity: 1 !important;
 }

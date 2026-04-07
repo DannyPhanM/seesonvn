@@ -3,7 +3,7 @@
 }
 .template--index slideshow-component .slideshow__controls {
   position: absolute;
-  bottom: 76px;
+  bottom: 65px;
   width: 100%;
   z-index: 1;
   border: none;
