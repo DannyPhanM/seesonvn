@@ -207,7 +207,7 @@
 
   .background-none .multicolumn-list .multicolumn-card__info,
   .background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info {
-    padding: 20px 84px 20px;
+    padding: 20px 84px 20px 20px;
   }
 }
 
