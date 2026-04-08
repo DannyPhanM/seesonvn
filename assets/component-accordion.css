@@ -21,9 +21,8 @@
   height: calc(var(--font-heading-scale) * 0.6rem);
 }
 
-.accordion + .accordion {
-  margin-top: 0;
-  border-top: none;
+accordion-component {
+  display: block;
 }
 
 .accordion {
@@ -31,6 +30,11 @@
   margin-bottom: 0;
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.accordion + .accordion {
+  margin-top: 0;
+  border-top: none;
 }
 
 .accordion details {
