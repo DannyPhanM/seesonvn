@@ -4087,7 +4087,7 @@ letter-spacing: 0.55px;
 .card__badge.sale .badge {
   border: 1.4px solid #E90303;
   border-radius: 0;
-  padding: 8px;
+  padding: 5px 8px;
   color: #E90303;
   text-align: center;
   background: transparent;
