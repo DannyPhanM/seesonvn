@@ -3902,9 +3902,8 @@ details-disclosure>details {
   position: absolute;
   left: 3px;
   top: 9px;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
+  width: 5px;
+  height: 1px;
   background: #999;
 }
 
@@ -4432,6 +4431,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 .template--page .accordion .accordion__content ul {
   margin-bottom: 3px;
+  margin-left: 5px;
 }
 .template--page .accordion .accordion__content ul ~ ul {
   margin-top: 5px;
