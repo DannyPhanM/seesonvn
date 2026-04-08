@@ -116,23 +116,30 @@
     padding: 0;
     padding-top: 15px;
   }
+  /* Thumbnail Image Swap Styles (Simplified from Flip) */
   .coll-thumb-flip-card {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
     aspect-ratio: 82 / 120;
   }
-
   .coll-thumb-front, .coll-thumb-back {
     position: absolute;
+    top: 0; left: 0;
     width: 100%; height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    transition: opacity 0.4s ease;
   }
   .coll-thumb-back {
-    transform: rotateY(180deg);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .coll-thumb-flip-card.is-flipped .coll-thumb-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .coll-thumb-flip-card.is-flipped .coll-thumb-back {
+    opacity: 1;
+    pointer-events: auto;
   }
   .coll-thumb-swiper .swiper-slide img {
     width: 100%; height: 100%;
@@ -151,15 +158,12 @@
   .coll-flip-card {
     position: relative;
     width: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
   }
   
   .coll-flip-front {
     position: relative;
     width: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    transition: opacity 0.4s ease;
   }
   
   .coll-flip-back {
@@ -168,10 +172,20 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     overflow: hidden;
-    transform: rotateY(180deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .coll-flip-card.is-flipped .coll-flip-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .coll-flip-card.is-flipped .coll-flip-back {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .coll-master-img {
