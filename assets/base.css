@@ -4834,6 +4834,7 @@ details[open] > .open-facets-overlay {
   height: 26px;
   position: absolute;
   right: 0;
+  top: 4px;
 }
 .card__information .card__heading .swym-button svg {
   width: 26px;
