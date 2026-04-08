@@ -993,14 +993,6 @@
     const menuDrawer = detailsElement.closest('menu-drawer');
     const summaryElement = detailsElement.querySelector('summary');
 
-    window.addEventListener('scroll', () => {
-      if (detailsElement.hasAttribute('open')) {
-        detailsElement.removeAttribute('open');
-        if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
-          menuDrawer.closeMenuDrawer(new Event('scroll'), summaryElement);
-        }
-      }
-    }, { passive: true });
 
     document.addEventListener('click', (event) => {
       if (detailsElement.hasAttribute('open')) {
