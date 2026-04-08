@@ -236,8 +236,19 @@
     border: none;
     border-radius: 0;
     box-shadow: none;
+    display: block;
   }
-
+  .banner__content {
+    
+    
+  }
+  .template--collection .slideshow__text-wrapper.banner__content {
+    padding-bottom: 14px;
+    align-items: flex-end;
+  }
+  .slideshow__text.banner__box.flex-column {
+    max-width: 100% !important;
+  }
   .banner:not(.banner--mobile-bottom) .button--secondary {
     --alpha-button-background: 0;
   }

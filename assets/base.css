@@ -5159,3 +5159,9 @@ details[open] > .open-facets-overlay {
 .swym-button.swym-add-to-wishlist-view-product.swym-added {
   opacity: 1 !important;
 }
+
+@media(max-width: 749px) {
+  .banner__content::before {
+    padding-bottom: 66.67% !important;
+  }
+}

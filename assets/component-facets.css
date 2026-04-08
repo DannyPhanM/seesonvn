@@ -1275,3 +1275,27 @@ facet-remove.active-facets__button-wrapper a {
   width: 100%;
   background: #aba3a3;
 }
+
+@media (max-width: 749px) {
+  details[open] > .open-facets-overlay {
+    display: none;
+  }
+  #FacetFiltersFormMobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    height: calc(100vh - 212px);
+  }
+  .mobile-facets__header {
+    padding: 20px 16px 30px !important;
+  }
+  .mobile-facets .mobile-facets__main {
+    padding: 0 0 90px;
+  }
+  .mobile-facets .mobile-facets__summary {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
