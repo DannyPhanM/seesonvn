@@ -49,6 +49,7 @@
     margin: 0 0 20px;
     line-height: 1.2;
     letter-spacing: 0;
+    max-width: 542px;
   }
   .coll-list-info .cta-link {
     display: inline-block;
@@ -106,7 +107,7 @@
   }
   
   .style-bottom.coll-thumb-swiper .swiper-slide.show-item::after {
-    top: 3px; left: 50%; width: 55px; height: 1px;
+    top: 3px; left: 50%; width: 100%; height: 1px;
     transform: translateX(-50%) scaleX(1);
   }
   /* Thumbnail Flip Styles */
@@ -123,9 +124,7 @@
     transform-style: preserve-3d;
     aspect-ratio: 82 / 120;
   }
-  .coll-thumb-flip-card.is-flipped {
-    transform: rotateY(180deg);
-  }
+
   .coll-thumb-front, .coll-thumb-back {
     position: absolute;
     width: 100%; height: 100%;
@@ -154,10 +153,6 @@
     width: 100%;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
-  }
-  
-  .coll-flip-card.is-flipped {
-    transform: rotateY(180deg);
   }
   
   .coll-flip-front {
@@ -204,7 +199,6 @@
   }
   
   .coll-flip-btn svg { width: 26px; height: 26px; transition: transform 0.6s ease; }
-  .coll-flip-card.is-flipped ~ .coll-flip-btn svg { transform: rotate(180deg); }
 
   /* MOBILE LAYOUT (Design Match) */
   @media screen and (max-width: 749px) {

@@ -157,7 +157,7 @@
 
 @media(min-width: 750px) {
   .multicolumn-card__info {
-    padding: 30px;
+    padding: 20px 84px 20px;
   }
 
 .background-none .multicolumn-card__info {
