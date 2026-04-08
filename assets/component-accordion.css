@@ -3,6 +3,7 @@
   position: relative;
   line-height: 1;
   padding: 3rem 0;
+  justify-content: space-between;
 }
 
 @media (max-width: 749px) {
@@ -30,6 +31,12 @@
   margin-bottom: 0;
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+}
+
+.accordion details {
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  height: auto;
 }
 
 .accordion__title {
@@ -62,4 +69,39 @@
 
 .accordion__content img {
   max-width: 100%;
+}
+
+.accordion .icon-plus-minus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.accordion .icon-plus-minus .icon-plus,
+.accordion .icon-plus-minus .icon-minus {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion details[open] .icon-plus {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.accordion details:not([open]) .icon-minus {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.accordion details[open] .icon-minus {
+  opacity: 1;
+  transform: rotate(0);
 }

@@ -37,31 +37,116 @@
 
 <div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient">
   <div class="collabsible-custom__wrapper section-{{ section.id }}-padding{% if section.settings.full_width %} content-container--full-width{% else %} page-width{% endif %}">
-    <details class="collabsible-custom__details" onclick="this.classList.toggle('is-open')"{% if section.settings.open_by_default %} open{% endif %}>
-      <summary class="collabsible-custom__summary" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-        <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
-        <span class="collabsible-custom__icon" style="display: flex; align-items: center;">
-          <span class="icon-plus" style="display: flex;align-items: center;margin-left: 10px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3H13V21H11V3Z" fill="#999999"/><path d="M21 11V13L3 13L3 11L21 11Z" fill="#999999"/></svg>
-          </span>
-          <span class="icon-minus" style="display: none;align-items: center;margin-left: 10px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 13V11H12L3 11L3 13L12 13H21Z" fill="#999999"/></svg>
-          </span>
-        </span>
-      </summary>
-      <div class="collabsible-custom__blocks">
-        {%- for block in section.blocks -%}
-          <div class="collabsible-custom__block" {{ block.shopify_attributes }} style="padding-top: {{  block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px">
-            {% comment %} <{{ block.settings.heading_tag }} class="collabsible-custom__block-title {{ block.settings.heading_tag }}" style="margin-bottom: 0;">
-            {{ block.settings.title }}
-            </{{ block.settings.heading_tag }}> {% endcomment %}
-            <div class="collabsible-custom__block-content rte">{{ block.settings.content }}</div>
+    <accordion-component>
+      <details class="collabsible-custom__details"{% if section.settings.open_by_default %} open{% endif %}>
+        <summary class="collabsible-custom__summary" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
           </div>
-        {%- endfor -%}
-      </div>
-    </details>
+          <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 24px; height: 24px;">
+            <span class="icon-plus" style="display: flex;align-items: center; position: absolute; transition: opacity 0.3s ease, transform 0.3s ease;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3H13V21H11V3Z" fill="#999999"/><path d="M21 11V13L3 13L3 11L21 11Z" fill="#999999"/></svg>
+            </span>
+            <span class="icon-minus" style="display: flex;align-items: center; position: absolute; transition: opacity 0.3s ease, transform 0.3s ease;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 13V11H12L3 11L3 13L12 13H21Z" fill="#999999"/></svg>
+            </span>
+          </span>
+        </summary>
+        <div class="accordion__content-container">
+          <div class="collabsible-custom__blocks">
+            {%- for block in section.blocks -%}
+              <div class="collabsible-custom__block" {{ block.shopify_attributes }} style="padding-top: {{  block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px">
+                <div class="collabsible-custom__block-content rte">{{ block.settings.content }}</div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </details>
+    </accordion-component>
   </div>
 </div>
+
+<style>
+  .collabsible-custom__details {
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: auto;
+  }
+  .collabsible-custom__details .icon-minus {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  .collabsible-custom__details[open] .icon-plus {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  .collabsible-custom__details[open] .icon-minus {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  .collabsible-custom__details .accordion__content-container {
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  if (!customElements.get('accordion-component')) {
+    customElements.define('accordion-component', class AccordionComponent extends HTMLElement {
+      constructor() {
+        super();
+        this.details = this.querySelector('details');
+        this.summary = this.querySelector('summary');
+        this.contentContainer = this.querySelector('.accordion__content-container');
+        
+        this.summary.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.toggle();
+        });
+      }
+
+      toggle() {
+        if (this.details.hasAttribute('open')) {
+          this.close();
+        } else {
+          this.open();
+        }
+      }
+
+      open() {
+        this.details.style.height = `${this.details.offsetHeight}px`;
+        this.details.open = true;
+        
+        requestAnimationFrame(() => {
+          const contentHeight = this.summary.offsetHeight + this.contentContainer.offsetHeight;
+          this.details.style.height = `${contentHeight}px`;
+        });
+
+        const onAnimationEnd = (e) => {
+          if (e.target !== this.details) return;
+          this.details.style.height = '';
+          this.details.classList.remove('is-opening');
+          this.details.removeEventListener('transitionend', onAnimationEnd);
+        };
+        this.details.addEventListener('transitionend', onAnimationEnd);
+      }
+
+      close() {
+        this.details.style.height = `${this.details.offsetHeight}px`;
+        requestAnimationFrame(() => {
+          this.details.style.height = `${this.summary.offsetHeight}px`;
+        });
+
+        const onAnimationEnd = (e) => {
+          if (e.target !== this.details) return;
+          this.details.open = false;
+          this.details.style.height = '';
+          this.details.removeEventListener('transitionend', onAnimationEnd);
+        };
+        this.details.addEventListener('transitionend', onAnimationEnd);
+      }
+    });
+  }
+</script>
 
 {% schema %}
 {
