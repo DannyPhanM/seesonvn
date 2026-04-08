@@ -526,10 +526,10 @@ a.product__text {
 @media(min-width: 1024px) {
     .product__left-info,
   .product__info-wrapper {
- position: sticky;
-    bottom: 50px;
-    top: auto;
-    align-self: end; 
+    position: sticky;
+    top: 30vh;
+    bottom: auto;
+    align-self: start; 
   }
   .product__info-container {
     width: 100%;
