@@ -21,22 +21,26 @@
 /* Active state */
 .swatch-input__input:active + .swatch-input__label,
 .swatch-input__input:checked + .swatch-input__label {
-  outline: 0.1rem solid rgb(var(--color-foreground));
-  width: 12px;
-  height: 12px;
-  margin-bottom: 0;
-  margin-top: 9px;
+  outline: none;
+  border: 0.64px solid #000;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Focus visible */
 .swatch-input__input:focus-visible + .swatch-input__label {
-  border: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  border: 0.64px solid rgba(var(--color-foreground), 0.5);
 }
 
 /* Active and focused */
 .swatch-input__input:active:focus-visible + .swatch-input__label,
 .swatch-input__input:checked:focus-visible + .swatch-input__label {
-  border: 0.1rem solid rgb(var(--color-foreground));
+  border: 0.64px solid #000;
 }
 
 /* Visually disabled */
