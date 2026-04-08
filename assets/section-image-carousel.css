@@ -53,18 +53,21 @@
 .image-carousel-content.left-center .image-carousel-text-overlay,
 .image-carousel-content.left-bottom .image-carousel-text-overlay {
   text-align: left;
+  align-items: flex-start;
 }
 
 .image-carousel-content.center-top .image-carousel-text-overlay,
 .image-carousel-content.center-center .image-carousel-text-overlay,
 .image-carousel-content.center-bottom .image-carousel-text-overlay {
   text-align: center;
+  align-items: center;
 }
 
 .image-carousel-content.right-top .image-carousel-text-overlay,
 .image-carousel-content.right-center .image-carousel-text-overlay,
 .image-carousel-content.right-bottom .image-carousel-text-overlay {
   text-align: right;
+  align-items: flex-end;
 }
 
 .image-carousel-text-overlay {
@@ -114,21 +117,23 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: inherit;
   pointer-events: auto;
-}
-
-.content-align-left .image-carousel-buttons {
   justify-content: flex-start;
 }
 
-.content-align-center .image-carousel-buttons {
+.image-carousel-content.center-top .image-carousel-buttons,
+.image-carousel-content.center-center .image-carousel-buttons,
+.image-carousel-content.center-bottom .image-carousel-buttons {
   justify-content: center;
 }
 
-.content-align-right .image-carousel-buttons {
+.image-carousel-content.right-top .image-carousel-buttons,
+.image-carousel-content.right-center .image-carousel-buttons,
+.image-carousel-content.right-bottom .image-carousel-buttons {
   justify-content: flex-end;
 }
+
+
 
 /* Premium Button Styles */
 .image-carousel-buttons .button {
