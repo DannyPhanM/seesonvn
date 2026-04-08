@@ -3930,7 +3930,7 @@ details-disclosure>details {
   text-transform: initial !important;
   color: var(--Primary-ss-grey, #999);
   font-family: var(--font-body-family);
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
@@ -3968,6 +3968,7 @@ details-disclosure>details {
 }
 .collabsible-custom__block-content p {
   margin: 0;
+  line-height: 1.2;
 }
 
 .collabsible-custom__block-content p:not(:last-child) {
