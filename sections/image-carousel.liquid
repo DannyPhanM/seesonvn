@@ -26,11 +26,11 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<slideshow-component
-  class="slider-mobile-gutter image-carousel-section"
-  role="region"
+<div class="page-width">
+  <slideshow-component
+    class="slider-mobile-gutter image-carousel-section"
+    role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
-  aria-label="{{ section.settings.accessibility_info | escape }}"
 >
   {%- if section.blocks.size > 1 -%}
     <div class="slideshow__controls slider-buttons no-js-hidden">
@@ -45,19 +45,21 @@
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </span>
       </button>
-      <div class="slider-counter slider-counter--dots">
-        <div class="slideshow__control-wrapper">
-          {%- for block in section.blocks -%}
-            <button
-              class="slider-counter__link slider-counter__link--dots link"
-              aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-              aria-controls="Slider-{{ section.id }}"
-            >
-              <span class="dot"></span>
-            </button>
-          {%- endfor -%}
+      {%- if section.settings.show_dots -%}
+        <div class="slider-counter slider-counter--dots">
+          <div class="slideshow__control-wrapper">
+            {%- for block in section.blocks -%}
+              <button
+                class="slider-counter__link slider-counter__link--dots link"
+                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                aria-controls="Slider-{{ section.id }}"
+              >
+                <span class="dot"></span>
+              </button>
+            {%- endfor -%}
+          </div>
         </div>
-      </div>
+      {%- endif -%}
       <button
         type="button"
         class="slider-button slider-button--next"
@@ -119,53 +121,56 @@
     {%- endfor -%}
   </div>
 
-  <div class="image-carousel-content {{ section.settings.text_alignment }}">
-    <div class="image-carousel-text-overlay">
-      {%- if section.settings.subheading != blank -%}
-        <p class="image-carousel-subheading h4">{{ section.settings.subheading }}</p>
-      {%- endif -%}
-      
-      {%- if section.settings.heading != blank -%}
-        <h2 class="image-carousel-heading {{ section.settings.heading_size }}">
-          {{ section.settings.heading }}
-        </h2>
-      {%- endif -%}
+  <div class="image-carousel-content-container">
+    <div class="image-carousel-content {{ section.settings.text_alignment }}">
+      <div class="image-carousel-text-overlay">
+        {%- if section.settings.subheading != blank -%}
+          <p class="image-carousel-subheading h4">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+        
+        {%- if section.settings.heading != blank -%}
+          <h2 class="image-carousel-heading {{ section.settings.heading_size }}">
+            {{ section.settings.heading }}
+          </h2>
+        {%- endif -%}
 
-      {%- if section.settings.text != blank -%}
-        <div class="image-carousel-description rte">
-          {{ section.settings.text }}
+        {%- if section.settings.text != blank -%}
+          <div class="image-carousel-description rte">
+            {{ section.settings.text }}
+          </div>
+        {%- endif -%}
+
+        <div class="image-carousel-buttons">
+          {%- if section.settings.button_1_label != blank -%}
+            <a
+              href="{{ section.settings.button_1_link | default: '#' }}"
+              class=" button--{{ section.settings.button_1_style }}"
+            >
+              {{ section.settings.button_1_label }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.button_2_label != blank -%}
+            <a
+              href="{{ section.settings.button_2_link | default: '#' }}"
+              class=" button--{{ section.settings.button_2_style }}"
+            >
+              {{ section.settings.button_2_label }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.button_3_label != blank -%}
+            <a
+              href="{{ section.settings.button_3_link | default: '#' }}"
+              class=" button--{{ section.settings.button_3_style }}"
+            >
+              {{ section.settings.button_3_label }}
+            </a>
+          {%- endif -%}
         </div>
-      {%- endif -%}
-
-      <div class="image-carousel-buttons">
-        {%- if section.settings.button_1_label != blank -%}
-          <a
-            href="{{ section.settings.button_1_link | default: '#' }}"
-            class=" button--{{ section.settings.button_1_style }}"
-          >
-            {{ section.settings.button_1_label }}
-          </a>
-        {%- endif -%}
-        {%- if section.settings.button_2_label != blank -%}
-          <a
-            href="{{ section.settings.button_2_link | default: '#' }}"
-            class=" button--{{ section.settings.button_2_style }}"
-          >
-            {{ section.settings.button_2_label }}
-          </a>
-        {%- endif -%}
-        {%- if section.settings.button_3_label != blank -%}
-          <a
-            href="{{ section.settings.button_3_link | default: '#' }}"
-            class=" button--{{ section.settings.button_3_style }}"
-          >
-            {{ section.settings.button_3_label }}
-          </a>
-        {%- endif -%}
       </div>
     </div>
   </div>
 </slideshow-component>
+</div>
 
 {% schema %}
 {
@@ -193,6 +198,12 @@
       "default": false
     },
     {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show navigation dots",
+      "default": true
+    },
+    {
       "type": "range",
       "id": "change_slides_speed",
       "min": 3,
@@ -201,12 +212,6 @@
       "unit": "s",
       "label": "Change slides every",
       "default": 5
-    },
-    {
-      "type": "text",
-      "id": "accessibility_info",
-      "label": "Accessibility Info",
-      "default": "Slideshow about our brand"
     },
     {
       "type": "header",
