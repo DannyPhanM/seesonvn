@@ -3933,11 +3933,11 @@ details-disclosure>details {
   text-transform: initial !important;
   color: var(--Primary-ss-grey, #999);
   font-family: var(--font-body-family);
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 1px;
+  letter-spacing: 5%;
 }
 
 .accordion .accordion__content h4:first-child,
