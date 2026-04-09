@@ -3074,6 +3074,7 @@ details-disclosure>details {
   line-height: 120%;
   padding: 3px 6px;;
   text-align: center;
+  background-color:transparent;
   border-color: #000;
   color:#000;
   /*
