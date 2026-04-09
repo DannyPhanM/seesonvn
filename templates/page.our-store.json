@@ -161,10 +161,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_bBBT8t": {
+    "multicolumn_fqVckq": {
       "type": "multicolumn",
       "blocks": {
-        "column_htbt8D": {
+        "column_TqtLyJ": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -173,13 +173,13 @@
             "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
             "image_link": false,
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_jd8VNi": {
+        "column_7DExBg": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -188,13 +188,13 @@
             "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
             "image_link": false,
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_MKiX78": {
+        "column_7JVWra": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -203,7 +203,7 @@
             "image_mobile": "shopify://shop_images/banner_mobile_6.png",
             "title": "",
             "image_link": false,
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
             "link_label": "",
             "link": ""
@@ -211,9 +211,9 @@
         }
       },
       "block_order": [
-        "column_htbt8D",
-        "column_jd8VNi",
-        "column_MKiX78"
+        "column_TqtLyJ",
+        "column_7DExBg",
+        "column_7JVWra"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
@@ -222,17 +222,17 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "image_ratio_mobile": "adapt",
+        "image_ratio_mobile": "4/5",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 1,
         "column_alignment": "left",
         "enable_desktop_slider": true,
-        "show_dots": false,
-        "background_style": "primary",
+        "show_dots": true,
+        "background_style": "none",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
@@ -359,7 +359,7 @@
     "rich_text_BXkFfc",
     "multicolumn_GGVYAc",
     "rich_text_amaBJ9",
-    "multicolumn_bBBT8t",
+    "multicolumn_fqVckq",
     "rich_text_ah3XAQ",
     "collabsible_custom_FHwd3m",
     "collabsible_custom_ntF3mT",
