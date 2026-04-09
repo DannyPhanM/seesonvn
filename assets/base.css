@@ -4104,6 +4104,8 @@ letter-spacing: 0.55px;
   letter-spacing: 0%;
   font-size: 16px;
   font-style: normal;
+  background-color: #999;
+  Color: #000;
 }
 .card__heading {
   display: flex;
