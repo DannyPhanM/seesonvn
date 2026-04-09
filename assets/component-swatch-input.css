@@ -22,11 +22,11 @@
 .swatch-input__input:active + .swatch-input__label,
 .swatch-input__input:checked + .swatch-input__label {
   outline: none;
-  border: 0.64px solid #000;
+  border: 1px solid #000;
   border-radius: 8px;
   width: 16px;
   height: 16px;
-  padding: 2px;
+  padding: 1px;
   display: flex;
   justify-content: center;
   align-items: center;

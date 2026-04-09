@@ -61,6 +61,7 @@
     right: 42px;
     border-top: none;
     border-right: none;
+    max-width: 467px;
   }
 
   .cart-notification-wrapper:is(.page-width) > .cart-notification {
@@ -81,7 +82,7 @@
 
 @media screen and (min-width: 1440px) {
   .cart-notification-wrapper:is(.page-width) > .cart-notification {
-    right: 82px; 
+    right: 76px; 
   }
 }
 
@@ -143,8 +144,8 @@
   display: inline-flex;
   margin-right: 2rem;
   margin-top: 0;
-  width: 15.5rem;
-  height: 7.2rem;
+  width: 221px;
+  height: 70px;
   overflow: hidden;
 }
 

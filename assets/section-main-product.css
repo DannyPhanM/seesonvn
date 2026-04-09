@@ -172,7 +172,7 @@ product-info {
 
 @media(min-width: 1024px) {
   .product__left-info.grid__item, .product__info-wrapper.grid__item {
-    margin-top: 373px;
+    /* margin-top: 373px; */
   }
 }
 

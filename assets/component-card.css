@@ -597,7 +597,7 @@
 }
 
 .cart-notification {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 10px;
     padding-left: 30px;
 }
@@ -616,8 +616,8 @@
     display: none;
 }
 .cart-notification .cart-notification-product {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 22px;
 }
 .cart-notification .cart-notification-product__image {
     margin-right: 20px;
@@ -626,14 +626,13 @@
     border-radius: 0;
 }
 .cart-notification .cart-notification-product__name {
-font-family: Seesans;
 font-size: 20px;
 font-weight: 400;
 line-height: 1.2;
 letter-spacing: -5%;
 text-transform: uppercase;
 font-family: var(--font-card-title-family);
-margin-bottom: 16px;
+margin-bottom: 8px;
 }
 
 .custom-note {

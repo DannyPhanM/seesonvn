@@ -37,11 +37,11 @@
   {%- if lens_width != blank or bridge_width != blank or temple_length != blank -%}
     <div class="product-sizing__top-highlight">
       <span class="sizing-value">
-        {{ lens_width }}
+        {{ lens_width | remove: 'mm' | strip }}
         <span class="sizing-square-icon">{% render 'icon-square-small' %}</span>
-        {{ bridge_width }}
+        {{ bridge_width | remove: 'mm' | strip }}
         -
-        {{ temple_length }}
+        {{ temple_length | remove: 'mm' | strip }}
       </span>
     </div>
   {%- endif -%}
@@ -64,27 +64,27 @@
         </div>
         <div class="product-sizing__table-col">
           <span class="sizing-label">{{ 'products.product.sizing.lens_width' | t }}</span>
-          <span class="sizing-value">{{ lens_width | default: '—' }}</span>
+          <span class="sizing-value">{{ lens_width | remove: 'mm' | strip | default: '—' }}</span>
         </div>
       </div>
       <div class="product-sizing__table-row">
         <div class="product-sizing__table-col">
           <span class="sizing-label">{{ 'products.product.sizing.bridge_width' | t }}</span>
-          <span class="sizing-value">{{ bridge_width | default: '—' }}</span>
+          <span class="sizing-value">{{ bridge_width | remove: 'mm' | strip | default: '—' }}</span>
         </div>
         <div class="product-sizing__table-col">
           <span class="sizing-label">{{ 'products.product.sizing.lens_height' | t }}</span>
-          <span class="sizing-value">{{ lens_height | default: '—' }}</span>
+          <span class="sizing-value">{{ lens_height | remove: 'mm' | strip | default: '—' }}</span>
         </div>
       </div>
       <div class="product-sizing__table-row">
         <div class="product-sizing__table-col">
           <span class="sizing-label">{{ 'products.product.sizing.frame_width' | t }}</span>
-          <span class="sizing-value">{{ frame_width | default: '—' }}</span>
+          <span class="sizing-value">{{ frame_width | remove: 'mm' | strip | default: '—' }}</span>
         </div>
         <div class="product-sizing__table-col">
           <span class="sizing-label">{{ 'products.product.sizing.temple_length' | t }}</span>
-          <span class="sizing-value">{{- temple_length | default: '—' -}}</span>
+          <span class="sizing-value">{{- temple_length | remove: 'mm' | strip | default: '—' -}}</span>
         </div>
       </div>
     </div>

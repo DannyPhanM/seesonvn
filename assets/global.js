@@ -1526,3 +1526,81 @@ document.addEventListener('click', (event) => {
   }
 });
 
+
+if (!customElements.get('accordion-component')) {
+  customElements.define('accordion-component', class AccordionComponent extends HTMLElement {
+    constructor() {
+      super();
+      this.details = this.querySelector('details');
+      this.summary = this.querySelector('summary');
+      this.contentContainer = this.querySelector('.accordion__content-container');
+      
+      this.summary.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.toggle();
+      });
+    }
+
+    toggle() {
+      if (this.details.hasAttribute('open')) {
+        this.close();
+      } else {
+        // Close others in the same group/container if needed
+        const group = this.getAttribute('group');
+        if (group) {
+          document.querySelectorAll(`accordion-component[group="${group}"]`).forEach(comp => {
+            if (comp !== this && comp.details.hasAttribute('open')) comp.close();
+          });
+        } else {
+          // Default behavior: close others in the same parent container
+          const parent = this.parentElement;
+          if (parent) {
+            parent.querySelectorAll('accordion-component').forEach(comp => {
+              if (comp !== this && comp.details.hasAttribute('open')) comp.close();
+            });
+          }
+        }
+        this.open();
+      }
+    }
+
+    open() {
+      this.details.style.height = `${this.details.offsetHeight}px`;
+      this.details.open = true;
+      
+      requestAnimationFrame(() => {
+        const contentHeight = this.summary.offsetHeight + this.contentContainer.offsetHeight;
+        this.details.style.height = `${contentHeight}px`;
+        this.details.classList.add('is-opening');
+        this.details.classList.remove('is-closing');
+      });
+
+      const onAnimationEnd = (e) => {
+        if (e.target !== this.details) return;
+        this.details.style.height = '';
+        this.details.classList.remove('is-opening');
+        this.details.removeEventListener('transitionend', onAnimationEnd);
+      };
+      this.details.addEventListener('transitionend', onAnimationEnd);
+    }
+
+    close() {
+      this.details.style.height = `${this.details.offsetHeight}px`;
+      this.details.classList.add('is-closing');
+      this.details.classList.remove('is-opening');
+
+      requestAnimationFrame(() => {
+        this.details.style.height = `${this.summary.offsetHeight}px`;
+      });
+
+      const onAnimationEnd = (e) => {
+        if (e.target !== this.details) return;
+        this.details.open = false;
+        this.details.style.height = '';
+        this.details.classList.remove('is-closing');
+        this.details.removeEventListener('transitionend', onAnimationEnd);
+      };
+      this.details.addEventListener('transitionend', onAnimationEnd);
+    }
+  });
+}
