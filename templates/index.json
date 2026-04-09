@@ -129,29 +129,6 @@
         "padding_bottom": 60
       }
     },
-    "collection_slider_jC63Bt": {
-      "type": "collection-slider",
-      "disabled": true,
-      "name": "Collection Slider",
-      "settings": {
-        "collection_list": [
-          "best-seller-kinh-can",
-          "best-seller-kinh-ram",
-          "big-size",
-          "clearance-sale",
-          "medium-size",
-          "metal",
-          "new-collection",
-          "small-size",
-          "the-athletes",
-          "the-assembled-sunglasses"
-        ],
-        "indicator_style": "bottom",
-        "background_color": "#f2f2f2",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "featured_collection_6Q8xjz": {
       "type": "featured-collection",
       "name": "ESSENTIAL STYLES",
@@ -178,7 +155,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 12
+        "padding_bottom": 100
       }
     },
     "rich_text_i7AqVh": {
@@ -305,7 +282,6 @@
   "order": [
     "slideshow_6w4AVd",
     "feature_collection_slider_Trkr38",
-    "collection_slider_jC63Bt",
     "featured_collection_6Q8xjz",
     "rich_text_i7AqVh",
     "rich_text_xj9AQe",
