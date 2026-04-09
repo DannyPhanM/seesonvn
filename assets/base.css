@@ -3069,10 +3069,10 @@ details-disclosure>details {
   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: 0.5rem 1.3rem 0.6rem 1.3rem;
+  font-size: 16px;
+  letter-spacing: 0%;
+  line-height: 120%;
+  padding: padding: 3px 6px;;
   text-align: center;
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
