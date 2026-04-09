@@ -4087,14 +4087,14 @@ letter-spacing: 0.55px;
 .card__badge.sale .badge {
   border: 1.4px solid #E90303;
   border-radius: 0;
-  padding: 5px 8px;
+  padding: 3px 6px;
   color: #E90303;
   text-align: center;
   background: transparent;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 0%;
 }
 .card__badge.sold-out .badge {
   border: none;
