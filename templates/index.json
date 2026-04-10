@@ -106,8 +106,8 @@
       "type": "feature-collection-slider",
       "name": "Feature Coll Slider",
       "settings": {
-        "heading": "SEESON LATEST ARRIVALS",
-        "description": "<p>Take your time exploring our carefully curated collection, where you’ll find an array of spectacles and sunglasses, along with a range of services and thoughtfully designed accessories to complement your style.</p>",
+        "heading": "LATEST ARRIVALS",
+        "description": "<p>Những thiết kế mới nhất — tiếp nối và mở rộng ngôn ngữ thị giác của SEESON qua nhiều chất liệu và hình thái.</p>",
         "product_list": [
           "the-athletes-01",
           "the-ruler-07-black",
@@ -137,7 +137,7 @@
         "products_to_show": 8,
         "title": "ESSENTIAL STYLES",
         "heading_size": "h1",
-        "description": "<p>From essential shapes to statement pieces, these are the frames chosen by those who value design and distinction. Thoughtfully made to complement every face, every moment, and every style.</p>",
+        "description": "<p>Chất liệu mới: TR-90 — cấu trúc nylon được nghiên cứu tỉ mỉ, mang lại cảm giác nhẹ, linh hoạt, và gợi tinh thần thể thao.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
@@ -196,7 +196,7 @@
         "text_mMRXhW": {
           "type": "text",
           "settings": {
-            "text": "<p>Visit our store to discover the craftsmanship behind every frame. From the subtle weight of acetate to the balance of titanium, each detail is meant to be felt. See the full collection in person and experience eyewear the way it was meant to be tactile, personal, and precise.</p>"
+            "text": "<p>Website content 2026Nơi tinh thần Việt Nam hiện diện trong nhịp điệu đương đại . Mỗi chi tiết được xây dựng tỉ mỉ, dẫn dắt cảm nhận qua những điểm chạm có chủ đích.Nơi tinh thần Việt Nam hiện diện trong nhịp điệu đương đại . Mỗi chi tiết được xây dựng tỉ mỉ, dẫn dắt cảm nhận qua những điểm chạm có chủ đích.</p>"
           }
         }
       },
