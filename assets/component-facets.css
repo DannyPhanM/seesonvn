@@ -1023,8 +1023,11 @@ input.mobile-facets__checkbox {
   color: #000;
   box-shadow: none;
   margin-top: 4px;
+  stroke-width: 2px;
 }
-
+.mobile-facets__label > svg path {
+  stroke-width: 2px;
+}
 .mobile-facets__label .icon-checkmark {
   position: absolute;
   top: 1.9rem;

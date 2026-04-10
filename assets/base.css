@@ -4616,12 +4616,12 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .mobile-facets .mobile-facets__heading {
   text-align: left;
   color: #000;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.2px;
   text-decoration: none !important;
 }
 .mobile-facets .mobile-facets__clear-all {
@@ -4723,8 +4723,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   overflow: visible;
   width: 410px;
   height: max-content;
-  top: -30px;
-  left: -1px;
+  top: -35px;
+  left: 0;
   border-left: 0;
   z-index: 9;
 }
