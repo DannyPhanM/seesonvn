@@ -303,6 +303,8 @@
     },
     "cart": {
       "title": "Giỏ hàng",
+      "subtotal": "Tạm tính",
+      "discount": "Giảm giá",
       "caption": "Các mặt hàng trong giỏ hàng",
       "remove_title": "Xóa {{ title }}",
       "note": "Hướng dẫn đặc biệt của đơn hàng",

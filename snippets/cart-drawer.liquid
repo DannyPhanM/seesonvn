@@ -69,7 +69,7 @@
   .totals-summary {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 3px;
     margin-bottom: 2rem;
   }
 
@@ -699,13 +699,13 @@ window.SwymCallbacks.push(renderWishlistCounter);
 
           <div class="totals-summary">
             <div class="totals-summary__item">
-              <span class="totals-summary__label">Subtotal</span>
+              <span class="totals-summary__label">{{ 'sections.cart.subtotal' | t }}</span>
               <span class="totals-summary__value">{{ total_compare_price | money }}</span>
             </div>
             
             {%- if total_saving > 0 -%}
               <div class="totals-summary__item totals-summary__item--discount">
-                <span class="totals-summary__label">Discount</span>
+                <span class="totals-summary__label">{{ 'sections.cart.discount' | t }}</span>
                 <span class="totals-summary__value">-{{ total_saving | money }}</span>
               </div>
             {%- endif -%}

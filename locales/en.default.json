@@ -311,6 +311,8 @@
     },
     "cart": {
       "title": "Your cart",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "estimated_total": "Estimated total",
