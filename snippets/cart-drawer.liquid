@@ -415,7 +415,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                     class="quantity__button"
                                     name="minus"
                                     type="button"
-                                    {% if item.instructions and item.instructions.can_update_quantity == false %}
+                                    {% if item.instructions and item.instructions.can_update_quantity == false or item.quantity <= 1 %}
                                       disabled
                                     {% endif %}
                                   >

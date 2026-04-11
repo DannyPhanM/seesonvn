@@ -96,12 +96,6 @@ cart-items .title-wrapper-with-link {
   width: 100%;
 }
 
-.cart-item__name:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.2rem;
-}
-
 .cart-item__price-wrapper > * {
   display: block;
   margin: 0;
