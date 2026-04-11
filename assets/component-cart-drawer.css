@@ -360,6 +360,7 @@ cart-drawer-items {
   grid-column: 2 / 5;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .cart-drawer .cart-items .cart-item__totals .icon-box {
