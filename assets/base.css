@@ -4966,6 +4966,8 @@ details[open] > .open-facets-overlay {
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-price .swym-product-original-price {
   color: #000;
   opacity: 1;
+  transform: translateY(-3px);
+  letter-spacing: 0.7px;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-add-to-cart-btn {
   grid-area: button;
@@ -4992,6 +4994,8 @@ details[open] > .open-facets-overlay {
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-final-price {
   font-weight: 600;
   font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.7px;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-original-price {
   font-size: 10px;
