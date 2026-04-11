@@ -241,7 +241,7 @@ cart-drawer-items {
 .cart-drawer .cart-item {
   display: grid;
   grid-template: repeat(2, auto) / repeat(4, 1fr);
-  gap: 1rem;
+  gap: 0;
   column-gap: 0;
   margin: 0;
   padding-top: 30px;
@@ -561,7 +561,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   overflow-x: hidden;
   overflow-y: visible;
   height: max-content;
-  padding-bottom: 16px;
+  padding-bottom: 23px;
   padding-top: 0
 }
 .drawer__cart-items-wrapper .cart-item__details .cart-item__details-wrapper,
