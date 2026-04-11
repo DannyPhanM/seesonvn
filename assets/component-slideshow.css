@@ -240,6 +240,8 @@ slideshow-component:not(.page-width) .slider-buttons {
   line-height: 1.2;
   font-weight: 400;
   color: #fff;
+  text-decoration: underline;
+  text-underline-offset: .3rem;
 }
 
 .slideshow__text.banner__box .button-box {
