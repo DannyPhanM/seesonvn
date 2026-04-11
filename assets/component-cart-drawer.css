@@ -2,9 +2,9 @@
   position: fixed;
   z-index: 100000000;
   left: 0;
-  top: 80px;
+  top: 0;
   width: 100vw;
-  height: calc(100% - 80px);
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   background-color: rgba(var(--color-foreground), 0.5);
