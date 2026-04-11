@@ -1358,42 +1358,7 @@ class CartPerformance {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const allDetails = document.querySelectorAll('.collabsible-custom__details');
 
-  if (!allDetails || allDetails.length === 0) return;
-
-  function updateIcon(details) {
-    if (!details) return;
-
-    const plus = details.querySelector('.icon-plus');
-    const minus = details.querySelector('.icon-minus');
-
-    if (details.open) {
-      if (plus) plus.style.display = 'none';
-      if (minus) minus.style.display = 'flex';
-    } else {
-      if (plus) plus.style.display = 'flex';
-      if (minus) minus.style.display = 'none';
-    }
-  }
-
-  allDetails.forEach(function (details) {
-    if (!details || typeof details.open === 'undefined') return;
-
-    details.addEventListener('toggle', function () {
-      if (details.open) {
-        allDetails.forEach(function (other) {
-          if (other !== details && other.open) {
-            other.open = false;
-          }
-        });
-      }
-      allDetails.forEach(updateIcon);
-    });
-    updateIcon(details);
-  });
-});
 
 class ProductCardCarousel extends HTMLElement {
   constructor() {
@@ -1545,10 +1510,18 @@ if (!customElements.get('accordion-component')) {
       if (this.details.hasAttribute('open')) {
         this.close();
       } else {
-        // Close others in the same group/container if needed
+        // Toggle behavior
         const group = this.getAttribute('group');
+        const isGlobal = this.hasAttribute('global');
+
         if (group) {
+          // Close others in prefix group
           document.querySelectorAll(`accordion-component[group="${group}"]`).forEach(comp => {
+            if (comp !== this && comp.details.hasAttribute('open')) comp.close();
+          });
+        } else if (isGlobal) {
+          // Close ALL other global accordions
+          document.querySelectorAll('accordion-component[global]').forEach(comp => {
             if (comp !== this && comp.details.hasAttribute('open')) comp.close();
           });
         } else {

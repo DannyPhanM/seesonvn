@@ -48,6 +48,7 @@ body {
 
 ::selection {
   background-color: rgba(var(--color-foreground), 0.2);
+  text-decoration: none;
 }
 
 h1,

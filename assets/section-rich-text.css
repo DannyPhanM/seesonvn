@@ -19,6 +19,15 @@
 .rich-text__blocks .rich-text__text {
   text-align: justify;
 }
+
+.rich-text__blocks .rich-text__text p {
+  font-family: inherit !important;
+}
+
+.rich-text__blocks .rich-text__text *::selection {
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+}
 @media screen and (min-width: 750px) {
   .rich-text__wrapper {
     width: 100%;

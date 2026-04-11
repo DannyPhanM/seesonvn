@@ -41,9 +41,11 @@
         aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+            <span class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
+                <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
+              </svg>
+            </span>
       </button>
       {%- if section.settings.show_dots -%}
         <div class="slider-counter slider-counter--dots">
@@ -67,9 +69,11 @@
         aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </span>
+            <span class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
+                <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
+              </svg>
+            </span>
       </button>
     </div>
   {%- endif -%}

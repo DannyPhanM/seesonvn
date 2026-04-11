@@ -297,8 +297,21 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   z-index: 2;
 }
 
-::selection {
-  background-color: rgba(var(--color-foreground), 0.2);
+*::selection {
+  background-color: rgba(var(--color-foreground), 0.15);
+  color: rgba(var(--color-foreground), 1);
+  text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+::-moz-selection {
+  background-color: rgba(var(--color-foreground), 0.15);
+  color: rgba(var(--color-foreground), 1);
+  text-decoration: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .text-body {
@@ -3761,7 +3774,7 @@ a {
 }
 
 .multicolumn .multicolumn-list {
-  gap: 18px;
+  gap: 32px;
 }
 
 .multicolumn .multicolumn-list.grid--2-col-tablet-down .grid__item {
@@ -3818,6 +3831,7 @@ a {
   position: relative;
   width: max-content;
   min-width: 300px;
+  padding-bottom: 11px;
 }
 
 .collabsible-custom__summary:after {
@@ -3827,7 +3841,7 @@ a {
   height: 1px;
   background: #999;
   position: absolute;
-  bottom: -11px;
+  bottom: 0px;
   left: 0;
 }
 
