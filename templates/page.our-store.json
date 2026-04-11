@@ -128,6 +128,60 @@
         "padding_bottom_mobile": 60
       }
     },
+    "image_carousel_pLDqbg": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_XwWGkc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_desktop.png",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_MJjG87": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_mobile_2.png",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_cQjB6K": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_XwWGkc",
+        "slide_MJjG87",
+        "slide_cQjB6K"
+      ],
+      "name": "Image Carousel",
+      "settings": {
+        "slide_height": "adapt_image",
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
     "rich_text_amaBJ9": {
       "type": "rich-text",
       "blocks": {
@@ -291,6 +345,7 @@
       ],
       "name": "Collabsible Custom",
       "settings": {
+        "enable_global_toggle": true,
         "open_by_default": true,
         "title": "IN HA NOI CITY",
         "heading_tag": "h3",
@@ -328,6 +383,7 @@
       ],
       "name": "Collabsible Custom",
       "settings": {
+        "enable_global_toggle": true,
         "open_by_default": true,
         "title": "HO CHI MINH CITY",
         "heading_tag": "h3",
@@ -358,6 +414,7 @@
     "main",
     "rich_text_BXkFfc",
     "multicolumn_GGVYAc",
+    "image_carousel_pLDqbg",
     "rich_text_amaBJ9",
     "multicolumn_fqVckq",
     "rich_text_ah3XAQ",
