@@ -369,12 +369,11 @@ cart-drawer-items {
   gap: 4px;
 }
 
-.cart-drawer .cart-items .cart-item__totals .icon-box .wish-list {
-  width: 16px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Hide Swym default heart icon */
+.cart-drawer .cart-items .cart-item__totals .icon-box .swym-button.swym-add-to-wishlist-view-product::after,
+.cart-drawer .cart-items .cart-item__totals .icon-box .swym-button::before {
+  content: none !important;
+  display: none !important;
 }
 
 .cart-drawer .cart-items .cart-item__totals .icon-box svg {
@@ -383,6 +382,17 @@ cart-drawer-items {
   min-width: 16px;
   padding: 0;
 }
+
+.cart-drawer .cart-items .cart-item__totals .icon-box .swym-button svg path {
+  fill: none !important;
+  stroke: #000;
+}
+
+.cart-drawer .cart-items .cart-item__totals .icon-box .swym-button.swym-added svg path {
+  fill: #000 !important;
+}
+
+
 
 @media screen and (max-width: 749px) {
   .cart-drawer .cart-item cart-remove-button {
