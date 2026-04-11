@@ -4960,6 +4960,7 @@ details[open] > .open-facets-overlay {
   flex-direction: column;
   align-items: flex-end;
   align-self: end;
+  margin-top: 27px !important;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-price .swym-product-final-price {
   order: 3;
