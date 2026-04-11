@@ -26,10 +26,26 @@
   border-radius: 8px;
   width: 16px;
   height: 16px;
+  min-width: 16px;
   padding: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.swatch-input__input:active + .swatch-input__label .swatch,
+.swatch-input__input:checked + .swatch-input__label .swatch {
+  width: 12px;
+  height: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Focus visible */

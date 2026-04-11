@@ -301,7 +301,6 @@ body.open-drawer:not(.open-filter) {
   overflow: hidden;
 }
 *::selection {
-  background-color: rgba(var(--color-foreground), 0.15);
   color: rgba(var(--color-foreground), 1);
   text-decoration: none !important;
   -webkit-text-decoration: none !important;
@@ -310,7 +309,6 @@ body.open-drawer:not(.open-filter) {
 }
 
 ::-moz-selection {
-  background-color: rgba(var(--color-foreground), 0.15);
   color: rgba(var(--color-foreground), 1);
   text-decoration: none !important;
   box-shadow: none !important;
