@@ -144,8 +144,9 @@ product-info {
   border-bottom: none;;
 }
 
-.product__left-info .accordion  summary {
-  padding-bottom: 20px;
+.product__left-info .accordion summary {
+  padding-bottom: 13px;
+  padding-top: 13px;
 }
 
 .product__accordion .accordion__content {
@@ -2401,7 +2402,8 @@ product-recommendations.related-products {
 }
 
 .accordion__content .product-sizing .product-sizing__top-highlight span{
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: fit-content;
   margin-bottom: 1rem;
   color:  #000;
@@ -2498,7 +2500,7 @@ product-recommendations.related-products {
 .sizing-square-icon {
   display: inline-flex;
   align-items: center;
-  margin: 0 4px;
+  margin: 0;
 }
 
 .product .product__left-info .accordion .accordion__content * {
