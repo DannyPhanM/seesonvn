@@ -3000,7 +3000,9 @@ details[open]>.header__menu-item .icon-caret {
   text-underline-offset: 0.3rem;
 }
 
-
+.search__button.field__button svg path{
+  fill: #000;
+}
 
 .header__submenu {
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
