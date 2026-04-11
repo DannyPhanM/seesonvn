@@ -1016,7 +1016,7 @@ input.mobile-facets__checkbox {
 .mobile-facets__label > svg {
   position: relative;
   z-index: 2;
-  margin-right: 6px;
+  margin-right: 10px;
   flex-shrink: 0;
   width: 14px;
   height: 14px;
@@ -1281,7 +1281,7 @@ facet-remove.active-facets__button-wrapper a {
   padding-bottom: 40px;
 }
 .mobile-facets .mobile-facets__details[open] .mobile-facets__summary {
-  padding-bottom: 16px;
+  padding-bottom: 14px;
 }
 @media (max-width: 749px) {
   details[open] > .open-facets-overlay {
