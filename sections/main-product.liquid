@@ -110,7 +110,7 @@
             endif
           -%}
           <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-            <accordion-component>
+            <accordion-component group="product-accordions">
               <details
                 id="Details-{{ block.id }}-{{ section.id }}"
                 {% if forloop.first %}

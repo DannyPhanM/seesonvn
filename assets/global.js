@@ -1531,10 +1531,10 @@ if (!customElements.get('accordion-component')) {
             if (comp !== this && comp.details.hasAttribute('open')) comp.close();
           });
         } else {
-          // Default behavior: close others in the same parent container
-          const parent = this.parentElement;
-          if (parent) {
-            parent.querySelectorAll('accordion-component').forEach(comp => {
+          // Default behavior: close others in the same group container (grid item, list item, or general wrapper)
+          const container = this.closest('.grid__item, .list-menu__item, .collapsible-content__wrapper, .accordion-container') || this.parentElement;
+          if (container) {
+            container.querySelectorAll('accordion-component').forEach(comp => {
               if (comp !== this && comp.details.hasAttribute('open')) comp.close();
             });
           }
