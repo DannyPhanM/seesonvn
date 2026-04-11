@@ -445,7 +445,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .product__title > * {
@@ -1957,7 +1957,7 @@ a.product__text {
 }
 
 .template--product .product__info-wrapper .price-box {
-  margin-top: 30px;
+  margin-top: 39px;
   margin-bottom: 0;
 }
 
@@ -2499,4 +2499,12 @@ product-recommendations.related-products {
   display: inline-flex;
   align-items: center;
   margin: 0 4px;
+}
+
+.product .product__left-info .accordion .accordion__content * {
+  color: #000;
+  font-size: 11px;
+}
+.product .product__left-info .sizing-square-icon svg rect {
+  stroke-width: 3px;
 }

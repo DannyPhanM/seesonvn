@@ -89,7 +89,7 @@ cart-items .title-wrapper-with-link {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
-  letter-spacing: -1.4px;
+  letter-spacing: -0.7px;
   font-family: var(--font-card-title-family);
 }
 

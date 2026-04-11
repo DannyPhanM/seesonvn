@@ -1262,22 +1262,27 @@ facet-remove.active-facets__button-wrapper a {
   padding: 0;
 }
 
-.mobile-facets .mobile-facets__main details:not(:last-child) summary > div {
+.mobile-facets .mobile-facets__main details:not(:first-child) summary > div {
   position: relative;
 }
-.mobile-facets .mobile-facets__main details:not(:last-child) summary > div:after {
+.mobile-facets .mobile-facets__main details:not(:first-child) summary > div:after {
   content: '';
   display: block;
   position: absolute;
   left: 0;
-  bottom: -20px;
+  top: -20px;
   height: 1px;
   width: 100%;
   background: #aba3a3;
 }
-.mobile-facets .mobile-facets__main details[open] summary[aria-expanded="true"] > div:after {
-  content: none;;
- }
+
+ .mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+  border-bottom: none;
+  padding-bottom: 40px;
+}
+.mobile-facets .mobile-facets__details[open] .mobile-facets__summary {
+  padding-bottom: 16px;
+}
 @media (max-width: 749px) {
   details[open] > .open-facets-overlay {
     display: none;

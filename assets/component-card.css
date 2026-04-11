@@ -629,7 +629,7 @@
 font-size: 20px;
 font-weight: 400;
 line-height: 1.2;
-letter-spacing: -5%;
+letter-spacing: -2px;
 text-transform: uppercase;
 font-family: var(--font-card-title-family);
 margin-bottom: 8px;
@@ -638,6 +638,7 @@ margin-bottom: 8px;
 .custom-note {
   padding: 14px 0;
   border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
 }
 
 .custom-note p {
