@@ -1583,3 +1583,42 @@ if (!customElements.get('accordion-component')) {
     }
   });
 }
+
+/**
+ * Swym Price Formatter
+ * Removes redundant .00 decimals from wishlist prices safely
+ */
+function formatSwymPrices() {
+  const priceSelectors = [
+    '.swym-product-final-price',
+    '.swym-product-original-price',
+    '.swym-value'
+  ];
+  
+  const priceElements = document.querySelectorAll(priceSelectors.join(', '));
+  priceElements.forEach(el => {
+    // Use TreeWalker to only modify text nodes, preserving HTML structure
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.textContent.includes('.00')) {
+        node.textContent = node.textContent.replace(/\.00(?=\s|$)/g, '');
+      }
+    }
+  });
+}
+
+// Observe changes to the document to handle Swym's async rendering
+const swymPriceObserver = new MutationObserver((mutations) => {
+  // Use a small timeout to let Swym finish its own DOM manipulations
+  clearTimeout(window.swymFormatTimeout);
+  window.swymFormatTimeout = setTimeout(formatSwymPrices, 10);
+});
+
+swymPriceObserver.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
+// Initial run
+formatSwymPrices();

@@ -66,6 +66,31 @@
     display: none !important;
   }
 
+  .drawer__wishlist-content {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drawer__wishlist-content .drawer__contents {
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+
+  .drawer__wishlist-content .drawer__contents::-webkit-scrollbar {
+    width: 3px;
+    display: block;
+  }
+
+  .drawer__wishlist-content .drawer__contents::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+  }
+
   .totals-summary {
     display: flex;
     flex-direction: column;

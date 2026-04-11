@@ -4967,8 +4967,13 @@ details[open] > .open-facets-overlay {
   color: #000;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-price .swym-product-original-price {
+  display: none;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-product-price.swym-has-sale .swym-product-original-price {
+  display: block !important;
   color: #000;
   opacity: 1;
+  text-decoration: line-through;
   transform: translateY(-3px);
   letter-spacing: 0.7px;
 }
