@@ -324,10 +324,6 @@
 }
 
 /* Hover/focus state */
-.facets-layout-list .facets__label:hover .facet-checkbox__text-label,
-.facets-layout-list input:focus ~ .facet-checkbox__text-label {
-  text-decoration: underline;
-}
 
 .facets-layout-grid > * {
   align-items: flex-start;

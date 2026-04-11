@@ -174,7 +174,6 @@ input::-webkit-search-decoration {
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li:hover a,
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li:hover p {
   background: transparent;
-  text-decoration: underline;
 }
 
 .search-modal.modal__content .search-modal__content .predictive-search__results-list li a {
