@@ -455,7 +455,13 @@
             });
             
             this.dots.forEach((dot, index) => {
-              dot.setAttribute('aria-current', index === activeIndex ? 'true' : 'false');
+              const isActive = index === activeIndex;
+              dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+              if (isActive) {
+                dot.classList.add('active');
+              } else {
+                dot.classList.remove('active');
+              }
             });
           }
         });
