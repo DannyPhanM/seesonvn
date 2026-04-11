@@ -308,60 +308,6 @@
         "padding_bottom": 200,
         "padding_bottom_mobile": 130
       }
-    },
-    "image_carousel_keBmCD": {
-      "type": "image-carousel",
-      "blocks": {
-        "slide_hfKqHB": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner_desktop.png",
-            "link_image": false,
-            "link": ""
-          }
-        },
-        "slide_FqGg4t": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner_mobile_2.png",
-            "link_image": false,
-            "link": ""
-          }
-        },
-        "slide_JLNz8G": {
-          "type": "slide",
-          "settings": {
-            "link_image": false,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide_hfKqHB",
-        "slide_FqGg4t",
-        "slide_JLNz8G"
-      ],
-      "name": "Image Carousel",
-      "settings": {
-        "slide_height": "adapt_image",
-        "auto_rotate": false,
-        "show_dots": true,
-        "change_slides_speed": 5,
-        "subheading": "",
-        "heading": "",
-        "heading_size": "h1",
-        "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
-        "text_alignment": "left-top",
-        "button_1_label": "",
-        "button_1_link": "",
-        "button_1_style": "primary",
-        "button_2_label": "",
-        "button_2_link": "",
-        "button_2_style": "secondary",
-        "button_3_label": "",
-        "button_3_link": "",
-        "button_3_style": "outline"
-      }
     }
   },
   "order": [
@@ -373,7 +319,6 @@
     "rich_text_YKfw9t",
     "multicolumn_XzAw6C",
     "rich_text_rTBygV",
-    "rich_text_6ar4X7",
-    "image_carousel_keBmCD"
+    "rich_text_6ar4X7"
   ]
 }
