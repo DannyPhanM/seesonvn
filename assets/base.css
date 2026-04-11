@@ -5120,6 +5120,7 @@ details[open] > .open-facets-overlay {
 }
 .template-search__search .search__input {
   border-bottom: 1px solid #C7C7C7;
+  box-shadow: none;
 }
 
 .swym-empty-wishlist-text {
