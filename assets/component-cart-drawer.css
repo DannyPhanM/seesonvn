@@ -539,11 +539,11 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     margin-top: 0;
 }
 .cart-drawer__footer .totals__total-value .money {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.7px;
-    line-height: 1.2;
-    color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.09px;
+  line-height: 1.2;
+  color: #000;
 }
 .cart-drawer__footer .tax-note {
     display: none;
