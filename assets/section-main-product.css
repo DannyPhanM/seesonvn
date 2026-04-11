@@ -2508,3 +2508,11 @@ product-recommendations.related-products {
 .product .product__left-info .sizing-square-icon svg rect {
   stroke-width: 3px;
 }
+
+.product__title .atw-button-add-color.atw-button-added .atw-button-icon {
+  fill: #000 !important;
+}
+.product__title .atw-button-add-color.atw-button-added .atw-button-icon path {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
