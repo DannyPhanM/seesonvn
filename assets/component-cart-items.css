@@ -384,7 +384,7 @@ cart-remove-button .icon-remove {
 }
 .cart-item__quantity .cart-quantity {
   min-height: 0;
-  width: 70px;
+  width: 54px;
 }
 .cart-item__quantity .cart-quantity:after,
 .cart-item__quantity .cart-quantity:before {
