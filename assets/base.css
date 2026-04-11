@@ -5242,3 +5242,7 @@ details[open] > .open-facets-overlay {
 .swym-wishlist-detail-content {
   margin-top: 0 !important;
 }
+
+.title.title--primary a {
+  color: #999;
+}
