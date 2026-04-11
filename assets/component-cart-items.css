@@ -93,6 +93,7 @@ cart-items .title-wrapper-with-link {
   font-family: var(--font-card-title-family);
   max-width: 98%;
   margin-right: 2%;
+  width: 100%;
 }
 
 .cart-item__name:hover {
