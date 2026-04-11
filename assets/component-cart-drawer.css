@@ -521,11 +521,12 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     margin-bottom: 14px;
 }
 .cart-drawer__footer .totals__total {
-    font-size: 12px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 1.2 !important;
     letter-spacing: 0.6px !important;
     text-transform: capitalize !important;
+    margin-top: 0;
 }
 .cart-drawer__footer .totals__total-value .money {
     font-size: 14px;
