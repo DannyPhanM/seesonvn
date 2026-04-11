@@ -105,6 +105,20 @@
         "button_3_style": "outline"
       }
     },
+    "rich_text_CAPDtY": {
+      "type": "rich-text",
+      "name": "Spacing",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 60
+      }
+    },
     "rich_text_amaBJ9": {
       "type": "rich-text",
       "blocks": {
@@ -197,20 +211,6 @@
       }
     },
     "rich_text_mKwhCQ": {
-      "type": "rich-text",
-      "name": "Spacing",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 120,
-        "padding_bottom_mobile": 60
-      }
-    },
-    "rich_text_CAPDtY": {
       "type": "rich-text",
       "name": "Spacing",
       "settings": {
