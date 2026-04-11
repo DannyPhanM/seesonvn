@@ -5230,3 +5230,13 @@ details[open] > .open-facets-overlay {
 .swym-storefront-layout-root-component button {
   background: transparent !important;
 }
+
+.template--page .slideshow__control-wrapper {
+  gap: 10px;
+}
+.template--page .slider-counter__link {
+  padding: 0;
+}
+.image-carousel-section .slideshow__controls .slider-button.slider-button--prev svg {
+  transform: rotate(-180deg);
+}
