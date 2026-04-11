@@ -490,6 +490,9 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
     document.body.classList.add('overflow-hidden');
     document.body.classList.add('open-drawer');
+    if (this.classList.contains('mobile-facets__wrapper')) {
+      document.body.classList.add('open-filter');
+    }
   }
 
   closeMenuDrawer(event, elementToFocus = false) {
@@ -506,6 +509,7 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     document.body.classList.remove('overflow-hidden');
     document.body.classList.remove('open-drawer');
+    document.body.classList.remove('open-filter');
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
 
