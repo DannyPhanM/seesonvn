@@ -2503,7 +2503,7 @@ product-recommendations.related-products {
 
 .product .product__left-info .accordion .accordion__content * {
   color: #000;
-  font-size: 11px;
+  font-size: 12px;
 }
 .product .product__left-info .sizing-square-icon svg rect {
   stroke-width: 3px;
