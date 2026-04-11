@@ -296,7 +296,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   left: 0;
   z-index: 2;
 }
-
+body.open-drawer {
+  height: 100vh;
+  overflow: hidden;
+}
 *::selection {
   background-color: rgba(var(--color-foreground), 0.15);
   color: rgba(var(--color-foreground), 1);
