@@ -65,6 +65,42 @@
   cart-drawer[active-tab="wishlist"] .drawer__footer {
     display: none !important;
   }
+
+  .totals-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .totals-summary__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .totals-summary__label {
+    font-size: 1.4rem;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 0;
+  }
+
+  .totals-summary__value {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .totals-summary__item--total .totals-summary__label,
+  .totals-summary__item--total .totals-summary__value {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    text-transform: uppercase;
+  }
+
+  .totals-summary__item--discount .totals-summary__value {
+    color: #000;
+  }
 </style>
 
 
@@ -648,23 +684,36 @@ window.SwymCallbacks.push(renderWishlistCounter);
         <!-- Subtotals -->
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-          <div>
-            {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                {%- for discount in cart.cart_level_discount_applications -%}
-                  <li class="discounts__discount discounts__discount--end">
-                    {{- 'icon-discount.svg' | inline_asset_content -}}
-                    {{ discount.title | escape }}
-                    (-{{ discount.total_allocated_amount | money }})
-                  </li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </div>
+          {%- liquid
+            assign total_compare_price = 0
+            for item in cart.items
+              if item.variant.compare_at_price > item.variant.price
+                assign line_compare = item.variant.compare_at_price | times: item.quantity
+              else
+                assign line_compare = item.original_line_price
+              endif
+              assign total_compare_price = total_compare_price | plus: line_compare
+            endfor
+            assign total_saving = total_compare_price | minus: cart.total_price
+          -%}
 
-          <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-            <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+          <div class="totals-summary">
+            <div class="totals-summary__item">
+              <span class="totals-summary__label">Subtotal</span>
+              <span class="totals-summary__value">{{ total_compare_price | money }}</span>
+            </div>
+            
+            {%- if total_saving > 0 -%}
+              <div class="totals-summary__item totals-summary__item--discount">
+                <span class="totals-summary__label">Discount</span>
+                <span class="totals-summary__value">-{{ total_saving | money }}</span>
+              </div>
+            {%- endif -%}
+
+            <div class="totals totals-summary__item totals-summary__item--total" role="status">
+              <h2 class="totals__total totals-summary__label">{{ 'sections.cart.estimated_total' | t }}</h2>
+              <p class="totals__total-value totals-summary__value">{{ cart.total_price | money_with_currency }}</p>
+            </div>
           </div>
 
           <small class="tax-note caption-large rte">
