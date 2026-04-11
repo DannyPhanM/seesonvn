@@ -320,6 +320,14 @@
             "link": ""
           }
         },
+        "slide_FqGg4t": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_mobile_2.png",
+            "link_image": false,
+            "link": ""
+          }
+        },
         "slide_JLNz8G": {
           "type": "slide",
           "settings": {
@@ -330,6 +338,7 @@
       },
       "block_order": [
         "slide_hfKqHB",
+        "slide_FqGg4t",
         "slide_JLNz8G"
       ],
       "name": "Image Carousel",
