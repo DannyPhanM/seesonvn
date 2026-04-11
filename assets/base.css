@@ -3792,7 +3792,7 @@ a {
 }
 
 .multicolumn .multicolumn-list.grid--2-col-tablet-down .grid__item {
-  width: calc(50% - 9px);
+  width: calc(50% - 16px);
 }
 
 .multicolumn .multicolumn-list.grid--1-col-tablet-down .grid__item {
@@ -3801,8 +3801,8 @@ a {
 
 @media (min-width: 990px) {
   .multicolumn .multicolumn-list.grid--2-col-desktop .grid__item {
-    width: calc(50% - 9px);
-    max-width: calc(50% - 9px);
+    width: calc(50% - 16px);
+    max-width: calc(50% - 16px);
   }
 }
 
