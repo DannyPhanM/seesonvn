@@ -4905,7 +4905,7 @@ details[open] > .open-facets-overlay {
 #swym-wishlist-render-container .swym-wishlist-grid li {
   width: 100%;
   margin: 0;
-  padding: 30px 0;
+  padding: 15px 0;
 }
 #swym-wishlist-render-container .swym-wishlist-grid li:not(:last-child) {
   border-bottom: 1px solid #999;
@@ -4913,14 +4913,16 @@ details[open] > .open-facets-overlay {
 #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-item {
   display: grid;
   grid-template-columns: 175px 20px 20px 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
         "img title title title"
         "img variant variant variant"
         "img remove button price";
-  gap:  0;
+  min-height: 0 !important;
+  gap: 0;
   padding: 0; 
   align-items: flex-start;
+  align-content: start;
   position: relative;
   background: transparent;
 }
