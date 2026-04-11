@@ -534,14 +534,14 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 1.2 !important;
-    letter-spacing: 0.6px !important;
+    letter-spacing: 0.09px !important;
     text-transform: capitalize !important;
     margin-top: 0;
 }
 .cart-drawer__footer .totals__total-value .money {
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.09px;
+  letter-spacing: 0.7px;
   line-height: 1.2;
   color: #000;
 }
