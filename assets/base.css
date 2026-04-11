@@ -5161,7 +5161,7 @@ details[open] > .open-facets-overlay {
   grid-area: variant;
   color: #000 !important;
   font-size: 10px !important;
-  transform: translateY(-14px);
+  transform: translateY(-9px);
 }
 
 .template--product .badge.price__badge-sold-out {
