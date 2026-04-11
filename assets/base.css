@@ -5250,3 +5250,7 @@ details[open] > .open-facets-overlay {
 .title.title--primary a {
   color: #999;
 }
+/*Hidden wish list noti*/
+#swym-storefront-layout-notification {
+  display: none;
+}
