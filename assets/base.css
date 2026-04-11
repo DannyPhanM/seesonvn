@@ -4918,7 +4918,7 @@ details[open] > .open-facets-overlay {
         "img title title title"
         "img variant variant variant"
         "img remove button price";
-  gap: 6px 0;
+  gap:  0;
   padding: 0;
   align-items: flex-start;
   position: relative;
@@ -5161,7 +5161,7 @@ details[open] > .open-facets-overlay {
   grid-area: variant;
   color: #000 !important;
   font-size: 10px !important;
-  transform: translateY(-9px);
+  transform: translateY(-7px);
 }
 
 .template--product .badge.price__badge-sold-out {
