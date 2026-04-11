@@ -261,6 +261,7 @@ cart-drawer-items {
 .cart-drawer .cart-item__media {
   grid-row: 1 / 4;
   width: 15.5rem;
+  padding-top: 0;
 }
 
 .cart-drawer .cart-item__image-container {
@@ -561,6 +562,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   overflow-y: visible;
   height: max-content;
   padding-bottom: 16px;
+  padding-top: 0
 }
 .drawer__cart-items-wrapper .cart-item__details .cart-item__details-wrapper,
 .drawer__cart-items-wrapper .cart-item__details .cart-item__quantity {
