@@ -2995,18 +2995,12 @@ details[open]>.header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  text-decoration: none;
-}
-
-.header__active-menu-item:hover {
   transition: text-decoration-thickness var(--duration-short) ease;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
-}
+
 
 .header__submenu {
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
@@ -4538,14 +4532,11 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 .collection-linked a.active {
   font-weight: 600;
-  text-decoration: none;
   color: #000;
+  text-decoration: underline;
+  text-underline-offset: .3rem;
 }
 
-.collection-linked a.active:hover {
-  text-decoration: none;
-    text-underline-offset: .3rem;
-}
 .collection-linked__left,
 .collection-linked__right {
   gap: 10px;
