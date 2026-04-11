@@ -412,48 +412,42 @@
 {%- if show_mobile_slider or show_desktop_slider -%}
   {%- if section.settings.show_dots -%}
     <script>
-      if (!customElements.get('slider-component-dots')) {
+      (function() {
+        if (customElements.get('slider-component-dots')) return;
+
         customElements.define('slider-component-dots', class SliderComponentDots extends HTMLElement {
           constructor() {
             super();
           }
 
           connectedCallback() {
-            this.slider = this.closest('slider-component').querySelector('ul.slider');
-            this.dots = this.querySelectorAll('.slider-dot');
-            this.slider.addEventListener('scroll', this.updateDots.bind(this));
-            
-            this.dots.forEach(dot => {
-              dot.addEventListener('click', (e) => {
-                const index = parseInt(dot.dataset.index);
-                const sliderItems = Array.from(this.slider.querySelectorAll('.slider__slide'));
-                const item = sliderItems[index];
-                if (item) {
-                  this.slider.scrollTo({
-                    left: item.offsetLeft,
-                    behavior: 'smooth'
-                  });
-                }
+            // Đợi một chút để slider cha kịp khởi tạo
+            setTimeout(() => {
+              this.sliderComponent = this.closest('slider-component');
+              if (!this.sliderComponent) return;
+
+              this.dots = this.querySelectorAll('.slider-dot');
+              
+              this.sliderComponent.addEventListener('slideChanged', (event) => {
+                this.updateDots(event.detail.currentPage - 1);
               });
-            });
-            this.updateDots();
+
+              this.dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                  const index = parseInt(dot.dataset.index);
+                  if (this.sliderComponent.sliderItemOffset) {
+                    this.sliderComponent.setSlidePosition(index * this.sliderComponent.sliderItemOffset);
+                  }
+                });
+              });
+              
+              // Cập nhật ngay lập tức dựa trên page hiện tại của slider
+              this.updateDots((this.sliderComponent.currentPage || 1) - 1);
+            }, 50);
           }
 
-          updateDots() {
-            const scrollLeft = this.slider.scrollLeft;
-            const sliderItems = Array.from(this.slider.querySelectorAll('.slider__slide'));
-            
-            let activeIndex = 0;
-            let minDiff = Infinity;
-            
-            sliderItems.forEach((item, index) => {
-              const diff = Math.abs(item.offsetLeft - scrollLeft);
-              if (diff < minDiff) {
-                minDiff = diff;
-                activeIndex = index;
-              }
-            });
-            
+          updateDots(activeIndex) {
+            if (!this.dots) return;
             this.dots.forEach((dot, index) => {
               const isActive = index === activeIndex;
               dot.setAttribute('aria-current', isActive ? 'true' : 'false');
@@ -465,7 +459,7 @@
             });
           }
         });
-      }
+      })();
     </script>
   {%- endif -%}
 {%- endif -%}
