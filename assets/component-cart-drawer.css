@@ -253,6 +253,11 @@ cart-drawer-items {
   border-bottom: none;
 }
 
+.cart-drawer s.cart-item__old-price span{
+  text-decoration: line-through;
+  font-size: 10px;
+}
+
 .cart-drawer .cart-item__media {
   grid-row: 1 / 4;
   width: 15.5rem;
@@ -560,6 +565,9 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 .drawer__cart-items-wrapper .cart-item__details .cart-item__quantity {
   width: 50%;
   margin-top: -4px;
+}
+.drawer__cart-items-wrapper .cart-item__details .cart-item__quantity {
+  margin-top: 0;
 }
 .drawer__cart-items-wrapper .cart-item__details .cart-item__details-wrapper dl {
   margin: 0;

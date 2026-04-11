@@ -568,7 +568,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                             </div>
                           </div>
                           
-                          {%- render 'loading-spinner' -%}
+                          {% comment %} {%- render 'loading-spinner' -%} {% endcomment %}
                           <div class="cart-item__price-wrapper">
                             {%- if item.original_line_price != item.final_line_price -%}
                               <div class="cart-item__discounted-prices">
@@ -586,6 +586,11 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                 </span>
                               </div>
                             {%- else -%}
+                              {%- if item.variant.compare_at_price > item.original_price -%}
+                                <s class="cart-item__old-price price price--end">
+                                  {{ item.variant.compare_at_price | times: item.quantity | money }}
+                                </s>
+                              {%- endif -%}
                               <span class="price price--end">
                                 {{ item.original_line_price | money }}
                               </span>
