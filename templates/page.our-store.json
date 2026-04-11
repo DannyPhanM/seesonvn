@@ -50,95 +50,9 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_GGVYAc": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_BmyXE3": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h2",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wmHzw9": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h2",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ABK7de": {
-          "type": "column",
-          "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
-            "image": "shopify://shop_images/image_14.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_5.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h2",
-            "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_BmyXE3",
-        "column_wmHzw9",
-        "column_ABK7de"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "remove_space_x": true,
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "image_ratio_mobile": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "enable_desktop_slider": true,
-        "show_dots": true,
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 50,
-        "padding_bottom_mobile": 60
-      }
-    },
     "image_carousel_pLDqbg": {
       "type": "image-carousel",
       "blocks": {
-        "slide_XwWGkc": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/banner_desktop.png",
-            "link_image": false,
-            "link": ""
-          }
-        },
         "slide_MJjG87": {
           "type": "slide",
           "settings": {
@@ -147,18 +61,27 @@
             "link": ""
           }
         },
-        "slide_cQjB6K": {
+        "slide_tVkyNf": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/banner_mobile_2.png",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_aLccAg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_mobile_2.png",
             "link_image": false,
             "link": ""
           }
         }
       },
       "block_order": [
-        "slide_XwWGkc",
         "slide_MJjG87",
-        "slide_cQjB6K"
+        "slide_tVkyNf",
+        "slide_aLccAg"
       ],
       "name": "Image Carousel",
       "settings": {
@@ -169,7 +92,7 @@
         "subheading": "",
         "heading": "",
         "heading_size": "h1",
-        "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+        "text": "<p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
         "text_alignment": "left-top",
         "button_1_label": "",
         "button_1_link": "",
@@ -215,78 +138,86 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_fqVckq": {
-      "type": "multicolumn",
+    "image_carousel_YK39QA": {
+      "type": "image-carousel",
       "blocks": {
-        "column_TqtLyJ": {
-          "type": "column",
+        "slide_FBxVQj": {
+          "type": "slide",
           "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h3",
-            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
+            "mobile_image": "shopify://shop_images/banner_mobile_6.png",
+            "link_image": false,
             "link": ""
           }
         },
-        "column_7DExBg": {
-          "type": "column",
+        "slide_tk94kE": {
+          "type": "slide",
           "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h3",
-            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
+            "mobile_image": "shopify://shop_images/banner_mobile_6.png",
+            "link_image": false,
             "link": ""
           }
         },
-        "column_7JVWra": {
-          "type": "column",
+        "slide_tDxeTg": {
+          "type": "slide",
           "settings": {
-            "content_overlay": true,
-            "content_alignment": "left-top",
             "image": "shopify://shop_images/image_14_9a49b93e-1fd2-4b8a-a785-4497915a15a4.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_6.png",
-            "title": "",
-            "image_link": false,
-            "heading_tag": "h3",
-            "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
-            "link_label": "",
+            "mobile_image": "shopify://shop_images/banner_mobile_6.png",
+            "link_image": false,
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_TqtLyJ",
-        "column_7DExBg",
-        "column_7JVWra"
+        "slide_FBxVQj",
+        "slide_tk94kE",
+        "slide_tDxeTg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Image Carousel",
       "settings": {
-        "remove_space_x": true,
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "image_ratio_mobile": "4/5",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "enable_desktop_slider": true,
+        "slide_height": "adapt_image",
+        "auto_rotate": false,
         "show_dots": true,
-        "background_style": "none",
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_mKwhCQ": {
+      "type": "rich-text",
+      "name": "Spacing",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "rich_text_CAPDtY": {
+      "type": "rich-text",
+      "name": "Spacing",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
@@ -413,10 +344,11 @@
   "order": [
     "main",
     "rich_text_BXkFfc",
-    "multicolumn_GGVYAc",
     "image_carousel_pLDqbg",
+    "rich_text_CAPDtY",
     "rich_text_amaBJ9",
-    "multicolumn_fqVckq",
+    "image_carousel_YK39QA",
+    "rich_text_mKwhCQ",
     "rich_text_ah3XAQ",
     "collabsible_custom_FHwd3m",
     "collabsible_custom_ntF3mT",
