@@ -627,9 +627,10 @@ footer * {
   }
   .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom .footer-block__details-content {
       flex-direction: column;
-      gap: 10px;
+      gap: 2px;
       text-align: left;
       justify-content: flex-start;
+      margin-bottom: 45px;
   }
   .footer__content-bottom-wrapper .footer__copyright .content-right .menu-list-custom .footer-block__details-content li {
       width: 100%;
@@ -638,5 +639,12 @@ footer * {
   }
   .footer__content-bottom-wrapper .footer__copyright .content-right .footer__localization {
       width: auto;
+  }
+  .footer__content-bottom-wrapper .footer__localization .disclosure__button, .footer__content-bottom-wrapper .localization-form .disclosure__button {
+    padding-right: 10px;
+  }
+
+  .localization-form__select .icon-caret {
+    width: 5px;
   }
 }

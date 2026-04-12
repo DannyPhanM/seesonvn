@@ -264,7 +264,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 @media (max-width: 749px) {
     .template--index .banner--mobile-bottom .slideshow__text-wrapper {
         position: absolute;
-        bottom: 40px;
+        bottom: 17px;
         width: 100%;
         padding: 16px;
     }
@@ -276,10 +276,12 @@ slideshow-component:not(.page-width) .slider-buttons {
       max-width: 220px;
       text-align: left;
       line-height: 26px;
+      letter-spacing: 6px;
     }
     .slideshow__text.banner__box .button-box {
-      gap: 4px;
+      gap: 7px;
       margin-bottom: 4px;
+      letter-spacing: 0.5px;
     }
     .template--index .slideshow__text.banner__box .button-box .banner__buttons {
       padding: 2px;

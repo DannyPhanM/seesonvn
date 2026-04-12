@@ -128,9 +128,35 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+@media(max-width: 989px) {
+  .collection__title .title:not(:only-child) {
+    font-size: 18px;
+  }
 
+  .collection__title.title-wrapper p {
+    font-size: 10px;
+  }
+}
 @media(max-width: 749px) {
   .load-more-button {
     font-size: 10px;
+  }
+
+  .collection__title.title-wrapper .collection__description {
+    max-width: 259px;
+  }
+
+  .collection__title.title-wrapper p {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .collection__title.title-wrapper {
+    margin-bottom: 33px;
+  }
+
+  .grid {
+    --grid-mobile-horizontal-spacing: 16px;
+    --grid-mobile-vertical-spacing: 10px;
   }
 }
