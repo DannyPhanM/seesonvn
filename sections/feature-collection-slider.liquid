@@ -3,17 +3,13 @@
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top_mobile }}px;
+      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
     }
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
-        padding-top: 50px;
-        padding-bottom: 66px;
-        /* Uyen note
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
-        */
       }
     }
 
@@ -229,14 +225,15 @@
 
     /* MOBILE LAYOUT (Design Match) */
     @media screen and (max-width: 749px) {
+
       .feat-coll-flex {
         display: grid !important;
-        grid-template-columns: minmax(0, 1fr) 60px; /* Image | Thumbs */
+        grid-template-columns: minmax(0, 1fr) 27px; /* Image | Thumbs */
         grid-template-areas:
           "main thumbs"
           "info info";
         gap: 26px;
-        row-gap: 14px;
+        row-gap: 10px;
         padding: 0 15px;
         width: 100%;
         box-sizing: border-box;
@@ -244,6 +241,9 @@
       .master-lifestyle-img {
         aspect-ratio: 275 / 380;
         object-fit: cover;
+      }
+      .thumb-master-swiper .swiper-slide img {
+        aspect-ratio: 27 / 40;
       }
       .feat-coll-header {
         padding: 0 15px;
@@ -264,29 +264,35 @@
         grid-area: main;
         width: 100% !important;
         height: auto !important;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 275 / 380;
         background: transparent;
       }
 
       .feat-coll-thumbs-wrap {
         grid-area: thumbs;
         width: 100% !important;
-        height: auto !important;
-        align-self: end; /* Push to bottom */
+        height: 100% !important; /* Take full height of main image */
+        max-height: 380px;  
         padding: 0;
         margin: 0;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end; /* Push to bottom half */
       }
 
       .thumb-master-swiper {
-        height: 100% !important;
-        max-height: 400px; /* Adjust as needed */
+        max-height: 50% !important; /* Limit to 50% but shrink if less items */
+        height: auto !important;
+        width: 100%;
+        margin-bottom: 0;
       }
 
       .thumb-master-swiper .swiper-slide {
         padding: 0 !important;
-        margin-bottom: 10px;
+        height: 40px; /* Fix height to 40px as requested */
+      }
+      .thumb-master-swiper .swiper-slide:last-child {
+        margin-bottom: 0 !important;
       }
 
       .feat-coll-info {
@@ -607,7 +613,7 @@
             spaceBetween: 15,
             watchSlidesProgress: true,
             breakpoints: {
-                320: { direction: 'vertical', slidesPerView: 5, spaceBetween: 10 },
+                320: { direction: 'vertical', slidesPerView: 'auto', spaceBetween: 10 },
                 750: { direction: 'horizontal', slidesPerView: 4, spaceBetween: 15 },
                 990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
             },
@@ -721,6 +727,27 @@
       "unit": "px",
       "label": "Padding Bottom",
       "default": 60
+    },
+    { "type": "header", "content": "Mobile padding" },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 40
     }
   ],
   "presets": [{ "name": "Feature Coll Slider" }]

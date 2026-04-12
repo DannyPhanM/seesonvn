@@ -341,7 +341,7 @@ button.swym-button:disabled:hover {
     font-style: normal;
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: -1.5px;
+    letter-spacing: 0.9px;
   }
 }
 

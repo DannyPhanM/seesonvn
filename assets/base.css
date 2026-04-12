@@ -2247,7 +2247,7 @@ input[type='checkbox'] {
 }
 @media(max-width: 749px) {
   .cart-count-bubble {
-    transform: translate(-45%, -25%);
+    transform: translate(-45%, -20%);
   }
 }
 /* utility-bar */
@@ -5327,5 +5327,16 @@ details[open] > .open-facets-overlay {
   .copyright__content svg {
     width: 6px;
     margin-right: -3px;
+  }
+
+  .header-localization .disclosure .localization-form__select {
+    display: none;
+  }
+  .header--has-social .menu-drawer__utility-links {
+    padding: 16px !important;
+  }
+
+  .drawer.active .drawer__inner {
+    max-width: 360px;
   }
 }
