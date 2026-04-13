@@ -3903,17 +3903,8 @@ a {
   }
 }
 
-.accordion summary svg+svg {
-  display: none;
-}
 
-.template--page .accordion summary[aria-expanded="true"] svg {
-  display: none;
-}
 
-.template--page .accordion summary[aria-expanded="true"] svg+svg {
-  display: block;
-}
 .template--page .accordion .accordion__content ul {
   list-style: none;
 }
