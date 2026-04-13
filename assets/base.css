@@ -5330,4 +5330,18 @@ details[open] > .open-facets-overlay {
   .drawer.active .drawer__inner {
     max-width: 360px;
   }
+
+  .swym-ui-component .swym-wishlist-grid {
+    padding: 0 !important;
+  }
+  .card-wrapper .card__information .price__container .price__sale .price-item--regular .money {
+    font-size: 8px;
+  }
+  .card__badge.sale .badge {
+    font-size: 10px;
+  }
+
+  .card-wrapper .card__information .price__container .price__sale .price-item {
+    margin-top: -3px;
+  }
 }
