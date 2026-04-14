@@ -126,7 +126,9 @@
         "indicator_style": "bottom",
         "background_color": "#eeeeee",
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 60,
+        "padding_top_mobile": 76,
+        "padding_bottom_mobile": 40
       }
     },
     "featured_collection_6Q8xjz": {
@@ -155,7 +157,9 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28
       }
     },
     "rich_text_i7AqVh": {
