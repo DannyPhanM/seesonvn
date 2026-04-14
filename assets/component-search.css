@@ -358,7 +358,7 @@ button.swym-button:disabled:hover {
   .search-modal.modal__content .promo_collection {
     width: 100%;
     order: 3;
-    margin-top: 40px;
+    margin-top: 54px;
   }
 
   .search-modal.modal__content .promo_collection .sub-title {
@@ -372,11 +372,11 @@ button.swym-button:disabled:hover {
 
   .search-modal.modal__content .promo_collection .title h2 {
     margin: 0;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.9px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
     width: 60%;
   }
 
@@ -412,8 +412,8 @@ button.swym-button:disabled:hover {
   .search-modal.modal__content .search-modal__content .search__input,
   .search-modal.modal__content .search-modal__content .search__input::placeholder,
   .search-modal.modal__content .search-modal__content .field__label {
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
   }
 
   .search-modal.modal__content .search-modal__content .search-modal__close-button {

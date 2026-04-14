@@ -625,13 +625,19 @@ span.active-facets__button-inner:after {
 
 @media screen and (max-width: 989px) {
   .active-facets {
-    margin: 0 -1.2rem -1.2rem;
+    margin:  0;
   }
 
   .active-facets__button,
   .active-facets__button-remove {
     margin: 0;
-    padding: 1.2rem;
+    padding: 0;
+  }
+
+  .active-facets {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
   }
 
   span.active-facets__button-inner {
@@ -1296,7 +1302,7 @@ facet-remove.active-facets__button-wrapper a {
     height: 12px;
   }
   .mobile-facets__header {
-    padding: 20px 16px 30px !important;
+    padding: 20px 16px 50px !important;
   }
   .mobile-facets .mobile-facets__main {
     padding: 0 0 90px;
@@ -1338,6 +1344,7 @@ facet-remove.active-facets__button-wrapper a {
     font-size: 11px;
     letter-spacing: 5%;
     line-height: 1.2;
+    color: #999;
   }
   .mobile-facets .mobile-facets__summary span {
     font-size: 14px;

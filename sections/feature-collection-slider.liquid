@@ -319,7 +319,7 @@
           height: auto !important;
           width: 100%;
           overflow: hidden;
-          transition: top 0.4s ease;
+          transition: top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .thumb-master-swiper .swiper-slide {
@@ -706,8 +706,7 @@
                 touchStart: function() {
                     const swiperEl = this.el;
                     if (window.innerWidth < 750) {
-                        swiperEl.style.top = '0';
-                        this.update(); // Recalculate Swiper after resize
+                        swiperEl.style.setProperty('max-height', '100%', 'important');
                     }
                 },
                 init: function() { 

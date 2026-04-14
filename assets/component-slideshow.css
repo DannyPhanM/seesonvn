@@ -288,6 +288,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
     .template--index slideshow-component .slideshow__controls {
       bottom: 13px;
+      display: block !important;
     }
 
     .template--index slideshow-component .slider-counter__link span {

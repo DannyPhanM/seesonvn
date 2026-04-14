@@ -4390,7 +4390,8 @@ letter-spacing: 0.55px;
 
 @media(max-width: 749px) {
   .card__badge .badge {
-    padding: 6px;
+    padding: 3px 6px;
+    font-size: 10px;
   }
   .menu-drawer .list-menu__item {
     padding-left: 16px;
@@ -4528,7 +4529,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   font-weight: 600;
   color: #000;
   text-decoration: underline;
-  text-underline-offset: .3rem;
+  text-underline-offset: 2px;
 }
 
 .collection-linked__left,
@@ -5384,5 +5385,21 @@ details[open] > .open-facets-overlay {
 
   .rich-text__blocks {
     max-width: 259px;
+  }
+
+  .collabsible-custom__block-content h4 {
+    font-size: 12px;
+  }
+
+  .collabsible-custom__block {
+    padding-top: 20px !important;
+  }
+
+  .mobile-facets .mobile-facets__clear-all {
+    background: transparent !important;
+  }
+
+  .mobile-facets .mobile-facets__list .mobile-facets__item {
+    font-size: 12px;
   }
 }

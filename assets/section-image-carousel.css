@@ -189,6 +189,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .image-carousel-section .banner--adapt_image::before {
+    display: block !important;
+  }
+
   .image-carousel-section .banner--small:not(.banner--adapt) {
     min-height: 28rem;
   }
