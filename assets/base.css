@@ -5252,7 +5252,36 @@ details[open] > .open-facets-overlay {
   display: none;
 }
 
+  .rich-text__blocks {
+    max-width: 275px;
+  }
+  .rich-text__blocks.left {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .rich-text__blocks.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rich-text__blocks.center * {
+    text-align: center;
+  }
+  .rich-text__blocks.right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+@media (min-width: 750px) {
+    .rich-text__blocks {
+        max-width: 542px;
+    }
+}
 
+@media(max-width: 749px) {
+  .rich-text__wrapper.page-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /*Add custom mobile*/
 
@@ -5351,5 +5380,9 @@ details[open] > .open-facets-overlay {
   }
   .card__media-nav, .card__media-dots {
     display: none !important;
+  }
+
+  .rich-text__blocks {
+    max-width: 259px;
   }
 }
