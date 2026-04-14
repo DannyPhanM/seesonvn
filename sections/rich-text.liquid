@@ -1,13 +1,13 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top_mobile  }}px;
-    padding-bottom: {{ section.settings.padding_bottom_mobile  }}px;
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top_mobile  }}px !important;
+    padding-bottom: {{ section.settings.padding_bottom_mobile  }}px !important;
   }
 
   @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
+    #shopify-section-{{ section.id }} {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }

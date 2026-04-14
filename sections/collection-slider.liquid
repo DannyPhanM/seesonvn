@@ -215,6 +215,10 @@
     color: #000;
     background: transparent;
   }
+
+  .coll-mobile-action-row {
+    display: none;
+  }
   
   .coll-flip-btn svg { width: 26px; height: 26px; transition: transform 0.6s ease; }
 
@@ -224,13 +228,58 @@
       display: grid !important;
       grid-template-columns: minmax(0, 1fr) 27px; /* Matches feature-collection-slider */
       grid-template-areas: 
+        "info info"
         "main thumbs"
-        "info info";
+        "action action";
       gap: 26px;
-      row-gap: 10px;
+      row-gap: 12px;
       padding: 0 15px;
       width: 100%;
       box-sizing: border-box;
+    }
+
+    .coll-mobile-action-row {
+      grid-area: action;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 0;
+      width: 100%;
+    }
+
+    .coll-mobile-action-row .cta-link {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #999999;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+    }
+
+    .coll-flip-btn-mobile {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coll-flip-btn-mobile svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .coll-flip-btn {
+      display: none !important;
+    }
+
+    .coll-list-info .cta-link {
+      display: none;
     }
     
     .coll-list-left {
@@ -286,18 +335,23 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-top: 10px;
+      padding-top: 0;
+      padding-bottom: 5px;
       width: 100%;
       text-align: left !important;
     }
 
     .coll-list-info h2 {
-      font-size: 16px;
-      margin-bottom: 3px;
+      font-size: 18px;
+      letter-spacing: 0.09px;
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
     .coll-list-info .description {
-      font-size: 14px;
-      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: 0.09px;
+      margin-bottom: 49px;
     }
 
     /* Mobile Active Item Style: Overlay border to ensure visibility */
@@ -388,6 +442,16 @@
              </svg>
           </button>
         </div>
+
+        <!-- MOBILE ACTION ROW -->
+        <div class="coll-mobile-action-row" id="ClMobileAction-{{ section.id | replace: '-', '_' }}">
+          <a href="{{ first_collection.url }}" class="cta-link">DISCOVER THE STORY</a>
+          <button class="coll-flip-btn-mobile" aria-label="Flip Image" id="FlipBtnMobile-{{ section.id | replace: '-', '_' }}">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 8.75L19.4 10.0962L17.65 11.8269C19.7833 12.0994 21.5417 12.6603 22.925 13.5096C24.3083 14.359 25 15.3365 25 16.4423C25 17.7724 24.0375 18.9062 22.1125 19.8437C20.1875 20.7812 17.8167 21.25 15 21.25C12.1833 21.25 9.8125 20.7812 7.8875 19.8437C5.9625 18.9062 5 17.7724 5 16.4423C5 15.4487 5.55417 14.5593 6.6625 13.774C7.77083 12.9888 9.21667 12.4038 11 12.0192L11 13.9904C9.71667 14.3109 8.72917 14.7075 8.0375 15.1803C7.34583 15.653 7 16.0737 7 16.4423C7 16.9551 7.7125 17.5641 9.1375 18.2692C10.5625 18.9744 12.5167 19.3269 15 19.3269C17.4833 19.3269 19.4375 18.9744 20.8625 18.2692C22.2875 17.5641 23 16.9551 23 16.4423C23 16.0577 22.575 15.597 21.725 15.0601C20.875 14.5232 19.6667 14.1186 18.1 13.8462L19.4 15.0962L18 16.4423L14 12.5962L18 8.75Z" fill="black"/>
+            </svg>
+          </button>
+        </div>
       </div>
     {%- else -%}
       <div class="center">Please select collections in the settings.</div>
@@ -403,8 +467,10 @@
     const sectionId = '{{ section.id | replace: "-", "_" }}';
     const mEl = document.getElementById('ClMaster-' + sectionId);
     const iEl = document.getElementById('ClInfo-' + sectionId);
+    const mAction = document.getElementById('ClMobileAction-' + sectionId);
     const fCard = document.getElementById('FlipCard-' + sectionId);
     const fBtn = document.getElementById('FlipBtn-' + sectionId);
+    const fBtnMobile = document.getElementById('FlipBtnMobile-' + sectionId);
     
     if(!mEl) return;
 
@@ -421,11 +487,14 @@
       if(iEl) {
         const h2 = iEl.querySelector('h2');
         const desc = iEl.querySelector('.description');
-        const cta = iEl.querySelector('.cta-link');
         if(h2) h2.textContent = slide.getAttribute('data-title');
         if(desc) desc.textContent = slide.getAttribute('data-description');
-        if(cta) cta.href = slide.getAttribute('data-url');
       }
+
+      const ctas = document.querySelectorAll('#ClInfo-' + sectionId + ' .cta-link, #ClMobileAction-' + sectionId + ' .cta-link');
+      ctas.forEach(cta => {
+        cta.href = slide.getAttribute('data-url');
+      });
 
       if(fCard) {
         const imgP = fCard.querySelector('.coll-master-img.primary');
@@ -443,19 +512,21 @@
           imgS.srcset = urlS; // Clear/Update srcset
           if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
           if(fBtn) fBtn.style.display = 'flex'; 
+          if(fBtnMobile) fBtnMobile.style.display = 'flex'; 
         }
       }
     }
 
-    if(fBtn && fCard) {
-      fBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const isFlipped = fCard.classList.toggle('is-flipped');
-        mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
-          card.classList.toggle('is-flipped', isFlipped);
-        });
+    const handleFlip = (e) => {
+      e.preventDefault();
+      const isFlipped = fCard.classList.toggle('is-flipped');
+      mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
+        card.classList.toggle('is-flipped', isFlipped);
       });
-    }
+    };
+
+    if(fBtn && fCard) fBtn.addEventListener('click', handleFlip);
+    if(fBtnMobile && fCard) fBtnMobile.addEventListener('click', handleFlip);
 
     if (typeof Swiper === 'undefined') {
         const script = document.createElement('script');
