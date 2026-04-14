@@ -237,17 +237,7 @@
             data-variant-id="{{ card_product.selected_or_first_available_variant.id | default: card_product.variants[0].id }}"
             data-product-url="{{ shop.url | append: card_product.url }}"
           >
-            <svg
-              id="swym-atw-pdp-button-icon"
-              class="atw-button-icon"
-              width="19"
-              height="24"
-              viewBox="0 0 19 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" stroke="#000" stroke-width="1.75px" fill="none" stroke-linejoin="round"></path>
-            </svg>
+            <svg id="swym-atw-pdp-button-icon" class="atw-button-icon" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" fill="transparent" stroke-width="1.5" d="M7.3 3c-.65 0-1.2.22-1.64.66S5 4.65 5 5.3V21l7-3.17L19 21V5.3c0-.65-.22-1.2-.66-1.64S17.35 3 16.7 3z"/></svg>
           </button>
           </h3>
           {% comment %}

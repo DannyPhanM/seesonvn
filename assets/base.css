@@ -5061,6 +5061,7 @@ details[open] > .open-facets-overlay {
   .card__information .card__heading .swym-button svg {
     width: 16px;
     height: 16px;
+    top: 2px;
   }
 }
 
@@ -5347,5 +5348,8 @@ details[open] > .open-facets-overlay {
 
   .template--collection .banner__content:before {
     padding-bottom: 63.67% !important;
+  }
+  .card__media-nav, .card__media-dots {
+    display: none !important;
   }
 }
