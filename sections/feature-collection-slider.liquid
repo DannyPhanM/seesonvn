@@ -304,19 +304,22 @@
         .feat-coll-thumbs-wrap {
           grid-area: thumbs;
           width: 100% !important;
-          height: 100% !important; /* Take full height of main image */
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end; /* Push to bottom half */
+          padding: 0 !important;
+          margin: 0 !important;
+          position: relative;
+          overflow: hidden;
         }
 
         .thumb-master-swiper {
-          max-height: 50% !important; /* Limit to 50% but shrink if less items */
+          position: absolute !important;
+          top: 50%; /* Initial: bottom half only */
+          bottom: 0;
+          left: 0;
+          right: 0;
           height: auto !important;
           width: 100%;
-          margin-bottom: 0;
+          overflow: hidden;
+          transition: top 0.4s ease;
         }
 
         .thumb-master-swiper .swiper-slide {
@@ -700,6 +703,13 @@
                 990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
             },
             on: {
+                touchStart: function() {
+                    const swiperEl = this.el;
+                    if (window.innerWidth < 750) {
+                        swiperEl.style.top = '0';
+                        this.update(); // Recalculate Swiper after resize
+                    }
+                },
                 init: function() { 
                     const slides = mEl.querySelectorAll('.swiper-slide');
                     if (slides.length > 0) slides[0].classList.add('show-item');
