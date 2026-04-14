@@ -5344,4 +5344,8 @@ details[open] > .open-facets-overlay {
   .card-wrapper .card__information .price__container .price__sale .price-item {
     margin-top: -3px;
   }
+
+  .template--collection .banner__content:before {
+    padding-bottom: 63.67% !important;
+  }
 }

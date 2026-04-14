@@ -1272,7 +1272,7 @@ facet-remove.active-facets__button-wrapper a {
   background: #aba3a3;
 }
 
- .mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+.mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
   border-bottom: none;
   padding-bottom: 40px;
 }
@@ -1289,7 +1289,11 @@ facet-remove.active-facets__button-wrapper a {
     left: 0;
     top: auto;
     width: 100%;
-    height: calc(100vh - 212px);
+    height: calc(100vh - 143px);
+  }
+  .mobile-facets .mobile-facets__close .svg-wrapper {
+    width: 12px;
+    height: 12px;
   }
   .mobile-facets__header {
     padding: 20px 16px 30px !important;
@@ -1297,8 +1301,55 @@ facet-remove.active-facets__button-wrapper a {
   .mobile-facets .mobile-facets__main {
     padding: 0 0 90px;
   }
+  .mobile-facets .mobile-facets__main details:first-child summary {
+    padding-top: 0;
+  }
+  .mobile-facets .mobile-facets__summary {
+    padding-bottom: 16px;
+  }
+  .mobile-facets .mobile-facets__main details summary {
+    padding-top: 16px;
+  }
   .mobile-facets .mobile-facets__summary {
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .mobile-facets__open-label {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 5%;
+  }
+  .mobile-facets__open .svg-wrapper {
+    width: 12px;
+    height: 12px;
+  }
+  .product-grid-container .product-grid {
+    margin-top: 7px;
+  }
+  .mobile-facets .mobile-facets__main details:not(:first-child) summary>div:after {
+    top: -16px;
+  }
+  .mobile-facets .mobile-facets__heading {
+    font-size: 16px;
+    letter-spacing: 0.09px;
+    line-height: 1.2;
+  }
+  .mobile-facets .mobile-facets__clear-all p {
+    font-size: 11px;
+    letter-spacing: 5%;
+    line-height: 1.2;
+  }
+  .mobile-facets .mobile-facets__summary span {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 5%;
+  }
+  .mobile-facets__label>svg {
+    margin-top: 0;
+  }
+  .mobile-facets .facets-layout-list, .mobile-facets .mobile-facets__list {
+    row-gap: 14px;
+    column-gap: 24px;
+    padding-bottom: 16px;
   }
 }
