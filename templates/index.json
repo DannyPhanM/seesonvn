@@ -228,8 +228,8 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_106.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
@@ -243,8 +243,8 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_107.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_3.png",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
