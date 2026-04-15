@@ -44,11 +44,19 @@
   .rich-text__blocks {
     max-width: 50rem;
   }
+
+    .template--index .rich-text__blocks {
+    max-width: 542px;
+  }
 }
 
 @media screen and (min-width: 990px) {
   .rich-text__blocks {
     max-width: 78rem;
+  }
+
+  .template--index .rich-text__blocks {
+    max-width: 542px;
   }
 }
 
