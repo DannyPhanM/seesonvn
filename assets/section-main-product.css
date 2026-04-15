@@ -141,7 +141,7 @@ product-info {
 }
 
 .product__left-info .accordion:last-child {
-  border-bottom: none;;
+  /* border-bottom: none;; */
 }
 
 .product__left-info .accordion summary {
