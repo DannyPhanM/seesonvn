@@ -5479,4 +5479,9 @@ details[open] > .open-facets-overlay {
     font-size: 14px !important;
     font-weight: 500 !important;
   }
+
+  .swym-ui-component .swym-empty-wishlist-container .swym-empty-wishlist-text {
+    font-weight: 500 !important;
+    font-size: 10px !important;
+  }
 }
