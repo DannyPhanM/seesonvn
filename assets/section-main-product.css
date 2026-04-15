@@ -203,6 +203,7 @@ product-info {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 }
 
 .product__title-content h1 {
