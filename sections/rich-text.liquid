@@ -1,10 +1,13 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .shopify-section-{{ section.id }} {
+
+@media(max-width: 749px) {
+    .shopify-section-{{ section.id }} {
     padding-top: {{ section.settings.padding_top_mobile  }}px !important;
     padding-bottom: {{ section.settings.padding_bottom_mobile  }}px !important;
   }
+}
 
   @media screen and (min-width: 750px) {
     .shopify-section-{{ section.id }} {
