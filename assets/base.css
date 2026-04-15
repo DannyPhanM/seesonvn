@@ -5467,4 +5467,7 @@ details[open] > .open-facets-overlay {
   .selected-value-right {
     font-size: 10px !important; 
   }
+  .product-form__input {
+    max-width: 100% !important;
+  }
 }
