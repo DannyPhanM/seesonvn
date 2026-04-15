@@ -5495,4 +5495,14 @@ details[open] > .open-facets-overlay {
     font-weight: 600 !important;
     letter-spacing: .7px !important;
   }
+
+  .cart-notification-wrapper .cart-notification.active {
+    border: none !important;
+  }
+}
+
+@media(min-width: 750px) {
+  .feat-coll-info-actions svg {
+    margin-top: -5px;
+  }
 }
