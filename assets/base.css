@@ -4409,6 +4409,9 @@ letter-spacing: 0.55px;
   .menu-drawer .list-menu__item {
     padding-left: 16px;
   }
+  .menu-drawer .list-menu__item:focus {
+    background: transparent !important;
+  }
   .card-wrapper .card__information .card__heading .wish-list svg {
     width: 16px;
     height: 16px;
