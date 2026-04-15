@@ -5448,4 +5448,8 @@ details[open] > .open-facets-overlay {
     margin-top: -5px;
     margin-left: 5px;
   }
+
+  .title.title--primary.title-blank {
+    font-size: 12px !important;
+  }
 }
