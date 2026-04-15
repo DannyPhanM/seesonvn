@@ -127,7 +127,7 @@
         "background_color": "#eeeeee",
         "padding_top": 60,
         "padding_bottom": 60,
-        "padding_top_mobile": 76,
+        "padding_top_mobile": 80,
         "padding_bottom_mobile": 40
       }
     },
