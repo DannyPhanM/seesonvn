@@ -44,7 +44,7 @@
         "content_alignment": "left",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 50,
+        "padding_top": 60,
         "padding_top_mobile": 20,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
@@ -92,7 +92,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 120,
+        "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
     },
@@ -123,7 +123,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 120,
         "padding_top_mobile": 60,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
@@ -171,7 +171,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 120,
+        "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
     },
@@ -188,7 +188,7 @@
         "text_RhkKdx": {
           "type": "text",
           "settings": {
-            "text": "<p>Không gian cửa hàng là sự tiếp nối tự nhiên của triết lý thiết kế SEESON.<br/><br/>Mỗi không gian được kiến tạo với chủ đích — nơi tinh thần Việt hiện diện trong một ngôn ngữ thẩm mỹ đương đại.<br/><br/>Không chỉ là nơi trưng bày, đó là một không gian để cảm nhận — nơi suy nghĩ, chất liệu và quá trình chế tác được thể hiện trong từng điểm chạm.</p>"
+            "text": "<p>Không gian cửa hàng là sự tiếp nối tự nhiên của triết lý thiết kế SEESON. </p><p>Mỗi không gian được kiến tạo với chủ đích — nơi tinh thần Việt hiện diện trong một ngôn ngữ thẩm mỹ đương đại. Không chỉ là nơi trưng bày, đó là một không gian để cảm nhận — nơi suy nghĩ, chất liệu và quá trình chế tác được thể hiện trong từng điểm chạm.</p>"
           }
         }
       },
@@ -202,7 +202,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 120,
         "padding_top_mobile": 60,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
@@ -266,7 +266,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_bottom_mobile": 20
       }
     },
@@ -289,9 +289,9 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_top_mobile": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 120,
         "padding_bottom_mobile": 120
       }
     }
