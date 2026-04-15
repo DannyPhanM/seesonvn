@@ -266,7 +266,7 @@ slideshow-component:not(.page-width) .slider-buttons {
         position: absolute;
         bottom: 17px;
         width: 100%;
-        padding: 16px;
+        padding: 16px 16px 25px;
     }
     .template--index .banner--mobile-bottom .slideshow__text.banner__box {
         background: transparent;
