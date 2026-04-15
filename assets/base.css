@@ -4417,7 +4417,7 @@ letter-spacing: 0.55px;
   .menu-drawer .list-menu__item {
     padding-left: 16px;
   }
-  .menu-drawer .list-menu__item:focus, .menu-drawer .list-menu__item:focus-visible {
+  .menu-drawer .list-menu__item:focus, .menu-drawer .list-menu__item:focus-visible , .menu-drawer .list-menu__item:hover{
     background: transparent !important;
     box-shadow: none;
     border: none;
