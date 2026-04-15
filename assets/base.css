@@ -3947,6 +3947,10 @@ a {
   .template--page .accordion .accordion__content li {
     font-size: 12px;
   }
+
+  .rich-text__blocks .rich-text__text {
+    margin-top: 15px;
+  }
 }
 .accordion .accordion__content,
 .collabsible-custom__block-content {
