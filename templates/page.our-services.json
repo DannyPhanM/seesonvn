@@ -30,7 +30,7 @@
         "text_rmNm4H": {
           "type": "text",
           "settings": {
-            "text": "<p>Tại SEESON, mỗi thiết kế được phát triển với sự cẩn trọng và độ chính xác của quy trình chế tác.<br/><br/>Từ ý tưởng đến sản phẩm hoàn thiện, mọi chi tiết đều được định hình qua thiết kế có chủ đích, sự nhạy cảm với chất liệu và tôn trọng yếu tố con người.<br/><br/>Các điều chỉnh cá nhân hoá — từ nắn chỉnh gọng đến tư vấn thiết kế — giúp mỗi chiếc kính không chỉ vừa vặn với khuôn mặt, mà còn thoải mái trong nhịp sống hằng ngày.<br/></p>"
+            "text": "<p>Tại SEESON, mỗi thiết kế được phát triển với sự cẩn trọng và độ chính xác của quy trình chế tác.</p><p>Từ ý tưởng đến sản phẩm hoàn thiện, mọi chi tiết đều được định hình qua thiết kế có chủ đích, sự nhạy cảm với chất liệu và tôn trọng yếu tố con người. Các điều chỉnh cá nhân hoá — từ nắn chỉnh gọng đến tư vấn thiết kế — giúp mỗi chiếc kính không chỉ vừa vặn với khuôn mặt, mà còn thoải mái trong nhịp sống hằng ngày.<br/></p>"
           }
         }
       },
@@ -44,7 +44,7 @@
         "content_alignment": "left",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 50,
+        "padding_top": 60,
         "padding_top_mobile": 20,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
@@ -108,7 +108,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 120,
+        "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
     },
@@ -139,7 +139,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 120,
         "padding_top_mobile": 60,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
@@ -203,7 +203,7 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
     },
@@ -226,9 +226,9 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_top_mobile": 20,
-        "padding_bottom": 0,
+        "padding_bottom": 120,
         "padding_bottom_mobile": 120
       }
     }
