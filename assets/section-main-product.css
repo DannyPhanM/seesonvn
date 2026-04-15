@@ -276,6 +276,33 @@ letter-spacing: 0.8px;
   letter-spacing: 0.1rem;
 }
 
+.product-form__submit-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  line-height: 1;
+}
+
+.product-form__submit-compare-at-price {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: 0.6px;
+  text-decoration: line-through;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.product-form__submit-current-price {
+  display: block;
+}
+
+.template--product .product__info-wrapper .product-form__buttons .product-form__submit .product-form__submit-compare-at-price span {
+  font-size: 9px !important;
+}
+
 /* Ensure swatches are circles if requested */
 .product-form__input--swatch .swatch-input__label {
   border-radius: 50%;

@@ -88,7 +88,16 @@
             </span>
             <span class="product-form__submit-price">
               {%- if product.selected_or_first_available_variant.available -%}
-                + {{ product.selected_or_first_available_variant.price | money }}
+                <div class="product-form__submit-price-wrapper">
+                  {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
+                    <span class="product-form__submit-compare-at-price">
+                      {{ product.selected_or_first_available_variant.compare_at_price | money }}
+                    </span>
+                  {%- endif -%}
+                  <span class="product-form__submit-current-price">
+                    + {{ product.selected_or_first_available_variant.price | money }}
+                  </span>
+                </div>
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
