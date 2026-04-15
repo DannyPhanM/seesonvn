@@ -97,6 +97,12 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   cursor: pointer;
 }
 
+@media(max-width: 749px) {
+  .drawer__close {
+    right: 0;
+  }
+}
+
 @media(min-width: 990px) {
   .drawer__close {
     right: 32px;
