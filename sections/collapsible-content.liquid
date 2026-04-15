@@ -83,7 +83,7 @@
                   >
                     <summary id="Summary-{{ block.id }}-{{ section.id }}">
                       {% render 'icon-accordion', icon: block.settings.icon %}
-                      <h3 class="accordion__title inline-richtext {% if block.settings.font_body %} font-body {% else %} h4 {%  endif %}" {% unless block.settings.font_body %}style="font-weight: 600;"{% endunless %}>
+                      <h3 class="accordion__title inline-richtext {% if block.settings.font_body %} font-body {% else %} h4 {%  endif %}">
                         {{ block.settings.heading | default: block.settings.page.title | escape }}
                       </h3>
                       <div class="icon-plus-minus">
