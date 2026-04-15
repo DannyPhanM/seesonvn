@@ -219,6 +219,10 @@
     font-size: 12px;
     margin-bottom: 2rem;
   }
+
+  .image-carousel-section .slideshow__controls .slider-button {
+    display: none;
+  }
   
   .image-carousel-buttons {
     flex-direction: column;
