@@ -309,6 +309,11 @@
 .image-carousel-section .slideshow__controls .slider-button {
   width: 20px;
 }
+@media(max-width: 749px) {
+  .image-carousel-section .slideshow__controls .slider-button {
+    display: none ;
+  }
+}
 .image-carousel-section .slideshow__controls .slider-button .svg-wrapper {
   width: 20px;
   display: flex;
