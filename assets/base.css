@@ -5460,4 +5460,8 @@ details[open] > .open-facets-overlay {
   .drawer__tab {
     font-size: 16px !important;
   }
+
+  .drawer__footer {
+    padding-bottom: 14px !important;
+  }
 }
