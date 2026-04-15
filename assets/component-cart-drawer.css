@@ -287,7 +287,6 @@ cart-drawer-items {
 
 @media screen and (max-width: 989px) {
   .cart-drawer .cart-item__image-container {
-    height: 100%;
   }
 }
 
