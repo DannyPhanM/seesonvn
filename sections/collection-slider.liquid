@@ -302,22 +302,20 @@
     .coll-list-thumbs-wrap {
       grid-area: thumbs;
       width: 100% !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      position: relative;
-      overflow: hidden;
+      height: 100% !important;
+      max-height: 380px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
     .coll-thumb-swiper {
-      position: absolute !important;
-      top: 50%;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      width: 100% !important;
+      max-height: 50% !important;
       height: auto !important;
-      width: 100%;
-      overflow: hidden;
-      transition: top 0.4s ease;
+      margin-bottom: 0;
     }
 
     .coll-thumb-swiper .swiper-wrapper {
