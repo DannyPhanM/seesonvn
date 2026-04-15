@@ -2383,6 +2383,9 @@ product-recommendations.related-products {
     max-width: 100% !important;
     margin-top: 25px;
   }
+  :is(.product-form__input--pill,.product-form__input--swatch) .form__label {
+    font-size: 14px;
+  }
   .template--product .product.product--medium .slider-mobile-gutter {
     margin: 0;
   }
