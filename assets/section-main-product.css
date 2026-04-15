@@ -2115,6 +2115,10 @@ product-recommendations.related-products {
     position: relative;
   }
 
+  .thumbnail[aria-current] {
+    box-shadow: none;
+  }
+
   .template--product
     .product__media-wrapper
     .slider-mobile-gutter
