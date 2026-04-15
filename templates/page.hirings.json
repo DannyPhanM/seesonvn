@@ -46,7 +46,7 @@
         "full_width": true,
         "padding_top": 80,
         "padding_top_mobile": 20,
-        "padding_bottom": 0,
+        "padding_bottom": 5,
         "padding_bottom_mobile": 0
       }
     },
