@@ -444,7 +444,7 @@ h3,
 .h3 {
   font-size: 14px;
   line-height: 17px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.7px;
 }
 
@@ -453,7 +453,7 @@ h3,
   h3,
   .h3 {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: 1px;
   }
