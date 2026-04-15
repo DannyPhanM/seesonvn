@@ -307,19 +307,23 @@
           padding: 0 !important;
           margin: 0 !important;
           position: relative;
-          overflow: hidden;
+          overflow: hidden; 
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end; /* Keep it at the bottom */
         }
 
         .thumb-master-swiper {
-          position: absolute !important;
-          top: 50%; /* Initial: bottom half only */
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: auto !important;
+          position: relative !important;
+          height: 50% !important;
           width: 100%;
-          overflow: hidden;
-          transition: top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          overflow: visible !important;
+          transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          will-change: height;
+        }
+        .thumb-master-swiper.is-expanded {
+          height: 100% !important;
         }
 
         .thumb-master-swiper .swiper-slide {
@@ -703,11 +707,20 @@
                 990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
             },
             on: {
-                touchStart: function() {
+                setTranslate: function() {
+                    if (window.innerWidth >= 750) return;
                     const swiperEl = this.el;
-                    if (window.innerWidth < 750) {
-                        swiperEl.style.setProperty('max-height', '100%', 'important');
-                    }
+                    const translate = this.translate; 
+                    const threshold = 150; 
+                    const progress = Math.min(Math.max(Math.abs(translate) / threshold, 0), 1);
+                    const heightVal = 50 + (progress * 50);
+                    swiperEl.style.height = heightVal + "%";
+                },
+                touchStart: function() {
+                    if (window.innerWidth < 750) this.el.style.transition = 'none';
+                },
+                touchEnd: function() {
+                    if (window.innerWidth < 750) this.el.style.transition = '';
                 },
                 init: function() { 
                     const slides = mEl.querySelectorAll('.swiper-slide');

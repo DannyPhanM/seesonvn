@@ -302,20 +302,26 @@
     .coll-list-thumbs-wrap {
       grid-area: thumbs;
       width: 100% !important;
-      height: 100% !important;
-      max-height: 380px;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      overflow: visible;
+      height: 100%;
+      overflow: hidden;
     }
 
     .coll-thumb-swiper {
       width: 100% !important;
-      max-height: 50% !important;
-      height: auto !important;
+      height: 50% !important;
       margin-bottom: 0;
+      overflow: visible !important;
+      transition: height 0.3s ease;
+      will-change: height;
+    }
+    .coll-thumb-swiper.is-expanded {
+      max-height: 100% !important;
     }
 
     .coll-thumb-swiper .swiper-wrapper {
@@ -549,12 +555,21 @@
         750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 } 
       },
       on: {
-        {% comment %} touchStart: function() {
+        setTranslate: function() {
+          if (window.innerWidth >= 750) return;
           const swiperEl = this.el;
-          if (window.innerWidth < 750) {
-            swiperEl.style.setProperty('max-height', '100%', 'important');
-          }
-        }, {% endcomment %}
+          const translate = this.translate; 
+          const threshold = 150; 
+          const progress = Math.min(Math.max(Math.abs(translate) / threshold, 0), 1);
+          const heightVal = 50 + (progress * 50);
+          swiperEl.style.height = heightVal + "%";
+        },
+        touchStart: function() {
+          if (window.innerWidth < 750) this.el.style.transition = 'none';
+        },
+        touchEnd: function() {
+          if (window.innerWidth < 750) this.el.style.transition = '';
+        },
         init: function() { 
             const slides = mEl.querySelectorAll('.swiper-slide');
             if (slides.length > 0) slides[0].classList.add('show-item');
