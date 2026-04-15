@@ -5484,4 +5484,13 @@ details[open] > .open-facets-overlay {
     font-weight: 500 !important;
     font-size: 10px !important;
   }
+
+  .swym-ui-component .swym-empty-wishlist-container .swym-empty-wishlist-continue-btn {
+    background: #000 !important;
+    text-transform: uppercase !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    letter-spacing: .7px !important;
+  }
 }
