@@ -2224,7 +2224,9 @@ product-recommendations.related-products {
   }
 
   .template--product .product__info-wrapper .price-box {
-    display: none;
+    margin-top: 0;
+        margin-bottom: -10px;
+        text-align: right;
   }
 
   .template--product .buy-buttons-box > .hidden,
