@@ -297,18 +297,22 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   z-index: 2;
 }
 
-body.open-drawer:not(.open-filter) {
+body.open-drawer,
+body.open-filter {
   height: 100vh;
   overflow: hidden;
 }
 
 @media screen and (max-width: 989px) {
-  html.overflow-hidden {
+  html.overflow-hidden,
+  html.open-drawer,
+  html.open-filter {
     overflow: hidden;
   }
 
   body.overflow-hidden,
-  body.open-drawer {
+  body.open-drawer,
+  body.open-filter {
     height: 100vh;
     overflow: hidden;
   }
