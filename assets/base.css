@@ -5456,4 +5456,8 @@ details[open] > .open-facets-overlay {
   .cart-notification .cart-notification__heading {
     font-size: 12px !important;
   }
+
+  .drawer__tab {
+    font-size: 16px !important;
+  }
 }
