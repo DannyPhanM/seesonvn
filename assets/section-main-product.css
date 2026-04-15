@@ -2123,9 +2123,7 @@ a.product__text {
 product-recommendations.related-products .related-products__heading {
   font-size: 40px;
 }
-product-recommendations.related-products {
-  padding-top: 105px;
-}
+
 @media (max-width: 749px) {
   .template--product .product.product--medium > .product__title {
     display: none;
@@ -2209,7 +2207,6 @@ product-recommendations.related-products {
   }
 
   .template--product product-info {
-    padding-bottom: 33px !important;
   }
 
   .template--product .product__info-wrapper .product-form__buttons {
@@ -2354,9 +2351,7 @@ product-recommendations.related-products {
     top: -3px;
   }
 
-  product-recommendations.related-products {
-    padding-top: 27px;
-  }
+
   product-recommendations.related-products .related-products__heading {
     font-size: 18px;
     font-weight: 600;
