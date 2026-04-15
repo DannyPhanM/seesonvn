@@ -2805,7 +2805,6 @@ menu-drawer+.header__search {
 
 details[open]>.search-modal {
   opacity: 1;
-  animation: animateMenuOpen var(--duration-default) ease;
   top: 80px;
   border-top: 1px solid #999;
 }
