@@ -652,6 +652,9 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  .product__left-info .accordion__title {
+    font-size: 14px;
+  }
   .product__media-list.slider--mobile {
     margin-left: 0;
     margin-bottom: 3rem;
