@@ -79,9 +79,9 @@
         "filter_type": "drawer",
         "enable_sorting": true,
         "padding_top": 20,
-        "padding_bottom": 100,
+        "padding_bottom": 120,
         "padding_top_mobile": 36,
-        "padding_bottom_mobile": 36
+        "padding_bottom_mobile": 120
       }
     }
   },
