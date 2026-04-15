@@ -490,7 +490,7 @@
       slides.forEach(sl => sl.classList.add('show-item'));
       
       const slide = slides[0];
-      if(fCard) fCard.classList.remove('is-flipped');
+      {% comment %} if(fCard) fCard.classList.remove('is-flipped'); {% endcomment %}
 
       if(iEl) {
         const h2 = iEl.querySelector('h2');
