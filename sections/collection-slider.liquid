@@ -393,7 +393,7 @@
         <div class="coll-list-left">
           <div class="coll-list-info" id="ClInfo-{{ section.id | replace: '-', '_' }}">
             <h2>{{ first_collection.title | escape }}</h2>
-            <div class="description">{{ first_collection.description | strip_html | truncate: 160 | escape }}</div>
+            <div class="description">{{ first_collection.description | strip_html | escape }}</div>
             <a href="{{ first_collection.url }}" class="cta-link">DISCOVER THE STORY</a>
           </div>
 
@@ -408,7 +408,7 @@
                   <div class="swiper-slide" 
                     data-real-index="{{ forloop.index0 }}"
                     data-title="{{ collection.title | escape }}"
-                    data-description="{{ collection.description | strip_html | truncate: 160 | escape }}"
+                    data-description="{{ collection.description | strip_html | escape }}"
                     data-url="{{ collection.url }}"
                     data-img-primary="{{ main_img | image_url: width: 1200 }}"
                     data-img-secondary="{{ second_img | image_url: width: 1200 }}"
