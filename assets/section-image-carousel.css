@@ -313,6 +313,11 @@
   .image-carousel-section .slideshow__controls .slider-button {
     display: none !important;
   }
+
+  .image-carousel-section .slideshow__controls .slider-counter__link span {
+    width: 4px;
+    height: 4px;
+  }
 }
 .image-carousel-section .slideshow__controls .slider-button .svg-wrapper {
   width: 20px;

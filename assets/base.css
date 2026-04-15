@@ -5431,7 +5431,7 @@ details[open] > .open-facets-overlay {
     margin-right: 16px !important;
   }
   .cart-notification .cart-notification-product__name {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .product__title-content .wishlist-button button {
