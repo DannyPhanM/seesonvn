@@ -89,7 +89,6 @@ accordion-component {
   width: 2.4rem;
   height: 2.4rem;
   position: absolute;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
