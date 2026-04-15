@@ -549,12 +549,12 @@
         750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 } 
       },
       on: {
-        touchStart: function() {
+        {% comment %} touchStart: function() {
           const swiperEl = this.el;
           if (window.innerWidth < 750) {
             swiperEl.style.setProperty('max-height', '100%', 'important');
           }
-        },
+        }, {% endcomment %}
         init: function() { 
             const slides = mEl.querySelectorAll('.swiper-slide');
             if (slides.length > 0) slides[0].classList.add('show-item');
