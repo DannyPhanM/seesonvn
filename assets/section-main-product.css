@@ -2115,8 +2115,8 @@ product-recommendations.related-products {
     position: relative;
   }
 
-  .thumbnail[aria-current] {
-    box-shadow: none;
+  .template--product .thumbnail-slider .thumbnail-list__item button {
+    box-shadow: none !important;
   }
 
   .template--product
