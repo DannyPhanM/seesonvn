@@ -45,7 +45,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 50,
-        "padding_top_mobile": 30,
+        "padding_top_mobile": 20,
         "padding_bottom": 50,
         "padding_bottom_mobile": 20
       }
@@ -138,20 +138,6 @@
         "button_3_style": "outline"
       }
     },
-    "rich_text_CAPDtY": {
-      "type": "rich-text",
-      "name": "Spacing",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 60,
-        "padding_bottom_mobile": 60
-      }
-    },
     "rich_text_amaBJ9": {
       "type": "rich-text",
       "blocks": {
@@ -180,7 +166,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 50,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 60,
         "padding_bottom": 50,
         "padding_bottom_mobile": 20
       }
@@ -273,20 +259,6 @@
         "button_3_style": "outline"
       }
     },
-    "rich_text_mKwhCQ": {
-      "type": "rich-text",
-      "name": "Spacing",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 120,
-        "padding_bottom_mobile": 60
-      }
-    },
     "rich_text_ah3XAQ": {
       "type": "rich-text",
       "blocks": {
@@ -296,10 +268,17 @@
             "heading": "OUR DISTRIBUTORS",
             "heading_tag": "h1"
           }
+        },
+        "text_PBjazx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
         }
       },
       "block_order": [
-        "heading_9AHqAx"
+        "heading_9AHqAx",
+        "text_PBjazx"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -308,7 +287,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 60,
         "padding_bottom": 30,
         "padding_bottom_mobile": 20
       }
@@ -345,8 +324,8 @@
         "heading_tag": "h3",
         "full_width": false,
         "color_scheme": "scheme-1",
-        "padding_top": 25,
-        "padding_top_mobile": 10,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
         "padding_bottom": 10,
         "padding_bottom_mobile": 10
       }
@@ -386,21 +365,7 @@
         "padding_top": 10,
         "padding_top_mobile": 10,
         "padding_bottom": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_zbAic8": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom": 200,
-        "padding_bottom_mobile": 130
+        "padding_bottom_mobile": 100
       }
     }
   },
@@ -408,13 +373,10 @@
     "main",
     "rich_text_BXkFfc",
     "image_carousel_pLDqbg",
-    "rich_text_CAPDtY",
     "rich_text_amaBJ9",
     "image_carousel_YK39QA",
-    "rich_text_mKwhCQ",
     "rich_text_ah3XAQ",
     "collabsible_custom_FHwd3m",
-    "collabsible_custom_ntF3mT",
-    "rich_text_zbAic8"
+    "collabsible_custom_ntF3mT"
   ]
 }
