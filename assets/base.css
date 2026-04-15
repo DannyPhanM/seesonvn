@@ -5497,7 +5497,8 @@ details[open] > .open-facets-overlay {
   }
 
   .cart-notification-wrapper .cart-notification.active {
-    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
   }
 }
 
