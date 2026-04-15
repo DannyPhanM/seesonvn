@@ -30,7 +30,7 @@
         "text_UNbYqd": {
           "type": "text",
           "settings": {
-            "text": "<p>Nằm giữa khu phố Hàng Cháo – Hàng Bột, SEESON xuất hiện như một khoảng lặng nhỏ giữa sân vận động Hàng Đẫy náo nhiệt và sự tĩnh tại của Văn Miếu – Quốc Tử Giám. Cửa hàng là một ngôi nhà cũ từ thập niên 70–80, được cải tạo giữ lại nhiều lớp ký ức kiến trúc. Mặt bằng không gian SEESON bao gồm 4 khối chính: khu trưng bày kính và tư vấn ở phía trước, khu đo khám khúc xạ và cắt tròng ở giữa, khu chờ đợi và khu vườn. Các không gian được kết nối với nhau bằng một hành lang dài và hẹp nhằm đảm bảo tất các khu vực đều được tiếp xúc với không khí, ánh nắng tự nhiên dọc theo khu vườn. Công trình sử dụng các vật liệu có sẵn dễ tìm, bề mặt tường được làm xước ngẫu nhiên, sàn gỗ lau màu mộc tự nhiên. Những điều này góp phần lưu lại dấu vết của đôi bàn tay của họ khi thực hiện dự án. Nằm giữa khu phố Hàng Cháo – Hàng Bột, SEESON xuất hiện như một khoảng lặng nhỏ giữa sân vận động Hàng Đẫy náo nhiệt và sự tĩnh tại của Văn Miếu – Quốc Tử Giám. Cửa hàng là một ngôi nhà cũ từ thập niên 70–80, được cải tạo giữ lại nhiều lớp ký ức kiến trúc. Mặt bằng không gian SEESON bao gồm 4 khối chính: khu trưng bày kính và tư vấn ở phía trước, khu đo khám khúc xạ và cắt tròng ở giữa, khu chờ đợi và khu vườn. Các không gian được kết nối với nhau bằng một hành lang dài và hẹp nhằm đảm bảo tất các khu vực đều được tiếp xúc với không khí, ánh nắng tự nhiên dọc theo khu vườn. Công trình sử dụng các vật liệu có sẵn dễ tìm, bề mặt tường được làm xước ngẫu nhiên, sàn gỗ lau màu mộc tự nhiên. Những điều này góp phần lưu lại dấu vết của đôi bàn tay của họ khi thực hiện dự án. </p>"
+            "text": "<p>Tiếp nối “sự một mình” của Flagship Hà Nội, Flagship Sài Gòn chọn “sự im lặng” làm concept trung tâm. Cảm hứng thiết kế đến từ sự đồng điệu giữa những viên gạch block, tranh của họa sĩ Katja Lang và tập thơ Wilhelm Müller – gợi hình ảnh mùa đông tĩnh lặng, nơi mọi thứ như phủ một lớp tuyết trắng yên ả. Không gian được tạo như một “quãng nghỉ” giữa lòng thành phố: nơi khách hàng ghé thăm có thể chậm lại, thưởng thức một ly trà và trải nghiệm cảm giác yên tĩnh cùng SEESON. Bố cục gồm khu trưng bày sản phẩm, phòng đo khám khúc xạ SEESON Clinic và không gian thưởng trà. Thay vì một buổi mua sắm như thông thường, khách hàng sẽ có một “quãng nghỉ”, dành thời gian để thưởng thức một ly trà ngon và có một trải nghiệm mới cùng SEESON. </p>"
           }
         }
       },
@@ -56,7 +56,8 @@
         "slide_MJjG87": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/SG_Flagship_01.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
             "link_image": false,
             "link": ""
           }
@@ -64,7 +65,8 @@
         "slide_tVkyNf": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/SG_Flagship_02.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_02.jpg",
             "link_image": false,
             "link": ""
           }
@@ -72,7 +74,35 @@
         "slide_aLccAg": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/SG_Flagship_03.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_03.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_9DWWNC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/SG_Flagship_04.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_04.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_YFXipK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/SG_Flagship_05.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_05.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_xPVBbd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/SG_Flagship_06.jpg",
+            "mobile_image": "shopify://shop_images/HN_Flagship_06.jpg",
             "link_image": false,
             "link": ""
           }
@@ -81,7 +111,10 @@
       "block_order": [
         "slide_MJjG87",
         "slide_tVkyNf",
-        "slide_aLccAg"
+        "slide_aLccAg",
+        "slide_9DWWNC",
+        "slide_YFXipK",
+        "slide_xPVBbd"
       ],
       "name": "Image Carousel",
       "settings": {
