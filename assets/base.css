@@ -5453,7 +5453,7 @@ details[open] > .open-facets-overlay {
     font-size: 12px !important;
   }
 
-  .cart-notification .cart-notification__heading, .selected-value-right {
+  .cart-notification .cart-notification__heading {
     font-size: 12px !important;
   }
 
@@ -5463,5 +5463,8 @@ details[open] > .open-facets-overlay {
 
   .drawer__footer {
     padding-bottom: 14px !important;
+  }
+  .selected-value-right {
+    font-size: 10px !important; 
   }
 }
