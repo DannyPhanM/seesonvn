@@ -3943,6 +3943,11 @@ a {
   background: #999;
 }
 
+@media(max-width: 749px) {
+  .template--page .accordion .accordion__content li {
+    font-size: 12px;
+  }
+}
 .accordion .accordion__content,
 .collabsible-custom__block-content {
   padding-top: 10px;
