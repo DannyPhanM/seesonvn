@@ -2066,17 +2066,9 @@ a.product__text {
 
 .template--product .product__info-wrapper .price-box .price__badge-sale {
   /* display: none; */
-  border: 1.5px solid var(--Frame-frame-red, #D21717);
   border-bottom: none;
   margin-bottom: -1px;
-  padding: 5px 6px;
-  color: var(--Frame-frame-red, #D21717);
   font-family: Afacad;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.2; /* 19.2px */
-  letter-spacing: 0.8px;
       border: 1.4px solid #E90303;
     border-radius: 0;
     padding: 3px 6px;
