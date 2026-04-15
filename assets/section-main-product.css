@@ -655,7 +655,7 @@ a.product__text {
   .product__left-info .accordion__title {
     font-size: 14px;
   }
-  .product .product__left-info .accordion .accordion__content p::first-child {
+  .product .product__left-info .accordion .accordion__content p:first-child {
     margin-top: 1px;
   }
   .product__media-list.slider--mobile {
