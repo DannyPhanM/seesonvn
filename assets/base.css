@@ -5452,4 +5452,8 @@ details[open] > .open-facets-overlay {
   .title.title--primary.title-blank {
     font-size: 12px !important;
   }
+
+  .cart-notification .cart-notification__heading {
+    font-size: 12px !important;
+  }
 }
