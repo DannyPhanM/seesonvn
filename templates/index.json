@@ -128,7 +128,7 @@
         "padding_top": 60,
         "padding_bottom": 60,
         "padding_top_mobile": 80,
-        "padding_bottom_mobile": 40
+        "padding_bottom_mobile": 0
       }
     },
     "featured_collection_6Q8xjz": {
@@ -158,7 +158,7 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 100,
-        "padding_top_mobile": 28,
+        "padding_top_mobile": 80,
         "padding_bottom_mobile": 28
       }
     },
