@@ -22,19 +22,22 @@
       "name": "Collection Slider",
       "settings": {
         "collection_list": [
-          "all-designs",
           "the-athletes",
-          "the-assembled-24",
+          "the-office",
+          "the-soap-25",
+          "the-cut-collection",
+          "the-layered",
           "the-assembled-collection",
-          "the-athletes-sunglasses",
-          "the-edge",
-          "the-snorkel-23",
-          "the-soap-optical"
+          "the-classics-1",
+          "the-vertebra-24-collection",
+          "the-edge"
         ],
         "indicator_style": "bottom",
         "background_color": "#eeeeee",
         "padding_top": 60,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
       }
     }
   },
