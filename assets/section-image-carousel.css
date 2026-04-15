@@ -311,7 +311,7 @@
 }
 @media(max-width: 749px) {
   .image-carousel-section .slideshow__controls .slider-button {
-    display: none ;
+    display: none !important;
   }
 }
 .image-carousel-section .slideshow__controls .slider-button .svg-wrapper {
