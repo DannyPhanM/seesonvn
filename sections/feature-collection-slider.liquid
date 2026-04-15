@@ -682,6 +682,7 @@
           e.stopPropagation();
           isRotated = !isRotated;
           if (wrapper) wrapper.classList.toggle('is-rotated', isRotated);
+          // Use currentIdx to preserve the selected product
           selectProduct(currentIdx, true);
         });
       }

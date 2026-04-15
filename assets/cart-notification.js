@@ -25,12 +25,18 @@ class CartNotification extends HTMLElement {
     );
 
     document.body.addEventListener('click', this.onBodyClick);
+
+    if (this.autoCloseTimeout) clearTimeout(this.autoCloseTimeout);
+    this.autoCloseTimeout = setTimeout(() => {
+      this.close();
+    }, 2000);
   }
 
   close() {
     this.notification.classList.remove('active');
     document.body.removeEventListener('click', this.onBodyClick);
 
+    if (this.autoCloseTimeout) clearTimeout(this.autoCloseTimeout);
     removeTrapFocus(this.activeElement);
   }
 
