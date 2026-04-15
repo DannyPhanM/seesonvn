@@ -143,7 +143,7 @@ variant-selects {
 }
 
 .product-form__input--swatch .swatch-input__input + .swatch-input__label {
-  --swatch-input--size: 3.6rem;
+  --swatch-input--size: 1.6rem;
 
   margin: 0.7rem 8px 0.2rem 0;
 }
