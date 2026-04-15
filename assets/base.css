@@ -4416,6 +4416,9 @@ letter-spacing: 0.55px;
     width: 16px;
     height: 16px;
 }
+.search__input.field__input {
+  font-size: 12px;
+}
 }
 
 @media (min-width: 990px) {
