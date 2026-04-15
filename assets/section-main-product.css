@@ -2111,6 +2111,10 @@ product-recommendations.related-products {
     justify-content: center;
   }
 
+  .template--product .product.product--medium .grid__item.product__media-wrapper media-gallery {
+    position: relative;
+  }
+
   .template--product
     .product__media-wrapper
     .slider-mobile-gutter
@@ -2118,6 +2122,9 @@ product-recommendations.related-products {
     .thumbnail-list {
     justify-content: center;
     margin-bottom: 14px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
   }
 
   .template--product
