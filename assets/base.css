@@ -5470,4 +5470,8 @@ details[open] > .open-facets-overlay {
   .product-form__input {
     max-width: 100% !important;
   }
+
+  .swym-ui-component .swym-empty-wishlist-container {
+    padding: 0 !important;
+  }
 }
