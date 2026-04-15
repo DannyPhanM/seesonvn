@@ -93,7 +93,7 @@
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
-        "padding_bottom_mobile": 60
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_Bh37UM": {
@@ -124,7 +124,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_top_mobile": 30,
+        "padding_top_mobile": 60,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
       }
@@ -172,7 +172,7 @@
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
-        "padding_bottom_mobile": 60
+        "padding_bottom_mobile": 0
       }
     },
     "rich_text_YKfw9t": {
@@ -203,7 +203,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 0,
-        "padding_top_mobile": 30,
+        "padding_top_mobile": 60,
         "padding_bottom": 60,
         "padding_bottom_mobile": 20
       }
@@ -292,21 +292,7 @@
         "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 0,
-        "padding_bottom_mobile": 0
-      }
-    },
-    "rich_text_6ar4X7": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_top_mobile": 50,
-        "padding_bottom": 200,
-        "padding_bottom_mobile": 130
+        "padding_bottom_mobile": 120
       }
     }
   },
@@ -318,7 +304,6 @@
     "multicolumn_GXGR98",
     "rich_text_YKfw9t",
     "multicolumn_XzAw6C",
-    "rich_text_rTBygV",
-    "rich_text_6ar4X7"
+    "rich_text_rTBygV"
   ]
 }
