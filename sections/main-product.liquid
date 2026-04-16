@@ -1,3 +1,4 @@
+{%- assign buy_buttons_block = section.blocks | where: 'type', 'buy_buttons' | first -%}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -200,7 +201,7 @@
                   </div>
                 </div>
               {%- when 'price' -%}
-                <div class="price-box" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                <div class="price-box{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %} price-is-sale{% endif %}" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -565,7 +566,7 @@
                     show_pickup_availability: true
                   -%}
                   <div class="hide hidden">
-                    <div class="price-box" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                    <div class="price-box{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %} price-is-sale{% endif %}" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                       {%- render 'price',
                         product: product,
                         use_variant: true,
@@ -857,6 +858,21 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+
+    {%- if buy_buttons_block != blank -%}
+      <script src="{{ 'sticky-add-to-cart.js' | asset_url }}" defer="defer"></script>
+      <sticky-bar class="sticky-bar-mobile" data-section-id="{{ section.id }}">
+        <div class="sticky-bar-mobile__container">
+          {%- render 'buy-buttons', 
+            block: buy_buttons_block, 
+            product: product, 
+            product_form_id: 'sticky-product-form', 
+            section_id: 'sticky', 
+            show_pickup_availability: false 
+          -%}
+        </div>
+      </sticky-bar>
+    {%- endif -%}
   </div>
 </product-info>
 

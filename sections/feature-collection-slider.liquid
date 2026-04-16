@@ -403,13 +403,7 @@
 {%- assign total = product_list.count | default: 0 -%}
 {%- if total > 0 -%}
   {%- assign first_product = product_list | first -%}
-  {%- assign first_lifestyle_image = first_product.media[0] -%}
-  {%- for media in first_product.media -%}
-    {%- if media.alt contains '-4' -%}
-      {%- assign first_lifestyle_image = media -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
+  {%- assign first_lifestyle_image = first_product.media[4] | default: first_product.featured_media -%}
 {%- endif -%}
 
 <div class="feat-coll-slider section-{{ section.id }}-padding">
@@ -517,15 +511,8 @@
               <div class="swiper-wrapper">
                 {%- for product in product_list -%}
                   {%- liquid
-                    assign lifestyle_image = product.media[0]
-                    assign thumbnail_image = product.media[0]
-                    for media in product.media
-                      if media.alt contains '-4'
-                        assign lifestyle_image = media
-                        assign thumbnail_image = media
-                        break
-                      endif
-                    endfor
+                    assign lifestyle_image = product.media[4] | default: product.featured_media
+                    assign thumbnail_image = lifestyle_image
                   -%}
                   <div
                     class="swiper-slide"

@@ -82,6 +82,7 @@
   height: 0.6rem;
   right: 0;
   top: 34%;
+  transform: rotate(180deg);
 }
 
 .localization-selector.link {
@@ -333,7 +334,7 @@
 }
 
 .disclosure__button[aria-expanded='true'] .icon-caret {
-  transform: rotate(180deg);
+ 
 }
 
 /* Header localization */
