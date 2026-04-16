@@ -4558,7 +4558,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   color:#999
 
 }
-.collection-linked a.active {
+.collection-linked a.active, .collection-linked a:hover {
   font-weight: 600;
   color: #000;
   text-decoration: underline;
