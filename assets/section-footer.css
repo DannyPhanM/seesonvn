@@ -549,7 +549,7 @@ footer * {
     width: auto;
     max-width: auto;
     align-items: center;
-    gap: 45px;
+    gap: 20px;
 }
 .footer__content-bottom-wrapper .menu-list-custom .footer-block__details-content .list-menu__item {
     white-space: nowrap;
