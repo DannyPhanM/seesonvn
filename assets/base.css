@@ -4268,7 +4268,7 @@ letter-spacing: 0.55px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  line-height: 12px;
+  line-height: 140%;
 }
 .xb-wishlist-header-auto-container {
   width: 16px;
