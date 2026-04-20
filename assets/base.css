@@ -5368,7 +5368,7 @@ details[open] > .open-facets-overlay {
   }
 
   .multicolumn-card__info.content_overlay.left-top {
-    padding: 16px 10px !important;
+    padding: 16px 10px 16px 16px !important;
     max-width: 320px;
   }
 
@@ -5544,6 +5544,7 @@ details[open] > .open-facets-overlay {
 .swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-variant-title {
   font-size: 8px !important;
 }
+
 }
 
 @media(hover: none) and (pointer: coarse) {
@@ -5554,4 +5555,18 @@ details[open] > .open-facets-overlay {
 
 .swym-ui-component .swym-empty-wishlist-container .swym-empty-wishlist-continue-btn {
   text-transform: uppercase !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  padding: 7px;
+  background: transparent !important;
+  opacity: 0.5;
+}
+.image-carousel-section .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+.image-carousel-section .swiper-pagination-bullet-active span {
+  background: #fff !important;
+  opacity: 1 !important;
 }

@@ -20,10 +20,19 @@
 {%- endif -%}
 
 <!-- Swiper CSS/JS -->
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .image-carousel--full-width-mobile {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+{%- endstyle -%}
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<div class="page-width">
+<div class="page-width image-carousel{% if section.settings.full_width_mobile %} image-carousel--full-width-mobile{% endif %}">
   <div class="image-carousel-section slideshow-component">
     {%- if section.blocks.size > 1 -%}
       <div class="slideshow__controls slider-buttons">
@@ -185,6 +194,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width_mobile",
+      "label": "Full width on mobile",
+      "default": false
+    },
     {
       "type": "select",
       "id": "slide_height",
