@@ -119,6 +119,7 @@
       "name": "Image HANOI IRL FLAGSHIP",
       "settings": {
         "slide_height": "adapt_image",
+        "loop": true,
         "auto_rotate": false,
         "show_dots": true,
         "change_slides_speed": 5,
@@ -240,6 +241,7 @@
       "name": "Image SAIGON IRL FLAGSHIP",
       "settings": {
         "slide_height": "adapt_image",
+        "loop": true,
         "auto_rotate": false,
         "show_dots": true,
         "change_slides_speed": 5,
