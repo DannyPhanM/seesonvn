@@ -210,25 +210,47 @@ cart-remove-button .icon-remove {
 
 .cart-item__error {
   display: flex;
-  align-items: flex-start;
-  margin-top: 0.2rem;
-  width: min-content;
-  min-width: 100%;
+  align-items: center;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  z-index: 10;
+  width: max-content;
+  max-width: 15rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cart-item__error::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 15px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #000 transparent;
 }
 
 .cart-item__error-text {
-  font-size: 1.3rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.2;
   letter-spacing: 0.04rem;
   order: 1;
+  text-transform: none;
 }
 
 .cart-item__error-text + .svg-wrapper {
   flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.7rem;
-  margin-top: 0.25rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  color: #fff;
+}
+.cart-item__error-text + .svg-wrapper svg {
+  fill: currentColor;
 }
 
 .cart-item__error-text:empty + .svg-wrapper {

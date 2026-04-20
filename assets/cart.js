@@ -231,7 +231,23 @@ class CartItems extends HTMLElement {
   updateLiveRegions(line, message) {
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
-    if (lineItemError) lineItemError.querySelector('.cart-item__error-text').textContent = message;
+    if (lineItemError) {
+      const errorText = lineItemError.querySelector('.cart-item__error-text');
+      errorText.textContent = message;
+
+      if (message) {
+        if (lineItemError.getAttribute('data-timeout')) {
+          clearTimeout(parseInt(lineItemError.getAttribute('data-timeout')));
+        }
+
+        const timeout = setTimeout(() => {
+          errorText.textContent = '';
+          lineItemError.setAttribute('data-timeout', '');
+        }, 3000);
+
+        lineItemError.setAttribute('data-timeout', timeout);
+      }
+    }
 
     this.lineItemStatusElement.setAttribute('aria-hidden', true);
 
