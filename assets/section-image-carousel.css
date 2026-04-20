@@ -292,10 +292,25 @@
 .image-carousel-section .slider-counter--dots {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   pointer-events: auto;
   z-index: 5;
+}
+
+
+
+.image-carousel-section .swiper-pagination-bullet {
+  background: transparent !important;
+  width: 4px;
+  height: 4px;
+  border: none;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.image-carousel-section .swiper-pagination-bullet-active {
+  background: #fff !important;
+  width: 4px;
+  height: 4px;
 }
 
 .image-carousel-section .slideshow__controls .slider-counter__link span {
@@ -312,6 +327,10 @@
 @media(max-width: 749px) {
   .image-carousel-section .slideshow__controls .slider-button {
     display: none !important;
+  }
+
+  .image-carousel-section .banner:after, .image-carousel-section .banner__media:after {
+    pointer-events: none !important;
   }
 
   .image-carousel-section .slideshow__controls .slider-counter__link span {

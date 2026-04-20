@@ -867,12 +867,6 @@ summary::-webkit-details-marker {
   box-shadow: none;
 }
 
-*:focus-visible {
-  outline: var(--focused-base-outline);
-  outline-offset: var(--focused-base-outline-offset);
-  box-shadow: var(--focused-base-box-shadow);
-}
-
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused {
   outline: var(--focused-base-outline);
@@ -3875,6 +3869,7 @@ a {
   position: absolute;
   bottom: 0px;
   left: 0;
+  transform: scaleY(0.5);
 }
 
 .collabsible-custom__summary .collabsible-custom__icon {
@@ -5513,7 +5508,8 @@ details[open] > .open-facets-overlay {
     font-size: 14px !important;
     line-height: 1.2 !important;
     font-weight: 600 !important;
-    letter-spacing: .7px !important;
+    letter-spacing: 0.7px !important;
+    
   }
 
   .cart-notification-wrapper .cart-notification.active {

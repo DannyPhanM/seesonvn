@@ -5,175 +5,178 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-    @media screen and (max-width: 749px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before,
-      #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: 150%;
-        content: '';
-        display: block;
-      }
-    }
+  .image-carousel-section .banner__media,
+  .image-carousel-section .media>*:not(.zoom):not(.deferred-media__poster-button),
+  .image-carousel-section .media model-viewer {
+    position: relative;
+  }
 
-    @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
+    /* Force swiper to follow aspect ratio height */
+    #Swiper-{{ section.id }} .swiper-wrapper,
+    #Swiper-{{ section.id }} .swiper-slide {
+      height: 100%;
     }
   {%- endstyle -%}
 {%- endif -%}
 
-<div class="page-width">
-  <slideshow-component
-    class="slider-mobile-gutter image-carousel-section"
-    role="region"
-  aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
->
-  {%- if section.blocks.size > 1 -%}
-    <div class="slideshow__controls slider-buttons no-js-hidden">
-      <button
-        type="button"
-        class="slider-button slider-button--prev"
-        name="previous"
-        aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
-        aria-controls="Slider-{{ section.id }}"
-      >
-            <span class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
-                <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
-              </svg>
-            </span>
-      </button>
-      {%- if section.settings.show_dots -%}
-        <div class="slider-counter slider-counter--dots">
-          <div class="slideshow__control-wrapper">
-            {%- for block in section.blocks -%}
-              <button
-                class="slider-counter__link slider-counter__link--dots link"
-                aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                aria-controls="Slider-{{ section.id }}"
-              >
-                <span class="dot"></span>
-              </button>
-            {%- endfor -%}
-          </div>
-        </div>
-      {%- endif -%}
-      <button
-        type="button"
-        class="slider-button slider-button--next"
-        name="next"
-        aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
-        aria-controls="Slider-{{ section.id }}"
-      >
-            <span class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
-                <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
-              </svg>
-            </span>
-      </button>
-    </div>
-  {%- endif -%}
+<!-- Swiper CSS/JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <div
-    class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-    id="Slider-{{ section.id }}"
-    aria-live="polite"
-    aria-atomic="true"
-    data-autoplay="{{ section.settings.auto_rotate }}"
-    data-speed="{{ section.settings.change_slides_speed }}"
-  >
-    {%- for block in section.blocks -%}
-      <div
-        class="slideshow__slide grid__item grid--1-col slider__slide"
-        id="Slide-{{ section.id }}-{{ forloop.index }}"
-        {{ block.shopify_attributes }}
-        role="group"
-        tabindex="-1"
-      >
-        <div class="image-carousel-item">
-          {%- if block.settings.link_image and block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="image-carousel-link-overlay"></a>
+<div class="page-width">
+  <div class="image-carousel-section slideshow-component">
+    {%- if section.blocks.size > 1 -%}
+      <div class="slideshow__controls slider-buttons">
+        <button
+          type="button"
+          class="slider-button slider-button--prev swiper-button-prev-{{ section.id }}"
+          aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+        >
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
+                  <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
+                </svg>
+              </span>
+        </button>
+        {%- if section.settings.show_dots -%}
+          <div class="slider-counter slider-counter--dots swiper-pagination-{{ section.id }}"></div>
+        {%- endif -%}
+        <button
+          type="button"
+          class="slider-button slider-button--next swiper-button-next-{{ section.id }}"
+          aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+        >
+              <span class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
+                  <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="1"/>
+                </svg>
+              </span>
+        </button>
+      </div>
+    {%- endif -%}
+
+    <div
+      class="swiper swiper-image-carousel-{{ section.id }} banner banner--{{ section.settings.slide_height }} slideshow"
+      id="Swiper-{{ section.id }}"
+    >
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div
+            class="swiper-slide slideshow__slide"
+            {{ block.shopify_attributes }}
+          >
+            <div class="image-carousel-item">
+              {%- if block.settings.link_image and block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="image-carousel-link-overlay"></a>
+              {%- endif -%}
+              
+              <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+                {%- if block.settings.image -%}
+                  {%- liquid
+                    assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+                    assign sizes = '100vw'
+                    assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                  -%}
+                  <picture>
+                    {%- if block.settings.mobile_image -%}
+                      <source media="(max-width: 749px)" srcset="{{ block.settings.mobile_image | image_url: width: 1500 }}" sizes="100vw">
+                    {%- endif -%}
+                    {{
+                      block.settings.image
+                      | image_url: width: 3840
+                      | image_tag: height: height, sizes: sizes, widths: widths, loading: 'lazy'
+                    }}
+                  </picture>
+                {%- else -%}
+                  {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="image-carousel-content-container">
+      <div class="image-carousel-content {{ section.settings.text_alignment }}">
+        <div class="image-carousel-text-overlay">
+          {%- if section.settings.subheading != blank -%}
+            <p class="image-carousel-subheading h4">{{ section.settings.subheading }}</p>
           {%- endif -%}
           
-          <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
-            {%- if block.settings.image -%}
-              {%- liquid
-                assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-                assign sizes = '100vw'
-                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              -%}
-              <picture>
-                {%- if block.settings.mobile_image -%}
-                  <source media="(max-width: 749px)" srcset="{{ block.settings.mobile_image | image_url: width: 1500 }}" sizes="100vw">
-                {%- endif -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 3840
-                  | image_tag: height: height, sizes: sizes, widths: widths, loading: 'lazy'
-                }}
-              </picture>
-            {%- else -%}
-              {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="image-carousel-heading {{ section.settings.heading_size }}">
+              {{ section.settings.heading }}
+            </h2>
+          {%- endif -%}
+
+          {%- if section.settings.text != blank -%}
+            <div class="image-carousel-description rte">
+              {{ section.settings.text }}
+            </div>
+          {%- endif -%}
+
+          <div class="image-carousel-buttons">
+            {%- if section.settings.button_1_label != blank -%}
+              <a
+                href="{{ section.settings.button_1_link | default: '#' }}"
+                class=" button--{{ section.settings.button_1_style }}"
+              >
+                {{ section.settings.button_1_label }}
+              </a>
+            {%- endif -%}
+            {%- if section.settings.button_2_label != blank -%}
+              <a
+                href="{{ section.settings.button_2_link | default: '#' }}"
+                class=" button--{{ section.settings.button_2_style }}"
+              >
+                {{ section.settings.button_2_label }}
+              </a>
+            {%- endif -%}
+            {%- if section.settings.button_3_label != blank -%}
+              <a
+                href="{{ section.settings.button_3_link | default: '#' }}"
+                class=" button--{{ section.settings.button_3_style }}"
+              >
+                {{ section.settings.button_3_label }}
+              </a>
             {%- endif -%}
           </div>
         </div>
       </div>
-    {%- endfor -%}
-  </div>
-
-  <div class="image-carousel-content-container">
-    <div class="image-carousel-content {{ section.settings.text_alignment }}">
-      <div class="image-carousel-text-overlay">
-        {%- if section.settings.subheading != blank -%}
-          <p class="image-carousel-subheading h4">{{ section.settings.subheading }}</p>
-        {%- endif -%}
-        
-        {%- if section.settings.heading != blank -%}
-          <h2 class="image-carousel-heading {{ section.settings.heading_size }}">
-            {{ section.settings.heading }}
-          </h2>
-        {%- endif -%}
-
-        {%- if section.settings.text != blank -%}
-          <div class="image-carousel-description rte">
-            {{ section.settings.text }}
-          </div>
-        {%- endif -%}
-
-        <div class="image-carousel-buttons">
-          {%- if section.settings.button_1_label != blank -%}
-            <a
-              href="{{ section.settings.button_1_link | default: '#' }}"
-              class=" button--{{ section.settings.button_1_style }}"
-            >
-              {{ section.settings.button_1_label }}
-            </a>
-          {%- endif -%}
-          {%- if section.settings.button_2_label != blank -%}
-            <a
-              href="{{ section.settings.button_2_link | default: '#' }}"
-              class=" button--{{ section.settings.button_2_style }}"
-            >
-              {{ section.settings.button_2_label }}
-            </a>
-          {%- endif -%}
-          {%- if section.settings.button_3_label != blank -%}
-            <a
-              href="{{ section.settings.button_3_link | default: '#' }}"
-              class=" button--{{ section.settings.button_3_style }}"
-            >
-              {{ section.settings.button_3_label }}
-            </a>
-          {%- endif -%}
-        </div>
-      </div>
     </div>
   </div>
-</slideshow-component>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-image-carousel-{{ section.id }}', {
+      loop: {{ section.settings.loop | default: true }},
+      observer: true,
+      observeParents: true,
+      {% if section.settings.auto_rotate %}
+      autoplay: {
+        delay: {{ section.settings.change_slides_speed | times: 1000 }},
+        disableOnInteraction: false,
+      },
+      {% endif %}
+      navigation: {
+        nextEl: '.swiper-button-next-{{ section.id }}',
+        prevEl: '.swiper-button-prev-{{ section.id }}',
+      },
+      pagination: {
+        el: '.swiper-pagination-{{ section.id }}',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' slider-counter__link slider-counter__link--dots"><span class="dot"></span></span>';
+        },
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 600,
+    });
+  });
+</script>
 </div>
 
 {% schema %}
@@ -194,6 +197,12 @@
       ],
       "default": "medium",
       "label": "Slider height"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Enable loop",
+      "default": true
     },
     {
       "type": "checkbox",

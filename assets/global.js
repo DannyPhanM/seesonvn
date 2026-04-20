@@ -863,7 +863,7 @@ class SlideshowComponent extends SliderComponent {
   constructor() {
     super();
     this.sliderControlWrapper = this.querySelector('.slider-buttons');
-    this.enableSliderLooping = true;
+    this.enableSliderLooping = this.getAttribute('data-loop') !== 'false';
 
     if (!this.sliderControlWrapper) return;
 
@@ -932,7 +932,7 @@ class SlideshowComponent extends SliderComponent {
 
     if (isFirstSlide && event.currentTarget.name === 'previous') {
       this.slideScrollPosition =
-        this.slider.scrollLeft + this.sliderFirstItemNode.clientWidth * this.sliderItemsToShow.length;
+        this.slider.scrollLeft + this.sliderItemOffset * this.sliderItemsToShow.length;
     } else if (isLastSlide && event.currentTarget.name === 'next') {
       this.slideScrollPosition = 0;
     }
