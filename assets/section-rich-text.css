@@ -80,7 +80,7 @@
 
   .template--index .rich-text__blocks>*+* {
     margin-top: 12px;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0;
   }
 }
