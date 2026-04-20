@@ -1,8 +1,9 @@
 /* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
 .swatch-input__input + .swatch-input__label {
-  --swatch-input--border-radius: 50%;
+  --swatch-input--border-radius: 0;
   display: inline-block;
-  max-width: 100%;
+  width: 14px;
+  height: 14px;
   border-radius: var(--swatch-input--border-radius);
   cursor: pointer;
   outline-offset: 0.2rem;
@@ -11,7 +12,38 @@
   transition-property: outline-color, outline-width, box-shadow;
   transition-duration: var(--duration-short);
   transition-timing-function: ease;
-  forced-color-adjust: none;
+  position: relative;
+}
+.mobile-facets__item .swatch-input__input + .swatch-input__label  {
+  
+}
+.mobile-facets__item .swatch-input__input + .swatch-input__label span { 
+  background: transparent;
+  border-color: #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mobile-facets__item .swatch-input__input:checked + .swatch-input__label {
+  border-radius: 0 !important;
+  padding: 0;
+  min-width: 14px;
+  width: 14px;
+  height: 14px;
+}
+.mobile-facets__item .swatch-input__input:checked + .swatch-input__label span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 9'%3E%3Cpath fill='black' fill-rule='evenodd' d='M11.35.643a.5.5 0 0 1 .006.707l-6.77 6.886a.5.5 0 0 1-.719-.006L.638 4.845a.5.5 0 1 1 .724-.69l2.872 3.011 6.41-6.517a.5.5 0 0 1 .707-.006z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
 }
 
 .swatch-input__input + .swatch-input__label.swatch-input__label--square {
