@@ -163,7 +163,7 @@ input::-webkit-search-decoration {
   border: none;
   margin: 0;
   margin-bottom: 30px;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .search-modal.modal__content .search-modal__content .predictive-search__results-list {
