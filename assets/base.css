@@ -5409,7 +5409,7 @@ details[open] > .open-facets-overlay {
     padding: 0 !important;
   }
   .card-wrapper .card__information .price__container .price__sale .price-item--regular .money {
-    font-size: 8px;
+    font-size: 10px;
   }
   .card__badge.sale .badge {
     font-size: 10px;
