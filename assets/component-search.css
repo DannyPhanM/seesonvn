@@ -159,7 +159,7 @@ input::-webkit-search-decoration {
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 5%;
+  letter-spacing: 0.09px;
   border: none;
   margin: 0;
   margin-bottom: 30px;
