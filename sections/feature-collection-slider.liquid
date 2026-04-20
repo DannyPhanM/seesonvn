@@ -409,13 +409,7 @@
 {%- assign total = product_list.count | default: 0 -%}
 {%- if total > 0 -%}
   {%- assign first_product = product_list | first -%}
-  {%- assign first_lifestyle_image = first_product.media[0] -%}
-  {%- for media in first_product.media -%}
-    {%- if media.alt contains '-5' -%}
-      {%- assign first_lifestyle_image = media -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
+  {%- assign first_lifestyle_image = first_product.media[4] | default: first_product.featured_media -%}
 {%- endif -%}
 
 <div class="feat-coll-slider section-{{ section.id }}-padding">
@@ -505,8 +499,9 @@
             class="feat-coll-preview"
             id="FcPreview-{{ section.id | replace: '-', '_' }}"
           >
+            {%- assign first_preview_image = first_product.media[1] | default: first_product.featured_media -%}
             {{
-              first_product.media[1]
+              first_preview_image
               | image_url: width: 1000
               | image_tag:
                 alt: first_product.title,
@@ -523,15 +518,8 @@
               <div class="swiper-wrapper">
                 {%- for product in product_list -%}
                   {%- liquid
-                    assign lifestyle_image = product.media[0]
-                    assign thumbnail_image = product.media[0]
-                    for media in product.media
-                      if media.alt contains '-4'
-                        assign lifestyle_image = media
-                        assign thumbnail_image = media
-                        break
-                      endif
-                    endfor
+                    assign lifestyle_image = product.media[4] | default: product.featured_media
+                    assign preview_image = product.media[1] | default: product.featured_media
                   -%}
                   <div
                     class="swiper-slide"
@@ -539,14 +527,14 @@
                     data-title="{{ product.title | escape }}"
                     data-available="{{ product.available }}"
                     data-price="{{ product.price | money }}"
-                    data-glass="{{ product.media[1] | image_url: width: 600 }}"
+                    data-glass="{{ preview_image | image_url: width: 600 }}"
                     data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
                     data-product-id="{{ product.id }}"
                     data-variant-id="{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}"
                     data-product-url="{{ shop.url | append: product.url }}"
                   >
                     {{ lifestyle_image | image_url: width: 200 | image_tag: class: 'thumb-lifestyle', loading: 'lazy' }}
-                    {{ product.media[1] | image_url: width: 200 | image_tag: class: 'thumb-glass', loading: 'lazy' }}
+                    {{ preview_image | image_url: width: 200 | image_tag: class: 'thumb-glass', loading: 'lazy' }}
                   </div>
                 {%- endfor -%}
               </div>
