@@ -5545,3 +5545,9 @@ details[open] > .open-facets-overlay {
   font-size: 8px !important;
 }
 }
+
+@media(hover: none) and (pointer: coarse) {
+  .card__media-nav {
+    display: none !important;
+  }
+}
