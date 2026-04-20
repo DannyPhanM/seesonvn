@@ -27,3 +27,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Temporarily disable scroll reveal animations */
+.scroll-trigger.animate--fade-in,
+.scroll-trigger.animate--slide-in,
+.scroll-trigger.animate--zoom-in {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  visibility: visible !important;
+}
