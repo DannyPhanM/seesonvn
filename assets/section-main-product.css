@@ -1944,21 +1944,20 @@ a.product__text {
 }
 
 .template--product .thumbnail-slider .thumbnail-list__item {
-  width: 6px !important;
-  height: 6px;
+  width: 4px !important;
+  height: 4px !important;
   background: #999;
   border-radius: 0;
 }
 
 .template--product .thumbnail-slider .thumbnail-list__item button {
   border-radius: 0;
+  opacity: 0.5;
 }
 
-.template--product
-  .thumbnail-slider
-  .thumbnail-list__item
-  button[aria-current="true"] {
+.template--product .thumbnail-slider .thumbnail-list__item button[aria-current="true"] {
   background: #000;
+  opacity: 1;
 }
 
 .template--product .thumbnail-slider .thumbnail-list__item:before {

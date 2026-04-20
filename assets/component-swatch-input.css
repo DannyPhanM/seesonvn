@@ -1,6 +1,6 @@
 /* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
 .swatch-input__input + .swatch-input__label {
-  --swatch-input--border-radius: 0;
+  --swatch-input--border-radius: 50%;
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -14,8 +14,8 @@
   transition-timing-function: ease;
   position: relative;
 }
-.mobile-facets__item .swatch-input__input + .swatch-input__label  {
-  
+.mobile-facets__item .swatch-input__input + .swatch-input__label {
+  --swatch-input--border-radius: 0;
 }
 .mobile-facets__item .swatch-input__input + .swatch-input__label span { 
   background: transparent;
