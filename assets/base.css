@@ -5545,6 +5545,16 @@ details[open] > .open-facets-overlay {
   font-size: 8px !important;
 }
 
+.mobile-facets .mobile-facets__close {
+  opacity: 1;
+  display: block;
+}
+.mobile-facets .mobile-facets__clear-all {
+  margin-right: 15px;
+}
+.product-form__input.product-form__input--swatch {
+  margin-bottom: 38px;
+}
 }
 
 @media(hover: none) and (pointer: coarse) {
