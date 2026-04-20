@@ -2223,6 +2223,10 @@ product-recommendations.related-products {
     display: flex;
   }
 
+  .template--product .product.product--medium .product__info-container .product__title.no-variant {
+    margin-bottom: 40px;
+  }
+
   .template--product .product.product--medium .product__title .wish-list {
     height: 24px;
   }
