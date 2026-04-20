@@ -149,7 +149,7 @@
         "unit_price": "Đơn giá"
       },
       "share": "Chia sẻ sản phẩm này",
-      "sold_out": "Đã bán hết",
+      "sold_out": "Sold out",
       "unavailable": "Không có sẵn",
       "vendor": "Nhà cung cấp",
       "video_exit_message": "{{ title }} mở video toàn màn hình ở cùng một cửa sổ.",
@@ -567,6 +567,16 @@
       "sorting": {
         "date_ascending": "Cũ đến mới",
         "date_descending": "Mới đến cũ"
+      }
+    },
+    "checkout": {
+      "stock": {
+        "sold_out_label": "Sold out"
+      },
+      "throttle": {
+        "merchandise": {
+          "sold_out": "Sold out"
+        }
       }
     }
   }
