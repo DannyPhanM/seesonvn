@@ -732,7 +732,19 @@
                     if (slide) {
                         const realIndex = slide.getAttribute('data-real-index');
                         if (realIndex !== null) {
-                            selectProduct(parseInt(realIndex));
+                            const idx = parseInt(realIndex);
+                            selectProduct(idx);
+
+                            const relativeIdx = idx - this.activeIndex;
+
+                            // When user clicks the items on the right (4th visible and beyond) -> Auto scroll forward 2
+                            if (relativeIdx >= 3) {
+                                this.slideTo(this.activeIndex + 2);
+                            }
+                            // When user clicks the items on the left (1st or 2nd visible) -> Auto scroll back 2
+                            else if (relativeIdx <= 1) {
+                                this.slideTo(this.activeIndex - 2);
+                            }
                         }
                     }
                 }

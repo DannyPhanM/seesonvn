@@ -586,7 +586,20 @@
         },
         click: function(s, e) {
           const sl = e.target.closest('.swiper-slide');
-          if(sl) selectCollection(parseInt(sl.getAttribute('data-real-index')));
+          if(sl) {
+            const idx = parseInt(sl.getAttribute('data-real-index'));
+            selectCollection(idx);
+
+            const relativeIdx = idx - this.activeIndex;
+            // When user clicks the items on the right (4th visible and beyond) -> Auto scroll forward 2
+            if (relativeIdx >= 3) {
+              this.slideTo(this.activeIndex + 2);
+            }
+            // When user clicks the items on the left (1st or 2nd visible) -> Auto scroll back 2
+            else if (relativeIdx <= 1) {
+              this.slideTo(this.activeIndex - 2);
+            }
+          }
         }
       }
     });
