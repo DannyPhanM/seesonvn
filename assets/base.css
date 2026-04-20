@@ -308,7 +308,7 @@ body.open-drawer:not(.open-filter) {
   }
 
   body.overflow-hidden,
-  body.open-drawer {
+  body.open-drawer:not(.open-filter) {
     height: 100vh;
     overflow: hidden;
   }

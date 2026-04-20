@@ -314,10 +314,52 @@ button.swym-button:disabled:hover {
   }
 }
 
-@media (min-width: 750px) and (max-width: 1200px) {
-  .search-modal.modal__content .search-modal__content {
+@media (min-width: 750px) and (max-width: 1155px) {
+  .search-modal.modal__content .page-width {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .search-modal.modal__content .promo_collection {
     width: 45%;
-    margin-right: 3%;
+    max-width: 45%;
+    margin-top: 0;
+  }
+
+  details[open]>.search-modal {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+  .search-modal.modal__content .page-width .promo_collection {
+    margin-top: 101px;
+  }
+
+  .search-modal.modal__content .search-modal__content {
+    width: 50% !important;
+    max-width: 50% !important;
+    padding-left: 53px;
+    margin-right: 0;
+    padding-top: 0 !important;
+  }
+
+  .search-modal.modal__content .search-modal__content .predictive-search__results-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    gap: 22px;
+  }
+
+  #predictive-search-recently-viewed-list li {
+    width: 40% !important;
+    min-width: 150px;
+    flex-shrink: 0;
+  }
+
+  .search-modal.modal__content .search-modal__content .predictive-search__results-list li a img {
+    height: auto;
+    max-width: 100%;
   }
 }
 
