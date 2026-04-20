@@ -5509,7 +5509,7 @@ details[open] > .open-facets-overlay {
     line-height: 1.2 !important;
     font-weight: 600 !important;
     letter-spacing: 0.7px !important;
-    
+    text-transform: uppercase !important;
   }
 
   .cart-notification-wrapper .cart-notification.active {
@@ -5550,4 +5550,8 @@ details[open] > .open-facets-overlay {
   .card__media-nav {
     display: none !important;
   }
+}
+
+.swym-ui-component .swym-empty-wishlist-container .swym-empty-wishlist-continue-btn {
+  text-transform: uppercase !important;
 }
