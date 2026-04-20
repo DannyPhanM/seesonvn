@@ -42,7 +42,7 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 200,
-        "padding_top_mobile": 200,
+        "padding_top_mobile": 100,
         "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
