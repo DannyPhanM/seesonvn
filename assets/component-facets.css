@@ -1360,3 +1360,11 @@ facet-remove.active-facets__button-wrapper a {
     padding-bottom: 16px;
   }
 }
+
+body:has(.mobile-facets__disclosure[open]) {
+  pointer-events: none;
+}
+
+.mobile-facets__disclosure[open] {
+  pointer-events: auto;
+}

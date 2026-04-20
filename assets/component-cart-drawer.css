@@ -242,6 +242,8 @@ cart-drawer-items.is-empty + .drawer__footer {
 cart-drawer-items {
   overflow: auto;
   flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
 }
 
 .cart-drawer .cart-item {
@@ -253,6 +255,8 @@ cart-drawer-items {
   padding-top: 30px;
   padding-bottom: 19px;
   border-bottom: 1px solid #999;
+  position: relative;
+  grid-template-rows: 1fr;
 }
 
 @media screen and (max-width: 989px) {
@@ -270,12 +274,14 @@ cart-drawer-items {
 .cart-drawer s.cart-item__old-price span{
   text-decoration: line-through;
   font-size: 10px;
+  font-weight: 400;
 }
 
 .cart-drawer .cart-item__media {
   grid-row: 1 / 4;
   width: 15.5rem;
   padding-top: 0;
+  height: 90px;
 }
 
 @media screen and (max-width: 989px) {
@@ -401,6 +407,7 @@ cart-drawer-items {
 .cart-drawer .cart-items .cart-item__totals .icon-box {
   display: flex;
   gap: 4px;
+  margin-bottom: -1px;
 }
 
 /* Hide Swym default heart icon */
@@ -444,6 +451,7 @@ cart-drawer-items {
 
 .cart-drawer .price {
   line-height: 1;
+  height: 13px;
 }
 
 .cart-drawer .tax-note {
@@ -489,6 +497,10 @@ cart-drawer-items {
 }
 
 @media screen and (min-width: 750px) {
+
+.cart-item__price-wrapper {
+  margin-bottom: 4px;
+}
   .drawer__footer #dynamic-checkout-cart ul > li {
     flex-basis: calc(100% / 3 - 0.5rem) !important;
     margin: 0 !important;
@@ -599,15 +611,16 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 }
 
 .drawer__cart-items-wrapper .cart-item__details {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  overflow-y: visible;
+  /* overflow-y: visible; */
   height: max-content;
-  padding-bottom: 21px;
-  padding-top: 0
+  /* padding-bottom: 21px; */
+  padding-top: 0;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .drawer__cart-items-wrapper .cart-item__details .cart-item__details-wrapper,
 .drawer__cart-items-wrapper .cart-item__details .cart-item__quantity {

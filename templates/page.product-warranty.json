@@ -23,14 +23,14 @@
         "heading_rp9Jm9": {
           "type": "heading",
           "settings": {
-            "heading": "PRODUCT WARRANTY",
+            "heading": "CHÍNH SÁCH BẢO HÀNH",
             "heading_tag": "h1"
           }
         },
         "text_cpRbWY": {
           "type": "text",
           "settings": {
-            "text": "<p>SEESON provides warranty care for all eligible products. We handle each case with precision and attention, ensuring your item is restored to our quality standards or replaced when necessary.</p>"
+            "text": "<p>Chúng tôi áp dụng chính sách bảo hành cho toàn bộ sản phẩm kính của SEESON. Mỗi yêu cầu đều được tiếp nhận và xử lý với sự chỉn chu và tôn trọng, đảm bảo khách hàng luôn được đồng hành và hỗ trợ tốt nhất, đồng thời duy trì chất lượng sản phẩm theo tiêu chuẩn của SEESON.</p>"
           }
         }
       },
@@ -38,7 +38,7 @@
         "heading_rp9Jm9",
         "text_cpRbWY"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "CHÍNH SÁCH BẢO HÀNH",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -56,30 +56,30 @@
         "collapsible_row_XXEnxn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "SHIPPING POLICY",
+            "heading": "CHÍNH SÁCH VẬN CHUYỂN",
             "font_body": true,
             "icon": "none",
-            "row_content": "<p><strong>Job Descriptions</strong></p><ul><li>Inspect finished products to ensure they meet quality standards and have no defects.</li><li>Sort products into “qualified” and “non-qualified” categories.</li><li>Identify and handle defects that arise during inspection.</li><li>Clean and package products after completing the quality control process.</li></ul><p><strong>Job Requirements</strong></p><ul><li>Currently studying at a university or college in Hanoi.</li><li>Honest and responsible.</li><li>Careful, detail-oriented, and observant.</li></ul><p><strong>Salary</strong></p><ul><li>To be negotiated</li></ul><p><strong>Working Hours</strong></p><ul><li>Minimum 4 hours per shift, 6 shifts per week.</li><li>Flexible weekly shift registration.</li></ul><p><strong>Work Location</strong></p><ul><li>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li></ul><p><strong>How to Apply</strong></p><ul><li>Interested candidates, please send your CV to: retail.hr@seeson.vn </li><li>Only shortlisted applicants will be contacted for an interview.</li></ul><p><strong>Notes</strong></p><ul><li>Email subject line: [QUALITY CONTROL] – Full Name</li><li>CV must include a portrait photo taken within the last 6 months.</li><li>Clearly indicate whether you are applying for Full-time or Part-time.</li></ul>",
+            "row_content": "<p><strong>PHÍ SHIP:</strong></p><ul><li>Miễn phí vận chuyển với các đơn hàng Online (không bao gồm đơn hàng đổi trả)</li></ul><p><strong>THỜI GIAN GIAO HÀNG:</strong></p><ul><li>Khu vực nội thành Hà Nội: 1 – 2 ngày</li><li>Khu vực ngoại thành và các thành phố lớn: 2 – 3 ngày</li><li>Các khu vực khác: 4 – 5 ngày</li></ul>",
             "page": ""
           }
         },
         "collapsible_row_dDEBmt": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "WARRANTY POLICY",
+            "heading": "CHÍNH SÁCH MUA HÀNG VÀ BẢO HÀNH",
             "font_body": true,
             "icon": "none",
-            "row_content": "<ul><li>SEESON provides a 1-year warranty for products with manufacturer defects, based on the customer information provided. Please note the following specific cases:</li></ul><ol><li>Frame front warranty: 6-month warranty for breakage due to manufacturer defects.</li><li>Metal coating warranty: 6-month warranty for coating on metal components. Peeling caused by direct contact with surfaces such as tables or chairs is not covered.</li><li>Normal wear and tear—including faded prints, scratches, stretching, etc.—is not covered under warranty.</li></ol><ul><li>If a defective frame that qualifies for warranty is out of stock, SEESON will support the customer with an exchange for another frame of equal value (no refunds for price differences if the new frame is of lower value).</li><li>Note: Lens components are not covered under the frame warranty.<br/>Warranty does not apply to damage resulting from customer use.</li><li>SEESON offers lifetime product care, including adjustments, tightening screws, cleaning, and other basic maintenance.</li><li>For damage caused during use or cases beyond the warranty period, SEESON will evaluate repair options individually. Any repair time and additional service fees will be communicated in advance.</li><li>Prescription lenses are covered for 30 days for prescription accuracy. The updated prescription must be verified by SEESON’s technicians before warranty processing. Warranty does not apply to lenses cut based on customer requests, old prescriptions, or prescriptions provided by third parties.</li></ul>",
+            "row_content": "<p>SEESON bảo hành sản phẩm gọng kính (dựa trên thông tin mua hàng khách hàng cung cấp) với chi tiết các hạng mục như sau: </p><ul><li>Bảo hành chi tiết mặt gọng (trong trường hợp đứt gãy) trong vòng 1 năm nếu có lỗi kĩ thuật từ nhà sản xuất. </li><li>Bảo hành các chi tiết lớp phủ kim loại trong vòng 6 tháng. Không bảo hành với trường hợp bong tróc xảy ra tại khu vực tiếp xúc trực tiếp với mặt bàn, ghế hoặc các bề mặt khác.</li><li>Hỗ trợ dịch vụ gia cố sản phẩm (bao gồm nắn chỉnh, vệ sinh, siết ốc và đánh bóng).</li><li>Không bảo hành đối với các hao mòn thông thường có thể xảy ra như: mờ mực in, xước, bai dão,…</li><li>Trong trường hợp gọng kính được bảo hành do có lỗi từ nhà sản xuất đã hết hàng, SEESON hỗ trợ khách hàng đổi sang sản phẩm gọng khác có giá trị tương đương (không hoàn lại phần chênh lệch nếu sản phẩm đổi có giá trị thấp hơn).</li></ul><p><strong>LƯU Ý</strong>: </p><ul><li>Đối với các trường hợp bảo hành gọng kính, SEESON không hỗ trợ bảo hành với tròng kính đi kèm.</li><li>Chính sách bảo hành không áp dụng với các sản phẩm bị lỗi do sử dụng bất cẩn của khách hàng hoặc hỏng hóc phát sinh trong quá trình mài lắp tròng kính từ bên thứ 3.</li><li>Đối với hỏng hóc do quá trình sử dụng, hoặc quá thời hạn bảo hành, SEESON sẽ cân nhắc các phương án sửa chữa theo từng trường hợp. Thời gian và mức phí phát sinh sẽ được thông báo tới khách hàng. </li></ul><p>Tròng khúc xạ theo đơn khám được cấp bởi KTV SEESON được bảo hành độ trong vòng 30 ngày. Độ khúc xạ mới sẽ được xác nhận bởi KTV SEESON trước khi tiến hành bảo hành. Chính sách bảo hành độ không áp dụng đối với các khách hàng có yêu cầu cắt theo độ cũ hoặc theo độ khám từ bên thứ 3.</p>",
             "page": ""
           }
         },
         "collapsible_row_PRnaRQ": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "CUSTOMER SERVICES LOCATION",
+            "heading": "ĐỊA ĐIỂM TIẾP NHẬN BẢO HÀNH",
             "font_body": true,
             "icon": "none",
-            "row_content": "<ul><li>HANOI IRL FLAGSHIP <br/>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</li><li>SAIGON IRL FLAGSHIP<br/>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</li><li>For warranty cases sent and returned via shipping services, all shipping fees are covered by the customer.</li></ul>",
+            "row_content": "<ul><li>Hà Nội: Cửa hàng SEESON FLAGSHIP, 44 Tôn Đức Thắng, Quận Đống Đa.</li><li>TP HCM: Cửa hàng SEESON IRL FLAGSHIP, 199 Điện Biện Phủ, Phường Võ Thị Sáu, Quận 3.</li></ul><p>Với các trường hợp gửi và nhận kính bảo hành qua dịch vụ chuyển phát, phí phát sinh do người mua chi trả.</p>",
             "page": ""
           }
         }
@@ -90,7 +90,7 @@
         "collapsible_row_PRnaRQ"
       ],
       "custom_css": [],
-      "name": "t:sections.collapsible_content.presets.name",
+      "name": "ĐIỀU KHOẢN BẢO HÀNH",
       "settings": {
         "caption": "",
         "heading": "",

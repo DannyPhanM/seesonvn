@@ -14,7 +14,7 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_custom_DrQKeE": {
+        "link_list_custom_FxdcED": {
           "type": "link_list_custom",
           "settings": {
             "menu": "social"
@@ -22,7 +22,7 @@
         }
       },
       "block_order": [
-        "link_list_custom_DrQKeE"
+        "link_list_custom_FxdcED"
       ],
       "settings": {
         "column_gap_mobile": 85,

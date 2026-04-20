@@ -303,7 +303,7 @@
     },
     "cart": {
       "title": "Giỏ hàng",
-      "subtotal": "Tạm tính",
+      "subtotal": "Tổng Đơn",
       "discount": "Giảm giá",
       "caption": "Các mặt hàng trong giỏ hàng",
       "remove_title": "Xóa {{ title }}",
@@ -324,7 +324,7 @@
         "title": "Bạn đã có tài khoản?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập</a> để thanh toán nhanh hơn."
       },
-      "estimated_total": "Tổng số tiền ước tính",
+      "estimated_total": "Tổng Sau Giảm Giá",
       "new_estimated_total": "Tổng số tiền ước tính mới",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và phí vận chuyển được tính khi thanh toán.",
@@ -554,6 +554,20 @@
       "send_on_label": "Ngày gửi (tùy chọn)",
       "expanded": "Đã mở rộng biểu mẫu người nhận thẻ quà tặng",
       "collapsed": "Đã thu nhỏ biểu mẫu người nhận thẻ quà tặng"
+    }
+  },
+  "shopify": {
+    "notices": {
+      "cart": {
+        "maximum_available_quantity_reached": "*Vượt tồn kho. Vui lòng giảm số lượng hoặc chọn sản phẩm khác.",
+        "only_one_added_to_cart": "Vượt tồn kho."
+      }
+    },
+    "collections": {
+      "sorting": {
+        "date_ascending": "Cũ đến mới",
+        "date_descending": "Mới đến cũ"
+      }
     }
   }
 }

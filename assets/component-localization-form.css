@@ -334,7 +334,7 @@
 }
 
 .disclosure__button[aria-expanded='true'] .icon-caret {
- 
+  transform: rotate(0);
 }
 
 /* Header localization */

@@ -23,7 +23,7 @@
         "heading_dra8Pb": {
           "type": "heading",
           "settings": {
-            "heading": "OUR SERVICES",
+            "heading": "DỊCH VỤ",
             "heading_tag": "h1"
           }
         },
@@ -38,7 +38,7 @@
         "heading_dra8Pb",
         "text_rmNm4H"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "DỊCH VỤ",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -63,7 +63,7 @@
             "title": "",
             "image_link": false,
             "heading_tag": "h3",
-            "text": "<p><strong>CLEANING SERVICE</strong></p><p>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores. </p><p>Turnaround time: 2–3 business days. </p><p><em>Note: The refreshing service is only available for certain product lines.<br/>Please contact the store for detailed information.</em></p>",
+            "text": "<p><strong>DỊCH VỤ VỆ SINH </strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.</p>",
             "link_label": "",
             "link": ""
           }
@@ -78,7 +78,7 @@
             "title": "",
             "image_link": false,
             "heading_tag": "h3",
-            "text": "<p><strong>FRAME ADJUSTMENT SERVICE</strong></p><p>Free lifetime frame adjustment service.</p><p>Available at SEESON stores.</p>",
+            "text": "<p><strong>DỊCH VỤ GIA CỐ GỌNG KÍNH</strong></p><p>Dịch vụ nắn chỉnh lại gọng kính miễn phí trọn đời sản phẩm.</p><p>Dịch vụ hiện có tại các cửa hàng của SEESON.</p>",
             "link_label": "",
             "link": ""
           }
@@ -88,7 +88,7 @@
         "column_fzQjaR",
         "column_YaDLBg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "CÁC DỊCH VỤ",
       "settings": {
         "remove_space_x": true,
         "title": "",
@@ -118,7 +118,7 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "A LIFETIME OF PERFECT FIT",
+            "heading": "BẢO HÀNH TRỌN ĐỜI",
             "heading_tag": "h1"
           }
         },
@@ -133,7 +133,7 @@
         "heading_WCzNHR",
         "text_zAzDqQ"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "BẢO HÀNH TRỌN ĐỜI",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -145,45 +145,45 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_N8yxjX": {
+    "multicolumn_CEDLiT": {
       "type": "multicolumn",
       "blocks": {
-        "column_hrjhHR": {
+        "column_7T7yqy": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_106.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_2.png",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, TP. Hà Nội<br/>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         },
-        "column_98Faij": {
+        "column_KKG4xy": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Rectangle_107.png",
-            "image_mobile": "shopify://shop_images/banner_mobile_3.png",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, TP. Hồ Chí Minh<br/>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_hrjhHR",
-        "column_98Faij"
+        "column_7T7yqy",
+        "column_KKG4xy"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "HỆ THỐNG CỬA HÀNG",
       "settings": {
         "remove_space_x": false,
         "title": "",
@@ -203,31 +203,31 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 0,
-        "padding_bottom_mobile": 0
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
       }
     },
-    "rich_text_rTBygV": {
+    "rich_text_Wxqhxr": {
       "type": "rich-text",
       "blocks": {
-        "text_QpdQwQ": {
+        "text_ErNBkq": {
           "type": "text",
           "settings": {
-            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
+            "text": "<p>Trải nghiệm trực tiếp thiết kế SEESON tại hệ thống đối tác phân phối được chọn lọc. Khám phá danh sách đại lý chính thức và tìm cửa hàng gần nhất tại đây.</p><p><a href=\"/pages/stores\" title=\"STORES\">HỆ THỐNG ĐẠI LÝ PHÂN PHỐI CHÍNH THỨC</a></p>"
           }
         }
       },
       "block_order": [
-        "text_QpdQwQ"
+        "text_ErNBkq"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "CTA HỆ THỐNG CỬA HÀNG",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 60,
-        "padding_top_mobile": 20,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
         "padding_bottom": 120,
         "padding_bottom_mobile": 120
       }
@@ -238,7 +238,7 @@
     "rich_text_TtqrjW",
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
-    "multicolumn_N8yxjX",
-    "rich_text_rTBygV"
+    "multicolumn_CEDLiT",
+    "rich_text_Wxqhxr"
   ]
 }

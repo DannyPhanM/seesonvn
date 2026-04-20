@@ -23,14 +23,14 @@
         "heading_rp9Jm9": {
           "type": "heading",
           "settings": {
-            "heading": "USER GUIDE",
+            "heading": "HƯỚNG DẪN SỬ DỤNG",
             "heading_tag": "h1"
           }
         },
         "text_cpRbWY": {
           "type": "text",
           "settings": {
-            "text": "<p>This guide helps you care for your SEESON frames and lenses with ease. Proper use and maintenance ensure durability, comfort, and the best visual experience.</p>"
+            "text": "<p>Hướng dẫn này giúp bạn chăm sóc gọng kính SEESON và tròng kính một cách dễ dàng. Việc sử dụng và bảo quản đúng cách giúp duy trì độ bền, sự thoải mái và chất lượng thị giác tốt nhất.</p>"
           }
         }
       },
@@ -38,7 +38,7 @@
         "heading_rp9Jm9",
         "text_cpRbWY"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "HƯỚNG DẪN SỬ DỤNG",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -56,20 +56,20 @@
         "collapsible_row_XXEnxn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "CARING FOR YOUR FRAMES",
+            "heading": "CHĂM SÓC GỌNG KÍNH",
             "font_body": true,
             "icon": "none",
-            "row_content": "<p><strong>Recommendations</strong></p><ul><li>Put on, remove, and open/close your glasses using both hands.</li><li>Use lens-cleaning solution and a microfiber cloth to clean your glasses.</li><li>Store your glasses in a case or leather pouch when not in use.</li><li>Avoid dropping or applying strong impact to the product—especially on structural areas such as the bridge and hinges. When cleaning, hold each lens gently and avoid twisting the bridge.</li><li>For products with metal details: Metal is sensitive to sweat, chemicals, and prolonged exposure to water. Wipe the metal parts dry with a microfiber cloth after each use.</li><li>Avoid collisions that may cause the coating to peel. Always store your glasses in the case when not in use.</li><li>Stop using the product if you experience irritation in areas where the metal touches your skin, and contact SEESON for support.</li></ul><h4>Advoidances</h4><ul><li>Putting on or removing glasses with one hand, or wearing them on top of your head (this may stretch the frame).</li><li>Using detergents or any chemical solutions (alcohol, hand sanitizer, soap) to clean the glasses.</li><li>Leaving glasses in high temperatures or under direct sunlight.</li><li>Storing glasses together with other items—especially sharp objects—without a case.</li><li>Applying force or strong impact that may deform the glasses.</li><li>Wearing ill-fitting glasses (too loose, too tight, or uneven), or adjusting them yourself.</li><li>If your glasses become loose, stretched, or misaligned, please bring them to the SEESON IRL FLAGSHIP stores for professional adjustment and support.</li></ul>",
+            "row_content": "<p><strong>NÊN:</strong></p><ul><li>Đeo, tháo và đóng mở kính bằng hai tay.</li><li>Sử dụng dung dịch vệ sinh kính và khăn lau chuyên dụng để lau kính.</li><li>Bảo quản kính trong hộp/ bao da khi không sử dụng.</li><li>Tránh để sản phẩm rơi vỡ hoặc tác động lực mạnh, đặc biệt là các khu vực có tác dụng giữ cấu trúc sản phẩm như cầu mũi, bản lề. Khi vệ sinh kính, nên cầm tay vào từng bên mắt kính và lau nhẹ, không làm xoắn uốn cầu mũi.</li><li>Đối với các sản phẩm có chi tiết kim loại: Kim loại nhạy cảm với mồ hôi, các chất hóa học, hoặc nước khi tiếp xúc trong thời gian dài. Vệ sinh sạch phần kim loại bằng khăn lau kính khô sau mỗi lần sử dụng.</li><li>Hạn chế va đập gây bong tróc lớp phủ kim loại. Bỏ kính vào hộp khi không sử dụng.</li><li>Ngưng sử dụng sản phẩm khi có dấu hiệu bị dị ứng tại vùng da tiếp xúc với kim loại. Vui lòng liên hệ SEESON để được hỗ trợ.</li></ul><p><strong>KHÔNG NÊN:</strong></p><ul><li>Đeo, tháo kính bằng một tay và cài kính lên đầu (có thể làm gọng kính bị bai dão.Sử dụng chất tẩy rửa hoặc bất kỳ dung dịch hóa học (cồn, nước rửa tay, xà phòng) để vệ sinh kính. Để kính tại nơi có nhiệt độ cao hoặc ánh nắng chiếu trực tiếp.</li><li>Để kính chung với các vật dụng khác, đặc biệt các đồ sắc nhọn mà không có bao da hoặc hộp bảo vệ.</li><li>Tác dụng lực, va đập mạnh làm biến dạng kính.</li><li>Đeo kính bị lệch, rộng quá hoặc chật quá so với khuôn mặt. Tự ý nắn chỉnh, thay đổi dáng kính.</li><li>Trong trường hợp kính bị bai dão/ lệch cần nắn chỉnh kính, khách hàng có thể mang sản phẩm qua các cửa hàng SEESON IRL FLAGSHIP để được nhân viên kĩ thuật hỗ trợ trực tiếp.</li></ul>",
             "page": ""
           }
         },
         "collapsible_row_dDEBmt": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "LENSES MAINTENANCE",
+            "heading": "BẢO QUẢN TRÒNG KÍNH",
             "font_body": true,
             "icon": "none",
-            "row_content": "<p><strong>Recommendations</strong></p><ul><li>Put on, remove, and open/close your glasses using both hands.</li><li>Use lens-cleaning solution and a microfiber cloth to clean your glasses.</li><li>Store your glasses in a case or leather pouch when not in use.</li><li>Avoid dropping or applying strong impact to the product—especially on structural areas such as the bridge and hinges. When cleaning, hold each lens gently and avoid twisting the bridge.</li><li>For products with metal details: Metal is sensitive to sweat, chemicals, and prolonged exposure to water. Wipe the metal parts dry with a microfiber cloth after each use.</li><li>Avoid collisions that may cause the coating to peel. Always store your glasses in the case when not in use.</li><li>Stop using the product if you experience irritation in areas where the metal touches your skin, and contact SEESON for support.</li></ul><h4>Advoidances</h4><ul><li>Putting on or removing glasses with one hand, or wearing them on top of your head (this may stretch the frame).</li><li>Using detergents or any chemical solutions (alcohol, hand sanitizer, soap) to clean the glasses.</li><li>Leaving glasses in high temperatures or under direct sunlight.</li><li>Storing glasses together with other items—especially sharp objects—without a case.</li><li>Applying force or strong impact that may deform the glasses.</li><li>Wearing ill-fitting glasses (too loose, too tight, or uneven), or adjusting them yourself.</li><li>If your glasses become loose, stretched, or misaligned, please bring them to the SEESON IRL FLAGSHIP stores for professional adjustment and support.</li></ul>",
+            "row_content": "<ul><li>Đối với gọng kính cận, tròng demo là tròng nhựa CR39 cơ bản để giữ dáng kính. Để bảo vệ mắt tốt hơn, khách hàng nên thay bằng các loại tròng chuyên dụng.</li><li>Việc cắt tròng sai kỹ thuật (quá căng, quá lỏng) có thể ảnh hưởng đến chất lượng gọng kính.</li><li>Lau tròng kính bằng khăn và nước lau kính chuyên dụng. Không sử dụng hoá chất, chất tẩy rửa mạnh, vải thô cứng để lau tròng kính.</li><li>Tránh để tròng kính tiếp xúc nhiệt độ cao, tác động lực mạnh hoặc va đập vào các bề mặt khác.</li><li>Việc lau chùi, sử dụng chưa đúng cách có thể làm tròng kính bị trầy xước, ảnh hưởng đến lớp váng phủ bảo vệ.</li><li>Đối với các khách hàng đo khám tại SEESON, vui lòng xem chính sách bảo hành và hướng dẫn sử dụng tròng kính chi tiết ở tài liệu đi kèm.</li></ul>",
             "page": ""
           }
         }
@@ -79,7 +79,7 @@
         "collapsible_row_dDEBmt"
       ],
       "custom_css": [],
-      "name": "t:sections.collapsible_content.presets.name",
+      "name": "CHI TIẾT HƯỚNG DẪN",
       "settings": {
         "caption": "",
         "heading": "",

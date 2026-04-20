@@ -490,10 +490,8 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
     document.body.classList.add('overflow-hidden');
     document.body.classList.add('open-drawer');
-    document.documentElement.classList.add('overflow-hidden');
     if (this.classList.contains('mobile-facets__wrapper')) {
       document.body.classList.add('open-filter');
-      document.documentElement.classList.add('open-filter');
     }
   }
 
@@ -512,8 +510,6 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.remove('overflow-hidden');
     document.body.classList.remove('open-drawer');
     document.body.classList.remove('open-filter');
-    document.documentElement.classList.remove('overflow-hidden');
-    document.documentElement.classList.remove('open-filter');
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
 
@@ -592,7 +588,6 @@ class HeaderDrawer extends MenuDrawer {
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
     document.body.classList.add('overflow-hidden');
     document.body.classList.add('open-drawer');
-    document.documentElement.classList.add('overflow-hidden');
   }
 
   closeMenuDrawer(event, elementToFocus) {

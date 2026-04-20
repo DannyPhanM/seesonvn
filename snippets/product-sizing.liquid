@@ -16,9 +16,10 @@
       assign temple_length = size_chart.temple_length_e.value | default: size_chart.temple_length_e
       
       assign shape_mo = product.metafields.custom.eyewear_frame_style_shape.value
-      assign frame_image = shape_mo.image.value | default: shape_mo.image | default: size_chart.image.value | default: size_chart.image
+      assign first_shape_mo = product.metafields.custom.eyewear_frame_style_shape.value | first
+      assign frame_image = shape_mo.image.value | default: first_shape_mo.image | default: shape_mo.image | default: size_chart.image.value | default: size_chart.image
       
-      assign sizing_description = size_chart.description.value | default: size_chart.description
+      assign sizing_description = first_shape_mo.image | default: size_chart.description.value | default: size_chart.description
     else
       # Fallback to product metafields if metaobject is not used
       assign lens_width = product.metafields.custom.lens_width_a.value | default: product.metafields.custom.lens_width_a | default: product.metafields.custom.lens_width.value
@@ -33,6 +34,8 @@
       assign sizing_description = description | default: product.metafields.custom.description.value
     endif
   -%}
+
+<!--hz  {{ frame_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'sizing-diagram-image' }} -->
 
   {%- if lens_width != blank or bridge_width != blank or temple_length != blank -%}
     <div class="product-sizing__top-highlight">
@@ -84,9 +87,9 @@
       </div>
     </div>
 
-    {%- if size_chart.description != blank -%}
+    {%- if first_shape_mo.description != blank -%}
       <div class="product-sizing__description rte">
-        {{- size_chart.description | metafield_tag -}}
+        {{- first_shape_mo.description | metafield_tag -}}
       </div>
     {%- elsif description != blank -%}
       <div class="product-sizing__description rte">

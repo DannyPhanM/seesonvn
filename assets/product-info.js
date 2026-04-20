@@ -182,7 +182,6 @@ if (!customElements.get('product-info')) {
             const destination = this.querySelector(`#${id}-${this.dataset.section}`);
             if (source && destination) {
               destination.innerHTML = source.innerHTML;
-              destination.className = source.className;
               destination.classList.toggle('hidden', shouldHide(source));
             }
           };
@@ -202,15 +201,6 @@ if (!customElements.get('product-info')) {
             window.variantStrings.soldOut
           );
 
-          // Update sticky button
-          const stickyButton = html.querySelector('.sticky-bar-mobile .product-form__submit');
-          const currentStickyButton = this.querySelector('.sticky-bar-mobile .product-form__submit');
-          if (stickyButton && currentStickyButton) {
-            currentStickyButton.innerHTML = stickyButton.innerHTML;
-            currentStickyButton.className = stickyButton.className;
-            currentStickyButton.disabled = stickyButton.disabled;
-          }
-
           publish(PUB_SUB_EVENTS.variantChange, {
             data: {
               sectionId: this.sectionId,
@@ -222,7 +212,10 @@ if (!customElements.get('product-info')) {
       }
 
       updateVariantInputs(variantId) {
-        this.querySelectorAll('input[name="id"]').forEach((input) => {
+        this.querySelectorAll(
+          `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
+        ).forEach((productForm) => {
+          const input = productForm.querySelector('input[name="id"]');
           input.value = variantId ?? '';
           input.dispatchEvent(new Event('change', { bubbles: true }));
         });

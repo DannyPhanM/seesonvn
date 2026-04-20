@@ -297,22 +297,18 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   z-index: 2;
 }
 
-body.open-drawer,
-body.open-filter {
+body.open-drawer:not(.open-filter) {
   height: 100vh;
   overflow: hidden;
 }
 
 @media screen and (max-width: 989px) {
-  html.overflow-hidden,
-  html.open-drawer,
-  html.open-filter {
+  html.overflow-hidden {
     overflow: hidden;
   }
 
   body.overflow-hidden,
-  body.open-drawer,
-  body.open-filter {
+  body.open-drawer {
     height: 100vh;
     overflow: hidden;
   }
@@ -2128,6 +2124,16 @@ input[type='checkbox'] {
   pointer-events: none;
 }
 
+@media (max-width: 750px) {
+  .quantity__button .svg-wrapper {
+
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  margin-top: 11px;
+  }
+}
+
 .quantity__button:focus-visible,
 .quantity__input:focus-visible {
   background-color: rgb(var(--color-background));
@@ -2722,7 +2728,8 @@ input[type='checkbox'] {
   }
 }
 
-.header__icon .svg-wrapper {
+.header__icon .svg-wrapper,
+.header__icon .svg-wrapper svg {
   width: 16px;
   height: 16px;
 }
@@ -4558,7 +4565,13 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   color:#999
 
 }
-.collection-linked a.active, .collection-linked a:hover {
+.collection-linked a:hover {
+  color: #999;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.collection-linked a.active {
   font-weight: 600;
   color: #000;
   text-decoration: underline;
@@ -5001,6 +5014,8 @@ details[open] > .open-facets-overlay {
   text-decoration: line-through;
   transform: translateY(-3px);
   letter-spacing: 0.7px;
+  font-weight: 400;
+  height: 11.4px;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-add-to-cart-btn {
   grid-area: button;
@@ -5306,7 +5321,7 @@ details[open] > .open-facets-overlay {
   }
 @media (min-width: 750px) {
     .rich-text__blocks {
-        max-width: 542px;
+        max-width: 542px !important;
     }
 }
 
@@ -5449,9 +5464,9 @@ details[open] > .open-facets-overlay {
   }
 
   .product__title-content .wishlist-button button {
-    width: 24px;
-    height: 24px;
-    margin-top: -5px;
+    width: 24px !important;
+    height: 24px !important;
+    margin-top: 2px;
     margin-left: 5px;
   }
 
@@ -5511,4 +5526,26 @@ details[open] > .open-facets-overlay {
   .feat-coll-info-actions svg {
     margin-top: -5px;
   }
+}
+
+@media (max-width: 750px) {
+
+.cart-item .svg-wrapper {
+  align-items: end;
+}
+.cart-item .atw-button-icon {
+  margin-bottom: -5px;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-product-price .swym-product-final-price {
+  font-size: 12px;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-product-price.swym-has-sale .swym-product-original-price {
+  font-size: 10px;
+}
+#swym-wishlist-render-container .swym-wishlist-grid .swym-title {
+  font-size: 10px;
+}
+.swym-ui-component .swym-wishlist-grid .swym-wishlist-item .swym-variant-title {
+  font-size: 8px !important;
+}
 }

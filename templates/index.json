@@ -168,7 +168,7 @@
         "text_PWQdMz": {
           "type": "text",
           "settings": {
-            "text": "<p>Every frame is crafted with balance, comfort, and timeless design.  Find the one that fits your world.<br/><br/><a href=\"https://www.seeson.vn/collections/all\" title=\"https://www.seeson.vn/collections/all\">SHOP ALL DESIGN</a></p>"
+            "text": "<p>Mỗi thiết kế đều được cân bằng giữa ngôn ngữ hình khối và tính ứng dụng, đảm bảo trải nghiệm thoải mái khi sử dụng hàng ngày.<br/><br/><a href=\"https://www.seeson.vn/collections/all\" title=\"https://www.seeson.vn/collections/all\">KHÁM PHÁ TẤT CẢ SẢN PHẨM</a></p>"
           }
         }
       },
@@ -193,7 +193,7 @@
         "heading_cDzbMc": {
           "type": "heading",
           "settings": {
-            "heading": "ESSENTIAL SPACES",
+            "heading": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
             "heading_tag": "h2"
           }
         },
@@ -233,7 +233,7 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Hà Nội</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
@@ -248,7 +248,7 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, Hồ Chí Minh</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
@@ -288,7 +288,7 @@
         "text_QYd4pt": {
           "type": "text",
           "settings": {
-            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
+            "text": "<p>Trải nghiệm trực tiếp thiết kế SEESON tại hệ thống đối tác phân phối được chọn lọc. Khám phá danh sách đại lý chính thức và tìm cửa hàng gần nhất tại đây.</p><p><a href=\"/pages/stores\" title=\"STORES\">HỆ THỐNG ĐẠI LÝ PHÂN PHỐI CHÍNH THỨC</a></p>"
           }
         }
       },

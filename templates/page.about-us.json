@@ -23,7 +23,7 @@
         "heading_dra8Pb": {
           "type": "heading",
           "settings": {
-            "heading": "OUR JOURNEY BEGINS",
+            "heading": "VỀ SEESON",
             "heading_tag": "h1"
           }
         },
@@ -38,7 +38,7 @@
         "heading_dra8Pb",
         "text_rmNm4H"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "VỀ SEESON",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -72,7 +72,7 @@
       "block_order": [
         "column_YaDLBg"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Image VỀ SEESON",
       "settings": {
         "remove_space_x": true,
         "title": "",
@@ -102,7 +102,7 @@
         "heading_WCzNHR": {
           "type": "heading",
           "settings": {
-            "heading": "OUR DESIGN PHILOSOPHY",
+            "heading": "TRIẾT LÝ THIẾT KẾ",
             "heading_tag": "h1"
           }
         },
@@ -117,7 +117,7 @@
         "heading_WCzNHR",
         "text_zAzDqQ"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "TRIẾT LÝ THIẾT KẾ",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -151,7 +151,7 @@
       "block_order": [
         "column_D9yK3F"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Image TRIẾT LÝ THIẾT KẾ",
       "settings": {
         "remove_space_x": true,
         "title": "",
@@ -181,7 +181,7 @@
         "heading_LQRJmP": {
           "type": "heading",
           "settings": {
-            "heading": "FROM PRODUCT TO CONSTRUCT",
+            "heading": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
             "heading_tag": "h1"
           }
         },
@@ -196,7 +196,7 @@
         "heading_LQRJmP",
         "text_RhkKdx"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -208,25 +208,25 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_XzAw6C": {
+    "multicolumn_NDdjYM": {
       "type": "multicolumn",
       "blocks": {
-        "column_te9UKE": {
+        "column_xWW4zb": {
           "type": "column",
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
             "image": "shopify://shop_images/Store_CTA_HN.jpg",
-            "image_mobile": "shopify://shop_images/Store_CTA_HN_65393500-8f43-4117-8cd2-589d33451996.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang Street, O Cho Dua District, Ha Noi City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Hà Nội</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         },
-        "column_3rLbLM": {
+        "column_YcV9wa": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -236,17 +236,17 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu Street, Xuan Hoa District, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | Monday - Sunday</p><p>+84 986 009 390<br/><br/></p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, Hồ Chí Minh</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_te9UKE",
-        "column_3rLbLM"
+        "column_xWW4zb",
+        "column_YcV9wa"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Image HỆ THỐNG CỬA HÀNG FLAGSHIP",
       "settings": {
         "remove_space_x": false,
         "title": "",
@@ -266,30 +266,30 @@
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_top_mobile": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 60,
         "padding_bottom_mobile": 20
       }
     },
-    "rich_text_rTBygV": {
+    "rich_text_a8fbaQ": {
       "type": "rich-text",
       "blocks": {
-        "text_QpdQwQ": {
+        "text_WVwXLU": {
           "type": "text",
           "settings": {
-            "text": "<p>You can also experience our eyewear through select partner retailers. Explore our list of official distributors and discover where you can try on your favorite frames nearby.</p><p><a href=\"https://www.seeson.vn/pages/our-services?pb=0\" title=\"https://www.seeson.vn/pages/our-services?pb=0\">SEESON'S OFFICIAL DISTRIBUTORS </a></p>"
+            "text": "<p>Trải nghiệm trực tiếp thiết kế SEESON tại hệ thống đối tác phân phối được chọn lọc. Khám phá danh sách đại lý chính thức và tìm cửa hàng gần nhất tại đây.</p><p><a href=\"/pages/stores\" title=\"STORES\">HỆ THỐNG ĐẠI LÝ PHÂN PHỐI CHÍNH THỨC</a></p>"
           }
         }
       },
       "block_order": [
-        "text_QpdQwQ"
+        "text_WVwXLU"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "CTA HỆ THỐNG CỬA HÀNG FLAGSHIP",
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_top_mobile": 0,
         "padding_bottom": 120,
         "padding_bottom_mobile": 120
@@ -303,7 +303,7 @@
     "rich_text_Bh37UM",
     "multicolumn_GXGR98",
     "rich_text_YKfw9t",
-    "multicolumn_XzAw6C",
-    "rich_text_rTBygV"
+    "multicolumn_NDdjYM",
+    "rich_text_a8fbaQ"
   ]
 }
