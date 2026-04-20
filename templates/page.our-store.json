@@ -118,6 +118,7 @@
       ],
       "name": "Image HANOI IRL FLAGSHIP",
       "settings": {
+        "full_width_mobile": true,
         "slide_height": "adapt_image",
         "loop": true,
         "auto_rotate": false,
@@ -240,6 +241,7 @@
       ],
       "name": "Image SAIGON IRL FLAGSHIP",
       "settings": {
+        "full_width_mobile": true,
         "slide_height": "adapt_image",
         "loop": true,
         "auto_rotate": false,
