@@ -324,7 +324,7 @@
         "title": "Bạn đã có tài khoản?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập</a> để thanh toán nhanh hơn."
       },
-      "estimated_total": "Tổng Sau Giảm Giá",
+      "estimated_total": "Tổng số tiền",
       "new_estimated_total": "Tổng số tiền ước tính mới",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Đã bao gồm thuế và thuế nhập khẩu. Ưu đãi giảm giá và phí vận chuyển được tính khi thanh toán.",

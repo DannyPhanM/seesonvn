@@ -5350,7 +5350,7 @@ details[open] > .open-facets-overlay {
   }
 
   .card-wrapper .card__information .price {
-    margin-top: 1px !important;
+    margin-top: 4px !important;
   }
 
   .rich-text__wrapper .rich-text__heading {
@@ -5402,7 +5402,8 @@ details[open] > .open-facets-overlay {
   }
 
   .drawer.active .drawer__inner {
-    max-width: 360px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .swym-ui-component .swym-wishlist-grid {
@@ -5427,7 +5428,7 @@ details[open] > .open-facets-overlay {
   }
 
   .rich-text__blocks {
-    max-width: 259px;
+    max-width: 72%;
   }
 
   .collabsible-custom__block-content h4 {
@@ -5568,7 +5569,7 @@ details[open] > .open-facets-overlay {
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0;
+  margin: 0 !important;
   padding: 7px;
   background: transparent !important;
   opacity: 0.5;

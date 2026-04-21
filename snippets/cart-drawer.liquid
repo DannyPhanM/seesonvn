@@ -701,7 +701,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
         </form>
       </cart-drawer-items>
       {%- if cart != empty -%}
-        <div class="custom-note">
+        <div class="custom-note hidden">
           <p>Don’t forget to save your code to use at checkout.</p>
         </div>
       {%- endif -%}
@@ -745,7 +745,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
           -%}
 
           <div class="totals-summary">
-            <div class="totals-summary__item">
+            <div class="totals-summary__item hidden">
               <span class="totals-summary__label">{{ 'sections.cart.subtotal' | t }}</span>
               <span class="totals-summary__value">{{ total_compare_price | money }}</span>
             </div>
