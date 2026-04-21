@@ -131,7 +131,7 @@
         "subheading": "",
         "heading": "",
         "heading_size": "h1",
-        "text": "<p><strong>DỊCH VỤ VỆ SINH</strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.<br/><br/></p>",
+        "text": "<p><strong>DỊCH VỤ GIA CỐ GỌNG KÍNH</strong></p><p>Dịch vụ nắn chỉnh lại gọng kính miễn phí trọn đời sản phẩm.</p><p>Dịch vụ hiện có tại các cửa hàng của SEESON.<br/><br/></p>",
         "text_alignment": "left-top",
         "button_1_label": "",
         "button_1_link": "",
@@ -142,6 +142,20 @@
         "button_3_label": "",
         "button_3_link": "",
         "button_3_style": "outline"
+      }
+    },
+    "rich_text_fKzqXJ": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "image_carousel_fDJ87C": {
@@ -171,7 +185,7 @@
         "subheading": "",
         "heading": "",
         "heading_size": "h1",
-        "text": "<p><strong>DỊCH VỤ VỆ SINH</strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.<br/><br/></p>",
+        "text": "<p><strong>ĐO KHÁM KHÚC XẠ</strong></p><p>SEESON cung cấp dịch vụ đo khám khúc xạ được vận hành bởi đội ngũ kỹ thuật viên chuyên môn cao, tuân thủ quy trình 16 bước tiêu chuẩn cùng hệ thống thiết bị cao cấp.</p><p>Thời gian nhận đo khám: 9:00 AM – 08:30 PM</p><p>*Dịch vụ áp dụng độc quyền cho gọng kính SEESON.</p>",
         "text_alignment": "left-top",
         "button_1_label": "",
         "button_1_link": "",
@@ -182,20 +196,6 @@
         "button_3_label": "",
         "button_3_link": "",
         "button_3_style": "outline"
-      }
-    },
-    "rich_text_fKzqXJ": {
-      "type": "rich-text",
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom": 0,
-        "padding_bottom_mobile": 0
       }
     },
     "multicolumn_UYRQzU": {
