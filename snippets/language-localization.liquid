@@ -23,7 +23,7 @@
       {% endif %}
 
     </span>
-    {{ 'icon-caret.svg' | inline_asset_content }}
+    {% render 'core-icon', name: 'caret' %}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>
     <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
@@ -39,13 +39,7 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            <span
-              {% if language.iso_code != localization.language.iso_code %}
-                class="visibility-hidden"
-              {% endif %}
-            >
-              {{- 'icon-checkmark.svg' | inline_asset_content -}}
-            </span>
+            {% render 'core-icon', name: 'checkmark' %}
             <span>
               {% if language.iso_code == 'vi' %}
                 VIE

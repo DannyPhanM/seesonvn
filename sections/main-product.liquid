@@ -125,10 +125,10 @@
                   </div>
                   <div class="icon-plus-minus">
                     <span class="icon-plus">
-                      {{- 'icon-plus.svg' | inline_asset_content -}}
+                      {% render 'core-icon', name: 'plus' %}
                     </span>
                     <span class="icon-minus">
-                      {{- 'icon-minus.svg' | inline_asset_content -}}
+                      {% render 'core-icon', name: 'minus' %}
                     </span>
                   </div>
                 </summary>
@@ -190,7 +190,8 @@
                         style="background:transparent;"
                       >
 
-                        <svg id="swym-atw-pdp-button-icon" class="atw-button-icon" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" fill="transparent" stroke-width="1.5" d="M7.3 3c-.65 0-1.2.22-1.64.66S5 4.65 5 5.3V21l7-3.17L19 21V5.3c0-.65-.22-1.2-.66-1.64S17.35 3 16.7 3z"/></svg>
+                        {% render 'core-icon', name: 'wishlist', id: 'swym-atw-pdp-button-icon', class: 'atw-button-icon' %}
+                        {% render 'core-icon', name: 'wishlist-added', id: 'swym-atw-pdp-button-icon-added', class: 'atw-button-icon wishlist-added-icon' %}
 
                         <span id="swym-atw-pdp-button-text" class="atw-button-text" aria-hidden="true"></span>
                         <div id="swym-atw-animated-loader-wrapper" class="swym-atw-animated-loader-wrapper">
@@ -248,7 +249,7 @@
                           <= block.settings.inventory_threshold
                       -%}
                         <span class="svg-wrapper" style="color: rgb(238, 148, 65)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'inventory-status' %}
                         </span>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
@@ -260,7 +261,7 @@
                         {%- endif -%}
                       {%- else -%}
                         <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'inventory-status' %}
                         </span>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
@@ -274,12 +275,12 @@
                     {%- else -%}
                       {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
                         <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'inventory-status' %}
                         </span>
                         {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
                       {%- else -%}
                         <span class="svg-wrapper" style="color: rgb(200, 200, 200)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'inventory-status' %}
                         </span>
                         {{- 'products.product.inventory_out_of_stock' | t -}}
                       {%- endif -%}
@@ -347,7 +348,7 @@
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
                         <span class="svg-wrapper">
-                          {{- 'icon-minus.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'minus' %}
                         </span>
                       </button>
                       <input
@@ -371,7 +372,7 @@
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
                         <span class="svg-wrapper">
-                          {{- 'icon-plus.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'plus' %}
                         </span>
                       </button>
                     </quantity-input>
@@ -674,7 +675,7 @@
                             {%- endif -%}
                           </div>
                           {%- if block.settings.make_collapsible_row -%}
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                            {% render 'core-icon', name: 'caret' %}
                             </summary>
                           {%- endif -%}
                           <slideshow-component class="slider-mobile-gutter">
@@ -741,7 +742,7 @@
                                   aria-label="{{ 'general.slider.previous_slide' | t }}"
                                 >
                                   <span class="svg-wrapper">
-                                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                                    {% render 'core-icon', name: 'caret' %}
                                   </span>
                                 </button>
                                 <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
@@ -775,7 +776,7 @@
                                   aria-label="{{ 'general.slider.next_slide' | t }}"
                                 >
                                   <span class="svg-wrapper">
-                                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                                    {% render 'core-icon', name: 'caret' %}
                                   </span>
                                 </button>
                               </div>
@@ -801,7 +802,7 @@
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
-            {{- 'icon-arrow.svg' | inline_asset_content -}}
+            {% render 'core-icon', name: 'arrow' %}
           </a>
         </section>
       </div>
@@ -825,7 +826,7 @@
             class="product-popup-modal__toggle"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            {{- 'icon-close.svg' | inline_asset_content -}}
+            {% render 'core-icon', name: 'close' %}
           </button>
           <div class="product-popup-modal__content-info">
             <h1 class="h2">{{ block.settings.page.title | escape }}</h1>

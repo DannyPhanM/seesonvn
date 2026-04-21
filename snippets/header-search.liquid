@@ -16,12 +16,8 @@
       aria-label="{{ 'general.search.search' | t }}"
     >
       <span>
-        <span class="svg-wrapper">
-          {% render 'core-icon', name: 'search' %}
-        </span>
-        <span class="svg-wrapper header__icon-close">
-          {% render 'core-icon', name: 'close' %}
-        </span>
+        {% render 'core-icon', name: 'search', class: 'icon icon-search' %}
+        {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
       </span>
     </summary>
     <div
@@ -85,13 +81,11 @@
                 style="display: none;"
               >
                 <span class="svg-wrapper">
-                  {{- 'icon-reset.svg' | inline_asset_content -}}
+                  {% render 'core-icon', name: 'reset' %}
                 </span>
               </button>
               <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                <span class="svg-wrapper">
-                  {% render 'core-icon', name: 'search' %}
-                </span>
+                {% render 'core-icon', name: 'search', class: 'icon icon-search' %}
               </button>
             </div>
 
@@ -148,9 +142,7 @@
             class="search-modal__close-button modal__close-button link link--text focus-inset"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            <span class="svg-wrapper">
-              {% render 'core-icon', name: 'close' %}
-            </span>
+            {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
           </button>
         </div>
       </div>

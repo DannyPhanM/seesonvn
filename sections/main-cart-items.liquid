@@ -316,7 +316,7 @@
                             class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary large-up-hide"
                             aria-expanded="false"
                           >
-                            {{- 'icon-info.svg' | inline_asset_content -}}
+                            {% render 'core-icon', name: 'info' %}
                             <span>
                               {%- if has_vol_pricing -%}
                                 {{ 'products.product.volume_pricing.note' | t }}

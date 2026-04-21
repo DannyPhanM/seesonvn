@@ -63,17 +63,11 @@
     >
       {% case media.media_type %}
         {% when 'video', 'external_video' %}
-          <span class="svg-wrapper">
-            {{- 'icon-play.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: 'play', class: 'icon icon-play' %}
         {% when 'model' %}
-          <span class="svg-wrapper">
-            {{- 'icon-3d-model.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: '3d-model', class: 'icon icon-3d-model' %}
         {% else %}
-          <span class="svg-wrapper">
-            {{- 'icon-zoom.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: 'zoom', class: 'icon icon-zoom' %}
       {% endcase %}
     </span>
     {%- render 'loading-spinner' -%}
@@ -110,14 +104,10 @@
       <span class="deferred-media__poster-button motion-reduce">
         {%- if media.media_type == 'model' -%}
           <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>
-          <span class="svg-wrapper">
-            {{- 'icon-3d-model.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: '3d-model', class: 'icon icon-3d-model' %}
         {%- else -%}
           <span class="visually-hidden">{{ 'products.product.media.play_video' | t }}</span>
-          <span class="svg-wrapper">
-            {{- 'icon-play.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: 'play', class: 'icon icon-play' %}
         {%- endif -%}
       </span>
       {{
@@ -159,9 +149,7 @@
           data-shopify-title="{{ product.title | escape }}"
           data-shopify-xr-hidden
         >
-          <span class="svg-wrapper">
-            {{- 'icon-3d-model.svg' | inline_asset_content -}}
-          </span>
+          {% render 'core-icon', name: '3d-model', class: 'icon icon-3d-model' %}
           {{ 'products.product.xr_button' | t }}
         </button>
       {%- endif -%}

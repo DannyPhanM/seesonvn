@@ -255,9 +255,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             onclick="this.closest('cart-drawer').close()"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            <span class="svg-wrapper">
-              {% render 'core-icon', name: 'close' %}
-            </span>
+            {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
           </button>
         </div>
 
@@ -410,7 +408,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                           >
                             {%- for discount in item.line_level_discount_allocations -%}
                               <li class="discounts__discount">
-                                {{- 'icon-discount.svg' | inline_asset_content -}}
+                                {% render 'core-icon', name: 'discount' %}
                                 {{ discount.discount_application.title }}
                               </li>
                             {%- endfor -%}
@@ -453,7 +451,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                       -}}
                                     </span>
                                     <span class="svg-wrapper">
-                                      {{- 'icon-minus.svg' | inline_asset_content -}}
+                                      {% render 'core-icon', name: 'minus' %}
                                     </span>
                                   </button>
                                   <input
@@ -494,7 +492,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                       -}}
                                     </span>
                                     <span class="svg-wrapper">
-                                      {{- 'icon-plus.svg' | inline_asset_content -}}
+                                      {% render 'core-icon', name: 'plus' %}
                                     </span>
                                   </button>
                                 </quantity-input>
@@ -506,9 +504,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary"
                                 aria-expanded="false"
                               >
-                                <span class="svg-wrapper">
-                                  {{- 'icon-info.svg' | inline_asset_content -}}
-                                </span>
+                                {% render 'core-icon', name: 'info' %}
                                 <span>
                                   {%- if has_vol_pricing -%}
                                     {{ 'products.product.volume_pricing.note' | t }}
@@ -560,9 +556,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                   type="button"
                                   aria-label="{{ 'accessibility.close' | t }}"
                                 >
-                                  <span class="svg-wrapper">
-                                    {{- 'icon-close.svg' | inline_asset_content -}}
-                                  </span>
+                                  {% render 'core-icon', name: 'close' %}
                                 </button>
                                 {%- if item.variant.quantity_price_breaks.size > 0 -%}
                                   <volume-pricing class="parent-display">
@@ -591,9 +585,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                               role="alert"
                             >
                               <small class="cart-item__error-text"></small>
-                              <span class="svg-wrapper">
-                                {{- 'icon-error.svg' | inline_asset_content -}}
-                              </span>
+                              {% render 'core-icon', name: 'error' %}
                             </div>
                           </quantity-popover>
                         </div>
@@ -700,7 +692,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             <summary>
               <span class="summary__title">
                 {{ 'sections.cart.note' | t }}
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'core-icon', name: 'caret' %}
               </span>
             </summary>
             <cart-note class="cart__note field">
