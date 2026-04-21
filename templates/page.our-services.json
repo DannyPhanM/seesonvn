@@ -57,7 +57,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/CLEANING_SERVICE.png",
-            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
+            "mobile_image": "shopify://shop_images/CLEANING_SERVICES_MOBILE.png",
             "link_image": false,
             "link": ""
           }
@@ -90,21 +90,35 @@
         "button_3_style": "outline"
       }
     },
-    "image_carousel_HbFVfc": {
+    "rich_text_8zAWpB": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_carousel_ML6wFw": {
       "type": "image-carousel",
       "blocks": {
-        "slide_CfzzjL": {
+        "slide_xVDrhX": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/CLEANING_SERVICE.png",
-            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
+            "mobile_image": "shopify://shop_images/CLEANING_SERVICES_MOBILE.png",
             "link_image": false,
             "link": ""
           }
         }
       },
       "block_order": [
-        "slide_CfzzjL"
+        "slide_xVDrhX"
       ],
       "name": "Image HANOI IRL FLAGSHIP",
       "settings": {
@@ -130,21 +144,21 @@
         "button_3_style": "outline"
       }
     },
-    "image_carousel_iAQMWg": {
+    "image_carousel_fDJ87C": {
       "type": "image-carousel",
       "blocks": {
-        "slide_WD7kFK": {
+        "slide_mPJrdP": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/CLEANING_SERVICE.png",
-            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
+            "mobile_image": "shopify://shop_images/CLEANING_SERVICES_MOBILE.png",
             "link_image": false,
             "link": ""
           }
         }
       },
       "block_order": [
-        "slide_WD7kFK"
+        "slide_mPJrdP"
       ],
       "name": "Image HANOI IRL FLAGSHIP",
       "settings": {
@@ -168,6 +182,20 @@
         "button_3_label": "",
         "button_3_link": "",
         "button_3_style": "outline"
+      }
+    },
+    "rich_text_fKzqXJ": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
       }
     },
     "multicolumn_UYRQzU": {
@@ -208,6 +236,7 @@
         "column_fzQjaR",
         "column_YaDLBg"
       ],
+      "disabled": true,
       "name": "CÁC DỊCH VỤ",
       "settings": {
         "remove_space_x": true,
@@ -357,8 +386,10 @@
     "main",
     "rich_text_TtqrjW",
     "image_carousel_AxTVVy",
-    "image_carousel_HbFVfc",
-    "image_carousel_iAQMWg",
+    "rich_text_8zAWpB",
+    "image_carousel_ML6wFw",
+    "rich_text_fKzqXJ",
+    "image_carousel_fDJ87C",
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
     "multicolumn_CEDLiT",
