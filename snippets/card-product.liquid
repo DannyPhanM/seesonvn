@@ -164,14 +164,10 @@
               </div>
               <div class="card__media-nav">
                 <button class="card__media-btn prev" type="button" aria-label="Previous">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
-                    <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="2"/>
-                  </svg>
+                  {% render 'core-icon', name: 'arrow' %}
                 </button>
                 <button class="card__media-btn next" type="button" aria-label="Next">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="22" viewBox="0 0 9 22" fill="none">
-                    <path d="M0.857422 0.514648L6.85742 10.5146L0.857422 20.5146" stroke="#999999" stroke-width="2"/>
-                  </svg>
+                  {% render 'core-icon', name: 'arrow' %}
                 </button>
               </div>
               <div class="card__media-dots"></div>
@@ -237,7 +233,8 @@
             data-variant-id="{{ card_product.selected_or_first_available_variant.id | default: card_product.variants[0].id }}"
             data-product-url="{{ shop.url | append: card_product.url }}"
           >
-            <svg id="swym-atw-pdp-button-icon" class="atw-button-icon" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke="#000" fill="transparent" stroke-width="1.5" d="M7.3 3c-.65 0-1.2.22-1.64.66S5 4.65 5 5.3V21l7-3.17L19 21V5.3c0-.65-.22-1.2-.66-1.64S17.35 3 16.7 3z"/></svg>
+            {% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}
+            {% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}
           </button>
           </h3>
           {% comment %}
@@ -404,7 +401,7 @@
                     type="button"
                     aria-label="{{ 'accessibility.close' | t }}"
                   >
-                    {{- 'icon-close.svg' | inline_asset_content -}}
+                    {% render 'core-icon', name: 'close' %}
                   </button>
                   {%- if card_product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
                     <volume-pricing class="parent-display">
@@ -458,7 +455,7 @@
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
                     <span class="icon-wrap">
-                      {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        {% render 'core-icon', name: 'arrow' %}
                     </span>
                   {%- endif -%}
                   {%- render 'loading-spinner' -%}
@@ -478,7 +475,7 @@
                     class="quick-add-modal__toggle"
                     aria-label="{{ 'accessibility.close' | t }}"
                   >
-                    {{- 'icon-close.svg' | inline_asset_content -}}
+                    {% render 'core-icon', name: 'close' %}
                   </button>
                   <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
                 </div>
@@ -526,7 +523,7 @@
                     </span>
                     {%- if horizontal_quick_add -%}
                       <span class="icon-wrap">
-                        {{- 'icon-plus.svg' | inline_asset_content -}}
+                        {% render 'core-icon', name: 'plus' %}
                       </span>
                     {%- endif -%}
                     {%- render 'loading-spinner' -%}
@@ -605,7 +602,7 @@
                     class="quick-add-modal__toggle"
                     aria-label="{{ 'accessibility.close' | t }}"
                   >
-                    {{- 'icon-close.svg' | inline_asset_content -}}
+                    {% render 'core-icon', name: 'close' %}
                   </button>
                   <div
                     id="QuickAddInfo-{{ card_product.id }}"
@@ -652,7 +649,7 @@
                           class="link product__view-details animate-arrow small-hide medium-hide"
                         >
                           {{ 'products.product.view_full_details' | t -}}
-                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                          {% render 'core-icon', name: 'arrow' %}
                         </a>
                       </div>
                       <div class="quick-add-modal__content-info--bulk-details large-up-hide">

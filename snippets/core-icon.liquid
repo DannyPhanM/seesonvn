@@ -1,0 +1,100 @@
+{% comment %}
+    Renders an icon based on the provided name.
+    Accepts:
+    - name: {String} Icon name (required)
+    - class: {String} Custom classes (optional)
+    - attr: {String} Custom attributes (optional)
+
+    Usage:
+    {% render 'core-icon', name: 'arrow' %}
+{% endcomment %}
+
+{%- liquid
+  assign icon_name = name | default: ''
+  assign icon_class = class | default: ''
+  assign icon_attr = attr | default: ''
+-%}
+
+{%- case icon_name -%}
+  {%- when 'arrow' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 100 40.12" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M100 0v11.52l-50 28.6L0 11.53V0l50 28.6z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'wishlist' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 70 100.3" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M70 100.3 35 72.75 0 100.3V10.67C0 4.78 4.78 0 10.67 0h48.65c5.89 0 10.67 4.79 10.67 10.67v89.62ZM35 60.03l25 19.68V13c0-1.66-1.34-3-3-3H13c-1.66 0-3 1.34-3 3v66.7l25-19.68Z" fill="currentColor"/>
+    </svg>
+
+    {%- when 'wishlist-added' -%}
+      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 70 100.3" class="{{ icon_class }}" {{ icon_attr }}>
+        <path d="M70 10.68v89.62L35 72.76 0 100.3V10.68C0 4.79 4.79 0 10.67 0h48.65C65.21 0 70 4.79 70 10.68" fill="currentColor"/>
+      </svg>
+
+  {%- when 'plus' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 90 90" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M90 40H50V0H40v40H0v10h40v40h10V50h40z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'minus' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 90 10" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M0 0h90v10H0z" fill="currentColor"/>
+    </svg>
+
+  {% when 'cart' %}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 80 110" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M65 30v-5C65 11.21 53.79 0 40 0S15 11.21 15 25v5H0v80h80V30zm-40-5c0-8.27 6.73-15 15-15s15 6.73 15 15v5H25zm45 75H10V40h60z" fill="currentColor"/>
+    </svg>
+
+  {% when 'close' %}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 87.07 87.07" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M87.07 7.07 80 0 43.54 36.47 7.07 0 0 7.07l36.46 36.47L0 80l7.07 7.07 36.47-36.46L80 87.07 87.07 80 50.61 43.54z" fill="currentColor"/>
+    </svg>
+  
+  {% when 'filter' %}
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 100 100" class="{{ icon_class }}" {{ icon_attr }}>
+      <defs/>
+      <g id="v">
+        <path d="M20 0h10v50H20zM0 70h20v30h10V70h20V60H0zM70 50h10v50H70zM80 30V0H70v30H50v10h50V30z" fill="currentColor"/>
+      </g>
+    </svg>
+
+  {% when 'menu' %}
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 100 80" class="{{ icon_class }}" {{ icon_attr }}>
+      <defs/>
+      <g id="v">
+        <path d="M0 0h100v10H0zM0 35h100v10H0zM0 70h100v10H0z" fill="currentColor"/>
+      </g>
+    </svg>
+
+  {% when 'search' %}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 99.99 99.99" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="M99.99 92.92 63.02 55.95C67.4 50.1 70 42.85 70 35 70 15.7 54.3 0 35 0S0 15.7 0 35s15.7 35 35 35c7.85 0 15.1-2.6 20.95-6.98l36.97 36.97zM10 35c0-13.79 11.21-25 25-25s25 11.21 25 25-11.21 25-25 25-25-11.21-25-25" fill="currentColor"/>
+    </svg>
+    
+  {% when 'trash' or 'remove' %}
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 100 100" class="{{ icon_class }}" {{ icon_attr }}>
+      <defs/>
+      <g id="v">
+        <path d="M100 10H70V0H30v10H0v10h15v80h70V20h15zM75 90H25V20h50z" fill="currentColor"/>
+        <path d="M35 30h10v50H35zM55 30h10v50H55z" fill="currentColor"/>
+      </g>
+    </svg>
+
+  {% when 'rotate' %}
+    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 100 57.59" class="{{ icon_class }}" {{ icon_attr }}>
+      <path d="m70.36 9.6.82-9.6L42.5 12.59l26.12 17.3.88-10.19c12.91 3 20.51 8.62 20.51 12.89 0 3.11-3.91 6.78-10.21 9.58-7.88 3.5-18.46 5.42-29.79 5.42-24.42 0-40-8.88-40-15 0-3.1 3.91-6.77 10.21-9.57 2.92-1.3 6.22-2.39 9.79-3.23V9.52C12.02 13.24 0 21.93 0 32.59c0 14.26 21.49 25 50 25s50-10.74 50-25C100 22 88.14 13.35 70.36 9.6" fill="currentColor"/>
+    </svg>
+    
+  {%- else -%}
+    {%- comment -%}
+      Fallback: if the icon isn't hardcoded above, try to find it in assets
+      Note: icon names should match files like 'icon-name.svg'
+    {%- endcomment -%}
+    {%- liquid
+      assign file_name = icon_name | prepend: 'icon-' | append: '.svg'
+    -%}
+    <span class="svg-wrapper {{ icon_class }}" {{ icon_attr }}>
+      {{ file_name | inline_asset_content }}
+    </span>
+{%- endcase -%}

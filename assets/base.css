@@ -4902,7 +4902,18 @@ details[open] > .open-facets-overlay {
 }
 
 .card__information .card__heading .swym-button.swym-added svg path {
-  fill: #000 !important;
+  fill: currentColor !important;
+}
+
+/* Wishlist Toggle Logic */
+.swym-button .icon-wishlist-added {
+  display: none;
+}
+.swym-button.swym-added .icon-wishlist {
+  display: none;
+}
+.swym-button.swym-added .icon-wishlist-added {
+  display: block;
 }
 .card__information .card__heading .swym-button {
   width: 26px;
@@ -4910,6 +4921,7 @@ details[open] > .open-facets-overlay {
   position: absolute;
   right: 0;
   top: 4px;
+  color: #231f20;
 }
 .card__information .card__heading .swym-button svg {
   width: 26px;

@@ -17,10 +17,10 @@
     >
       <span>
         <span class="svg-wrapper">
-          {{- 'icon-search.svg' | inline_asset_content -}}
+          {% render 'core-icon', name: 'search' %}
         </span>
         <span class="svg-wrapper header__icon-close">
-          {{- 'icon-close.svg' | inline_asset_content -}}
+          {% render 'core-icon', name: 'close' %}
         </span>
       </span>
     </summary>
@@ -90,7 +90,7 @@
               </button>
               <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                 <span class="svg-wrapper">
-                  {{- 'icon-search.svg' | inline_asset_content -}}
+                  {% render 'core-icon', name: 'search' %}
                 </span>
               </button>
             </div>
@@ -149,7 +149,7 @@
             aria-label="{{ 'accessibility.close' | t }}"
           >
             <span class="svg-wrapper">
-              {{- 'icon-close.svg' | inline_asset_content -}}
+              {% render 'core-icon', name: 'close' %}
             </span>
           </button>
         </div>
