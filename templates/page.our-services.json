@@ -90,6 +90,86 @@
         "button_3_style": "outline"
       }
     },
+    "image_carousel_HbFVfc": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_CfzzjL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CLEANING_SERVICE.png",
+            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_CfzzjL"
+      ],
+      "name": "Image HANOI IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p><strong>DỊCH VỤ VỆ SINH</strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.<br/><br/></p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "image_carousel_iAQMWg": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_WD7kFK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CLEANING_SERVICE.png",
+            "mobile_image": "shopify://shop_images/HN_Flagship_01.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_WD7kFK"
+      ],
+      "name": "Image HANOI IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p><strong>DỊCH VỤ VỆ SINH</strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.<br/><br/></p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
     "multicolumn_UYRQzU": {
       "type": "multicolumn",
       "blocks": {
@@ -277,6 +357,8 @@
     "main",
     "rich_text_TtqrjW",
     "image_carousel_AxTVVy",
+    "image_carousel_HbFVfc",
+    "image_carousel_iAQMWg",
     "multicolumn_UYRQzU",
     "rich_text_Bh37UM",
     "multicolumn_CEDLiT",
