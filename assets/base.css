@@ -4550,7 +4550,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   text-align: left;
   font-style: normal; 
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -4725,7 +4725,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
@@ -5360,7 +5360,7 @@ details[open] > .open-facets-overlay {
 
   .rich-text__wrapper .rich-text__blocks {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
   .rich-text.content-container {
