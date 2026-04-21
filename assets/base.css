@@ -5375,7 +5375,6 @@ details[open] > .open-facets-overlay {
   .multicolumn-card__info.content_overlay * {
     letter-spacing: 0.09px !important;
     font-size: 12px;
-    line-height: 1.4!important;
   }
 
   .multicolumn-card__info.content_overlay p:not(:last-child) {
