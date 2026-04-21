@@ -276,7 +276,7 @@ slideshow-component:not(.page-width) .slider-buttons {
       max-width: 220px;
       text-align: left;
       line-height: 26px;
-      letter-spacing: 6px;
+      letter-spacing: 4%;
     }
     .slideshow__text.banner__box .button-box {
       gap: 7px;
