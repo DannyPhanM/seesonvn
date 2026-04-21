@@ -340,7 +340,7 @@ body.open-drawer:not(.open-filter) {
 @media(min-width: 750px) {
   .text-body {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0%;
     text-align: justify;
   }
@@ -1475,7 +1475,7 @@ button.shopify-payment-button__button--unbranded {
   .button * {
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.4;
     padding: 0 14px;
   }
 }
@@ -3982,7 +3982,7 @@ a {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: 5%;
 }
 
@@ -4017,7 +4017,7 @@ a {
 }
 .collabsible-custom__block-content p {
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .collabsible-custom__block-content p:not(:last-child) {
@@ -4033,7 +4033,7 @@ a {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: 1px;
 }
 
@@ -4058,7 +4058,7 @@ a {
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
-line-height: 1.2;
+line-height: 1.4;
 letter-spacing: 0.55px;
 }
 
@@ -4108,7 +4108,7 @@ letter-spacing: 0.55px;
 
 .rich-text__text {
   color: #999;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .accordion__title.font-body {
