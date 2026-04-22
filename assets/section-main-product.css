@@ -2634,3 +2634,21 @@ product-recommendations.related-products {
   fill: #000 !important;
   stroke: #000 !important;
 }
+
+@media (max-width: 749px) {
+  .template--product .product-form__input--swatch {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .template--product .selected-value-right {
+    display: none;
+  }
+  .template--product .hidden.mobile-info {
+    display: block !important;
+  }
+  .template--product .hidden.mobile-info .selected-value-right {
+    display: block;
+    color: #000000;
+    opacity: 1;
+  }
+}
