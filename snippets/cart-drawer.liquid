@@ -255,7 +255,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             onclick="this.closest('cart-drawer').close()"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
+            <span class="svg-wrapper">{% render 'core-icon', name: 'close', class: 'icon icon-close' %}</span>
           </button>
         </div>
 
@@ -408,7 +408,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                           >
                             {%- for discount in item.line_level_discount_allocations -%}
                               <li class="discounts__discount">
-                                {% render 'core-icon', name: 'discount' %}
+                                <span class="svg-wrapper">{% render 'core-icon', name: 'discount' %}</span>
                                 {{ discount.discount_application.title }}
                               </li>
                             {%- endfor -%}
@@ -504,7 +504,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary"
                                 aria-expanded="false"
                               >
-                                {% render 'core-icon', name: 'info' %}
+                                <span class="svg-wrapper">{% render 'core-icon', name: 'info' %}</span>
                                 <span>
                                   {%- if has_vol_pricing -%}
                                     {{ 'products.product.volume_pricing.note' | t }}
@@ -556,7 +556,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                   type="button"
                                   aria-label="{{ 'accessibility.close' | t }}"
                                 >
-                                  {% render 'core-icon', name: 'close' %}
+                                  <span class="svg-wrapper">{% render 'core-icon', name: 'close' %}</span>
                                 </button>
                                 {%- if item.variant.quantity_price_breaks.size > 0 -%}
                                   <volume-pricing class="parent-display">
@@ -585,7 +585,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                               role="alert"
                             >
                               <small class="cart-item__error-text"></small>
-                              {% render 'core-icon', name: 'error' %}
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'error' %}</span>
                             </div>
                           </quantity-popover>
                         </div>
@@ -625,8 +625,8 @@ window.SwymCallbacks.push(renderWishlistCounter);
                               data-variant-id="{{ item.variant.id }}"
                               data-product-url="{{ shop.url | append: item.product.url }}"
                             >
-                              {% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}
-                              {% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}</span>
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}</span>
                             </button>
                           </div>
 
@@ -692,7 +692,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             <summary>
               <span class="summary__title">
                 {{ 'sections.cart.note' | t }}
-                {% render 'core-icon', name: 'caret' %}
+                <span class="svg-wrapper">{% render 'core-icon', name: 'caret' %}</span>
               </span>
             </summary>
             <cart-note class="cart__note field">

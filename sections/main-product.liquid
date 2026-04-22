@@ -190,8 +190,12 @@
                         style="background:transparent;"
                       >
 
-                        {% render 'core-icon', name: 'wishlist', id: 'swym-atw-pdp-button-icon', class: 'atw-button-icon' %}
-                        {% render 'core-icon', name: 'wishlist-added', id: 'swym-atw-pdp-button-icon-added', class: 'atw-button-icon wishlist-added-icon' %}
+                        <span class="svg-wrapper wishlist-icon">
+                          {% render 'core-icon', name: 'wishlist', id: 'swym-atw-pdp-button-icon', class: 'atw-button-icon' %}
+                        </span>
+                        <span class="svg-wrapper wishlist-added-icon">
+                          {% render 'core-icon', name: 'wishlist-added', id: 'swym-atw-pdp-button-icon-added', class: 'atw-button-icon' %}
+                        </span>
 
                         <span id="swym-atw-pdp-button-text" class="atw-button-text" aria-hidden="true"></span>
                         <div id="swym-atw-animated-loader-wrapper" class="swym-atw-animated-loader-wrapper">

@@ -315,6 +315,18 @@
   color: rgba(var(--color-foreground), 0.75);
   word-break: break-word;
 }
+.disclosure__link span {
+  text-align: left;
+}
+.disclosure__link .svg-wrapper {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.disclosure__link[aria-current="true"] .svg-wrapper {
+  opacity: 1;
+  visibility: visible;
+}
 
 .disclosure__link:hover {
   color: rgb(var(--color-foreground));

@@ -2627,12 +2627,18 @@ product-recommendations.related-products {
   stroke-width: 3px;
 }
 
-.product__title .atw-button-add-color.atw-button-added .atw-button-icon {
-  fill: #000 !important;
+.wishlist-button button .wishlist-added-icon {
+  display: none !important;
 }
-.product__title .atw-button-add-color.atw-button-added .atw-button-icon path {
-  fill: #000 !important;
-  stroke: #000 !important;
+
+.wishlist-button button.added .wishlist-added-icon,
+.wishlist-button button.atw-button-added .wishlist-added-icon {
+  display: inline-flex !important;
+}
+
+.wishlist-button button.added .wishlist-icon,
+.wishlist-button button.atw-button-added .wishlist-icon {
+  display: none !important;
 }
 
 @media (max-width: 749px) {

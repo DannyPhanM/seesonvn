@@ -78,7 +78,9 @@
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
                           {{ value.label | escape }}
-                            {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                            <span class="svg-wrapper">
+                              {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                            </span>
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                         </span>
                       </a>
@@ -92,7 +94,9 @@
                         <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                           <span class="active-facets__button-inner button button--tertiary">
                             {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
-                              {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                              <span class="svg-wrapper">
+                                {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                              </span>
                             <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                           </span>
                         </a>
@@ -147,7 +151,9 @@
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
                           </span>
                         {%- endif -%}
-                        {% render 'core-icon', name: 'caret', class: 'icon icon-caret' %}
+                        <span class="svg-wrapper">
+                          {% render 'core-icon', name: 'caret', class: 'icon icon-caret' %}
+                        </span>
                       </div>
                     </summary>
                     <div
@@ -259,7 +265,9 @@
                                       {%- endif -%}
                                     </div>
                                   {%- else -%}
-                                    {% render 'core-icon', name: 'square' %}
+                                    <span class="svg-wrapper">
+                                      {% render 'core-icon', name: 'square' %}
+                                    </span>
 
                                     <div class="svg-wrapper">
                                       {% render 'core-icon', name: 'checkmark', class: 'icon icon-checkmark' %}
@@ -303,7 +311,9 @@
                     <summary class="facets__summary caption-large focus-offset">
                       <div>
                         <span>{{ filter.label | escape }}</span>
-                        {% render 'core-icon', name: 'caret', class: 'icon icon-caret' %}
+                        <span class="svg-wrapper">
+                          {% render 'core-icon', name: 'caret', class: 'icon icon-caret' %}
+                        </span>
                       </div>
                     </summary>
                     <div
@@ -340,7 +350,9 @@
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
                       <span class="active-facets__button-inner button button--tertiary">
                         {{ value.label | escape }}
-                          {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                          <span class="svg-wrapper">
+                            {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                          </span>
                         <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                       </span>
                     </a>
@@ -354,7 +366,9 @@
                       <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
                         <span class="active-facets__button-inner button button--tertiary">
                           {{ min | default: 0 | money }} - {{ max | default: filter.range_max | money }}
-                            {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                            <span class="svg-wrapper">
+                              {% render 'core-icon', name: 'close-small', class: 'icon icon-close-small' %}
+                            </span>
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                         </span>
                       </a>
@@ -497,7 +511,9 @@
                 <p>{{ 'products.facets.clear_all' | t }}</p>
               </button>
               <div tabindex="0" class="mobile-facets__close">
-                {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
+                <span class="svg-wrapper">
+                  {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
+                </span>
               </div>
             </div>
             <div
@@ -526,8 +542,8 @@
                           <div>
                             <span>{{ filter.label | escape }}</span>
                             <span class="mobile-facets__arrow">
-                              {% render 'core-icon', name: 'plus' %}
-                              {% render 'core-icon', name: 'minus' %}
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span>
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span>
                             </span>
                           </div>
                         </summary>
@@ -634,8 +650,8 @@
                                       </div>
                                     {%- else -%}
                                       <span class="mobile-facets__highlight"></span>
-                                      {% render 'core-icon', name: 'square' %}
-                                      {% render 'core-icon', name: 'checkmark', class: 'icon icon-checkmark' %}
+                                      <span class="svg-wrapper">{% render 'core-icon', name: 'square' %}</span>
+                                      <span class="svg-wrapper">{% render 'core-icon', name: 'checkmark', class: 'icon icon-checkmark' %}</span>
                                     {%- endif %}
 
                                     {{ text_value }}
@@ -672,8 +688,8 @@
                           <div>
                             <span>{{ filter.label | escape }}</span>
                             <span class="mobile-facets__arrow">
-                              {% render 'core-icon', name: 'plus' %}
-                              {% render 'core-icon', name: 'minus' %}
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span>
+                              <span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span>
                             </span>
                           </div>
                         </summary>
@@ -730,8 +746,8 @@
                     <div>
                       <span>{{ 'products.facets.sort_by_label' | t }}</span>
                       <span class="mobile-facets__arrow">
-                        {% render 'core-icon', name: 'plus' %}
-                        {% render 'core-icon', name: 'minus' %}
+                        <span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span>
+                        <span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span>
                       </span>
                     </div>
                   </summary>
@@ -751,8 +767,8 @@
                               {% endif %}
                             >
                             <span class="mobile-facets__highlight"></span>
-                            {% render 'core-icon', name: 'square' %}
-                            {% render 'core-icon', name: 'checkmark', class: 'icon icon-checkmark' %}
+                            <span class="svg-wrapper">{% render 'core-icon', name: 'square' %}</span>
+                            <span class="svg-wrapper">{% render 'core-icon', name: 'checkmark', class: 'icon icon-checkmark' %}</span>
                             <span class="facet-checkbox__text">
                               {%- if forloop.last -%}
                                 {{ 'products.facets.sort_by_newest' | t }}

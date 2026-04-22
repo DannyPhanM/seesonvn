@@ -38,7 +38,9 @@
       {{ localization.country.currency.iso_code }}
       {{ localization.country.currency.symbol -}}
     </span>
-    {% render 'core-icon', name: 'caret' %}
+    <span class="svg-wrapper">
+      {% render 'core-icon', name: 'caret' %}
+    </span>
   </button>
   <div class="disclosure__list-wrapper country-selector" hidden>
     <div class="country-filter{% unless show_country_filter %} country-filter--no-padding{% endunless %}">
@@ -109,7 +111,9 @@
                     class="visibility-hidden"
                   {% endif %}
                 >
-                  {% render 'core-icon', name: 'checkmark' %}
+                  <span class="svg-wrapper">
+                    {% render 'core-icon', name: 'checkmark' %}
+                  </span>
                 </span>
                 <span class="country">{{- country.name }}</span>
                 <span class="localization-form__currency motion-reduce{% unless show_currencies %} hidden{% endunless %}">
@@ -138,7 +142,9 @@
                   class="visibility-hidden"
                 {% endif %}
               >
-                {% render 'core-icon', name: 'checkmark' %}
+                <span class="svg-wrapper">
+                  {% render 'core-icon', name: 'checkmark' %}
+                </span>
               </span>
               <span class="country">{{- country.name }}</span>
               <span class="localization-form__currency motion-reduce{% unless show_currencies %} hidden{% endunless %}">
