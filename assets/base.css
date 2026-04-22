@@ -2217,10 +2217,6 @@ input[type='checkbox'] {
   display: flex;
 }
 
-details[open] > .modal__toggle .modal__toggle-open {
-  display: none;
-}
-
 details[open] > .modal__toggle .modal__toggle-close {
   display: flex;
 }

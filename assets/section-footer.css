@@ -587,6 +587,11 @@ footer * {
     min-width: 0;
     padding-right: 20px;
 }
+.footer__content-bottom-wrapper .footer__localization .disclosure__button .svg-wrapper {
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+}
 .footer__content-bottom-wrapper .footer__localization .disclosure__button:after,
 .footer__content-bottom-wrapper .localization-form .disclosure__button:after,
 .footer__content-bottom-wrapper .footer__localization .disclosure__button:before,
