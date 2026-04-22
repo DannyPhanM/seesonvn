@@ -612,16 +612,16 @@ a.product__text {
 .product__title-content .wishlist-button button {
   border: none;
   padding: 3px;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 .product__title-content .wishlist-button button svg,
 .product__title-content .wishlist-button button path {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
 }
 
 @media (max-width: 749px) {
