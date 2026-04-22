@@ -143,7 +143,7 @@
   }
 
   .collection__title.title-wrapper .collection__description {
-    max-width: 259px;
+    max-width: calc(100% - 70px);
   }
 
   .collection__title.title-wrapper p {

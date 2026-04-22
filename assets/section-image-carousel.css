@@ -207,8 +207,9 @@
   }
 
   .image-carousel-text-overlay {
-    max-width: 100%;
+    max-width: calc(100% - 70px);
     padding: 1.5rem;
+    padding-right: 0;
   }
   
   .image-carousel-heading {
