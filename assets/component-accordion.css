@@ -55,6 +55,8 @@ accordion-component {
 .accordion .svg-wrapper {
   align-self: center;
   fill: rgb(var(--color-foreground));
+  width:20px;
+  height:20px;
 }
 
 .accordion details[open] > summary .icon-caret {
