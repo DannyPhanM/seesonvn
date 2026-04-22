@@ -570,6 +570,6 @@
     padding: 0 16px;
   }
   .slideshow__text.banner__box.flex-column .banner__text {
-  max-width: 259px !important;
+  max-width: calc(100% - 70px) !important;
 }
 }
