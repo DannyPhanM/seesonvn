@@ -621,8 +621,8 @@ a.product__text {
 }
 .product__title-content .wishlist-button button svg,
 .product__title-content .wishlist-button button path {
-  width: 26px;
-  height: 26px;
+  width: 19px;
+  height: 19px;
 }
 
 @media (max-width: 749px) {
