@@ -208,10 +208,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_NDdjYM": {
+    "multicolumn_tit84A": {
       "type": "multicolumn",
       "blocks": {
-        "column_xWW4zb": {
+        "column_bchcEB": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -221,12 +221,12 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Hà Nội</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, TP. Hà Nội</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390<br/><br/></p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         },
-        "column_YcV9wa": {
+        "column_y8Xw9F": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -236,17 +236,17 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, Hồ Chí Minh</p><p>9.00 AM - 10.00 PM | Thứ 2 - Thứ 6</p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, TP. Hồ Chí Minh</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
             "link_label": "",
             "link": "shopify://pages/out-stores"
           }
         }
       },
       "block_order": [
-        "column_xWW4zb",
-        "column_YcV9wa"
+        "column_bchcEB",
+        "column_y8Xw9F"
       ],
-      "name": "Image HỆ THỐNG CỬA HÀNG FLAGSHIP",
+      "name": "FLAGSHIP STORES",
       "settings": {
         "remove_space_x": false,
         "title": "",
@@ -303,7 +303,7 @@
     "rich_text_Bh37UM",
     "multicolumn_GXGR98",
     "rich_text_YKfw9t",
-    "multicolumn_NDdjYM",
+    "multicolumn_tit84A",
     "rich_text_a8fbaQ"
   ]
 }
