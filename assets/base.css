@@ -5448,7 +5448,7 @@ details[open] > .open-facets-overlay {
   }
 
   .rich-text__blocks {
-    max-width: 72%;
+    max-width: calc(100% - 70px);
   }
 
   .collabsible-custom__block-content h4 {

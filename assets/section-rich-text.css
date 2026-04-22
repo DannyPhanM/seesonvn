@@ -8,6 +8,14 @@
   width: calc(100% - 4rem / var(--font-body-scale));
 }
 
+@media(max-width: 750px) {
+  .rich-text__wrapper {
+    width: 100%;
+  }
+
+  
+}
+
 .rich-text:not(.rich-text--full-width) .rich-text__wrapper {
   margin: auto;
   width: calc(100% - 8rem / var(--font-body-scale));
