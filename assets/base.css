@@ -4938,14 +4938,16 @@ details[open] > .open-facets-overlay {
 .card__information .card__heading .swym-button {
   width: 19px;
   height: 19px;
+  padding-top: 2px;
   position: absolute;
   right: 0;
   top: 4px;
-  color: #231f20;
+  color: #000;
 }
 .card__information .card__heading .swym-button svg {
   width: 19px;
   height: 19px;
+  padding-top: 2px;
 }
 .card__information .card__heading .product-card__link:after {
   content: none !important;
