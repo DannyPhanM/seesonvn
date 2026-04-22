@@ -57,6 +57,60 @@
         "full_width": true,
         "padding_top": 60,
         "padding_top_mobile": 30,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_QwKppt": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_wtf4RV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Contact_us.jpg",
+            "mobile_image": "shopify://shop_images/Contact_us_658083e8-36e9-41fb-976c-8d7c128a1caa.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_wtf4RV"
+      ],
+      "name": "Image HANOI IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": false,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_X6TN6J": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 30,
         "padding_bottom": 0,
         "padding_bottom_mobile": 0
       }
@@ -65,6 +119,8 @@
   "order": [
     "main",
     "form",
-    "rich_text_KR6mXq"
+    "rich_text_KR6mXq",
+    "image_carousel_QwKppt",
+    "rich_text_X6TN6J"
   ]
 }
