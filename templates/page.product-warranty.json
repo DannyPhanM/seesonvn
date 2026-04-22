@@ -82,12 +82,23 @@
             "row_content": "<ul><li>Hà Nội: Cửa hàng SEESON FLAGSHIP, 44 Tôn Đức Thắng, Quận Đống Đa.</li><li>TP HCM: Cửa hàng SEESON IRL FLAGSHIP, 199 Điện Biện Phủ, Phường Võ Thị Sáu, Quận 3.</li></ul><p>Với các trường hợp gửi và nhận kính bảo hành qua dịch vụ chuyển phát, phí phát sinh do người mua chi trả.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_MK8TE8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HƯỚNG DẪN SỬ DỤNG",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>Để quá trình trải nghiệm và sử dụng sản phẩm được tối ưu nhất, truy cập đường link bên dưới để để tìm hiểu chi tiết thông tin hướng dẫn sử dụng từ SEESON.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_XXEnxn",
         "collapsible_row_dDEBmt",
-        "collapsible_row_PRnaRQ"
+        "collapsible_row_PRnaRQ",
+        "collapsible_row_MK8TE8"
       ],
       "custom_css": [],
       "name": "ĐIỀU KHOẢN BẢO HÀNH",
