@@ -983,6 +983,73 @@
     const menuDrawer = detailsElement.closest('menu-drawer');
     const summaryElement = detailsElement.querySelector('summary');
 
+    function closePopupSafely(event, mainDetails, drawer, summary) {
+      const openInnerDetails = mainDetails.querySelectorAll('details[open]:not(.mobile-facets__disclosure)');
+      
+      const inner = mainDetails.querySelector('.mobile-facets__inner');
+      
+      if (openInnerDetails.length > 0) {
+        let maxWait = 0;
+        
+        if (inner) {
+          inner.style.opacity = '0';
+          inner.style.transition = 'opacity 0.1s ease';
+        }
+
+        openInnerDetails.forEach(details => {
+          if (drawer && typeof drawer.closeSubmenu === 'function') {
+            drawer.closeSubmenu(details);
+            maxWait = 100; // closeSubmenu takes 400ms
+          } else {
+            details.removeAttribute('open');
+            details.classList.remove('menu-opening');
+          }
+        });
+        
+        if (maxWait > 0) {
+          const closeBtn = mainDetails.querySelector('.mobile-facets__close');
+          if (closeBtn) closeBtn.style.pointerEvents = 'none';
+          
+          setTimeout(() => {
+            if (closeBtn) closeBtn.style.pointerEvents = '';
+            if (drawer && typeof drawer.closeMenuDrawer === 'function') {
+              drawer.closeMenuDrawer(event, summary);
+            } else {
+               mainDetails.removeAttribute('open');
+            }
+            
+            setTimeout(() => {
+              if (inner) {
+                inner.style.opacity = '';
+                inner.style.transition = '';
+              }
+            }, 400);
+          }, maxWait);
+        } else {
+          closeDirectly(event, mainDetails, drawer, summary, inner);
+        }
+      } else {
+        closeDirectly(event, mainDetails, drawer, summary, inner);
+      }
+    }
+
+    function closeDirectly(event, mainDetails, drawer, summary, inner) {
+      if (inner) {
+        inner.style.opacity = '0';
+        inner.style.transition = 'opacity 0.1s ease';
+      }
+      if (drawer && typeof drawer.closeMenuDrawer === 'function') {
+        drawer.closeMenuDrawer(event, summary);
+      } else {
+        mainDetails.removeAttribute('open');
+      }
+      setTimeout(() => {
+        if (inner) {
+          inner.style.opacity = '';
+          inner.style.transition = '';
+        }
+      }, 400);
+    }
 
     document.addEventListener('click', (event) => {
       if (detailsElement.hasAttribute('open')) {
@@ -990,12 +1057,12 @@
         const isClickInsideForm = form && form.contains(event.target);
         const summary = detailsElement.querySelector('summary');
         const isSummaryClick = summary && summary.contains(event.target);
+        
+        // Exclude the close button from being considered "inside form" or else click outside fires
+        const isCloseBtn = event.target.closest('.mobile-facets__close');
 
-        if (!isClickInsideForm && !isSummaryClick) {
-          detailsElement.removeAttribute('open');
-          if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
-            menuDrawer.closeMenuDrawer(event, summaryElement);
-          }
+        if (!isClickInsideForm && !isSummaryClick && !isCloseBtn) {
+          closePopupSafely(event, detailsElement, menuDrawer, summaryElement);
         }
       }
     });
@@ -1036,11 +1103,8 @@
     // Handle click on the custom close button
     document.addEventListener('click', (event) => {
       const closeButton = event.target.closest('.mobile-facets__close');
-      if (closeButton && detailsElement) {
-        detailsElement.removeAttribute('open');
-        if (menuDrawer && typeof menuDrawer.closeMenuDrawer === 'function') {
-          menuDrawer.closeMenuDrawer(event, summaryElement);
-        }
+      if (closeButton && detailsElement && detailsElement.hasAttribute('open')) {
+        closePopupSafely(event, detailsElement, menuDrawer, summaryElement);
       }
 
       const clickedClearAll = event.target.closest('.mobile-facets__clear-all');
