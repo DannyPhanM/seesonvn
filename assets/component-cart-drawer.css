@@ -561,7 +561,7 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
 
 .drawer__footer {
     padding-top: 14px;
-    padding-bottom: 44px;
+    padding-bottom: 40px;
     border-top: 1px solid #999999;
 }
 .cart-drawer__footer .totals,
