@@ -20,7 +20,7 @@
         "heading_PNdAHD": {
           "type": "heading",
           "settings": {
-            "heading": "OPPS! KHÔNG TÌM THẤY",
+            "heading": "<strong>HẸN GẶP LẠI</strong>",
             "heading_tag": "h2"
           }
         },
