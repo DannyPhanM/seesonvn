@@ -1964,12 +1964,16 @@ a.product__text {
   content: none;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1024px) {
   .template--product .product__info-wrapper {
     width: 320px !important;
     max-width: 100% !important;
     margin-left: auto;
   }
+}
+
+@media(min-width: 750px) and (max-width: 989px) {
+
 }
 
 .template--product .product__info-wrapper summary {
@@ -2466,6 +2470,7 @@ product-recommendations.related-products {
     width: 100%;
     max-width: 100% !important;
     margin-top: 25px;
+    padding-left: 0;
   }
   :is(.product-form__input--pill,.product-form__input--swatch) .form__label {
     font-size: 14px !important;
