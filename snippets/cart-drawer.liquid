@@ -603,7 +603,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                             >
                               <button
                                   type="button"
-                                  class="button button--tertiary cart-remove-button"
+                                  class=" button button--tertiary cart-remove-button"
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                                   data-variant-id="{{ item.variant.id }}"
                                   {% if item.instructions and item.instructions.can_remove == false %}
@@ -625,8 +625,8 @@ window.SwymCallbacks.push(renderWishlistCounter);
                               data-variant-id="{{ item.variant.id }}"
                               data-product-url="{{ shop.url | append: item.product.url }}"
                             >
-                              <span class="svg-wrapper">{% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}</span>
-                              <span class="svg-wrapper">{% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}</span>
+                              <span class="svg-wrapper wishlist-icon">{% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}</span>
+                              <span class="svg-wrapper wishlist-added-icon">{% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}</span>
                             </button>
                           </div>
 

@@ -107,9 +107,9 @@ cart-items .title-wrapper-with-link {
   .drawer__cart-items-wrapper .cart-item__details .product-option dd {
     font-size: 8px !important;
   }
-  .cart-drawer .cart-items .cart-item__totals .icon-box svg {
-    width: 14px !important;
-    height: 14px !important;
+  .cart-drawer .cart-items .cart-item__totals .icon-box .svg-wrapper {
+    /* width: 14px !important;
+    height: 14px !important; */
   }
   .cart-item__price-wrapper .money {
     font-size: 10px;
