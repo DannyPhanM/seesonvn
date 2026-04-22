@@ -1363,6 +1363,8 @@ facet-remove.active-facets__button-wrapper a {
 
 body:has(.mobile-facets__disclosure[open]) {
   pointer-events: none;
+  height: calc(100vh - 54px);
+  overflow: hidden;
 }
 
 .mobile-facets__disclosure[open] {

@@ -605,6 +605,10 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     font-size: 12px;
     font-weight: 400;
   }
+
+  .cart-drawer {
+    width: 100%;
+  }
 }
 
 .drawer__cart-items-wrapper .cart-item__details {
