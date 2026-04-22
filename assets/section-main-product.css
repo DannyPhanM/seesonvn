@@ -612,7 +612,7 @@ a.product__text {
 .product__title-content .wishlist-button button {
   border: none;
   padding: 3px;
-  padding-top: 6px;
+  padding-top: 8px;
   width: 26px;
   height: 26px;
   display: flex;
