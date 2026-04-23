@@ -366,8 +366,8 @@
         "heading_tag": "h3",
         "full_width": false,
         "color_scheme": "scheme-1",
-        "padding_top": 10,
-        "padding_top_mobile": 10,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
         "padding_bottom": 20,
         "padding_bottom_mobile": 20
       }
