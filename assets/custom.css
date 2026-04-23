@@ -17,6 +17,7 @@
   height: 6px;
   border-radius: 0;
   box-sizing: content-box;
+  border: none;
 }
 /* Slideshow video full height */
 .slideshow__video {

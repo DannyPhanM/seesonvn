@@ -5608,6 +5608,16 @@ details[open] > .open-facets-overlay {
 .product-form__input.product-form__input--swatch {
   margin-bottom: 38px;
 }
+.feat-coll-info-actions .swym-button.swym-add-to-wishlist-view-product {
+  width: 18px !important;
+  height: 18px !important;
+  display: flex;
+}
+.feat-coll-info-actions .swym-button.swym-add-to-wishlist-view-product svg{
+  width: 14px !important;
+  height: 14px !important;
+  padding: 0 !important;
+}
 }
 
 @media(hover: none) and (pointer: coarse) {

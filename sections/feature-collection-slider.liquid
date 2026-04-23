@@ -261,6 +261,7 @@
         .feat-coll-flex {
           display: grid !important;
           grid-template-columns: minmax(0, 1fr) 27px; /* Image | Thumbs */
+          grid-template-rows: auto auto; /* Let first row size to main image, second row for info */
           grid-template-areas:
             "main thumbs"
             "info info";
@@ -289,15 +290,16 @@
         }
 
         .feat-coll-left {
-          display: contents; /* Allows children to be positions by grid */
+          display: contents; /* Allows children to be positioned by grid */
         }
 
         .feat-coll-right {
           grid-area: main;
           width: 100% !important;
-          height: 100% !important;
           aspect-ratio: 275 / 380;
           background: transparent;
+          /* This element drives the row height */
+          min-height: 0; /* Allow shrinking within grid */
         }
 
         .feat-coll-thumbs-wrap {
@@ -306,11 +308,7 @@
           padding: 0 !important;
           margin: 0 !important;
           position: relative;
-          overflow: hidden; 
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end; /* Keep it at the bottom */
+          overflow: hidden;
           /* Fix for iOS Safari overflow: hidden bug with transforms */
           -webkit-mask-image: -webkit-radial-gradient(white, white);
           -webkit-backface-visibility: hidden;
@@ -319,7 +317,11 @@
         }
 
         .thumb-master-swiper {
-          position: relative !important;
+          /* Absolutely position the swiper so its content doesn't expand the grid row */
+          position: absolute !important;
+          bottom: 0;
+          left: 0;
+          right: 0;
           height: 50% !important;
           width: 100%;
           overflow: visible !important;
@@ -333,6 +335,7 @@
         .thumb-master-swiper .swiper-slide {
           padding: 0 !important;
           height: 40px; /* Fix height to 40px as requested */
+          flex-shrink: 0;
         }
         .thumb-master-swiper .swiper-slide:last-child {
           margin-bottom: 0 !important;
