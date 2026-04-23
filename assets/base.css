@@ -4741,7 +4741,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   padding: 20px 32px 20px 0;
 }
 .mobile-facets .mobile-facets__summary span {
-  color: #999;
+  color: #000;
   text-align: justify;
   font-size: 16px;
   font-style: normal;
