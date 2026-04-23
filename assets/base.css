@@ -751,8 +751,6 @@ details>* {
 .customer a,
 .inline-richtext a {
   text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.1rem;
-  transition: text-decoration-thickness ease 100ms;
 }
 
 .underlined-link,
@@ -4591,7 +4589,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   font-weight: 600;
   color: #000;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 0.3rem;
 }
 
 .collection-linked__left,
