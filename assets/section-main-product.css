@@ -2272,8 +2272,7 @@ product-recommendations.related-products {
 
   .template--product .product__info-wrapper .price-box {
     margin-top: 0;
-        margin-bottom: -20px;
-        text-align: right;
+    text-align: right;
   }
 
   .template--product .buy-buttons-box > .hidden,
