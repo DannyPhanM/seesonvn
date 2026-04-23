@@ -72,11 +72,22 @@
             "row_content": "<ul><li>Đối với gọng kính cận, tròng demo là tròng nhựa CR39 cơ bản để giữ dáng kính. Để bảo vệ mắt tốt hơn, khách hàng nên thay bằng các loại tròng chuyên dụng.</li><li>Việc cắt tròng sai kỹ thuật (quá căng, quá lỏng) có thể ảnh hưởng đến chất lượng gọng kính.</li><li>Lau tròng kính bằng khăn và nước lau kính chuyên dụng. Không sử dụng hoá chất, chất tẩy rửa mạnh, vải thô cứng để lau tròng kính.</li><li>Tránh để tròng kính tiếp xúc nhiệt độ cao, tác động lực mạnh hoặc va đập vào các bề mặt khác.</li><li>Việc lau chùi, sử dụng chưa đúng cách có thể làm tròng kính bị trầy xước, ảnh hưởng đến lớp váng phủ bảo vệ.</li><li>Đối với các khách hàng đo khám tại SEESON, vui lòng xem chính sách bảo hành và hướng dẫn sử dụng tròng kính chi tiết ở tài liệu đi kèm.</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_row_c9KkiM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CHÍNH SÁCH BẢO HÀNH",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>Mọi thông tin chi tiết về quyền lợi mua sắm cùng các điều khoản bảo hành sản phẩm đã được SEESON cập nhật đầy đủ tại đường dẫn dưới đây. Vui lòng nhấn vào để tìm hiểu thêm.<br/><br/>CHÍNH SÁCH BẢO HÀNH</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_XXEnxn",
-        "collapsible_row_dDEBmt"
+        "collapsible_row_dDEBmt",
+        "collapsible_row_c9KkiM"
       ],
       "custom_css": [],
       "name": "CHI TIẾT HƯỚNG DẪN",
