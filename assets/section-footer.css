@@ -592,6 +592,7 @@ footer * {
   height: 14px;
   margin-left: 10px;
   transform: rotate(180deg);
+  color: #999;
 }
 .footer__content-bottom-wrapper .footer__localization .disclosure__button:after,
 .footer__content-bottom-wrapper .localization-form .disclosure__button:after,
