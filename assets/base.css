@@ -5574,7 +5574,8 @@ details[open] > .open-facets-overlay {
 }
 
 @media (max-width: 750px) {
-.search-modal.modal__content .promo_collection a {
+.search-modal.modal__content .promo_collection a,
+.title.title--primary a {
   text-decoration: underline;
 }
 .cart-item .svg-wrapper {
