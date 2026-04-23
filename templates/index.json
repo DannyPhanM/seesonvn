@@ -147,7 +147,7 @@
       "type": "featured-collection",
       "name": "ESSENTIAL STYLES",
       "settings": {
-        "collection": "the-athletes",
+        "collection": "essential-style",
         "products_to_show": 8,
         "title": "ESSENTIAL STYLES",
         "heading_size": "h1",
