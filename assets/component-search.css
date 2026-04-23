@@ -430,6 +430,7 @@ button.swym-button:disabled:hover {
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 0.24px;
+    text-underline-offset: 0.3rem;
   }
 
   .search-modal.modal__content .search-modal__content {

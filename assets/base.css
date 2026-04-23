@@ -5085,9 +5085,9 @@ details[open] > .open-facets-overlay {
   background-repeat: no-repeat;
   background-position: center;
   padding: 2px;
-    background-size: 12px 12px;
-    display: flex;
-    background-position: center;
+  background-size: 12px 12px;
+  display: flex;
+  background-position: center;
 }
 #swym-wishlist-render-container .swym-wishlist-grid .swym-product-final-price {
   font-weight: 600;
