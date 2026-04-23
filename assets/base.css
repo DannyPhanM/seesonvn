@@ -5560,7 +5560,9 @@ details[open] > .open-facets-overlay {
 }
 
 @media (max-width: 750px) {
-
+.search-modal.modal__content .promo_collection a {
+  text-decoration: unavailable;
+}
 .cart-item .svg-wrapper {
   align-items: end;
 }
