@@ -1587,10 +1587,11 @@ if (!customElements.get('accordion-component')) {
 }
 
 /**
- * Swym Price Formatter
- * Removes redundant .00 decimals from wishlist prices safely
+ * Swym Customizations
+ * 1. Removes redundant .00 decimals from wishlist prices safely
+ * 2. Redirects "Continue shopping" button to /collections/all-designs
  */
-function formatSwymPrices() {
+function handleSwymCustomizations() {
   const priceSelectors = [
     '.swym-product-final-price',
     '.swym-product-original-price',
@@ -1608,19 +1609,30 @@ function formatSwymPrices() {
       }
     }
   });
+
+  // Handle "Continue shopping" button redirect
+  const continueBtn = document.querySelector('.swym-empty-wishlist-continue-btn');
+  if (continueBtn && !continueBtn.dataset.handled) {
+    continueBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = '/collections/all-designs';
+    }, true);
+    continueBtn.dataset.handled = 'true';
+  }
 }
 
 // Observe changes to the document to handle Swym's async rendering
-const swymPriceObserver = new MutationObserver((mutations) => {
+const swymObserver = new MutationObserver((mutations) => {
   // Use a small timeout to let Swym finish its own DOM manipulations
-  clearTimeout(window.swymFormatTimeout);
-  window.swymFormatTimeout = setTimeout(formatSwymPrices, 10);
+  clearTimeout(window.swymTimeout);
+  window.swymTimeout = setTimeout(handleSwymCustomizations, 10);
 });
 
-swymPriceObserver.observe(document.body, {
+swymObserver.observe(document.body, {
   childList: true,
   subtree: true
 });
 
 // Initial run
-formatSwymPrices();
+handleSwymCustomizations();
