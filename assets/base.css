@@ -4782,11 +4782,18 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   background: transparent;
 }
 .mobile-facets .mobile-facets__label .icon-checkmark {
-  top: 3px;
-  left: 2px;
+  top: 6px;
+  left: 6px;
 }
 .active-facets__button-remove {
   font-size: 12px;
+}
+.mobile-facets__item .svg-wrapper + .svg-wrapper {
+  position: absolute;
+}
+
+.mobile-facets__label.active .svg-wrapper + .svg-wrapper {
+  visibility: visible;
 }
 .mobile-facets .sort-by-list li:nth-child(3),
 .mobile-facets .sort-by-list li:nth-child(4),
