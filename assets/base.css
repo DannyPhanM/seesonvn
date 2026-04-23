@@ -5642,3 +5642,16 @@ details[open] > .open-facets-overlay {
     text-decoration: underline;
   }
 }
+
+.mobile-facets .mobile-facets__summary .mobile-facets__arrow .svg-wrapper + .svg-wrapper {
+  display: none;
+}
+.mobile-facets .mobile-facets__details[open] .mobile-facets__summary .mobile-facets__arrow .svg-wrapper {
+  display: none;
+}
+.mobile-facets .mobile-facets__details[open] .mobile-facets__summary .mobile-facets__arrow .svg-wrapper + .svg-wrapper {
+  display: flex;
+}
+.mobile-facets .mobile-facets__details[open] .mobile-facets__summary .mobile-facets__arrow .svg-wrapper + .svg-wrapper svg {
+  display: flex;
+}
