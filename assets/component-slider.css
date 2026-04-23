@@ -278,7 +278,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link--dots.slider-counter__link--active span {
-  border: 0.2px solid #999;
+  
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
