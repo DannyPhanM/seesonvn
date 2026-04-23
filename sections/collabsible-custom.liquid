@@ -44,12 +44,8 @@
             <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
           </div>
           <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 24px; height: 24px;">
-            <span class="icon-plus" style="display: flex;align-items: center; position: absolute; color: #999999;">
-              {% render 'core-icon', name: 'plus' %}
-            </span>
-            <span class="icon-minus" style="display: flex;align-items: center; position: absolute; color: #999999;">
-              {% render 'core-icon', name: 'minus' %}
-            </span>
+            <span class="icon-plus"><span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span></span>
+            <span class="icon-minus"><span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span></span>
           </span>
         </summary>
         <div class="accordion__content-container">
@@ -74,12 +70,16 @@
   }
   .collabsible-custom__details .icon-minus {
     opacity: 0;
-    transform: rotate(-90deg);
   }
   .collabsible-custom__details[open] .icon-plus {
-    opacity: 0;
-    transform: rotate(90deg);
+    display: none;
   }
+  .collabsible-custom__icon .svg-wrapper {
+    align-self: center;
+    fill: rgb(var(--color-foreground));
+    width: 20px;
+    height: 20px;
+}
   .collabsible-custom__details[open] .icon-minus {
     opacity: 1;
     transform: rotate(0);
