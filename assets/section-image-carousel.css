@@ -297,6 +297,12 @@
   z-index: 5;
 }
 
+@media(max-width: 749px) {
+  .image-carousel-section .slider-counter--dots {
+    bottom: 13px !important;
+  }
+}
+
 
 
 .image-carousel-section .swiper-pagination-bullet {

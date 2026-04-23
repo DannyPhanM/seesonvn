@@ -4800,6 +4800,9 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .active-facets__button-remove {
   font-size: 12px;
 }
+.mobile-facets__item .svg-wrapper {
+  stroke-width: 2px;
+}
 .mobile-facets__item .svg-wrapper + .svg-wrapper {
   position: absolute;
 }
@@ -5232,6 +5235,7 @@ details[open] > .open-facets-overlay {
 .active-facets__button .svg-wrapper {
   padding: 0;
   min-width: 12px;
+  color: #999;
 }
 
 .active-facets__button .svg-wrapper svg {
