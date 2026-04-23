@@ -2625,6 +2625,11 @@ product-recommendations.related-products {
   font-size: 12px;
   letter-spacing: 0;
 }
+@media(min-width: 1024px) {
+  .product .product__left-info .accordion .accordion__content * {
+    font-size: 14px;
+  }
+}
 .product .product__left-info .sizing-square-icon svg rect {
   stroke-width: 3px;
 }

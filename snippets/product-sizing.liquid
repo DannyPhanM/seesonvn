@@ -9,11 +9,11 @@
     assign size_chart = product.metafields.custom.size_chart.value
     
     if size_chart != blank
-      assign lens_width = size_chart.lens_width_a.value | default: size_chart.lens_width_a
-      assign lens_height = size_chart.lens_height_b.value | default: size_chart.lens_height_b
-      assign bridge_width = size_chart.bridge_width_c.value | default: size_chart.bridge_width_c
-      assign frame_width = size_chart.total_frame_width_d.value | default: size_chart.total_frame_width_d
-      assign temple_length = size_chart.temple_length_e.value | default: size_chart.temple_length_e
+      assign lens_width = size_chart.lens_width_a.value | default: size_chart.lens_width_a | remove: ' mm' | remove: 'mm' | strip
+      assign lens_height = size_chart.lens_height_b.value | default: size_chart.lens_height_b | remove: ' mm' | remove: 'mm' | strip
+      assign bridge_width = size_chart.bridge_width_c.value | default: size_chart.bridge_width_c | remove: ' mm' | remove: 'mm' | strip
+      assign frame_width = size_chart.total_frame_width_d.value | default: size_chart.total_frame_width_d | remove: ' mm' | remove: 'mm' | strip
+      assign temple_length = size_chart.temple_length_e.value | default: size_chart.temple_length_e | remove: ' mm' | remove: 'mm' | strip
       
       assign shape_mo = product.metafields.custom.eyewear_frame_style_shape.value
       assign first_shape_mo = product.metafields.custom.eyewear_frame_style_shape.value | first
@@ -22,11 +22,11 @@
       assign sizing_description = first_shape_mo.image | default: size_chart.description.value | default: size_chart.description
     else
       # Fallback to product metafields if metaobject is not used
-      assign lens_width = product.metafields.custom.lens_width_a.value | default: product.metafields.custom.lens_width_a | default: product.metafields.custom.lens_width.value
-      assign lens_height = product.metafields.custom.lens_height_b.value | default: product.metafields.custom.lens_height_b | default: product.metafields.custom.lens_height.value
-      assign bridge_width = product.metafields.custom.bridge_width_c.value | default: product.metafields.custom.bridge_width_c | default: product.metafields.custom.bridge_width.value
-      assign frame_width = product.metafields.custom.total_frame_width_d.value | default: product.metafields.custom.total_frame_width_d | default: product.metafields.custom.frame_width.value
-      assign temple_length = product.metafields.custom.temple_length_e.value | default: product.metafields.custom.temple_length_e | default: product.metafields.custom.temple_length.value
+      assign lens_width = product.metafields.custom.lens_width_a.value | default: product.metafields.custom.lens_width_a | default: product.metafields.custom.lens_width.value | remove: ' mm' | remove: 'mm' | strip
+      assign lens_height = product.metafields.custom.lens_height_b.value | default: product.metafields.custom.lens_height_b | default: product.metafields.custom.lens_height.value | remove: ' mm' | remove: 'mm' | strip
+      assign bridge_width = product.metafields.custom.bridge_width_c.value | default: product.metafields.custom.bridge_width_c | default: product.metafields.custom.bridge_width.value | remove: ' mm' | remove: 'mm' | strip
+      assign frame_width = product.metafields.custom.total_frame_width_d.value | default: product.metafields.custom.total_frame_width_d | default: product.metafields.custom.frame_width.value | remove: ' mm' | remove: 'mm' | strip
+      assign temple_length = product.metafields.custom.temple_length_e.value | default: product.metafields.custom.temple_length_e | default: product.metafields.custom.temple_length.value | remove: ' mm' | remove: 'mm' | strip
       
       assign shape_mo = product.metafields.custom.eyewear_frame_style_shape.value
       assign frame_image = shape_mo.image.value | default: shape_mo.image | default: product.metafields.custom.eyewear_frame_style_shape_image.value
@@ -40,11 +40,11 @@
   {%- if lens_width != blank or bridge_width != blank or temple_length != blank -%}
     <div class="product-sizing__top-highlight">
       <span class="sizing-value">
-        {{ lens_width | remove: 'mm' | strip }}
+        {{ lens_width }}
         <span class="sizing-square-icon">{% render 'icon-square-small' %}</span>
-        {{ bridge_width | remove: 'mm' | strip }}
+        {{ bridge_width }}
         -
-        {{ temple_length | remove: 'mm' | strip }}
+        {{ temple_length }}
       </span>
     </div>
   {%- endif -%}
