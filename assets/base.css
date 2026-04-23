@@ -4753,6 +4753,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .mobile-facets .mobile-facets__summary svg {
   width: 12px;
   height: 12px;
+  color: #999;
 }
 .mobile-facets .mobile-facets__summary svg + svg {
   display: none;
