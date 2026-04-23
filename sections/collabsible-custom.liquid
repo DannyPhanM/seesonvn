@@ -43,7 +43,7 @@
           <div style="display: flex; align-items: center; gap: 8px;">
             <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
           </div>
-          <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 24px; height: 24px;">
+          <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 20px; height: 20px;">
             <span class="icon-plus"><span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span></span>
             <span class="icon-minus"><span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span></span>
           </span>
@@ -69,7 +69,7 @@
     height: auto;
   }
   .collabsible-custom__details .icon-minus {
-    opacity: 0;
+    display: none;
   }
   .collabsible-custom__details[open] .icon-plus {
     display: none;
@@ -81,8 +81,7 @@
     height: 20px;
 }
   .collabsible-custom__details[open] .icon-minus {
-    opacity: 1;
-    transform: rotate(0);
+    display: flex;
   }
   .collabsible-custom__details .accordion__content-container {
     overflow: hidden;
