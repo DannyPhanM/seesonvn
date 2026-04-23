@@ -79,7 +79,7 @@
             "heading": "CHÍNH SÁCH BẢO HÀNH",
             "font_body": true,
             "icon": "none",
-            "row_content": "<p>Mọi thông tin chi tiết về quyền lợi mua sắm cùng các điều khoản bảo hành sản phẩm đã được SEESON cập nhật đầy đủ tại đường dẫn dưới đây. Vui lòng nhấn vào để tìm hiểu thêm.<br/><br/>CHÍNH SÁCH BẢO HÀNH</p>",
+            "row_content": "<p>Mọi thông tin chi tiết về quyền lợi mua sắm cùng các điều khoản bảo hành sản phẩm đã được SEESON cập nhật đầy đủ tại đường dẫn dưới đây. Vui lòng nhấn vào để tìm hiểu thêm.<br/><br/><a href=\"/pages/product-warranty\" title=\"Product warranty\">CHÍNH SÁCH BẢO HÀNH</a></p>",
             "page": ""
           }
         }
