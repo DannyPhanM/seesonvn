@@ -733,7 +733,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             {%- if total_saving > 0 -%}
               <div class="totals-summary__item totals-summary__item--discount">
                 <span class="totals-summary__label">{{ 'sections.cart.discount' | t }}</span>
-                <span class="totals-summary__value">-{{ total_saving | money }}</span>
+                <s class="totals-summary__value">{{ total_saving | money }}</s>
               </div>
             {%- endif -%}
 
