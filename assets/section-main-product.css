@@ -2656,7 +2656,7 @@ product-recommendations.related-products {
   }
   .template--product .hidden.mobile-info .selected-value-right {
     display: block;
-    color: #000000;
+    color: #999;
     opacity: 1;
   }
 }
