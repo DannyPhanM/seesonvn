@@ -4784,6 +4784,8 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .mobile-facets .mobile-facets__label .icon-checkmark {
   top: 6px;
   left: 6px;
+  width: 15px;
+  height: 15px;
 }
 .active-facets__button-remove {
   font-size: 12px;
