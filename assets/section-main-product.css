@@ -2440,6 +2440,7 @@ product-recommendations.related-products {
   .template--product .product.product--medium .buy-buttons-box,
   .template--product .product.product--medium .product-form__submit {
     margin-bottom: 0;
+    margin-top: -3px;
   }
   .template--product .product.product--medium .grid__item.product__media-wrapper {
     width: 100%;
