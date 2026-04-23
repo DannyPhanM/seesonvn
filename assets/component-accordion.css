@@ -57,6 +57,7 @@ accordion-component {
   fill: rgb(var(--color-foreground));
   width:20px;
   height:20px;
+  color: #999;
 }
 
 .accordion details[open] > summary .icon-caret {
