@@ -4777,6 +4777,11 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .mobile-facets .facets__label,
 .mobile-facets .mobile-facets__label {
   padding: 0;
+  align-items: center;
+}
+
+.mobile-facets .mobile-facets__label .facet-checkbox__text {
+  margin-left: 10px;
 }
 .mobile-facets .mobile-facets__highlight {
   background: transparent;
