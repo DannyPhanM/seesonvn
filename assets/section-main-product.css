@@ -2239,6 +2239,8 @@ product-recommendations.related-products {
   .template--product .product.product--medium .product__title .svg-wrapper {
     width: 18px;
     height: 18px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .template--product .product.product--medium .product__title svg {
