@@ -302,6 +302,7 @@ letter-spacing: 0.8px;
   justify-content: center;
   line-height: 1;
   padding: 0;
+  padding-right: 0 !important;
 }
 
 .product-form__submit-compare-at-price {
