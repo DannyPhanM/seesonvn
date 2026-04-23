@@ -5638,7 +5638,7 @@ details[open] > .open-facets-overlay {
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
-  padding: 7px;
+  padding: 9px;
   background: transparent !important;
   opacity: 0.5;
 }
