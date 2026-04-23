@@ -4582,7 +4582,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .collection-linked a:hover {
   color: #999;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 0.3rem;
 }
 
 .collection-linked a.active {
