@@ -628,7 +628,7 @@ a.product__text {
 
 @media (max-width: 749px) {
   .product__title-content .wishlist-button button {
-    margin-top: -1px;
+    padding: 0;
   }
 }
 
@@ -2236,9 +2236,14 @@ product-recommendations.related-products {
     height: 24px;
   }
 
+  .template--product .product.product--medium .product__title .svg-wrapper {
+    width: 18px;
+    height: 18px;
+  }
+
   .template--product .product.product--medium .product__title svg {
-    width: 21px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
   }
 
   .template--product .product.product--medium .product__title .product__title {
