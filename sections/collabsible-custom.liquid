@@ -37,18 +37,18 @@
 
 <div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient">
   <div class="collabsible-custom__wrapper section-{{ section.id }}-padding{% if section.settings.full_width %} content-container--full-width{% else %} page-width{% endif %}">
-    <accordion-component{% if section.settings.enable_global_toggle %} global{% endif %}>
+    <accordion-component {% if section.settings.enable_global_toggle %} global{% endif %}>
       <details class="collabsible-custom__details"{% if section.settings.open_by_default %} open{% endif %}>
         <summary class="collabsible-custom__summary" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer;">
           <div style="display: flex; align-items: center; gap: 8px;">
             <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
           </div>
           <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 24px; height: 24px;">
-            <span class="icon-plus" style="display: flex;align-items: center; position: absolute; ">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3H13V21H11V3Z" fill="#999999"/><path d="M21 11V13L3 13L3 11L21 11Z" fill="#999999"/></svg>
+            <span class="icon-plus" style="display: flex;align-items: center; position: absolute; color: #999999;">
+              {% render 'core-icon', name: 'plus' %}
             </span>
-            <span class="icon-minus" style="display: flex;align-items: center; position: absolute; ">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 13V11H12L3 11L3 13L12 13H21Z" fill="#999999"/></svg>
+            <span class="icon-minus" style="display: flex;align-items: center; position: absolute; color: #999999;">
+              {% render 'core-icon', name: 'minus' %}
             </span>
           </span>
         </summary>
@@ -86,6 +86,12 @@
   }
   .collabsible-custom__details .accordion__content-container {
     overflow: hidden;
+  }
+  .collabsible-custom__icon .icon-plus svg,
+  .collabsible-custom__icon .icon-minus svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.35s ease, opacity 0.35s ease;
   }
 </style>
 
