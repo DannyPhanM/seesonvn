@@ -292,7 +292,7 @@
 
 .image-carousel-section .slider-counter--dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px !important;
   pointer-events: auto;
   z-index: 5;
 }
