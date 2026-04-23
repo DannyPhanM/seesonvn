@@ -4794,7 +4794,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   position: absolute;
 }
 
-.mobile-facets__label.active .svg-wrapper + .svg-wrapper {
+.mobile-facets__label.active .svg-wrapper + .svg-wrapper svg{
   visibility: visible;
 }
 .mobile-facets .sort-by-list li:nth-child(3),
