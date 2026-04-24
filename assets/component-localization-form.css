@@ -330,6 +330,7 @@
 .disclosure__link[aria-current="true"] .svg-wrapper {
   opacity: 1;
   visibility: visible;
+  color: #999999;
 }
 
 .disclosure__link:hover {
