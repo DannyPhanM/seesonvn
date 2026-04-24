@@ -2743,8 +2743,8 @@ details[open] > .modal__toggle .modal__toggle-close {
 
 .header__icon .svg-wrapper,
 .header__icon .svg-wrapper svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 .header__icon::after {
