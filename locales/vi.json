@@ -199,11 +199,11 @@
       "duties_included": "Đã bao gồm thuế nhập khẩu.",
       "duties_and_taxes_included": "Đã bao gồm thuế và thuế nhập khẩu.",
       "sizing": {
-        "lens_width": "Lens width (A):",
-        "bridge_width": "Bridge width (C):",
-        "lens_height": "Lens height (B):",
-        "frame_width": "Total frame width (D):",
-        "temple_length": "Temple length (E):"
+        "lens_width": "Chiều ngang tròng (A):",
+        "bridge_width": "Chiều dọc tròng (B):",
+        "lens_height": "Cầu mũi (C):",
+        "frame_width": "Tổng chiều ngang (D):",
+        "temple_length": "Tổng chiều ngang (E):"
       }
     },
     "modal": {
