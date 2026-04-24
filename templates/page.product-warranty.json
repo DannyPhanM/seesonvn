@@ -82,23 +82,12 @@
             "row_content": "<ul><li>Hà Nội: Cửa hàng SEESON FLAGSHIP, 44 Tôn Đức Thắng, Quận Đống Đa.</li><li>TP HCM: Cửa hàng SEESON IRL FLAGSHIP, 199 Điện Biện Phủ, Phường Võ Thị Sáu, Quận 3.</li></ul><p>Với các trường hợp gửi và nhận kính bảo hành qua dịch vụ chuyển phát, phí phát sinh do người mua chi trả.</p>",
             "page": ""
           }
-        },
-        "collapsible_row_MK8TE8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "HƯỚNG DẪN SỬ DỤNG",
-            "font_body": true,
-            "icon": "none",
-            "row_content": "<p>Để quá trình trải nghiệm và sử dụng sản phẩm được tối ưu nhất, truy cập đường link bên dưới để để tìm hiểu chi tiết thông tin hướng dẫn sử dụng từ SEESON.</p><p><a href=\"/pages/huong-dan-su-dung\" title=\"HƯỚNG DẪN SỬ DỤNG\">HƯỚNG DẪN SỬ DỤNG</a></p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "collapsible_row_XXEnxn",
         "collapsible_row_dDEBmt",
-        "collapsible_row_PRnaRQ",
-        "collapsible_row_MK8TE8"
+        "collapsible_row_PRnaRQ"
       ],
       "custom_css": [],
       "name": "ĐIỀU KHOẢN BẢO HÀNH",
@@ -115,6 +104,31 @@
         "desktop_layout": "image_second",
         "padding_top": 0,
         "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_8JRnbc": {
+      "type": "rich-text",
+      "blocks": {
+        "text_xLRdLV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Để quá trình trải nghiệm và sử dụng sản phẩm được tối ưu nhất, truy cập đường link bên dưới để để tìm hiểu chi tiết thông tin hướng dẫn sử dụng từ SEESON.</p><p><a href=\"/pages/huong-dan-su-dung\" title=\"HƯỚNG DẪN SỬ DỤNG\">HƯỚNG DẪN SỬ DỤNG</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xLRdLV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
         "padding_bottom": 120,
         "padding_bottom_mobile": 120
       }
@@ -123,6 +137,7 @@
   "order": [
     "main",
     "rich_text_LCwFbF",
-    "collapsible_content_LwEYV4"
+    "collapsible_content_LwEYV4",
+    "rich_text_8JRnbc"
   ]
 }
