@@ -4495,7 +4495,7 @@ body.open-drawer .header-wrapper *,
 body.open-search .header-wrapper *,
 body.open-drawer .header-wrapper .header__icon svg path, body.open-search .header-wrapper .header__icon svg path {
   color: #000 !important;
-  fill: #222 !important;
+  
   
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper img,
