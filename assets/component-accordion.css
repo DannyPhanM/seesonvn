@@ -73,6 +73,7 @@ accordion-component {
 
 .accordion__content img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .accordion .icon-plus-minus {
