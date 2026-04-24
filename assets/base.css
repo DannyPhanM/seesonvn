@@ -5277,12 +5277,12 @@ details[open] > .open-facets-overlay {
 .scrolled-past-header .header-wrapper .header__icon svg path,
 .scrolled-past-header .header-wrapper .header__icon .cart-count-bubble {
   color: #222 !important;
-  fill: #222 !important;
+  /* fill: #222 !important; */
 }
 .scrolled-past-header .header-wrapper .header__menu-item path,
 .scrolled-past-header .header-wrapper .header__icon svg path,
 .scrolled-past-header .header-wrapper .header__icon .cart-count-bubble path {
-  fill: #222;
+  /* fill: #222; */
 }
 .scrolled-past-header .header__heading-logo-wrapper img {
   display: block !important;
