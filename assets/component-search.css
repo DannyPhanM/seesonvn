@@ -28,6 +28,7 @@
   content: "";
   position: absolute;
   right: 0;
+  content: none !important;
 }
 
 .search__button:focus-visible,
