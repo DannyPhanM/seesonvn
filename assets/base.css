@@ -1961,8 +1961,8 @@ details[open]>.share-button__fallback {
 }
 
 .field__button>.svg-wrapper {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 14px;
+  width: 14px;
 }
 
 .field__input:-webkit-autofill~.field__button,
