@@ -208,24 +208,44 @@
 <script class="swym-wishlist-header-counter-custom">
 function renderWishlistCounter(swat) {
   var counterElems = document.querySelectorAll(".swym-wishlist-header-counter");
-
   if (!counterElems.length) return;
 
-  for (var i = 0; i < counterElems.length; i++) {
-    if (swat.renderWishlistCount) {
-      swat.renderWishlistCount(counterElems[i], function(count, element) {
-        // Update text
-        element.innerText = count;
+  function updateCount() {
+    _swat.fetchWrtEventTypeET(function(products){
 
-        // Optional: toggle class khi có item
+      // 🔥 chỉ lấy item chưa bị xoá
+      var validItems = products.filter(function(item){
+        return item.d !== 1;
+      });
+
+      // 🔥 nếu bạn muốn đếm theo PRODUCT (không duplicate variant)
+      var unique = {};
+      validItems.forEach(function(item){
+        unique[item.empi] = true; // product id
+      });
+
+      var count = Object.keys(unique).length;
+
+      // render ra UI
+      counterElems.forEach(function(el){
+        el.innerText = count;
+
         if (count > 0) {
-          element.classList.add("has-items");
+          el.classList.add("has-items");
         } else {
-          element.classList.remove("has-items");
+          el.classList.remove("has-items");
         }
       });
-    }
+
+    }, 4);
   }
+
+  // chạy lần đầu
+  updateCount();
+
+  // 🔥 update lại khi user add/remove wishlist
+  document.addEventListener("swym:added", updateCount);
+  document.addEventListener("swym:removed", updateCount);
 }
 
 window.SwymCallbacks = window.SwymCallbacks || [];
