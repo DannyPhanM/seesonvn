@@ -210,72 +210,39 @@ function renderWishlistCounter(swat) {
   var counterElems = document.querySelectorAll(".swym-wishlist-header-counter");
   if (!counterElems.length) return;
 
-  // 🎯 Ưu tiên lấy từ UI Swym (nguồn chuẩn)
-  function getCountFromUI() {
-    var tabCount = document.querySelector('.swym-storefront-layout-tab-count');
-    if (tabCount && tabCount.innerText) {
-      return parseInt(tabCount.innerText, 10) || 0;
-    }
-    return null;
-  }
-
-  // 🎯 Fallback: tự tính từ API
-  function getCountFromAPI(callback) {
+  function updateCount() {
     _swat.fetchWrtEventTypeET(function(products){
 
+      // 🎯 chỉ lấy wishlist thật (user add)
       var validItems = products.filter(function(item){
-        return item.d !== 1;
+        return item.d !== 1 && item.source !== "auto-wishlist";
       });
 
+      // 🎯 nếu muốn tránh duplicate product
       var unique = {};
       validItems.forEach(function(item){
         unique[item.empi] = true;
       });
 
-      callback(Object.keys(unique).length);
+      var count = Object.keys(unique).length;
+
+      counterElems.forEach(function(el){
+        el.innerText = count;
+
+        if (count > 0) {
+          el.classList.add("has-items");
+        } else {
+          el.classList.remove("has-items");
+        }
+      });
 
     }, 4);
   }
 
-  function render(count) {
-    counterElems.forEach(function(el){
-      el.innerText = count;
-
-      if (count > 0) {
-        el.classList.add("has-items");
-      } else {
-        el.classList.remove("has-items");
-      }
-    });
-  }
-
-  function updateCount() {
-    var uiCount = getCountFromUI();
-
-    if (uiCount !== null) {
-      render(uiCount);
-    } else {
-      // fallback nếu UI chưa có
-      getCountFromAPI(render);
-    }
-  }
-
-  // chạy lần đầu
   updateCount();
 
-  // 🔥 update khi có thay đổi wishlist
   document.addEventListener("swym:added", updateCount);
   document.addEventListener("swym:removed", updateCount);
-
-  // 🔥 update khi drawer render xong (Swym inject DOM)
-  var observer = new MutationObserver(function(){
-    updateCount();
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
 }
 
 window.SwymCallbacks = window.SwymCallbacks || [];
