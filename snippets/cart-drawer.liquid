@@ -207,21 +207,28 @@
 </script>
 <script class="swym-wishlist-header-counter-custom">
 function renderWishlistCounter(swat) {
-	var counter_elem = document.querySelectorAll(".swym-wishlist-header-counter"); /* Targets the span added in Step 1. */
-	if (counter_elem) {
-		for (var i = 0; i < counter_elem.length; i++) {
-			if (swat.renderWishlistCount) {
-				swat.renderWishlistCount(counter_elem[i], function(count, element) {
-				});
-			}
-		}
-	}
+  var counterElems = document.querySelectorAll(".swym-wishlist-header-counter");
+
+  if (!counterElems.length) return;
+
+  for (var i = 0; i < counterElems.length; i++) {
+    if (swat.renderWishlistCount) {
+      swat.renderWishlistCount(counterElems[i], function(count, element) {
+        // Update text
+        element.innerText = count;
+
+        // Optional: toggle class khi có item
+        if (count > 0) {
+          element.classList.add("has-items");
+        } else {
+          element.classList.remove("has-items");
+        }
+      });
+    }
+  }
 }
 
-if (!window.SwymCallbacks) {
-	window.SwymCallbacks = [];
-}
-
+window.SwymCallbacks = window.SwymCallbacks || [];
 window.SwymCallbacks.push(renderWishlistCounter);
 </script>
 
