@@ -323,7 +323,7 @@
       "name": "THÀNH PHỐ HÀ NỘI",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": true,
+        "remove_border_top": true,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HÀ NỘI",
@@ -363,7 +363,7 @@
       "name": "THÀNH PHỐ HỒ CHÍ MINH",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HỒ CHÍ MINH",
@@ -394,7 +394,7 @@
       "name": "THÀNH PHỐ CẦN THƠ",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ CẦN THƠ",
@@ -425,7 +425,7 @@
       "name": "THÀNH PHỐ ĐÀ NẴNG",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ ĐÀ NẴNG",
@@ -456,7 +456,7 @@
       "name": "THÀNH PHỐ HẢI PHÒNG",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HẢI PHÒNG",
@@ -487,7 +487,7 @@
       "name": "THÀNH PHỐ NHA TRANG",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ NHA TRANG",
@@ -518,7 +518,7 @@
       "name": "THÀNH PHỐ ĐÀ LẠT",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "remove_border_top": false,
         "enable_border_bottom": true,
         "open_by_default": false,
         "title": "THÀNH PHỐ ĐÀ LẠT",
