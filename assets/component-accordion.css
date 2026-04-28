@@ -2,13 +2,13 @@
   display: flex;
   position: relative;
   line-height: 1;
-  padding: 3rem 0;
+  padding: 20px 0;
   justify-content: space-between;
 }
 
 @media (max-width: 749px) {
   .accordion summary {
-    padding: 1.4rem 0;
+    padding: 20px 0;
   }
 }
 
