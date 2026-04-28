@@ -3884,7 +3884,7 @@ a {
   display: block;
   width: 100%;
   height: 1px;
-  background: #999;
+  background: rgba(var(--color-foreground),.08);
   position: absolute;
   bottom: 0px;
   left: 0;
