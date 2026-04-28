@@ -5715,3 +5715,8 @@ details[open] > .open-facets-overlay {
 .template--our-store  .collabsible-custom__block, .template--our-store  .collabsible-custom__block .collabsible-custom__block-content  {
   padding-top: 0 !important;
 }
+
+    .footer {
+        position: relative;
+        z-index: 2;
+    }
