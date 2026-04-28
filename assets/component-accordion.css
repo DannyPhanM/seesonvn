@@ -28,8 +28,8 @@ accordion-component {
 .accordion {
   margin-top: 2.5rem;
   margin-bottom: 0;
-  border-top: 0.5px solid #999;
-  border-bottom: 0.5px solid #999;
+  border-top: 0.5px solid #99999975;
+  border-bottom: 0.5px solid #99999975;
 }
 
 .accordion + .accordion {

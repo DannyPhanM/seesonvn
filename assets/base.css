@@ -4539,7 +4539,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 
 .collapsible-content .accordion:last-child {
-  border-bottom: 0.5px solid #999;
+  border-bottom: 0.5px solid #99999975;
 }
 
 .media_link {
@@ -5709,7 +5709,7 @@ details[open] > .open-facets-overlay {
 .template--our-store .collabsible-custom__details[open] .accordion__content-container {
   padding-bottom: 20px;
   width: 300px;
-  border-bottom: 0.5px solid #999;
+  border-bottom: 0.5px solid #99999975;
 }
 
 .template--our-store  .collabsible-custom__block, .template--our-store  .collabsible-custom__block .collabsible-custom__block-content  {
