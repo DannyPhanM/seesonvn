@@ -140,7 +140,6 @@
     const drawer = document.querySelector('cart-drawer');
     if (!drawer) return;
 
-    // Default to cart tab if not set
     if (!drawer.hasAttribute('active-tab')) {
       drawer.setAttribute('active-tab', 'cart');
     }
@@ -178,27 +177,20 @@
       const target = tab.dataset.tab;
       drawer.setAttribute('active-tab', target);
 
-      // Re-render Swym when switching to wishlist tab
       if (target === 'wishlist' && window._swat) {
         refreshSwymWishlist(window._swat);
       }
     });
 
-
-
-    // Swym Wishlist Synchronization
     window.SwymCallbacks = window.SwymCallbacks || [];
     window.SwymCallbacks.push(function(swat) {
       window._swat = swat;
 
-      // Initial update
       refreshSwymWishlist(swat);
 
-      // Listen for changes
       swat.evtLayer.addEventListener('sw:addedtowishlist', () => refreshSwymWishlist(swat));
       swat.evtLayer.addEventListener('sw:removedfromwishlist', () => refreshSwymWishlist(swat));
       
-      // Listen for general shopper info refresh for multi-device sync
       if (swat.JSEvents && swat.JSEvents.customerInfoRefreshed) {
         swat.evtLayer.addEventListener(swat.JSEvents.customerInfoRefreshed, () => updateWishlistCount(swat));
       }
@@ -213,12 +205,10 @@ function renderWishlistCounter(swat) {
   function updateCount() {
     _swat.fetchWrtEventTypeET(function(products){
 
-      // 🎯 chỉ lấy wishlist thật (user add)
       var validItems = products.filter(function(item){
         return item.d !== 1 && item.source !== "auto-wishlist";
       });
 
-      // 🎯 nếu muốn tránh duplicate product
       var unique = {};
       validItems.forEach(function(item){
         unique[item.empi] = true;
