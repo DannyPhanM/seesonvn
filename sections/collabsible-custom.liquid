@@ -35,7 +35,7 @@
 
 {%- endstyle -%}
 
-<div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient {% if section.settings.enable_border_top %} border-top {% endif %} {% if section.settings.enable_border_bottom %} border-bottom {% endif %}">
+<div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient {% if section.settings.remove_border_top %} remove-top {% endif %} {% if section.settings.enable_border_bottom %} border-bottom {% endif %}">
   <div class="collabsible-custom__wrapper section-{{ section.id }}-padding{% if section.settings.full_width %} content-container--full-width{% else %} page-width{% endif %}">
     <accordion-component {% if section.settings.enable_global_toggle %} global{% endif %}>
       <details class="collabsible-custom__details"{% if section.settings.open_by_default %} open{% endif %}>
