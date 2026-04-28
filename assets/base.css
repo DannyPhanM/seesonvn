@@ -3884,10 +3884,11 @@ a {
   display: block;
   width: 100%;
   height: 1px;
-  background: rgba(var(--color-foreground),.08);
+  background: #999;
   position: absolute;
   bottom: 0px;
   left: 0;
+  transform: scaleY(0.5);
 }
 
 .collabsible-custom__summary .collabsible-custom__icon {
@@ -5708,7 +5709,7 @@ details[open] > .open-facets-overlay {
 .template--our-store .collabsible-custom__details[open] .accordion__content-container {
   padding-bottom: 20px;
   width: 300px;
-  border-bottom: 1px solid rgba(var(--color-foreground),.08);
+  border-bottom: 1px solid #999;
 }
 
 .template--our-store  .collabsible-custom__block, .template--our-store  .collabsible-custom__block .collabsible-custom__block-content  {
