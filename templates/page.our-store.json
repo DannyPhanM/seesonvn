@@ -323,7 +323,7 @@
       "name": "THÀNH PHỐ HÀ NỘI",
       "settings": {
         "enable_global_toggle": true,
-        "enable_border_top": false,
+        "enable_border_top": true,
         "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HÀ NỘI",
