@@ -5707,15 +5707,11 @@ details[open] > .open-facets-overlay {
   content: none;
 }
 .template--our-store .collabsible-custom__details[open] .accordion__content-container {
-  padding-bottom: 20px;
  
-  border-bottom: .5px solid #999999c9;
 }
 
 @media(max-width: 767px) {
-  .template--our-store .collabsible-custom__details[open] .accordion__content-container {
-    width: 300px;
-  }
+
 }
 
 .template--our-store  .collabsible-custom__block, .template--our-store  .collabsible-custom__block .collabsible-custom__block-content  {
