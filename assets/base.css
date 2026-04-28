@@ -3978,7 +3978,7 @@ a {
 .accordion .accordion__content,
 .collabsible-custom__block-content {
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   overflow-y: visible;
   scrollbar-width: none;
 }
