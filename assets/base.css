@@ -3876,8 +3876,8 @@ a {
   position: relative;
   width: max-content;
   min-width: 300px;
-  padding-bottom: 20px;
-  border-bottom: 0.5px solid #999;
+  padding-top: 20px;
+  border-top: 0.5px solid #999;
 }
 
 /* .collabsible-custom__summary:after {
