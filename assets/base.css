@@ -5707,3 +5707,7 @@ details[open] > .open-facets-overlay {
   width: 300px;
   border-bottom: 1px solid #999;
 }
+
+.template--our-store  .collabsible-custom__block {
+  padding-top: 0 !important;
+}
