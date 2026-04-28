@@ -3876,7 +3876,7 @@ a {
   position: relative;
   width: max-content;
   min-width: 300px;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .collabsible-custom__summary:after {
