@@ -5443,6 +5443,8 @@ details[open] > .open-facets-overlay {
 
   .footer {
     padding-top: 15px !important;
+    position: relative;
+    z-index: 2;
   }
 
   .copyright__content svg {
