@@ -3897,7 +3897,7 @@ a {
 }
 
 .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block:first-of-type {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 @media(max-width: 749px) {
