@@ -4539,7 +4539,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 }
 
 .collapsible-content .accordion:last-child {
-  border-bottom: 1px solid #999;
+  border-bottom: 0.5px solid #999;
 }
 
 .media_link {
