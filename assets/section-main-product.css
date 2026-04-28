@@ -139,11 +139,11 @@ product-info {
 }
 
 .product__left-info .accordion {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border-top: 0.1rem solid #999;
 }
 
 .product__left-info .accordion:last-child {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border-bottom: 0.1rem solid #999;
 }
 
 .product__info-container .price__container {
