@@ -5708,6 +5708,6 @@ details[open] > .open-facets-overlay {
   border-bottom: 1px solid #999;
 }
 
-.template--our-store  .collabsible-custom__block {
+.template--our-store  .collabsible-custom__block, .template--our-store  .collabsible-custom__block .collabsible-custom__block-content  {
   padding-top: 0 !important;
 }
