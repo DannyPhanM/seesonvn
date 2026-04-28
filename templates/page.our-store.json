@@ -323,6 +323,8 @@
       "name": "THÀNH PHỐ HÀ NỘI",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HÀ NỘI",
         "heading_tag": "h3",
@@ -361,6 +363,8 @@
       "name": "THÀNH PHỐ HỒ CHÍ MINH",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HỒ CHÍ MINH",
         "heading_tag": "h3",
@@ -390,6 +394,8 @@
       "name": "THÀNH PHỐ CẦN THƠ",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ CẦN THƠ",
         "heading_tag": "h3",
@@ -419,6 +425,8 @@
       "name": "THÀNH PHỐ ĐÀ NẴNG",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ ĐÀ NẴNG",
         "heading_tag": "h3",
@@ -448,6 +456,8 @@
       "name": "THÀNH PHỐ HẢI PHÒNG",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ HẢI PHÒNG",
         "heading_tag": "h3",
@@ -477,6 +487,8 @@
       "name": "THÀNH PHỐ NHA TRANG",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
         "open_by_default": false,
         "title": "THÀNH PHỐ NHA TRANG",
         "heading_tag": "h3",
@@ -506,6 +518,8 @@
       "name": "THÀNH PHỐ ĐÀ LẠT",
       "settings": {
         "enable_global_toggle": true,
+        "enable_border_top": false,
+        "enable_border_bottom": true,
         "open_by_default": false,
         "title": "THÀNH PHỐ ĐÀ LẠT",
         "heading_tag": "h3",
