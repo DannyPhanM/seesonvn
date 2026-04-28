@@ -3888,7 +3888,6 @@ a {
   position: absolute;
   bottom: 0px;
   left: 0;
-  transform: scaleY(0.5);
 }
 
 .collabsible-custom__summary .collabsible-custom__icon {
