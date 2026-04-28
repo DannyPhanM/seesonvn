@@ -3896,7 +3896,7 @@ a {
   margin-left: auto;
 }
 
-.collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block:first-child {
+.collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block:first-of-type {
   padding-top: 20px;
 }
 
