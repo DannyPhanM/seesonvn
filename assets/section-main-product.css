@@ -2634,7 +2634,7 @@ product-recommendations.related-products {
 }
 @media(min-width: 1024px) {
   .product .product__left-info .accordion .accordion__content * {
-    font-size: 14px;
+    font-size: 13.4px;
   }
 }
 .product .product__left-info .sizing-square-icon svg rect {
