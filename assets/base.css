@@ -2283,7 +2283,7 @@ details[open] > .modal__toggle .modal__toggle-close {
 }
 @media(max-width: 749px) {
   .cart-count-bubble {
-    transform: translate(-45%, -20%);
+    transform: translate(-45%, -10%);
   }
 }
 /* utility-bar */
@@ -4396,6 +4396,11 @@ letter-spacing: 0.55px;
       width: 18px;
       height: 18px;
   }
+
+  .header__icon--cart .svg-wrapper {
+    padding-bottom: 0;
+  }
+    
   .cart-count-bubble {
       width: 10px;
       height: 10px;
