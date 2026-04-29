@@ -2629,7 +2629,7 @@ product-recommendations.related-products {
 
 .product .product__left-info .accordion .accordion__content * {
   color: #000;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0;
 }
 @media(min-width: 1024px) {
