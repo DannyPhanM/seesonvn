@@ -4380,7 +4380,7 @@ letter-spacing: 0.55px;
 @media(max-width: 989px) {
   .header__icons {
     gap: 0;
-    width: 70px;
+    width: 90px;
     justify-content: space-between;
   }
   .header__icon {
