@@ -4389,12 +4389,12 @@ letter-spacing: 0.55px;
     gap: 8px;
   }
   .header__icon .svg-wrapper {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
   }
   .header__icon.header__icon--menu .svg-wrapper svg {
-      width: 15px;
-      height: 15px;
+      width: 18px;
+      height: 18px;
   }
   .cart-count-bubble {
       width: 10px;
