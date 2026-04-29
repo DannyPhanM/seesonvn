@@ -4506,11 +4506,13 @@ body.open-search .header-wrapper .header{
   background: #eeeeee !important;
 }
 body.open-drawer .header-wrapper *,
-body.open-search .header-wrapper *,
-body.open-drawer .header-wrapper .header__icon svg path, body.open-search .header-wrapper .header__icon svg path {
+body.open-search .header-wrapper * {
   color: #000 !important;
 }
-body.open-search .header-wrapper *, body.open-search .shopify-section-group-header-group .svg-wrapper svg path, body.open-drawer .header-wrapper .header__icon svg path {
+
+body.template--index.open-search .shopify-section-group-header-group .svg-wrapper svg .cls-2,
+body.template--index.open-search .shopify-section-group-header-group  .search-modal__close-button .svg-wrapper  path,
+body.template--index.open-drawer .shopify-section-group-header-group .svg-wrapper svg .cls-2 {
   fill: #000;
 }
 body.open-drawer .header-wrapper .header__heading-logo-wrapper img,
@@ -5720,9 +5722,6 @@ details[open] > .open-facets-overlay {
 .template--our-store .collabsible-custom__details[open] .collabsible-custom__summary:after {
   content: none;
 }
-.template--our-store .collabsible-custom__details[open] .accordion__content-container {
- 
-}
 
 @media(max-width: 767px) {
 
@@ -5732,7 +5731,18 @@ details[open] > .open-facets-overlay {
   padding-top: 0 !important;
 }
 
-    .footer {
-        position: relative;
-        z-index: 2;
-    }
+.footer {
+    position: relative;
+    z-index: 2;
+}
+@media(max-width: 750px) {
+  body.template--index.open-drawer .shopify-section-group-header-group .header__icon--menu .svg-wrapper svg:first-child  {
+    display: none;
+  }
+
+  body.template--index.open-drawer .shopify-section-group-header-group .header__icon--menu .svg-wrapper svg:last-child  {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+}

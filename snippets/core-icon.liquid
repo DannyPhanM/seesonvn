@@ -42,8 +42,24 @@
     </svg>
 
   {% when 'cart' or 'cart-empty' %}
-    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 80 110">
-      <path d="M65 30v-5C65 11.21 53.79 0 40 0S15 11.21 15 25v5H0v80h80V30zm-40-5c0-8.27 6.73-15 15-15s15 6.73 15 15v5H25zm45 75H10V40h60z"/>
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
+
+          .cls-2 {
+            fill: #231f20;
+          }
+        </style>
+      </defs>
+      <g id="v">
+        <g>
+          <rect class="cls-1" width="110" height="110"/>
+          <path class="cls-2" d="M80,30v-5c0-13.79-11.21-25-25-25s-25,11.21-25,25v5h-15v80h80V30h-15ZM40,25c0-8.27,6.73-15,15-15s15,6.73,15,15v5h-30v-5ZM85,100H25v-60h60v60Z"/>
+        </g>
+      </g>
     </svg>
 
   {% when 'cart-new' or 'cart-empty-new' %}
@@ -66,10 +82,27 @@
     </svg>
 
   {% when 'menu' %}
-    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 100 80" class="{{ icon_class }}" {{ icon_attr }}>
-      <defs/>
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
+
+          .cls-2 {
+            fill: #231f20;
+          }
+        </style>
+      </defs>
       <g id="v">
-        <path d="M0 0h100v10H0zM0 35h100v10H0zM0 70h100v10H0z" fill="currentColor"/>
+        <g>
+          <rect class="cls-1" width="110" height="110"/>
+          <g>
+            <rect class="cls-2" x="5" y="20" width="100" height="10"/>
+            <rect class="cls-2" x="5" y="55" width="100" height="10"/>
+            <rect class="cls-2" x="5" y="90" width="100" height="10"/>
+          </g>
+        </g>
       </g>
     </svg>
 
@@ -83,8 +116,24 @@
 </svg>
 
   {% when 'search' %}
-    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 99.99 99.99" class="{{ icon_class }}" {{ icon_attr }}>
-      <path d="M99.99 92.92 63.02 55.95C67.4 50.1 70 42.85 70 35 70 15.7 54.3 0 35 0S0 15.7 0 35s15.7 35 35 35c7.85 0 15.1-2.6 20.95-6.98l36.97 36.97zM10 35c0-13.79 11.21-25 25-25s25 11.21 25 25-11.21 25-25 25-25-11.21-25-25" fill="currentColor"/>
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
+
+          .cls-2 {
+            fill: #231f20;
+          }
+        </style>
+      </defs>
+      <g id="v">
+        <g>
+          <rect class="cls-1" width="110" height="110"/>
+          <path class="cls-2" d="M104.99,102.92l-36.97-36.97c4.38-5.85,6.98-13.1,6.98-20.95,0-19.3-15.7-35-35-35S5,25.7,5,45s15.7,35,35,35c7.85,0,15.1-2.6,20.95-6.98l36.97,36.97,7.07-7.07ZM15,45c0-13.79,11.21-25,25-25s25,11.21,25,25-11.21,25-25,25-25-11.21-25-25Z"/>
+        </g>
+      </g>
     </svg>
 
   {% when 'search-new' %}
