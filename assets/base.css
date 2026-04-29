@@ -4392,8 +4392,8 @@ letter-spacing: 0.55px;
       width: 18px;
       height: 18px;
   }
-  .header__icon .svg-wrapper svg {
-      width: 12px;
+  .header__icon.header__icon--menu .svg-wrapper svg {
+      width: 15px;
       height: 15px;
   }
   .cart-count-bubble {
