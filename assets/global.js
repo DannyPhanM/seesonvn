@@ -65,6 +65,11 @@ class HTMLUpdateUtility {
       newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
       oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
     });
+
+    // Trigger Swym re-initialization for dynamically added buttons
+    if (window._swat && typeof window._swat.initializeAllButtons === 'function') {
+      window._swat.initializeAllButtons();
+    }
   }
 }
 
@@ -693,7 +698,7 @@ class BulkModal extends HTMLElement {
           .then((responseText) => {
             const html = new DOMParser().parseFromString(responseText, 'text/html');
             const sourceQty = html.querySelector('.quick-order-list-container').parentNode;
-            this.innerHTML = sourceQty.innerHTML;
+            HTMLUpdateUtility.setInnerHTML(this, sourceQty.innerHTML);
           })
           .catch((e) => {
             console.error(e);
@@ -1193,7 +1198,7 @@ class ProductRecommendations extends HTMLElement {
         const recommendations = html.querySelector('product-recommendations');
 
         if (recommendations?.innerHTML.trim().length) {
-          this.innerHTML = recommendations.innerHTML;
+          HTMLUpdateUtility.setInnerHTML(this, recommendations.innerHTML);
         }
 
         if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
