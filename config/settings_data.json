@@ -160,6 +160,7 @@
         "type": "shopify://apps/swym-relay/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
         "disabled": false,
         "settings": {
+          "show_ui": true,
           "storefront_layout_enabled": false,
           "storefront_layout_primary_bg_color": "#000000",
           "storefront_layout_primary_text_color": "#ffffff",
@@ -169,8 +170,7 @@
           "storefront_layout_notification_position": "left",
           "storefront_layout_action_popup_position": "left",
           "storefront_layout_drawer_position": "left",
-          "storefront_layout_as_section_page": "",
-          "show_ui": true
+          "storefront_layout_as_section_page": ""
         }
       },
       "17745397173973090149": {
@@ -180,9 +180,9 @@
       },
       "10274264662263595587": {
         "type": "shopify://apps/wishlist-plus/blocks/wishlist-collections-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
-        "disabled": false,
+        "disabled": true,
         "settings": {
-          "swym_collections_icon_type": "heart",
+          "swym_collections_icon_type": "bookmark",
           "swym_collections_icon_thickness": 1.7,
           "swym_collections_position": "top-right",
           "swym_collections_vertical_offset": 0,
