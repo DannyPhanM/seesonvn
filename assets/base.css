@@ -5751,3 +5751,7 @@ details[open] > .open-facets-overlay {
     height: 12px;
   }
 }
+
+.card--media + .swym-wishlist-collections-v2-container {
+  display: none;
+}
